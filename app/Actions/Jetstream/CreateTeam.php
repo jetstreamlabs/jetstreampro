@@ -10,28 +10,28 @@ use Laravel\Jetstream\Jetstream;
 
 class CreateTeam implements CreatesTeams
 {
-    /**
-     * Validate and create a new team for the given user.
-     *
-     * @param  mixed  $user
-     * @param  array  $input
-     * @return mixed
-     */
-    public function create($user, array $input)
-    {
-        Gate::forUser($user)->authorize('create', Jetstream::newTeamModel());
+	/**
+	 * Validate and create a new team for the given user.
+	 *
+	 * @param  mixed  $user
+	 * @param  array  $input
+	 * @return mixed
+	 */
+	public function create($user, array $input)
+	{
+		Gate::forUser($user)->authorize('create', Jetstream::newTeamModel());
 
-        Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-        ])->validateWithBag('createTeam');
+		Validator::make($input, [
+			'name' => ['required', 'string', 'max:255'],
+		])->validateWithBag('createTeam');
 
-        AddingTeam::dispatch($user);
+		AddingTeam::dispatch($user);
 
-        $user->switchTeam($team = $user->ownedTeams()->create([
-            'name' => $input['name'],
-            'personal_team' => false,
-        ]));
+		$user->switchTeam($team = $user->ownedTeams()->create([
+			'name' => $input['name'],
+			'personal_team' => false,
+		]));
 
-        return $team;
-    }
+		return $team;
+	}
 }

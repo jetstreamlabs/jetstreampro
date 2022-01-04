@@ -36,25 +36,25 @@
 <script>
 export default defineComponent({
 	props: {
-		status: String
+		status: String,
 	},
 
 	data() {
 		return {
-			form: this.$inertia.form()
-		}
+			form: this.$inertia.form(),
+		};
 	},
 
 	methods: {
 		submit() {
-			this.form.post(this.route('verification.send'))
-		}
+			this.form.post(this.route('verification.send'));
+		},
 	},
 
 	computed: {
 		verificationLinkSent() {
-			return this.status === 'verification-link-sent'
-		}
-	}
-})
+			return this.status === 'verification-link-sent';
+		},
+	},
+});
 </script>
