@@ -30,7 +30,8 @@
 							placeholder="Password"
 							ref="password"
 							v-model="form.password"
-							@keyup.enter="deleteUser" />
+							@keyup.enter="deleteUser"
+						/>
 
 						<jet-input-error :message="form.errors.password" class="mt-2" />
 					</div>
@@ -43,7 +44,8 @@
 						class="ml-2"
 						@click="deleteUser"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing">
+						:disabled="form.processing"
+					>
 						Delete Account
 					</jet-danger-button>
 				</template>
@@ -59,16 +61,16 @@ export default defineComponent({
 			confirmingUserDeletion: false,
 
 			form: this.$inertia.form({
-				password: ''
-			})
-		}
+				password: '',
+			}),
+		};
 	},
 
 	methods: {
 		confirmUserDeletion() {
-			this.confirmingUserDeletion = true
+			this.confirmingUserDeletion = true;
 
-			setTimeout(() => this.$refs.password.focus(), 250)
+			setTimeout(() => this.$refs.password.focus(), 250);
 		},
 
 		deleteUser() {
@@ -76,15 +78,15 @@ export default defineComponent({
 				preserveScroll: true,
 				onSuccess: () => this.closeModal(),
 				onError: () => this.$refs.password.focus(),
-				onFinish: () => this.form.reset()
-			})
+				onFinish: () => this.form.reset(),
+			});
 		},
 
 		closeModal() {
-			this.confirmingUserDeletion = false
+			this.confirmingUserDeletion = false;
 
-			this.form.reset()
-		}
-	}
-})
+			this.form.reset();
+		},
+	},
+});
 </script>

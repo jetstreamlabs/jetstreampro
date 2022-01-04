@@ -22,7 +22,8 @@
 					v-model="form.password"
 					required
 					autocomplete="current-password"
-					autofocus />
+					autofocus
+				/>
 			</div>
 
 			<div class="flex justify-end mt-4">
@@ -39,17 +40,17 @@ export default defineComponent({
 	data() {
 		return {
 			form: this.$inertia.form({
-				password: ''
-			})
-		}
+				password: '',
+			}),
+		};
 	},
 
 	methods: {
 		submit() {
 			this.form.post(this.route('password.confirm'), {
-				onFinish: () => this.form.reset()
-			})
-		}
-	}
-})
+				onFinish: () => this.form.reset(),
+			});
+		},
+	},
+});
 </script>

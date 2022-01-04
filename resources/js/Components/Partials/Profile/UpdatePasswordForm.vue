@@ -13,7 +13,8 @@
 					class="block w-full mt-1"
 					v-model="form.current_password"
 					ref="current_password"
-					autocomplete="current-password" />
+					autocomplete="current-password"
+				/>
 				<jet-input-error :message="form.errors.current_password" class="mt-2" />
 			</div>
 
@@ -25,7 +26,8 @@
 					class="block w-full mt-1"
 					v-model="form.password"
 					ref="password"
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 				<jet-input-error :message="form.errors.password" class="mt-2" />
 			</div>
 
@@ -36,7 +38,8 @@
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 				<jet-input-error :message="form.errors.password_confirmation" class="mt-2" />
 			</div>
 		</template>
@@ -56,9 +59,9 @@ export default defineComponent({
 			form: this.$inertia.form({
 				current_password: '',
 				password: '',
-				password_confirmation: ''
-			})
-		}
+				password_confirmation: '',
+			}),
+		};
 	},
 
 	methods: {
@@ -69,17 +72,17 @@ export default defineComponent({
 				onSuccess: () => this.form.reset(),
 				onError: () => {
 					if (this.form.errors.password) {
-						this.form.reset('password', 'password_confirmation')
-						this.$refs.password.focus()
+						this.form.reset('password', 'password_confirmation');
+						this.$refs.password.focus();
 					}
 
 					if (this.form.errors.current_password) {
-						this.form.reset('current_password')
-						this.$refs.current_password.focus()
+						this.form.reset('current_password');
+						this.$refs.current_password.focus();
 					}
-				}
-			})
-		}
-	}
-})
+				},
+			});
+		},
+	},
+});
 </script>

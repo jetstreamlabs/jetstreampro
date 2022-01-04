@@ -1,15 +1,14 @@
-window.locale = document.getElementsByTagName('html')[0].getAttribute('lang')
+window.locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
-import '../css/app.css'
+import '../css/app.css';
 
-import { createJetstreamApp } from '@/Application'
-import { InertiaProgress } from '@inertiajs/progress'
+import { createJetstreamApp } from '@/Application';
+import { InertiaProgress } from '@inertiajs/progress';
 
-const appName =
-	window.document.getElementsByTagName('title')[0]?.innerText || 'Jetstream Pro'
+const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Jetstream Pro';
 
 createJetstreamApp({
-	appName: appName
-})
+	appName: appName,
+});
 
-InertiaProgress.init({ color: '#4B5563' })
+InertiaProgress.init({ color: '#4B5563' });

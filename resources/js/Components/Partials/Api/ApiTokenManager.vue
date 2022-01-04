@@ -66,7 +66,8 @@
 									<button
 										class="ml-6 text-sm text-gray-400 underline cursor-pointer"
 										@click="manageApiTokenPermissions(token)"
-										v-if="availablePermissions.length > 0">
+										v-if="availablePermissions.length > 0"
+									>
 										Permissions
 									</button>
 
@@ -90,7 +91,8 @@
 
 				<div
 					class="px-4 py-2 mt-4 font-mono text-sm text-gray-500 bg-gray-100 rounded"
-					v-if="$page.props.jetstream.flash.token">
+					v-if="$page.props.jetstream.flash.token"
+				>
 					{{ $page.props.jetstream.flash.token }}
 				</div>
 			</template>
@@ -122,7 +124,8 @@
 					class="ml-2"
 					@click="updateApiToken"
 					:class="{ 'opacity-25': updateApiTokenForm.processing }"
-					:disabled="updateApiTokenForm.processing">
+					:disabled="updateApiTokenForm.processing"
+				>
 					Save
 				</jet-button>
 			</template>
@@ -141,7 +144,8 @@
 					class="ml-2"
 					@click="deleteApiToken"
 					:class="{ 'opacity-25': deleteApiTokenForm.processing }"
-					:disabled="deleteApiTokenForm.processing">
+					:disabled="deleteApiTokenForm.processing"
+				>
 					Delete
 				</jet-danger-button>
 			</template>
@@ -157,19 +161,19 @@ export default defineComponent({
 		return {
 			createApiTokenForm: this.$inertia.form({
 				name: '',
-				permissions: this.defaultPermissions
+				permissions: this.defaultPermissions,
 			}),
 
 			updateApiTokenForm: this.$inertia.form({
-				permissions: []
+				permissions: [],
 			}),
 
 			deleteApiTokenForm: this.$inertia.form(),
 
 			displayingToken: false,
 			managingPermissionsFor: null,
-			apiTokenBeingDeleted: null
-		}
+			apiTokenBeingDeleted: null,
+		};
 	},
 
 	methods: {
@@ -177,37 +181,37 @@ export default defineComponent({
 			this.createApiTokenForm.post(this.route('api-tokens.store'), {
 				preserveScroll: true,
 				onSuccess: () => {
-					this.displayingToken = true
-					this.createApiTokenForm.reset()
-				}
-			})
+					this.displayingToken = true;
+					this.createApiTokenForm.reset();
+				},
+			});
 		},
 
 		manageApiTokenPermissions(token) {
-			this.updateApiTokenForm.permissions = token.abilities
+			this.updateApiTokenForm.permissions = token.abilities;
 
-			this.managingPermissionsFor = token
+			this.managingPermissionsFor = token;
 		},
 
 		updateApiToken() {
 			this.updateApiTokenForm.put(this.route('api-tokens.update', this.managingPermissionsFor), {
 				preserveScroll: true,
 				preserveState: true,
-				onSuccess: () => (this.managingPermissionsFor = null)
-			})
+				onSuccess: () => (this.managingPermissionsFor = null),
+			});
 		},
 
 		confirmApiTokenDeletion(token) {
-			this.apiTokenBeingDeleted = token
+			this.apiTokenBeingDeleted = token;
 		},
 
 		deleteApiToken() {
 			this.deleteApiTokenForm.delete(this.route('api-tokens.destroy', this.apiTokenBeingDeleted), {
 				preserveScroll: true,
 				preserveState: true,
-				onSuccess: () => (this.apiTokenBeingDeleted = null)
-			})
-		}
-	}
-})
+				onSuccess: () => (this.apiTokenBeingDeleted = null),
+			});
+		},
+	},
+});
 </script>

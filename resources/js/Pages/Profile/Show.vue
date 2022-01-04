@@ -37,5 +37,5 @@
 </template>
 
 <script setup>
-const props = defineProps(['sessions'])
+const props = defineProps(['sessions']);
 </script>

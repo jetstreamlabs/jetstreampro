@@ -8,16 +8,16 @@ use Tests\TestCase;
 
 class BrowserSessionsTest extends TestCase
 {
-    use RefreshDatabase;
+	use RefreshDatabase;
 
-    public function test_other_browser_sessions_can_be_logged_out()
-    {
-        $this->actingAs($user = User::factory()->create());
+	public function test_other_browser_sessions_can_be_logged_out()
+	{
+		$this->actingAs($user = User::factory()->create());
 
-        $response = $this->delete('/user/other-browser-sessions', [
-            'password' => 'password',
-        ]);
+		$response = $this->delete('/user/other-browser-sessions', [
+			'password' => 'password',
+		]);
 
-        $response->assertSessionHasNoErrors();
-    }
+		$response->assertSessionHasNoErrors();
+	}
 }

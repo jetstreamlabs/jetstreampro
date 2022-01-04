@@ -28,7 +28,8 @@
 					type="text"
 					class="block w-full mt-1"
 					v-model="form.name"
-					:disabled="!permissions.canUpdateTeam" />
+					:disabled="!permissions.canUpdateTeam"
+				/>
 
 				<jet-input-error :message="form.errors.name" class="mt-2" />
 			</div>
@@ -49,18 +50,18 @@ export default defineComponent({
 	data() {
 		return {
 			form: this.$inertia.form({
-				name: this.team.name
-			})
-		}
+				name: this.team.name,
+			}),
+		};
 	},
 
 	methods: {
 		updateTeamName() {
 			this.form.put(this.route('teams.update', this.team), {
 				errorBag: 'updateTeamName',
-				preserveScroll: true
-			})
-		}
-	}
-})
+				preserveScroll: true,
+			});
+		},
+	},
+});
 </script>
