@@ -9,7 +9,7 @@ php:
       - server.php
 js:
   tab-width: 2
-  use-table: true
+  use-tabs: true
   finder:
     not-name:
       - webpack.mix.js
