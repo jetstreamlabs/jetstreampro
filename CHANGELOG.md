@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.0.1](https://github.com/jetstreamlabs/jetstreampro/compare/v1.0.0...v1.0.1) (2022-01-04)
+
+
+### Bug Fixes
+
+* typo in styleci config ([388b580](https://github.com/jetstreamlabs/jetstreampro/commit/388b580b743d8b147819cf07bae2596cf57df73d))
+
 # 1.0.0 (2022-01-04)
 
 
