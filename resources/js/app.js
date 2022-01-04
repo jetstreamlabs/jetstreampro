@@ -1,15 +1,15 @@
-window.locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+window.locale = document.getElementsByTagName('html')[0].getAttribute('lang')
 
-import '../css/app.css';
+import '../css/app.css'
 
-import { createJasmineApp } from '@/Jasmine';
-import { InertiaProgress } from '@inertiajs/progress';
+import { createJetstreamApp } from '@/Application'
+import { InertiaProgress } from '@inertiajs/progress'
 
 const appName =
-	window.document.getElementsByTagName('title')[0]?.innerText || 'Jasmine';
+	window.document.getElementsByTagName('title')[0]?.innerText || 'Jetstream Pro'
 
-createJasmineApp({
-	appName: appName,
-});
+createJetstreamApp({
+	appName: appName
+})
 
-InertiaProgress.init({ color: '#4B5563' });
+InertiaProgress.init({ color: '#4B5563' })

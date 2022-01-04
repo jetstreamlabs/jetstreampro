@@ -1,11 +1,11 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
-import { jasmine } from '@/Jasmine/app.js'
+import { jetstreampro } from '@/Application/plugin.js'
 import DefaultLayout from '@/Components/Layouts/MainApp.vue'
 
 const pages = import.meta.glob('../Pages/**/*.vue')
 
-export default async function createJasmineApp({ appName }) {
+export default async function createJetstreamApp({ appName }) {
 	return createInertiaApp({
 		title: title => `${title} - ${appName}`,
 		resolve: name => {
@@ -24,7 +24,7 @@ export default async function createJasmineApp({ appName }) {
 		setup({ el, app, props, plugin }) {
 			return createApp({ render: () => h(app, props) })
 				.use(plugin)
-				.use(jasmine)
+				.use(jetstreampro)
 				.mount(el)
 		}
 	})
