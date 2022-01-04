@@ -1,0 +1,39 @@
+{
+	"arrowParens": "avoid",
+	"bracketSameLine": true,
+	"singleQuote": true,
+	"tabWidth": 2,
+	"useTabs": true,
+	"printWidth": 80,
+	"overrides": [
+		{
+			"files": "*.js",
+			"options": {
+				"semi": false,
+				"printWidth": 80,
+				"trailingComma": "none"
+			}
+		},
+		{
+			"files": "*.vue",
+			"options": {
+				"semi": false,
+				"printWidth": 120,
+				"bracketSameLine": true,
+				"trailingComma": "none"
+			}
+		},
+		{
+			"files": "*.md",
+			"options": {
+				"htmlWhitespaceSensitivity": "ignore"
+			}
+		},
+		{
+			"files": "docker-compose.yml",
+			"options": {
+				"tabWidth": 4
+			}
+		}
+	]
+}
