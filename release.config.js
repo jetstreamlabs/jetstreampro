@@ -8,17 +8,17 @@ const commitAnalyzerOptions = {
 		{ type: 'docs', release: 'patch' },
 		{ type: 'chore', release: false },
 		{ scope: 'style', release: false },
-		{ scope: 'test', release: false }
+		{ scope: 'test', release: false },
 	],
 	parserOpts: {
-		noteKeywords: []
-	}
-}
+		noteKeywords: [],
+	},
+};
 
 const releaseNotesGeneratorOptions = {
 	writerOpts: {
 		transform: (commit, context) => {
-			const issues = []
+			const issues = [];
 
 			const types = {
 				breaking: 'Breaking',
@@ -26,55 +26,50 @@ const releaseNotesGeneratorOptions = {
 				fix: 'Bug Fixes',
 				refactor: 'Code Refactoring',
 				docs: 'Documentation',
-				chore: 'Utilities'
-			}
+				chore: 'Utilities',
+			};
 
-			commit.type = types[commit.type]
+			commit.type = types[commit.type];
 
 			if (typeof commit.hash === 'string') {
-				commit.shortHash = commit.hash.substring(0, 7)
+				commit.shortHash = commit.hash.substring(0, 7);
 			}
 
 			if (typeof commit.subject === 'string') {
-				let url = context.repository
-					? `${context.host}/${context.owner}/${context.repository}`
-					: context.repoUrl
+				let url = context.repository ? `${context.host}/${context.owner}/${context.repository}` : context.repoUrl;
 				if (url) {
-					url = `${url}/issues/`
+					url = `${url}/issues/`;
 					// Issue URLs.
 					commit.subject = commit.subject.replace(/#([0-9]+)/g, (_, issue) => {
-						issues.push(issue)
-						return `[#${issue}](${url}${issue})`
-					})
+						issues.push(issue);
+						return `[#${issue}](${url}${issue})`;
+					});
 				}
 				if (context.host) {
 					// User URLs.
-					commit.subject = commit.subject.replace(
-						/\B@([a-z0-9](?:-?[a-z0-9/]){0,38})/g,
-						(_, username) => {
-							if (username.includes('/')) {
-								return `@${username}`
-							}
-
-							return `[@${username}](${context.host}/${username})`
+					commit.subject = commit.subject.replace(/\B@([a-z0-9](?:-?[a-z0-9/]){0,38})/g, (_, username) => {
+						if (username.includes('/')) {
+							return `@${username}`;
 						}
-					)
+
+						return `[@${username}](${context.host}/${username})`;
+					});
 				}
 			}
 
 			// remove references that already appear in the subject
-			commit.references = commit.references.filter(reference => {
+			commit.references = commit.references.filter((reference) => {
 				if (issues.indexOf(reference.issue) === -1) {
-					return true
+					return true;
 				}
 
-				return false
-			})
+				return false;
+			});
 
-			return commit
-		}
-	}
-}
+			return commit;
+		},
+	},
+};
 
 module.exports = {
 	debug: true,
@@ -90,16 +85,16 @@ module.exports = {
 			'@semantic-release/changelog',
 			{
 				changelogFile: 'CHANGELOG.md',
-				changelogTitle: '# Jetstream Pro Changelog'
-			}
+				changelogTitle: '# Jetstream Pro Changelog',
+			},
 		],
 		// creating a new version commit
 		[
 			'@semantic-release/git',
 			{
-				assets: ['CHANGELOG.md']
-			}
+				assets: ['CHANGELOG.md'],
+			},
 		],
-		'@semantic-release/github'
-	]
-}
+		'@semantic-release/github',
+	],
+};

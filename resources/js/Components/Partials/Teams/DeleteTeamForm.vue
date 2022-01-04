@@ -30,7 +30,8 @@
 						class="ml-2"
 						@click="deleteTeam"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing">
+						:disabled="form.processing"
+					>
 						Delete Team
 					</jet-danger-button>
 				</template>
@@ -48,20 +49,20 @@ export default defineComponent({
 			confirmingTeamDeletion: false,
 			deleting: false,
 
-			form: this.$inertia.form()
-		}
+			form: this.$inertia.form(),
+		};
 	},
 
 	methods: {
 		confirmTeamDeletion() {
-			this.confirmingTeamDeletion = true
+			this.confirmingTeamDeletion = true;
 		},
 
 		deleteTeam() {
 			this.form.delete(this.route('teams.destroy', this.team), {
-				errorBag: 'deleteTeam'
-			})
-		}
-	}
-})
+				errorBag: 'deleteTeam',
+			});
+		},
+	},
+});
 </script>

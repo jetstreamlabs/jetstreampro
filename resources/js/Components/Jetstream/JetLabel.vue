@@ -7,6 +7,6 @@
 
 <script>
 export default defineComponent({
-	props: ['value']
-})
+	props: ['value'],
+});
 </script>

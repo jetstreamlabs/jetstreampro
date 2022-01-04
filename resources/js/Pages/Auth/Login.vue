@@ -26,7 +26,8 @@
 					class="block w-full mt-1"
 					v-model="form.password"
 					required
-					autocomplete="current-password" />
+					autocomplete="current-password"
+				/>
 			</div>
 
 			<div class="block mt-4">
@@ -40,7 +41,8 @@
 				<Link
 					v-if="canResetPassword"
 					:href="route('password.request')"
-					class="text-sm text-gray-600 underline hover:text-gray-900">
+					class="text-sm text-gray-600 underline hover:text-gray-900"
+				>
 					Forgot your password?
 				</Link>
 
@@ -56,7 +58,7 @@
 export default defineComponent({
 	props: {
 		canResetPassword: Boolean,
-		status: String
+		status: String,
 	},
 
 	data() {
@@ -64,22 +66,22 @@ export default defineComponent({
 			form: this.$inertia.form({
 				email: '',
 				password: '',
-				remember: false
-			})
-		}
+				remember: false,
+			}),
+		};
 	},
 
 	methods: {
 		submit() {
 			this.form
-				.transform(data => ({
+				.transform((data) => ({
 					...data,
-					remember: this.form.remember ? 'on' : ''
+					remember: this.form.remember ? 'on' : '',
 				}))
 				.post(this.route('login'), {
-					onFinish: () => this.form.reset('password')
-				})
-		}
-	}
-})
+					onFinish: () => this.form.reset('password'),
+				});
+		},
+	},
+});
 </script>

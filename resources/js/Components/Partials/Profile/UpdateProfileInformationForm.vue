@@ -21,7 +21,8 @@
 				<div class="mt-2" v-show="photoPreview">
 					<span
 						class="block w-20 h-20 bg-center bg-no-repeat bg-cover rounded-full"
-						:style="'background-image: url(\'' + photoPreview + '\');'">
+						:style="'background-image: url(\'' + photoPreview + '\');'"
+					>
 					</span>
 				</div>
 
@@ -69,59 +70,59 @@ export default defineComponent({
 				_method: 'PUT',
 				name: this.user.name,
 				email: this.user.email,
-				photo: null
+				photo: null,
 			}),
 
-			photoPreview: null
-		}
+			photoPreview: null,
+		};
 	},
 
 	methods: {
 		updateProfileInformation() {
 			if (this.$refs.photo) {
-				this.form.photo = this.$refs.photo.files[0]
+				this.form.photo = this.$refs.photo.files[0];
 			}
 
 			this.form.post(this.route('user-profile-information.update'), {
 				errorBag: 'updateProfileInformation',
 				preserveScroll: true,
-				onSuccess: () => this.clearPhotoFileInput()
-			})
+				onSuccess: () => this.clearPhotoFileInput(),
+			});
 		},
 
 		selectNewPhoto() {
-			this.$refs.photo.click()
+			this.$refs.photo.click();
 		},
 
 		updatePhotoPreview() {
-			const photo = this.$refs.photo.files[0]
+			const photo = this.$refs.photo.files[0];
 
-			if (!photo) return
+			if (!photo) return;
 
-			const reader = new FileReader()
+			const reader = new FileReader();
 
-			reader.onload = e => {
-				this.photoPreview = e.target.result
-			}
+			reader.onload = (e) => {
+				this.photoPreview = e.target.result;
+			};
 
-			reader.readAsDataURL(photo)
+			reader.readAsDataURL(photo);
 		},
 
 		deletePhoto() {
 			this.$inertia.delete(this.route('current-user-photo.destroy'), {
 				preserveScroll: true,
 				onSuccess: () => {
-					this.photoPreview = null
-					this.clearPhotoFileInput()
-				}
-			})
+					this.photoPreview = null;
+					this.clearPhotoFileInput();
+				},
+			});
 		},
 
 		clearPhotoFileInput() {
 			if (this.$refs.photo?.value) {
-				this.$refs.photo.value = null
+				this.$refs.photo.value = null;
 			}
-		}
-	}
-})
+		},
+	},
+});
 </script>

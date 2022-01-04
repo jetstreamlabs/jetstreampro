@@ -35,21 +35,21 @@
 <script>
 export default defineComponent({
 	props: {
-		status: String
+		status: String,
 	},
 
 	data() {
 		return {
 			form: this.$inertia.form({
-				email: ''
-			})
-		}
+				email: '',
+			}),
+		};
 	},
 
 	methods: {
 		submit() {
-			this.form.post(this.route('password.email'))
-		}
-	}
-})
+			this.form.post(this.route('password.email'));
+		},
+	},
+});
 </script>

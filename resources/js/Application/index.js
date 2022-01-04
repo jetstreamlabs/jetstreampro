@@ -1,1 +1,1 @@
-export { default as createJetstreamApp } from './createJetstreamApp.js'
+export { default as createJetstreamApp } from './createJetstreamApp.js';

@@ -1,5 +1,5 @@
-import Echo from 'laravel-echo'
-import Larasocket from 'larasocket-js'
+import Echo from 'laravel-echo';
+import Larasocket from 'larasocket-js';
 
 const echo = new Echo({
 	broadcaster: Larasocket,
@@ -11,18 +11,18 @@ const echo = new Echo({
 				axios
 					.post('/api/broadcasting/auth', {
 						socket_id: socketId,
-						channel_name: channel.name
+						channel_name: channel.name,
 					})
-					.then(response => {
-						callback(false, response.data)
+					.then((response) => {
+						callback(false, response.data);
 					})
-					.catch(error => {
-						callback(true, error)
-					})
-			}
-		}
+					.catch((error) => {
+						callback(true, error);
+					});
+			},
+		};
 	},
-	debug: false
-})
+	debug: false,
+});
 
-export default { echo }
+export default { echo };

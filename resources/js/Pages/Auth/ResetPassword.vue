@@ -22,7 +22,8 @@
 					class="block w-full mt-1"
 					v-model="form.password"
 					required
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 			</div>
 
 			<div class="mt-4">
@@ -33,7 +34,8 @@
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
 					required
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 			</div>
 
 			<div class="flex items-center justify-end mt-4">
@@ -47,7 +49,7 @@
 export default defineComponent({
 	props: {
 		email: String,
-		token: String
+		token: String,
 	},
 
 	data() {
@@ -56,17 +58,17 @@ export default defineComponent({
 				token: this.token,
 				email: this.email,
 				password: '',
-				password_confirmation: ''
-			})
-		}
+				password_confirmation: '',
+			}),
+		};
 	},
 
 	methods: {
 		submit() {
 			this.form.post(this.route('password.update'), {
-				onFinish: () => this.form.reset('password', 'password_confirmation')
-			})
-		}
-	}
-})
+				onFinish: () => this.form.reset('password', 'password_confirmation'),
+			});
+		},
+	},
+});
 </script>

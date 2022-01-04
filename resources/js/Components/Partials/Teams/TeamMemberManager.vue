@@ -34,11 +34,12 @@
 								class="relative inline-flex w-full px-4 py-3 rounded-lg focus:z-10 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200"
 								:class="{
 									'border-t border-gray-200 rounded-t-none': i > 0,
-									'rounded-b-none': i != Object.keys(availableRoles).length - 1
+									'rounded-b-none': i != Object.keys(availableRoles).length - 1,
 								}"
 								@click="addTeamMemberForm.role = role.key"
 								v-for="(role, i) in availableRoles"
-								:key="role.key">
+								:key="role.key"
+							>
 								<div :class="{ 'opacity-50': addTeamMemberForm.role && addTeamMemberForm.role != role.key }">
 									<!-- Role Name -->
 									<div class="flex items-center">
@@ -54,7 +55,8 @@
 											stroke-linejoin="round"
 											stroke-width="2"
 											stroke="currentColor"
-											viewBox="0 0 24 24">
+											viewBox="0 0 24 24"
+										>
 											<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 										</svg>
 									</div>
@@ -97,7 +99,8 @@
 						<div
 							class="flex items-center justify-between"
 							v-for="invitation in team.team_invitations"
-							:key="invitation.id">
+							:key="invitation.id"
+						>
 							<div class="text-gray-600">{{ invitation.email }}</div>
 
 							<div class="flex items-center">
@@ -105,7 +108,8 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer focus:outline-none"
 									@click="cancelTeamInvitation(invitation)"
-									v-if="userPermissions.canRemoveTeamMembers">
+									v-if="userPermissions.canRemoveTeamMembers"
+								>
 									Cancel
 								</button>
 							</div>
@@ -138,7 +142,8 @@
 								<button
 									class="ml-2 text-sm text-gray-400 underline"
 									@click="manageRole(user)"
-									v-if="userPermissions.canAddTeamMembers && availableRoles.length">
+									v-if="userPermissions.canAddTeamMembers && availableRoles.length"
+								>
 									{{ displayableRole(user.membership.role) }}
 								</button>
 
@@ -150,7 +155,8 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmLeavingTeam"
-									v-if="$page.props.user.id === user.id">
+									v-if="$page.props.user.id === user.id"
+								>
 									Leave
 								</button>
 
@@ -158,7 +164,8 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmTeamMemberRemoval(user)"
-									v-if="userPermissions.canRemoveTeamMembers">
+									v-if="userPermissions.canRemoveTeamMembers"
+								>
 									Remove
 								</button>
 							</div>
@@ -180,11 +187,12 @@
 							class="relative inline-flex w-full px-4 py-3 rounded-lg focus:z-10 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200"
 							:class="{
 								'border-t border-gray-200 rounded-t-none': i > 0,
-								'rounded-b-none': i !== Object.keys(availableRoles).length - 1
+								'rounded-b-none': i !== Object.keys(availableRoles).length - 1,
 							}"
 							@click="updateRoleForm.role = role.key"
 							v-for="(role, i) in availableRoles"
-							:key="role.key">
+							:key="role.key"
+						>
 							<div :class="{ 'opacity-50': updateRoleForm.role && updateRoleForm.role !== role.key }">
 								<!-- Role Name -->
 								<div class="flex items-center">
@@ -200,7 +208,8 @@
 										stroke-linejoin="round"
 										stroke-width="2"
 										stroke="currentColor"
-										viewBox="0 0 24 24">
+										viewBox="0 0 24 24"
+									>
 										<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 									</svg>
 								</div>
@@ -222,7 +231,8 @@
 					class="ml-2"
 					@click="updateRole"
 					:class="{ 'opacity-25': updateRoleForm.processing }"
-					:disabled="updateRoleForm.processing">
+					:disabled="updateRoleForm.processing"
+				>
 					Save
 				</jet-button>
 			</template>
@@ -241,7 +251,8 @@
 					class="ml-2"
 					@click="leaveTeam"
 					:class="{ 'opacity-25': leaveTeamForm.processing }"
-					:disabled="leaveTeamForm.processing">
+					:disabled="leaveTeamForm.processing"
+				>
 					Leave
 				</jet-danger-button>
 			</template>
@@ -260,7 +271,8 @@
 					class="ml-2"
 					@click="removeTeamMember"
 					:class="{ 'opacity-25': removeTeamMemberForm.processing }"
-					:disabled="removeTeamMemberForm.processing">
+					:disabled="removeTeamMemberForm.processing"
+				>
 					Remove
 				</jet-danger-button>
 			</template>
@@ -276,11 +288,11 @@ export default defineComponent({
 		return {
 			addTeamMemberForm: this.$inertia.form({
 				email: '',
-				role: null
+				role: null,
 			}),
 
 			updateRoleForm: this.$inertia.form({
-				role: null
+				role: null,
 			}),
 
 			leaveTeamForm: this.$inertia.form(),
@@ -289,8 +301,8 @@ export default defineComponent({
 			currentlyManagingRole: false,
 			managingRoleFor: null,
 			confirmingLeavingTeam: false,
-			teamMemberBeingRemoved: null
-		}
+			teamMemberBeingRemoved: null,
+		};
 	},
 
 	methods: {
@@ -298,39 +310,39 @@ export default defineComponent({
 			this.addTeamMemberForm.post(this.route('team-members.store', this.team), {
 				errorBag: 'addTeamMember',
 				preserveScroll: true,
-				onSuccess: () => this.addTeamMemberForm.reset()
-			})
+				onSuccess: () => this.addTeamMemberForm.reset(),
+			});
 		},
 
 		cancelTeamInvitation(invitation) {
 			this.$inertia.delete(this.route('team-invitations.destroy', invitation), {
-				preserveScroll: true
-			})
+				preserveScroll: true,
+			});
 		},
 
 		manageRole(teamMember) {
-			this.managingRoleFor = teamMember
-			this.updateRoleForm.role = teamMember.membership.role
-			this.currentlyManagingRole = true
+			this.managingRoleFor = teamMember;
+			this.updateRoleForm.role = teamMember.membership.role;
+			this.currentlyManagingRole = true;
 		},
 
 		updateRole() {
 			this.updateRoleForm.put(this.route('team-members.update', [this.team, this.managingRoleFor]), {
 				preserveScroll: true,
-				onSuccess: () => (this.currentlyManagingRole = false)
-			})
+				onSuccess: () => (this.currentlyManagingRole = false),
+			});
 		},
 
 		confirmLeavingTeam() {
-			this.confirmingLeavingTeam = true
+			this.confirmingLeavingTeam = true;
 		},
 
 		leaveTeam() {
-			this.leaveTeamForm.delete(this.route('team-members.destroy', [this.team, this.$page.props.user]))
+			this.leaveTeamForm.delete(this.route('team-members.destroy', [this.team, this.$page.props.user]));
 		},
 
 		confirmTeamMemberRemoval(teamMember) {
-			this.teamMemberBeingRemoved = teamMember
+			this.teamMemberBeingRemoved = teamMember;
 		},
 
 		removeTeamMember() {
@@ -338,13 +350,13 @@ export default defineComponent({
 				errorBag: 'removeTeamMember',
 				preserveScroll: true,
 				preserveState: true,
-				onSuccess: () => (this.teamMemberBeingRemoved = null)
-			})
+				onSuccess: () => (this.teamMemberBeingRemoved = null),
+			});
 		},
 
 		displayableRole(role) {
-			return this.availableRoles.find(r => r.key === role).name
-		}
-	}
-})
+			return this.availableRoles.find((r) => r.key === role).name;
+		},
+	},
+});
 </script>
