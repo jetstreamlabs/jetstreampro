@@ -1,5 +1,21 @@
 # Jetstream Pro Changelog
 
+## [1.0.2](https://github.com/jetstreamlabs/jetstreampro/compare/v1.0.1...v1.0.2) (2022-01-07)
+
+
+### Code Refactoring
+
+* major updates for components and actions ([51816de](https://github.com/jetstreamlabs/jetstreampro/commit/51816dedf76aa8e1de7f222acbf5e8363b9bd9c4))
+
+
+* Merge pull request #2 from jetstreamlabs/analysis-rdnO7G ([6db94e7](https://github.com/jetstreamlabs/jetstreampro/commit/6db94e75f9b0fbf10e4346c1027f3d0cd50f2e18)), closes [#2](https://github.com/jetstreamlabs/jetstreampro/issues/2)
+* Apply fixes from StyleCI ([15f7fd7](https://github.com/jetstreamlabs/jetstreampro/commit/15f7fd7f812c5afe067dc9d61e1311ecd49c9530))
+
+
+### Maintenance
+
+* **style:** apply style changes from styleci ([6c0f81c](https://github.com/jetstreamlabs/jetstreampro/commit/6c0f81c20849c41e19d67e01c2b6c2a5f6836f15))
+
 ## [1.0.1](https://github.com/jetstreamlabs/jetstreampro/compare/v1.0.0...v1.0.1) (2022-01-04)
 
 
