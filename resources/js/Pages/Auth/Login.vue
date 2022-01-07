@@ -26,7 +26,8 @@
 					class="block w-full mt-1"
 					v-model="form.password"
 					required
-					autocomplete="current-password" />
+					autocomplete="current-password"
+				/>
 			</div>
 
 			<div class="block mt-4">
@@ -40,7 +41,8 @@
 				<Link
 					v-if="canResetPassword"
 					:href="route('password.request')"
-					class="text-sm text-gray-600 underline hover:text-gray-900">
+					class="text-sm text-gray-600 underline hover:text-gray-900"
+				>
 					Forgot your password?
 				</Link>
 

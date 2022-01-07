@@ -5,6 +5,7 @@ php:
   use-tabs: true
   finder:
     exclude:
+      - 'public'
       - 'storage'
       - 'vendor'
     name: '*.php'
@@ -16,6 +17,7 @@ js:
   semicolons: false
   finder:
     exclude:
+      - 'public'
       - 'node_modules'
 css:
   tab-width: 2

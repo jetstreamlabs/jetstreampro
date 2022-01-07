@@ -15,5 +15,5 @@ export default defineComponent({
 			default: 'button',
 		},
 	},
-});
+})
 </script>

@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite';
-import Components from 'unplugin-vue-components/vite';
-import AutoImport from 'unplugin-auto-import/vite';
-import vue from '@vitejs/plugin-vue';
-import Dotenv from 'dotenv';
-const { resolve } = require('path');
+import { defineConfig } from 'vite'
+import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import vue from '@vitejs/plugin-vue'
+import Dotenv from 'dotenv'
+const { resolve } = require('path')
 
-Dotenv.config();
+Dotenv.config()
 
 // prettier-ignore
 export default defineConfig(({ command }) => {

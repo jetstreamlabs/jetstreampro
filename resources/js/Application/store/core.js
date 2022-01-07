@@ -8,23 +8,23 @@ export default {
 
 	getters: {
 		getVisible(state) {
-			return state.visible;
+			return state.visible
 		},
 	},
 
 	mutations: {
 		setVisible(state, visible) {
-			state.visible = visible;
+			state.visible = visible
 		},
 	},
 
 	actions: {
 		fire({ commit }) {
-			commit('setVisible', true);
+			commit('setVisible', true)
 		},
 
 		dismiss({ commit }) {
-			commit('setVisible', false);
+			commit('setVisible', false)
 		},
 	},
-};
+}

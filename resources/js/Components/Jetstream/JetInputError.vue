@@ -9,5 +9,5 @@
 <script>
 export default defineComponent({
 	props: ['message'],
-});
+})
 </script>

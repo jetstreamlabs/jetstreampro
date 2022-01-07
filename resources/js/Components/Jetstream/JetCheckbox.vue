@@ -24,13 +24,13 @@ export default defineComponent({
 	computed: {
 		proxyChecked: {
 			get() {
-				return this.checked;
+				return this.checked
 			},
 
 			set(val) {
-				this.$emit('update:checked', val);
+				this.$emit('update:checked', val)
 			},
 		},
 	},
-});
+})
 </script>

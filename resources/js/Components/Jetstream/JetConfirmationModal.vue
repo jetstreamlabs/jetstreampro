@@ -50,8 +50,8 @@ export default defineComponent({
 
 	methods: {
 		close() {
-			this.$emit('close');
+			this.$emit('close')
 		},
 	},
-});
+})
 </script>

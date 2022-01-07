@@ -57,9 +57,9 @@ export default defineComponent({
 			immediate: true,
 			handler: (show) => {
 				if (show) {
-					document.body.style.overflow = 'hidden';
+					document.body.style.overflow = 'hidden'
 				} else {
-					document.body.style.overflow = null;
+					document.body.style.overflow = null
 				}
 			},
 		},
@@ -68,25 +68,25 @@ export default defineComponent({
 	setup(props, { emit }) {
 		const close = () => {
 			if (props.closeable) {
-				emit('close');
+				emit('close')
 			}
-		};
+		}
 
 		const closeOnEscape = (e) => {
 			if (e.key === 'Escape' && props.show) {
-				close();
+				close()
 			}
-		};
+		}
 
-		onMounted(() => document.addEventListener('keydown', closeOnEscape));
+		onMounted(() => document.addEventListener('keydown', closeOnEscape))
 		onUnmounted(() => {
-			document.removeEventListener('keydown', closeOnEscape);
-			document.body.style.overflow = null;
-		});
+			document.removeEventListener('keydown', closeOnEscape)
+			document.body.style.overflow = null
+		})
 
 		return {
 			close,
-		};
+		}
 	},
 
 	computed: {
@@ -97,8 +97,8 @@ export default defineComponent({
 				lg: 'sm:max-w-lg',
 				xl: 'sm:max-w-xl',
 				'2xl': 'sm:max-w-2xl',
-			}[this.maxWidth];
+			}[this.maxWidth]
 		},
 	},
-});
+})
 </script>

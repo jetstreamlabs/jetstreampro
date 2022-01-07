@@ -33,18 +33,21 @@
 										<span class="inline-flex rounded-md">
 											<button
 												type="button"
-												class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50">
+												class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50"
+											>
 												{{ $page.props.user.current_team.name }}
 
 												<svg
 													class="ml-2 -mr-0.5 h-4 w-4"
 													xmlns="http://www.w3.org/2000/svg"
 													viewBox="0 0 20 20"
-													fill="currentColor">
+													fill="currentColor"
+												>
 													<path
 														fill-rule="evenodd"
 														d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-														clip-rule="evenodd" />
+														clip-rule="evenodd"
+													/>
 												</svg>
 											</button>
 										</span>
@@ -82,7 +85,8 @@
 																	stroke-linejoin="round"
 																	stroke-width="2"
 																	stroke="currentColor"
-																	viewBox="0 0 24 24">
+																	viewBox="0 0 24 24"
+																>
 																	<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 																</svg>
 																<div>{{ team.name }}</div>
@@ -102,28 +106,33 @@
 									<template #trigger>
 										<button
 											v-if="$page.props.jetstream.managesProfilePhotos"
-											class="flex text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300">
+											class="flex text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300"
+										>
 											<img
 												class="object-cover w-8 h-8 rounded-full"
 												:src="$page.props.user.profile_photo_url"
-												:alt="$page.props.user.name" />
+												:alt="$page.props.user.name"
+											/>
 										</button>
 
 										<span v-else class="inline-flex rounded-md">
 											<button
 												type="button"
-												class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
+												class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none"
+											>
 												{{ $page.props.user.name }}
 
 												<svg
 													class="ml-2 -mr-0.5 h-4 w-4"
 													xmlns="http://www.w3.org/2000/svg"
 													viewBox="0 0 20 20"
-													fill="currentColor">
+													fill="currentColor"
+												>
 													<path
 														fill-rule="evenodd"
 														d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-														clip-rule="evenodd" />
+														clip-rule="evenodd"
+													/>
 												</svg>
 											</button>
 										</span>
@@ -154,20 +163,23 @@
 						<div class="flex items-center -mr-2 sm:hidden">
 							<button
 								@click="showingNavigationDropdown = !showingNavigationDropdown"
-								class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500">
+								class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
+							>
 								<svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
 									<path
 										:class="{ hidden: showingNavigationDropdown, 'inline-flex': !showingNavigationDropdown }"
 										stroke-linecap="round"
 										stroke-linejoin="round"
 										stroke-width="2"
-										d="M4 6h16M4 12h16M4 18h16" />
+										d="M4 6h16M4 12h16M4 18h16"
+									/>
 									<path
 										:class="{ hidden: !showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }"
 										stroke-linecap="round"
 										stroke-linejoin="round"
 										stroke-width="2"
-										d="M6 18L18 6M6 6l12 12" />
+										d="M6 18L18 6M6 6l12 12"
+									/>
 								</svg>
 							</button>
 						</div>
@@ -189,7 +201,8 @@
 								<img
 									class="object-cover w-10 h-10 rounded-full"
 									:src="$page.props.user.profile_photo_url"
-									:alt="$page.props.user.name" />
+									:alt="$page.props.user.name"
+								/>
 							</div>
 
 							<div>
@@ -206,7 +219,8 @@
 							<JetResponsiveNavLink
 								:href="route('api-tokens.index')"
 								:active="route().current('api-tokens.index')"
-								v-if="$page.props.jetstream.hasApiFeatures">
+								v-if="$page.props.jetstream.hasApiFeatures"
+							>
 								{{ __('layouts.main.tokens') }}
 							</JetResponsiveNavLink>
 
@@ -224,14 +238,16 @@
 								<!-- Team Settings -->
 								<JetResponsiveNavLink
 									:href="route('teams.show', $page.props.user.current_team)"
-									:active="route().current('teams.show')">
+									:active="route().current('teams.show')"
+								>
 									{{ __('layouts.main.settings') }}
 								</JetResponsiveNavLink>
 
 								<JetResponsiveNavLink
 									:href="route('teams.create')"
 									:active="route().current('teams.create')"
-									v-if="$page.props.jetstream.canCreateTeams">
+									v-if="$page.props.jetstream.canCreateTeams"
+								>
 									{{ __('layouts.main.create') }}
 								</JetResponsiveNavLink>
 
@@ -252,7 +268,8 @@
 													stroke-linejoin="round"
 													stroke-width="2"
 													stroke="currentColor"
-													viewBox="0 0 24 24">
+													viewBox="0 0 24 24"
+												>
 													<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 												</svg>
 												<div>{{ team.name }}</div>

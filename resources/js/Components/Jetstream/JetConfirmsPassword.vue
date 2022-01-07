@@ -19,7 +19,8 @@
 						placeholder="Password"
 						ref="password"
 						v-model="form.password"
-						@keyup.enter="confirmPassword" />
+						@keyup.enter="confirmPassword"
+					/>
 
 					<JetInput-error :message="form.error" class="mt-2" />
 				</div>
@@ -32,7 +33,8 @@
 					class="ml-2"
 					@click="confirmPassword"
 					:class="{ 'opacity-25': form.processing }"
-					:disabled="form.processing">
+					:disabled="form.processing"
+				>
 					{{ button }}
 				</JetButton>
 			</template>

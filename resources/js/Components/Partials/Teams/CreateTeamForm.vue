@@ -12,7 +12,8 @@
 					<img
 						class="object-cover w-12 h-12 rounded-full"
 						:src="$page.props.user.profile_photo_url"
-						:alt="$page.props.user.name" />
+						:alt="$page.props.user.name"
+					/>
 
 					<div class="ml-4 leading-tight">
 						<div>{{ $page.props.user.name }}</div>

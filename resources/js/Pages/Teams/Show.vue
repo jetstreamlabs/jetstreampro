@@ -12,7 +12,8 @@
 					class="mt-10 sm:mt-0"
 					:team="team"
 					:available-roles="availableRoles"
-					:user-permissions="permissions" />
+					:user-permissions="permissions"
+				/>
 
 				<template v-if="permissions.canDeleteTeam && !team.personal_team">
 					<JetSectionBorder />

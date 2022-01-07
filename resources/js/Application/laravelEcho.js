@@ -1,5 +1,5 @@
-import Echo from 'laravel-echo';
-import Larasocket from 'larasocket-js';
+import Echo from 'laravel-echo'
+import Larasocket from 'larasocket-js'
 
 const echo = new Echo({
 	broadcaster: Larasocket,
@@ -14,15 +14,15 @@ const echo = new Echo({
 						channel_name: channel.name,
 					})
 					.then((response) => {
-						callback(false, response.data);
+						callback(false, response.data)
 					})
 					.catch((error) => {
-						callback(true, error);
-					});
+						callback(true, error)
+					})
 			},
-		};
+		}
 	},
 	debug: false,
-});
+})
 
-export default { echo };
+export default { echo }

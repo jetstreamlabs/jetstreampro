@@ -30,7 +30,8 @@
 							placeholder="Password"
 							ref="password"
 							v-model="form.password"
-							@keyup.enter="deleteUser" />
+							@keyup.enter="deleteUser"
+						/>
 
 						<JetInput-error :message="form.errors.password" class="mt-2" />
 					</div>
@@ -43,7 +44,8 @@
 						class="ml-2"
 						@click="deleteUser"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing">
+						:disabled="form.processing"
+					>
 						Delete Account
 					</JetDangerButton>
 				</template>

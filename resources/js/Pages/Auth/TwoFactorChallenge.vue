@@ -30,7 +30,8 @@
 					class="block w-full mt-1"
 					v-model="form.code"
 					autofocus
-					autocomplete="one-time-code" />
+					autocomplete="one-time-code"
+				/>
 			</div>
 
 			<div v-else>
@@ -41,14 +42,16 @@
 					type="text"
 					class="block w-full mt-1"
 					v-model="form.recovery_code"
-					autocomplete="one-time-code" />
+					autocomplete="one-time-code"
+				/>
 			</div>
 
 			<div class="flex items-center justify-end mt-4">
 				<button
 					type="button"
 					class="text-sm text-gray-600 underline cursor-pointer hover:text-gray-900"
-					@click.prevent="toggleRecovery">
+					@click.prevent="toggleRecovery"
+				>
 					<template v-if="!recovery"> Use a recovery code </template>
 
 					<template v-else> Use an authentication code </template>

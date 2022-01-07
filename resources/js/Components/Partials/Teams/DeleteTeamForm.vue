@@ -30,7 +30,8 @@
 						class="ml-2"
 						@click="deleteTeam"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing">
+						:disabled="form.processing"
+					>
 						Delete Team
 					</JetDangerButton>
 				</template>

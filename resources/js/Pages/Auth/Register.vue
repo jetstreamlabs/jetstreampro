@@ -18,7 +18,8 @@
 					v-model="form.name"
 					required
 					autofocus
-					autocomplete="name" />
+					autocomplete="name"
+				/>
 			</div>
 
 			<div class="mt-4">
@@ -34,7 +35,8 @@
 					class="block w-full mt-1"
 					v-model="form.password"
 					required
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 			</div>
 
 			<div class="mt-4">
@@ -45,7 +47,8 @@
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
 					required
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 			</div>
 
 			<div class="mt-4" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">

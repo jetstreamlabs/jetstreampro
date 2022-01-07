@@ -8,5 +8,5 @@
 <script>
 export default defineComponent({
 	props: ['value'],
-});
+})
 </script>

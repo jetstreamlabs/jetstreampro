@@ -13,5 +13,5 @@
 </template>
 
 <script setup>
-const props = defineProps(['on']);
+const props = defineProps(['on'])
 </script>

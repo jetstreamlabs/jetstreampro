@@ -22,7 +22,8 @@
 					v-model="form.password"
 					required
 					autocomplete="current-password"
-					autofocus />
+					autofocus
+				/>
 			</div>
 
 			<div class="flex justify-end mt-4">
