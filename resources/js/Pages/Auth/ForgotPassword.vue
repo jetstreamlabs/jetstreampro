@@ -1,9 +1,9 @@
 <template>
 	<Head title="Forgot Password" />
 
-	<jet-authentication-card>
+	<JetAuthenticationCard>
 		<template #logo>
-			<jet-authentication-card-logo />
+			<JetAuthenticationCard-logo />
 		</template>
 
 		<div class="mb-4 text-sm text-gray-600">
@@ -15,21 +15,21 @@
 			{{ status }}
 		</div>
 
-		<jet-validation-errors class="mb-4" />
+		<JetValidationErrors class="mb-4" />
 
 		<form @submit.prevent="submit">
 			<div>
-				<jet-label for="email" value="Email" />
-				<jet-input id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
+				<JetLabel for="email" value="Email" />
+				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
 			</div>
 
 			<div class="flex items-center justify-end mt-4">
-				<jet-button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+				<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
 					Email Password Reset Link
-				</jet-button>
+				</JetButton>
 			</div>
 		</form>
-	</jet-authentication-card>
+	</JetAuthenticationCard>
 </template>
 
 <script>
@@ -43,13 +43,13 @@ export default defineComponent({
 			form: this.$inertia.form({
 				email: '',
 			}),
-		};
+		}
 	},
 
 	methods: {
 		submit() {
-			this.form.post(this.route('password.email'));
+			this.form.post(this.route('password.email'))
 		},
 	},
-});
+})
 </script>

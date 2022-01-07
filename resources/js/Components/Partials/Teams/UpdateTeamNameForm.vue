@@ -1,5 +1,5 @@
 <template>
-	<jet-form-section @submitted="updateTeamName">
+	<JetFormSection @submitted="updateTeamName">
 		<template #title> Team Name </template>
 
 		<template #description> The team's name and owner information. </template>
@@ -7,7 +7,7 @@
 		<template #form>
 			<!-- Team Owner Information -->
 			<div class="col-span-6">
-				<jet-label value="Team Owner" />
+				<JetLabel value="Team Owner" />
 
 				<div class="flex items-center mt-2">
 					<img class="object-cover w-12 h-12 rounded-full" :src="team.owner.profile_photo_url" :alt="team.owner.name" />
@@ -21,26 +21,25 @@
 
 			<!-- Team Name -->
 			<div class="col-span-6 sm:col-span-4">
-				<jet-label for="name" value="Team Name" />
+				<JetLabel for="name" value="Team Name" />
 
-				<jet-input
+				<JetInput
 					id="name"
 					type="text"
 					class="block w-full mt-1"
 					v-model="form.name"
-					:disabled="!permissions.canUpdateTeam"
-				/>
+					:disabled="!permissions.canUpdateTeam" />
 
-				<jet-input-error :message="form.errors.name" class="mt-2" />
+				<JetInput-error :message="form.errors.name" class="mt-2" />
 			</div>
 		</template>
 
 		<template #actions v-if="permissions.canUpdateTeam">
-			<jet-action-message :on="form.recentlySuccessful" class="mr-3"> Saved. </jet-action-message>
+			<JetActionMessage :on="form.recentlySuccessful" class="mr-3"> Saved. </JetActionMessage>
 
-			<jet-button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Save </jet-button>
+			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Save </JetButton>
 		</template>
-	</jet-form-section>
+	</JetFormSection>
 </template>
 
 <script>
@@ -52,7 +51,7 @@ export default defineComponent({
 			form: this.$inertia.form({
 				name: this.team.name,
 			}),
-		};
+		}
 	},
 
 	methods: {
@@ -60,8 +59,8 @@ export default defineComponent({
 			this.form.put(this.route('teams.update', this.team), {
 				errorBag: 'updateTeamName',
 				preserveScroll: true,
-			});
+			})
 		},
 	},
-});
+})
 </script>

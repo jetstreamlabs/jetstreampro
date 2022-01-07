@@ -1,48 +1,46 @@
 <template>
 	<Head title="Reset Password" />
 
-	<jet-authentication-card>
+	<JetAuthenticationCard>
 		<template #logo>
-			<jet-authentication-card-logo />
+			<JetAuthenticationCard-logo />
 		</template>
 
-		<jet-validation-errors class="mb-4" />
+		<JetValidationErrors class="mb-4" />
 
 		<form @submit.prevent="submit">
 			<div>
-				<jet-label for="email" value="Email" />
-				<jet-input id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
+				<JetLabel for="email" value="Email" />
+				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
 			</div>
 
 			<div class="mt-4">
-				<jet-label for="password" value="Password" />
-				<jet-input
+				<JetLabel for="password" value="Password" />
+				<JetInput
 					id="password"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password"
 					required
-					autocomplete="new-password"
-				/>
+					autocomplete="new-password" />
 			</div>
 
 			<div class="mt-4">
-				<jet-label for="password_confirmation" value="Confirm Password" />
-				<jet-input
+				<JetLabel for="password_confirmation" value="Confirm Password" />
+				<JetInput
 					id="password_confirmation"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
 					required
-					autocomplete="new-password"
-				/>
+					autocomplete="new-password" />
 			</div>
 
 			<div class="flex items-center justify-end mt-4">
-				<jet-button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Reset Password </jet-button>
+				<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Reset Password </JetButton>
 			</div>
 		</form>
-	</jet-authentication-card>
+	</JetAuthenticationCard>
 </template>
 
 <script>
@@ -60,15 +58,15 @@ export default defineComponent({
 				password: '',
 				password_confirmation: '',
 			}),
-		};
+		}
 	},
 
 	methods: {
 		submit() {
 			this.form.post(this.route('password.update'), {
 				onFinish: () => this.form.reset('password', 'password_confirmation'),
-			});
+			})
 		},
 	},
-});
+})
 </script>

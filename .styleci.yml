@@ -4,15 +4,19 @@ php:
   tab-width: 2
   use-tabs: true
   finder:
+    exclude:
+      - 'storage'
+      - 'vendor'
+    name: '*.php'
     not-name:
-      - index.php
-      - server.php
+      - '*.blade.php'
 js:
   tab-width: 2
   use-tabs: true
+  semicolons: false
   finder:
-    not-name:
-      - webpack.mix.js
+    exclude:
+      - 'node_modules'
 css:
   tab-width: 2
   use-tabs: true
@@ -20,3 +24,4 @@ css:
 vue:
   tab-width: 2
   use-tabs: true
+  semicolons: false

@@ -13,15 +13,13 @@
 			enter-to-class="transform scale-100 opacity-100"
 			leave-active-class="transition duration-75 ease-in"
 			leave-from-class="transform scale-100 opacity-100"
-			leave-to-class="transform scale-95 opacity-0"
-		>
+			leave-to-class="transform scale-95 opacity-0">
 			<div
 				v-show="open"
 				class="absolute z-50 mt-2 rounded-md shadow-lg"
 				:class="[widthClass, alignmentClasses]"
 				style="display: none"
-				@click="open = false"
-			>
+				@click="open = false">
 				<div class="rounded-md ring-1 ring-black ring-opacity-5" :class="contentClasses">
 					<slot name="content"></slot>
 				</div>
@@ -45,38 +43,38 @@ export default defineComponent({
 	},
 
 	setup() {
-		let open = ref(false);
+		let open = ref(false)
 
 		const closeOnEscape = (e) => {
 			if (open.value && e.key === 'Escape') {
-				open.value = false;
+				open.value = false
 			}
-		};
+		}
 
-		onMounted(() => document.addEventListener('keydown', closeOnEscape));
-		onUnmounted(() => document.removeEventListener('keydown', closeOnEscape));
+		onMounted(() => document.addEventListener('keydown', closeOnEscape))
+		onUnmounted(() => document.removeEventListener('keydown', closeOnEscape))
 
 		return {
 			open,
-		};
+		}
 	},
 
 	computed: {
 		widthClass() {
 			return {
 				48: 'w-48',
-			}[this.width.toString()];
+			}[this.width.toString()]
 		},
 
 		alignmentClasses() {
 			if (this.align === 'left') {
-				return 'origin-top-left left-0';
+				return 'origin-top-left left-0'
 			} else if (this.align === 'right') {
-				return 'origin-top-right right-0';
+				return 'origin-top-right right-0'
 			} else {
-				return 'origin-top';
+				return 'origin-top'
 			}
 		},
 	},
-});
+})
 </script>

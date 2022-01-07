@@ -1,26 +1,29 @@
 {
-	"arrowParens": "avoid",
+	"arrowParens": "always",
 	"bracketSameLine": true,
 	"singleQuote": true,
 	"tabWidth": 2,
 	"useTabs": true,
-	"printWidth": 80,
+	"printWidth": 120,
 	"overrides": [
 		{
 			"files": "*.js",
 			"options": {
 				"semi": false,
-				"printWidth": 80,
-				"trailingComma": "none"
+				"bracketSpacing": true,
+				"trailingComma": "es5",
+				"htmlWhitespaceSensitivity": "css"
 			}
 		},
 		{
 			"files": "*.vue",
 			"options": {
 				"semi": false,
-				"printWidth": 120,
+				"indentScriptAndStyle": false,
 				"bracketSameLine": true,
-				"trailingComma": "none"
+				"bracketSpacing": true,
+				"trailingComma": "es5",
+				"htmlWhitespaceSensitivity": "css"
 			}
 		},
 		{

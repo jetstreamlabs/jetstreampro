@@ -1,5 +1,5 @@
 <template>
-	<MainApp title="API Tokens">
+	<MainLayout title="API Tokens">
 		<template #header>
 			<h2 class="text-xl font-semibold leading-tight text-gray-800">API Tokens</h2>
 		</template>
@@ -9,11 +9,10 @@
 				<ApiTokenManager
 					:tokens="props.tokens"
 					:available-permissions="props.availablePermissions"
-					:default-permissions="props.defaultPermissions"
-				/>
+					:default-permissions="props.defaultPermissions" />
 			</div>
 		</div>
-	</MainApp>
+	</MainLayout>
 </template>
 
 <script setup>

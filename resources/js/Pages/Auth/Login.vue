@@ -1,12 +1,12 @@
 <template>
 	<Head title="Log in" />
 
-	<jet-authentication-card>
+	<JetAuthenticationCard>
 		<template #logo>
-			<jet-authentication-card-logo />
+			<JetAuthenticationCard-logo />
 		</template>
 
-		<jet-validation-errors class="mb-4" />
+		<JetValidationErrors class="mb-4" />
 
 		<div v-if="status" class="mb-4 text-sm font-medium text-green-600">
 			{{ status }}
@@ -14,25 +14,24 @@
 
 		<form @submit.prevent="submit">
 			<div>
-				<jet-label for="email" value="Email" />
-				<jet-input id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
+				<JetLabel for="email" value="Email" />
+				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
 			</div>
 
 			<div class="mt-4">
-				<jet-label for="password" value="Password" />
-				<jet-input
+				<JetLabel for="password" value="Password" />
+				<JetInput
 					id="password"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password"
 					required
-					autocomplete="current-password"
-				/>
+					autocomplete="current-password" />
 			</div>
 
 			<div class="block mt-4">
 				<label class="flex items-center">
-					<jet-checkbox name="remember" v-model:checked="form.remember" />
+					<JetCheckbox name="remember" v-model:checked="form.remember" />
 					<span class="ml-2 text-sm text-gray-600">Remember me</span>
 				</label>
 			</div>
@@ -41,17 +40,16 @@
 				<Link
 					v-if="canResetPassword"
 					:href="route('password.request')"
-					class="text-sm text-gray-600 underline hover:text-gray-900"
-				>
+					class="text-sm text-gray-600 underline hover:text-gray-900">
 					Forgot your password?
 				</Link>
 
-				<jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+				<JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
 					Log in
-				</jet-button>
+				</JetButton>
 			</div>
 		</form>
-	</jet-authentication-card>
+	</JetAuthenticationCard>
 </template>
 
 <script>
@@ -68,7 +66,7 @@ export default defineComponent({
 				password: '',
 				remember: false,
 			}),
-		};
+		}
 	},
 
 	methods: {
@@ -80,8 +78,8 @@ export default defineComponent({
 				}))
 				.post(this.route('login'), {
 					onFinish: () => this.form.reset('password'),
-				});
+				})
 		},
 	},
-});
+})
 </script>

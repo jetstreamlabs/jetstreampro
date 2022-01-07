@@ -1,60 +1,57 @@
 <template>
 	<Head title="Register" />
 
-	<jet-authentication-card>
+	<JetAuthenticationCard>
 		<template #logo>
-			<jet-authentication-card-logo />
+			<JetAuthenticationCard-logo />
 		</template>
 
-		<jet-validation-errors class="mb-4" />
+		<JetValidationErrors class="mb-4" />
 
 		<form @submit.prevent="submit">
 			<div>
-				<jet-label for="name" value="Name" />
-				<jet-input
+				<JetLabel for="name" value="Name" />
+				<JetInput
 					id="name"
 					type="text"
 					class="block w-full mt-1"
 					v-model="form.name"
 					required
 					autofocus
-					autocomplete="name"
-				/>
+					autocomplete="name" />
 			</div>
 
 			<div class="mt-4">
-				<jet-label for="email" value="Email" />
-				<jet-input id="email" type="email" class="block w-full mt-1" v-model="form.email" required />
+				<JetLabel for="email" value="Email" />
+				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required />
 			</div>
 
 			<div class="mt-4">
-				<jet-label for="password" value="Password" />
-				<jet-input
+				<JetLabel for="password" value="Password" />
+				<JetInput
 					id="password"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password"
 					required
-					autocomplete="new-password"
-				/>
+					autocomplete="new-password" />
 			</div>
 
 			<div class="mt-4">
-				<jet-label for="password_confirmation" value="Confirm Password" />
-				<jet-input
+				<JetLabel for="password_confirmation" value="Confirm Password" />
+				<JetInput
 					id="password_confirmation"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
 					required
-					autocomplete="new-password"
-				/>
+					autocomplete="new-password" />
 			</div>
 
 			<div class="mt-4" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">
-				<jet-label for="terms">
+				<JetLabel for="terms">
 					<div class="flex items-center">
-						<jet-checkbox name="terms" id="terms" v-model:checked="form.terms" />
+						<JetCheckbox name="terms" id="terms" v-model:checked="form.terms" />
 
 						<div class="ml-2">
 							I agree to the
@@ -67,7 +64,7 @@
 							>
 						</div>
 					</div>
-				</jet-label>
+				</JetLabel>
 			</div>
 
 			<div class="flex items-center justify-end mt-4">
@@ -75,12 +72,12 @@
 					Already registered?
 				</Link>
 
-				<jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+				<JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
 					Register
-				</jet-button>
+				</JetButton>
 			</div>
 		</form>
-	</jet-authentication-card>
+	</JetAuthenticationCard>
 </template>
 
 <script>
@@ -94,15 +91,15 @@ export default defineComponent({
 				password_confirmation: '',
 				terms: false,
 			}),
-		};
+		}
 	},
 
 	methods: {
 		submit() {
 			this.form.post(this.route('register'), {
 				onFinish: () => this.form.reset('password', 'password_confirmation'),
-			});
+			})
 		},
 	},
-});
+})
 </script>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Fortify;
+namespace App\Fortify;
 
 use App\Models\Team;
 use App\Models\User;

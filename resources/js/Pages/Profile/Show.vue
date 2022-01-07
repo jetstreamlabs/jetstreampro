@@ -1,5 +1,5 @@
 <template>
-	<MainApp title="Profile">
+	<MainLayout title="Profile">
 		<template #header>
 			<h2 class="text-xl font-semibold leading-tight text-gray-800">Profile</h2>
 		</template>
@@ -9,33 +9,33 @@
 				<div v-if="$page.props.jetstream.canUpdateProfileInformation">
 					<update-profile-information-form :user="$page.props.user" />
 
-					<jet-section-border />
+					<JetSectionBorder />
 				</div>
 
 				<div v-if="$page.props.jetstream.canUpdatePassword">
 					<update-password-form class="mt-10 sm:mt-0" />
 
-					<jet-section-border />
+					<JetSectionBorder />
 				</div>
 
 				<div v-if="$page.props.jetstream.canManageTwoFactorAuthentication">
 					<two-factor-authentication-form class="mt-10 sm:mt-0" />
 
-					<jet-section-border />
+					<JetSectionBorder />
 				</div>
 
 				<logout-other-browser-sessions-form :sessions="props.sessions" class="mt-10 sm:mt-0" />
 
 				<template v-if="$page.props.jetstream.hasAccountDeletionFeatures">
-					<jet-section-border />
+					<JetSectionBorder />
 
 					<delete-user-form class="mt-10 sm:mt-0" />
 				</template>
 			</div>
 		</div>
-	</MainApp>
+	</MainLayout>
 </template>
 
 <script setup>
-const props = defineProps(['sessions']);
+const props = defineProps(['sessions'])
 </script>

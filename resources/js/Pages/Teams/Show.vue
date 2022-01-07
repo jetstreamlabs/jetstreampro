@@ -1,5 +1,5 @@
 <template>
-	<MainApp title="Team Settings">
+	<MainLayout title="Team Settings">
 		<template #header>
 			<h2 class="text-xl font-semibold leading-tight text-gray-800">Team Settings</h2>
 		</template>
@@ -12,20 +12,19 @@
 					class="mt-10 sm:mt-0"
 					:team="team"
 					:available-roles="availableRoles"
-					:user-permissions="permissions"
-				/>
+					:user-permissions="permissions" />
 
 				<template v-if="permissions.canDeleteTeam && !team.personal_team">
-					<jet-section-border />
+					<JetSectionBorder />
 
 					<delete-team-form class="mt-10 sm:mt-0" :team="team" />
 				</template>
 			</div>
 		</div>
-	</MainApp>
+	</MainLayout>
 </template>
 
 <script setup>
-const props = defineProps(['team', 'availableRoles', 'permissions']);
-const { team, availableRoles, permissions } = toRefs(props);
+const props = defineProps(['team', 'availableRoles', 'permissions'])
+const { team, availableRoles, permissions } = toRefs(props)
 </script>

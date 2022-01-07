@@ -1,5 +1,5 @@
 <template>
-	<MainApp title="Create Team">
+	<MainLayout title="Create Team">
 		<template #header>
 			<h2 class="text-xl font-semibold leading-tight text-gray-800">Create Team</h2>
 		</template>
@@ -9,5 +9,5 @@
 				<create-team-form />
 			</div>
 		</div>
-	</MainApp>
+	</MainLayout>
 </template>

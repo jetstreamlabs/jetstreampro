@@ -1,9 +1,9 @@
 <template>
 	<Head title="Email Verification" />
 
-	<jet-authentication-card>
+	<JetAuthenticationCard>
 		<template #logo>
-			<jet-authentication-card-logo />
+			<JetAuthenticationCard-logo />
 		</template>
 
 		<div class="mb-4 text-sm text-gray-600">
@@ -17,9 +17,9 @@
 
 		<form @submit.prevent="submit">
 			<div class="flex items-center justify-between mt-4">
-				<jet-button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+				<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
 					Resend Verification Email
-				</jet-button>
+				</JetButton>
 
 				<Link
 					:href="route('logout')"
@@ -30,7 +30,7 @@
 				>
 			</div>
 		</form>
-	</jet-authentication-card>
+	</JetAuthenticationCard>
 </template>
 
 <script>
@@ -42,19 +42,19 @@ export default defineComponent({
 	data() {
 		return {
 			form: this.$inertia.form(),
-		};
+		}
 	},
 
 	methods: {
 		submit() {
-			this.form.post(this.route('verification.send'));
+			this.form.post(this.route('verification.send'))
 		},
 	},
 
 	computed: {
 		verificationLinkSent() {
-			return this.status === 'verification-link-sent';
+			return this.status === 'verification-link-sent'
 		},
 	},
-});
+})
 </script>

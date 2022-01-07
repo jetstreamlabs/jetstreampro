@@ -1,5 +1,5 @@
 <template>
-	<jet-action-section>
+	<JetActionSection>
 		<template #title> Browser Sessions </template>
 
 		<template #description> Manage and log out your active sessions on other browsers and devices. </template>
@@ -23,11 +23,9 @@
 							viewBox="0 0 24 24"
 							stroke="currentColor"
 							class="w-8 h-8 text-gray-500"
-							v-if="session.agent.is_desktop"
-						>
+							v-if="session.agent.is_desktop">
 							<path
-								d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-							></path>
+								d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
 						</svg>
 
 						<svg
@@ -39,8 +37,7 @@
 							stroke-linecap="round"
 							stroke-linejoin="round"
 							class="w-8 h-8 text-gray-500"
-							v-else
-						>
+							v-else>
 							<path d="M0 0h24v24H0z" stroke="none"></path>
 							<rect x="7" y="4" width="10" height="16" rx="1"></rect>
 							<path d="M11 5h2M12 17v.01"></path>
@@ -63,13 +60,13 @@
 			</div>
 
 			<div class="flex items-center mt-5">
-				<jet-button @click="confirmLogout"> Log Out Other Browser Sessions </jet-button>
+				<JetButton @click="confirmLogout"> Log Out Other Browser Sessions </JetButton>
 
-				<jet-action-message :on="form.recentlySuccessful" class="ml-3"> Done. </jet-action-message>
+				<JetActionMessage :on="form.recentlySuccessful" class="ml-3"> Done. </JetActionMessage>
 			</div>
 
 			<!-- Log Out Other Devices Confirmation Modal -->
-			<jet-dialog-modal :show="confirmingLogout" @close="closeModal">
+			<JetDialogModal :show="confirmingLogout" @close="closeModal">
 				<template #title> Log Out Other Browser Sessions </template>
 
 				<template #content>
@@ -77,34 +74,32 @@
 					your devices.
 
 					<div class="mt-4">
-						<jet-input
+						<JetInput
 							type="password"
 							class="block w-3/4 mt-1"
 							placeholder="Password"
 							ref="password"
 							v-model="form.password"
-							@keyup.enter="logoutOtherBrowserSessions"
-						/>
+							@keyup.enter="logoutOtherBrowserSessions" />
 
-						<jet-input-error :message="form.errors.password" class="mt-2" />
+						<JetInput-error :message="form.errors.password" class="mt-2" />
 					</div>
 				</template>
 
 				<template #footer>
-					<jet-secondary-button @click="closeModal"> Cancel </jet-secondary-button>
+					<JetSecondaryButton @click="closeModal"> Cancel </JetSecondaryButton>
 
-					<jet-button
+					<JetButton
 						class="ml-2"
 						@click="logoutOtherBrowserSessions"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing"
-					>
+						:disabled="form.processing">
 						Log Out Other Browser Sessions
-					</jet-button>
+					</JetButton>
 				</template>
-			</jet-dialog-modal>
+			</JetDialogModal>
 		</template>
-	</jet-action-section>
+	</JetActionSection>
 </template>
 
 <script>
@@ -118,14 +113,14 @@ export default defineComponent({
 			form: this.$inertia.form({
 				password: '',
 			}),
-		};
+		}
 	},
 
 	methods: {
 		confirmLogout() {
-			this.confirmingLogout = true;
+			this.confirmingLogout = true
 
-			setTimeout(() => this.$refs.password.focus(), 250);
+			setTimeout(() => this.$refs.password.focus(), 250)
 		},
 
 		logoutOtherBrowserSessions() {
@@ -134,14 +129,14 @@ export default defineComponent({
 				onSuccess: () => this.closeModal(),
 				onError: () => this.$refs.password.focus(),
 				onFinish: () => this.form.reset(),
-			});
+			})
 		},
 
 		closeModal() {
-			this.confirmingLogout = false;
+			this.confirmingLogout = false
 
-			this.form.reset();
+			this.form.reset()
 		},
 	},
-});
+})
 </script>

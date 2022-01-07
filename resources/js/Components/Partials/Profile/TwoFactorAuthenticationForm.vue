@@ -1,5 +1,5 @@
 <template>
-	<jet-action-section>
+	<JetActionSection>
 		<template #title> Two Factor Authentication </template>
 
 		<template #description> Add additional security to your account using two factor authentication. </template>
@@ -48,31 +48,31 @@
 
 			<div class="mt-5">
 				<div v-if="!twoFactorEnabled">
-					<jet-confirms-password @confirmed="enableTwoFactorAuthentication">
-						<jet-button type="button" :class="{ 'opacity-25': enabling }" :disabled="enabling"> Enable </jet-button>
-					</jet-confirms-password>
+					<JetConfirmsPassword @confirmed="enableTwoFactorAuthentication">
+						<JetButton type="button" :class="{ 'opacity-25': enabling }" :disabled="enabling"> Enable </JetButton>
+					</JetConfirmsPassword>
 				</div>
 
 				<div v-else>
-					<jet-confirms-password @confirmed="regenerateRecoveryCodes">
-						<jet-secondary-button class="mr-3" v-if="recoveryCodes.length > 0">
+					<JetConfirmsPassword @confirmed="regenerateRecoveryCodes">
+						<JetSecondaryButton class="mr-3" v-if="recoveryCodes.length > 0">
 							Regenerate Recovery Codes
-						</jet-secondary-button>
-					</jet-confirms-password>
+						</JetSecondaryButton>
+					</JetConfirmsPassword>
 
-					<jet-confirms-password @confirmed="showRecoveryCodes">
-						<jet-secondary-button class="mr-3" v-if="recoveryCodes.length === 0">
+					<JetConfirmsPassword @confirmed="showRecoveryCodes">
+						<JetSecondaryButton class="mr-3" v-if="recoveryCodes.length === 0">
 							Show Recovery Codes
-						</jet-secondary-button>
-					</jet-confirms-password>
+						</JetSecondaryButton>
+					</JetConfirmsPassword>
 
-					<jet-confirms-password @confirmed="disableTwoFactorAuthentication">
-						<jet-danger-button :class="{ 'opacity-25': disabling }" :disabled="disabling"> Disable </jet-danger-button>
-					</jet-confirms-password>
+					<JetConfirmsPassword @confirmed="disableTwoFactorAuthentication">
+						<JetDangerButton :class="{ 'opacity-25': disabling }" :disabled="disabling"> Disable </JetDangerButton>
+					</JetConfirmsPassword>
 				</div>
 			</div>
 		</template>
-	</jet-action-section>
+	</JetActionSection>
 </template>
 
 <script>
@@ -84,12 +84,12 @@ export default defineComponent({
 
 			qrCode: null,
 			recoveryCodes: [],
-		};
+		}
 	},
 
 	methods: {
 		enableTwoFactorAuthentication() {
-			this.enabling = true;
+			this.enabling = true
 
 			this.$inertia.post(
 				'/user/two-factor-authentication',
@@ -99,41 +99,41 @@ export default defineComponent({
 					onSuccess: () => Promise.all([this.showQrCode(), this.showRecoveryCodes()]),
 					onFinish: () => (this.enabling = false),
 				}
-			);
+			)
 		},
 
 		showQrCode() {
 			return axios.get('/user/two-factor-qr-code').then((response) => {
-				this.qrCode = response.data.svg;
-			});
+				this.qrCode = response.data.svg
+			})
 		},
 
 		showRecoveryCodes() {
 			return axios.get('/user/two-factor-recovery-codes').then((response) => {
-				this.recoveryCodes = response.data;
-			});
+				this.recoveryCodes = response.data
+			})
 		},
 
 		regenerateRecoveryCodes() {
 			axios.post('/user/two-factor-recovery-codes').then((response) => {
-				this.showRecoveryCodes();
-			});
+				this.showRecoveryCodes()
+			})
 		},
 
 		disableTwoFactorAuthentication() {
-			this.disabling = true;
+			this.disabling = true
 
 			this.$inertia.delete('/user/two-factor-authentication', {
 				preserveScroll: true,
 				onSuccess: () => (this.disabling = false),
-			});
+			})
 		},
 	},
 
 	computed: {
 		twoFactorEnabled() {
-			return !this.enabling && this.$page.props.user.two_factor_enabled;
+			return !this.enabling && this.$page.props.user.two_factor_enabled
 		},
 	},
-});
+})
 </script>

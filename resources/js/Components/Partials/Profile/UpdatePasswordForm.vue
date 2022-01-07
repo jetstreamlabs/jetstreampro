@@ -1,55 +1,52 @@
 <template>
-	<jet-form-section @submitted="updatePassword">
+	<JetFormSection @submitted="updatePassword">
 		<template #title> Update Password </template>
 
 		<template #description> Ensure your account is using a long, random password to stay secure. </template>
 
 		<template #form>
 			<div class="col-span-6 sm:col-span-4">
-				<jet-label for="current_password" value="Current Password" />
-				<jet-input
+				<JetLabel for="current_password" value="Current Password" />
+				<JetInput
 					id="current_password"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.current_password"
 					ref="current_password"
-					autocomplete="current-password"
-				/>
-				<jet-input-error :message="form.errors.current_password" class="mt-2" />
+					autocomplete="current-password" />
+				<JetInput-error :message="form.errors.current_password" class="mt-2" />
 			</div>
 
 			<div class="col-span-6 sm:col-span-4">
-				<jet-label for="password" value="New Password" />
-				<jet-input
+				<JetLabel for="password" value="New Password" />
+				<JetInput
 					id="password"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password"
 					ref="password"
-					autocomplete="new-password"
-				/>
-				<jet-input-error :message="form.errors.password" class="mt-2" />
+					autocomplete="new-password" />
+				<JetInput-error :message="form.errors.password" class="mt-2" />
 			</div>
 
 			<div class="col-span-6 sm:col-span-4">
-				<jet-label for="password_confirmation" value="Confirm Password" />
-				<jet-input
+				<JetLabel for="password_confirmation" value="Confirm Password" />
+				<JetInput
 					id="password_confirmation"
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
-					autocomplete="new-password"
-				/>
-				<jet-input-error :message="form.errors.password_confirmation" class="mt-2" />
+					autocomplete="new-password" />
+				<JetInput-error :message="form.errors.password_confirmation" class="mt-2" />
 			</div>
 		</template>
 
 		<template #actions>
-			<jet-action-message :on="form.recentlySuccessful" class="mr-3"> Saved. </jet-action-message>
+			<JetActionMessage :on="form.recentlySuccessful" class="mr-3"> Saved. </JetActionMessage>
 
-			<jet-button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Save </jet-button>
+			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Save </JetButton>
 		</template>
-	</jet-form-section>
+	</JetFormSection>
 </template>
 
 <script>
@@ -61,7 +58,7 @@ export default defineComponent({
 				password: '',
 				password_confirmation: '',
 			}),
-		};
+		}
 	},
 
 	methods: {
@@ -72,17 +69,17 @@ export default defineComponent({
 				onSuccess: () => this.form.reset(),
 				onError: () => {
 					if (this.form.errors.password) {
-						this.form.reset('password', 'password_confirmation');
-						this.$refs.password.focus();
+						this.form.reset('password', 'password_confirmation')
+						this.$refs.password.focus()
 					}
 
 					if (this.form.errors.current_password) {
-						this.form.reset('current_password');
-						this.$refs.current_password.focus();
+						this.form.reset('current_password')
+						this.$refs.current_password.focus()
 					}
 				},
-			});
+			})
 		},
 	},
-});
+})
 </script>

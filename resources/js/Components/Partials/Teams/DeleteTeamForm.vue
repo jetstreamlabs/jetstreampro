@@ -1,5 +1,5 @@
 <template>
-	<jet-action-section>
+	<JetActionSection>
 		<template #title> Delete Team </template>
 
 		<template #description> Permanently delete this team. </template>
@@ -11,11 +11,11 @@
 			</div>
 
 			<div class="mt-5">
-				<jet-danger-button @click="confirmTeamDeletion"> Delete Team </jet-danger-button>
+				<JetDangerButton @click="confirmTeamDeletion"> Delete Team </JetDangerButton>
 			</div>
 
 			<!-- Delete Team Confirmation Modal -->
-			<jet-confirmation-modal :show="confirmingTeamDeletion" @close="confirmingTeamDeletion = false">
+			<JetConfirmationModal :show="confirmingTeamDeletion" @close="confirmingTeamDeletion = false">
 				<template #title> Delete Team </template>
 
 				<template #content>
@@ -24,20 +24,19 @@
 				</template>
 
 				<template #footer>
-					<jet-secondary-button @click="confirmingTeamDeletion = false"> Cancel </jet-secondary-button>
+					<JetSecondaryButton @click="confirmingTeamDeletion = false"> Cancel </JetSecondaryButton>
 
-					<jet-danger-button
+					<JetDangerButton
 						class="ml-2"
 						@click="deleteTeam"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing"
-					>
+						:disabled="form.processing">
 						Delete Team
-					</jet-danger-button>
+					</JetDangerButton>
 				</template>
-			</jet-confirmation-modal>
+			</JetConfirmationModal>
 		</template>
-	</jet-action-section>
+	</JetActionSection>
 </template>
 
 <script>
@@ -50,19 +49,19 @@ export default defineComponent({
 			deleting: false,
 
 			form: this.$inertia.form(),
-		};
+		}
 	},
 
 	methods: {
 		confirmTeamDeletion() {
-			this.confirmingTeamDeletion = true;
+			this.confirmingTeamDeletion = true
 		},
 
 		deleteTeam() {
 			this.form.delete(this.route('teams.destroy', this.team), {
 				errorBag: 'deleteTeam',
-			});
+			})
 		},
 	},
-});
+})
 </script>

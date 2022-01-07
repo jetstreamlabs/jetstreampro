@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<div v-if="userPermissions.canAddTeamMembers">
-			<jet-section-border />
+			<JetSectionBorder />
 
 			<!-- Add Team Member -->
-			<jet-form-section @submitted="addTeamMember">
+			<JetFormSection @submitted="addTeamMember">
 				<template #title> Add Team Member </template>
 
 				<template #description> Add a new team member to your team, allowing them to collaborate with you. </template>
@@ -18,15 +18,15 @@
 
 					<!-- Member Email -->
 					<div class="col-span-6 sm:col-span-4">
-						<jet-label for="email" value="Email" />
-						<jet-input id="email" type="email" class="block w-full mt-1" v-model="addTeamMemberForm.email" />
-						<jet-input-error :message="addTeamMemberForm.errors.email" class="mt-2" />
+						<JetLabel for="email" value="Email" />
+						<JetInput id="email" type="email" class="block w-full mt-1" v-model="addTeamMemberForm.email" />
+						<JetInput-error :message="addTeamMemberForm.errors.email" class="mt-2" />
 					</div>
 
 					<!-- Role -->
 					<div class="col-span-6 lg:col-span-4" v-if="availableRoles.length > 0">
-						<jet-label for="roles" value="Role" />
-						<jet-input-error :message="addTeamMemberForm.errors.role" class="mt-2" />
+						<JetLabel for="roles" value="Role" />
+						<JetInput-error :message="addTeamMemberForm.errors.role" class="mt-2" />
 
 						<div class="relative z-0 mt-1 border border-gray-200 rounded-lg cursor-pointer">
 							<button
@@ -38,8 +38,7 @@
 								}"
 								@click="addTeamMemberForm.role = role.key"
 								v-for="(role, i) in availableRoles"
-								:key="role.key"
-							>
+								:key="role.key">
 								<div :class="{ 'opacity-50': addTeamMemberForm.role && addTeamMemberForm.role != role.key }">
 									<!-- Role Name -->
 									<div class="flex items-center">
@@ -55,8 +54,7 @@
 											stroke-linejoin="round"
 											stroke-width="2"
 											stroke="currentColor"
-											viewBox="0 0 24 24"
-										>
+											viewBox="0 0 24 24">
 											<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 										</svg>
 									</div>
@@ -72,20 +70,20 @@
 				</template>
 
 				<template #actions>
-					<jet-action-message :on="addTeamMemberForm.recentlySuccessful" class="mr-3"> Added. </jet-action-message>
+					<JetActionMessage :on="addTeamMemberForm.recentlySuccessful" class="mr-3"> Added. </JetActionMessage>
 
-					<jet-button :class="{ 'opacity-25': addTeamMemberForm.processing }" :disabled="addTeamMemberForm.processing">
+					<JetButton :class="{ 'opacity-25': addTeamMemberForm.processing }" :disabled="addTeamMemberForm.processing">
 						Add
-					</jet-button>
+					</JetButton>
 				</template>
-			</jet-form-section>
+			</JetFormSection>
 		</div>
 
 		<div v-if="team.team_invitations.length > 0 && userPermissions.canAddTeamMembers">
-			<jet-section-border />
+			<JetSectionBorder />
 
 			<!-- Team Member Invitations -->
-			<jet-action-section class="mt-10 sm:mt-0">
+			<JetActionSection class="mt-10 sm:mt-0">
 				<template #title> Pending Team Invitations </template>
 
 				<template #description>
@@ -99,8 +97,7 @@
 						<div
 							class="flex items-center justify-between"
 							v-for="invitation in team.team_invitations"
-							:key="invitation.id"
-						>
+							:key="invitation.id">
 							<div class="text-gray-600">{{ invitation.email }}</div>
 
 							<div class="flex items-center">
@@ -108,22 +105,21 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer focus:outline-none"
 									@click="cancelTeamInvitation(invitation)"
-									v-if="userPermissions.canRemoveTeamMembers"
-								>
+									v-if="userPermissions.canRemoveTeamMembers">
 									Cancel
 								</button>
 							</div>
 						</div>
 					</div>
 				</template>
-			</jet-action-section>
+			</JetActionSection>
 		</div>
 
 		<div v-if="team.users.length > 0">
-			<jet-section-border />
+			<JetSectionBorder />
 
 			<!-- Manage Team Members -->
-			<jet-action-section class="mt-10 sm:mt-0">
+			<JetActionSection class="mt-10 sm:mt-0">
 				<template #title> Team Members </template>
 
 				<template #description> All of the people that are part of this team. </template>
@@ -142,8 +138,7 @@
 								<button
 									class="ml-2 text-sm text-gray-400 underline"
 									@click="manageRole(user)"
-									v-if="userPermissions.canAddTeamMembers && availableRoles.length"
-								>
+									v-if="userPermissions.canAddTeamMembers && availableRoles.length">
 									{{ displayableRole(user.membership.role) }}
 								</button>
 
@@ -155,8 +150,7 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmLeavingTeam"
-									v-if="$page.props.user.id === user.id"
-								>
+									v-if="$page.props.user.id === user.id">
 									Leave
 								</button>
 
@@ -164,19 +158,18 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmTeamMemberRemoval(user)"
-									v-if="userPermissions.canRemoveTeamMembers"
-								>
+									v-if="userPermissions.canRemoveTeamMembers">
 									Remove
 								</button>
 							</div>
 						</div>
 					</div>
 				</template>
-			</jet-action-section>
+			</JetActionSection>
 		</div>
 
 		<!-- Role Management Modal -->
-		<jet-dialog-modal :show="currentlyManagingRole" @close="currentlyManagingRole = false">
+		<JetDialogModal :show="currentlyManagingRole" @close="currentlyManagingRole = false">
 			<template #title> Manage Role </template>
 
 			<template #content>
@@ -191,8 +184,7 @@
 							}"
 							@click="updateRoleForm.role = role.key"
 							v-for="(role, i) in availableRoles"
-							:key="role.key"
-						>
+							:key="role.key">
 							<div :class="{ 'opacity-50': updateRoleForm.role && updateRoleForm.role !== role.key }">
 								<!-- Role Name -->
 								<div class="flex items-center">
@@ -208,8 +200,7 @@
 										stroke-linejoin="round"
 										stroke-width="2"
 										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
+										viewBox="0 0 24 24">
 										<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 									</svg>
 								</div>
@@ -225,58 +216,55 @@
 			</template>
 
 			<template #footer>
-				<jet-secondary-button @click="currentlyManagingRole = false"> Cancel </jet-secondary-button>
+				<JetSecondaryButton @click="currentlyManagingRole = false"> Cancel </JetSecondaryButton>
 
-				<jet-button
+				<JetButton
 					class="ml-2"
 					@click="updateRole"
 					:class="{ 'opacity-25': updateRoleForm.processing }"
-					:disabled="updateRoleForm.processing"
-				>
+					:disabled="updateRoleForm.processing">
 					Save
-				</jet-button>
+				</JetButton>
 			</template>
-		</jet-dialog-modal>
+		</JetDialogModal>
 
 		<!-- Leave Team Confirmation Modal -->
-		<jet-confirmation-modal :show="confirmingLeavingTeam" @close="confirmingLeavingTeam = false">
+		<JetConfirmationModal :show="confirmingLeavingTeam" @close="confirmingLeavingTeam = false">
 			<template #title> Leave Team </template>
 
 			<template #content> Are you sure you would like to leave this team? </template>
 
 			<template #footer>
-				<jet-secondary-button @click="confirmingLeavingTeam = false"> Cancel </jet-secondary-button>
+				<JetSecondaryButton @click="confirmingLeavingTeam = false"> Cancel </JetSecondaryButton>
 
-				<jet-danger-button
+				<JetDangerButton
 					class="ml-2"
 					@click="leaveTeam"
 					:class="{ 'opacity-25': leaveTeamForm.processing }"
-					:disabled="leaveTeamForm.processing"
-				>
+					:disabled="leaveTeamForm.processing">
 					Leave
-				</jet-danger-button>
+				</JetDangerButton>
 			</template>
-		</jet-confirmation-modal>
+		</JetConfirmationModal>
 
 		<!-- Remove Team Member Confirmation Modal -->
-		<jet-confirmation-modal :show="teamMemberBeingRemoved" @close="teamMemberBeingRemoved = null">
+		<JetConfirmationModal :show="teamMemberBeingRemoved" @close="teamMemberBeingRemoved = null">
 			<template #title> Remove Team Member </template>
 
 			<template #content> Are you sure you would like to remove this person from the team? </template>
 
 			<template #footer>
-				<jet-secondary-button @click="teamMemberBeingRemoved = null"> Cancel </jet-secondary-button>
+				<JetSecondaryButton @click="teamMemberBeingRemoved = null"> Cancel </JetSecondaryButton>
 
-				<jet-danger-button
+				<JetDangerButton
 					class="ml-2"
 					@click="removeTeamMember"
 					:class="{ 'opacity-25': removeTeamMemberForm.processing }"
-					:disabled="removeTeamMemberForm.processing"
-				>
+					:disabled="removeTeamMemberForm.processing">
 					Remove
-				</jet-danger-button>
+				</JetDangerButton>
 			</template>
-		</jet-confirmation-modal>
+		</JetConfirmationModal>
 	</div>
 </template>
 
@@ -302,7 +290,7 @@ export default defineComponent({
 			managingRoleFor: null,
 			confirmingLeavingTeam: false,
 			teamMemberBeingRemoved: null,
-		};
+		}
 	},
 
 	methods: {
@@ -311,38 +299,38 @@ export default defineComponent({
 				errorBag: 'addTeamMember',
 				preserveScroll: true,
 				onSuccess: () => this.addTeamMemberForm.reset(),
-			});
+			})
 		},
 
 		cancelTeamInvitation(invitation) {
 			this.$inertia.delete(this.route('team-invitations.destroy', invitation), {
 				preserveScroll: true,
-			});
+			})
 		},
 
 		manageRole(teamMember) {
-			this.managingRoleFor = teamMember;
-			this.updateRoleForm.role = teamMember.membership.role;
-			this.currentlyManagingRole = true;
+			this.managingRoleFor = teamMember
+			this.updateRoleForm.role = teamMember.membership.role
+			this.currentlyManagingRole = true
 		},
 
 		updateRole() {
 			this.updateRoleForm.put(this.route('team-members.update', [this.team, this.managingRoleFor]), {
 				preserveScroll: true,
 				onSuccess: () => (this.currentlyManagingRole = false),
-			});
+			})
 		},
 
 		confirmLeavingTeam() {
-			this.confirmingLeavingTeam = true;
+			this.confirmingLeavingTeam = true
 		},
 
 		leaveTeam() {
-			this.leaveTeamForm.delete(this.route('team-members.destroy', [this.team, this.$page.props.user]));
+			this.leaveTeamForm.delete(this.route('team-members.destroy', [this.team, this.$page.props.user]))
 		},
 
 		confirmTeamMemberRemoval(teamMember) {
-			this.teamMemberBeingRemoved = teamMember;
+			this.teamMemberBeingRemoved = teamMember
 		},
 
 		removeTeamMember() {
@@ -351,12 +339,12 @@ export default defineComponent({
 				preserveScroll: true,
 				preserveState: true,
 				onSuccess: () => (this.teamMemberBeingRemoved = null),
-			});
+			})
 		},
 
 		displayableRole(role) {
-			return this.availableRoles.find((r) => r.key === role).name;
+			return this.availableRoles.find((r) => r.key === role).name
 		},
 	},
-});
+})
 </script>

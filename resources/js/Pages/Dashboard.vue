@@ -1,5 +1,5 @@
 <template>
-	<MainApp title="Dashboard">
+	<MainLayout title="Dashboard">
 		<template #header>
 			<h2 class="text-xl font-semibold leading-tight text-gray-800">Dashboard</h2>
 		</template>
@@ -11,5 +11,5 @@
 				</div>
 			</div>
 		</div>
-	</MainApp>
+	</MainLayout>
 </template>
