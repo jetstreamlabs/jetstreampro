@@ -22,6 +22,7 @@
 					"breaking",
 					"feat",
 					"fix",
+					"task",
 					"refactor",
 					"docs",
 					"chore"
