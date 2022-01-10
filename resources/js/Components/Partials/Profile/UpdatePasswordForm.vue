@@ -46,7 +46,8 @@ defineExpose({ password, current_password })
 					class="block w-full mt-1"
 					v-model="form.current_password"
 					ref="current_password"
-					autocomplete="current-password" />
+					autocomplete="current-password"
+				/>
 				<JetInput-error :message="form.errors.current_password" class="mt-2" />
 			</div>
 
@@ -58,7 +59,8 @@ defineExpose({ password, current_password })
 					class="block w-full mt-1"
 					v-model="form.password"
 					ref="password"
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 				<JetInput-error :message="form.errors.password" class="mt-2" />
 			</div>
 
@@ -69,7 +71,8 @@ defineExpose({ password, current_password })
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
-					autocomplete="new-password" />
+					autocomplete="new-password"
+				/>
 				<JetInput-error :message="form.errors.password_confirmation" class="mt-2" />
 			</div>
 		</template>
