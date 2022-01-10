@@ -1,3 +1,8 @@
+<script setup>
+const props = defineProps(['team', 'availableRoles', 'permissions'])
+const { team, availableRoles, permissions } = toRefs(props)
+</script>
+
 <template>
 	<MainLayout title="Team Settings">
 		<template #header>
@@ -6,9 +11,9 @@
 
 		<div>
 			<div class="py-10 mx-auto max-w-7xl sm:px-6 lg:px-8">
-				<update-team-name-form :team="team" :permissions="permissions" />
+				<UpdateTeamNameForm :team="team" :permissions="permissions" />
 
-				<team-member-manager
+				<TeamMemberManager
 					class="mt-10 sm:mt-0"
 					:team="team"
 					:available-roles="availableRoles"
@@ -18,14 +23,9 @@
 				<template v-if="permissions.canDeleteTeam && !team.personal_team">
 					<JetSectionBorder />
 
-					<delete-team-form class="mt-10 sm:mt-0" :team="team" />
+					<DeleteTeamForm class="mt-10 sm:mt-0" :team="team" />
 				</template>
 			</div>
 		</div>
 	</MainLayout>
 </template>
-
-<script setup>
-const props = defineProps(['team', 'availableRoles', 'permissions'])
-const { team, availableRoles, permissions } = toRefs(props)
-</script>

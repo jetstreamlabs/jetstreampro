@@ -1,3 +1,12 @@
+<script setup>
+//prettier-ignore
+const props = defineProps([
+  'tokens', 
+  'availablePermissions', 
+  'defaultPermissions'
+])
+</script>
+
 <template>
 	<MainLayout title="API Tokens">
 		<template #header>
@@ -15,12 +24,3 @@
 		</div>
 	</MainLayout>
 </template>
-
-<script setup>
-//prettier-ignore
-const props = defineProps([
-  'tokens', 
-  'availablePermissions', 
-  'defaultPermissions'
-])
-</script>

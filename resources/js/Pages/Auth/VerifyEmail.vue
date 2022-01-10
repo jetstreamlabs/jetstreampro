@@ -1,3 +1,18 @@
+<script setup>
+const props = defineProps({ status: String })
+const form = useForm()
+
+const submit = () => {
+	const { href } = useRoutes('verification.send')
+
+	form.post(href.value)
+}
+
+const verificationLinkSent = computed(() => {
+	return props.status === 'verification-link-sent'
+})
+</script>
+
 <template>
 	<Head title="Email Verification" />
 
@@ -32,29 +47,3 @@
 		</form>
 	</JetAuthenticationCard>
 </template>
-
-<script>
-export default defineComponent({
-	props: {
-		status: String,
-	},
-
-	data() {
-		return {
-			form: this.$inertia.form(),
-		}
-	},
-
-	methods: {
-		submit() {
-			this.form.post(this.route('verification.send'))
-		},
-	},
-
-	computed: {
-		verificationLinkSent() {
-			return this.status === 'verification-link-sent'
-		},
-	},
-})
-</script>

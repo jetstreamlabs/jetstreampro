@@ -1,3 +1,28 @@
+<script setup>
+const props = defineProps({
+	canResetPassword: Boolean,
+	status: String,
+})
+
+const form = useForm({
+	email: '',
+	password: '',
+	remember: false,
+})
+
+const submit = () => {
+	const { href } = useRoutes('login')
+	form
+		.transform((data) => ({
+			...data,
+			remember: form.remember ? 'on' : '',
+		}))
+		.post(href.value, {
+			onFinish: () => form.reset('password'),
+		})
+}
+</script>
+
 <template>
 	<Head title="Log in" />
 
@@ -8,8 +33,8 @@
 
 		<JetValidationErrors class="mb-4" />
 
-		<div v-if="status" class="mb-4 text-sm font-medium text-green-600">
-			{{ status }}
+		<div v-if="props.status" class="mb-4 text-sm font-medium text-green-600">
+			{{ props.status }}
 		</div>
 
 		<form @submit.prevent="submit">
@@ -39,7 +64,7 @@
 
 			<div class="flex items-center justify-end mt-4">
 				<Link
-					v-if="canResetPassword"
+					v-if="props.canResetPassword"
 					:href="route('password.request')"
 					class="text-sm text-gray-600 underline hover:text-gray-900"
 				>
@@ -53,35 +78,3 @@
 		</form>
 	</JetAuthenticationCard>
 </template>
-
-<script>
-export default defineComponent({
-	props: {
-		canResetPassword: Boolean,
-		status: String,
-	},
-
-	data() {
-		return {
-			form: this.$inertia.form({
-				email: '',
-				password: '',
-				remember: false,
-			}),
-		}
-	},
-
-	methods: {
-		submit() {
-			this.form
-				.transform((data) => ({
-					...data,
-					remember: this.form.remember ? 'on' : '',
-				}))
-				.post(this.route('login'), {
-					onFinish: () => this.form.reset('password'),
-				})
-		},
-	},
-})
-</script>

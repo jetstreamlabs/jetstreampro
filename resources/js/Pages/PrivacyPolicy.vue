@@ -1,3 +1,7 @@
+<script setup>
+const props = defineProps(['policy'])
+</script>
+
 <template>
 	<Head title="Privacy Policy" />
 
@@ -16,7 +20,3 @@
 		</div>
 	</div>
 </template>
-
-<script setup>
-const props = defineProps(['policy'])
-</script>

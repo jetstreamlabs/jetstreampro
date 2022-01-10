@@ -1,3 +1,22 @@
+<script setup>
+const form = useForm({
+	name: '',
+	email: '',
+	password: '',
+	password_confirmation: '',
+	terms: false,
+})
+
+const submit = () => {
+	const { href } = useRoutes('register')
+
+	form.post(href.value, {
+		onStart: () => form.clearErrors(),
+		onFinish: () => form.reset('password', 'password_confirmation'),
+	})
+}
+</script>
+
 <template>
 	<Head title="Register" />
 
@@ -82,27 +101,3 @@
 		</form>
 	</JetAuthenticationCard>
 </template>
-
-<script>
-export default defineComponent({
-	data() {
-		return {
-			form: this.$inertia.form({
-				name: '',
-				email: '',
-				password: '',
-				password_confirmation: '',
-				terms: false,
-			}),
-		}
-	},
-
-	methods: {
-		submit() {
-			this.form.post(this.route('register'), {
-				onFinish: () => this.form.reset('password', 'password_confirmation'),
-			})
-		},
-	},
-})
-</script>

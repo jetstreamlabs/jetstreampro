@@ -1,3 +1,7 @@
+<script setup>
+const props = defineProps(['sessions'])
+</script>
+
 <template>
 	<MainLayout title="Profile">
 		<template #header>
@@ -35,7 +39,3 @@
 		</div>
 	</MainLayout>
 </template>
-
-<script setup>
-const props = defineProps(['sessions'])
-</script>

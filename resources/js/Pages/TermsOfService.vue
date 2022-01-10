@@ -1,3 +1,7 @@
+<script setup>
+const props = defineProps(['terms'])
+</script>
+
 <template>
 	<Head title="Terms of Service" />
 
@@ -16,7 +20,3 @@
 		</div>
 	</div>
 </template>
-
-<script setup>
-const props = defineProps(['terms'])
-</script>

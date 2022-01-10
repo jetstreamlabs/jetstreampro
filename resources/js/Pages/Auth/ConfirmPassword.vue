@@ -1,3 +1,18 @@
+<script setup>
+const form = useForm({
+	password: '',
+})
+
+const submit = () => {
+	const { href } = useRoutes('password.confirm')
+
+	form.post(href.value, {
+		onStart: () => form.clearErrors(),
+		onSuccess: () => form.reset('password'),
+	})
+}
+</script>
+
 <template>
 	<Head title="Secure Area" />
 
@@ -34,23 +49,3 @@
 		</form>
 	</JetAuthenticationCard>
 </template>
-
-<script>
-export default defineComponent({
-	data() {
-		return {
-			form: this.$inertia.form({
-				password: '',
-			}),
-		}
-	},
-
-	methods: {
-		submit() {
-			this.form.post(this.route('password.confirm'), {
-				onFinish: () => this.form.reset(),
-			})
-		},
-	},
-})
-</script>

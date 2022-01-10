@@ -1,3 +1,14 @@
+<script setup>
+const props = defineProps({
+	canLogin: Boolean,
+	canRegister: Boolean,
+	laravelVersion: String,
+	phpVersion: String,
+})
+
+const { canLogin, canRegister, laravelVersion, phpVersion } = toRefs(props)
+</script>
+
 <template>
 	<Head title="Welcome" />
 
@@ -266,14 +277,3 @@
 	}
 }
 </style>
-
-<script setup>
-const props = defineProps({
-	canLogin: Boolean,
-	canRegister: Boolean,
-	laravelVersion: String,
-	phpVersion: String,
-})
-
-const { canLogin, canRegister, laravelVersion, phpVersion } = toRefs(props)
-</script>

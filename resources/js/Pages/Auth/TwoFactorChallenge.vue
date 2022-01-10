@@ -1,3 +1,36 @@
+<script setup>
+const recovery = ref(false)
+const recovery_code = ref()
+const code = ref()
+
+const form = useForm({
+	code: '',
+	recovery_code: '',
+})
+
+const toggleRecovery = () => {
+	recovery.value ^= true
+
+	nextTick(() => {
+		if (recovery.value) {
+			recovery_code.value.input.focus()
+			form.code = ''
+		} else {
+			code.value.input.focus()
+			form.recovery_code = ''
+		}
+	})
+}
+
+const submit = () => {
+	const { href } = useRoutes('two-factor.login')
+
+	form.post(href.value)
+}
+
+defineExpose({ code, recovery_code })
+</script>
+
 <template>
 	<Head title="Two-factor Confirmation" />
 
@@ -64,37 +97,3 @@
 		</form>
 	</JetAuthenticationCard>
 </template>
-
-<script>
-export default defineComponent({
-	data() {
-		return {
-			recovery: false,
-			form: this.$inertia.form({
-				code: '',
-				recovery_code: '',
-			}),
-		}
-	},
-
-	methods: {
-		toggleRecovery() {
-			this.recovery ^= true
-
-			this.$nextTick(() => {
-				if (this.recovery) {
-					this.$refs.recovery_code.focus()
-					this.form.code = ''
-				} else {
-					this.$refs.code.focus()
-					this.form.recovery_code = ''
-				}
-			})
-		},
-
-		submit() {
-			this.form.post(this.route('two-factor.login'))
-		},
-	},
-})
-</script>

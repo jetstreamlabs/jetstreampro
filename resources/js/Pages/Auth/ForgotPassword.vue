@@ -1,3 +1,22 @@
+<script setup>
+const props = defineProps({
+	status: String,
+})
+
+const form = useForm({
+	email: '',
+})
+
+const submit = () => {
+	const { href } = useRoutes('password.email')
+
+	form.post(href.value, {
+		onStart: () => form.clearErrors(),
+		onSuccess: () => form.reset('email'),
+	})
+}
+</script>
+
 <template>
 	<Head title="Forgot Password" />
 
@@ -11,8 +30,8 @@
 			that will allow you to choose a new one.
 		</div>
 
-		<div v-if="status" class="mb-4 text-sm font-medium text-green-600">
-			{{ status }}
+		<div v-if="props.status" class="mb-4 text-sm font-medium text-green-600">
+			{{ props.status }}
 		</div>
 
 		<JetValidationErrors class="mb-4" />
@@ -31,25 +50,3 @@
 		</form>
 	</JetAuthenticationCard>
 </template>
-
-<script>
-export default defineComponent({
-	props: {
-		status: String,
-	},
-
-	data() {
-		return {
-			form: this.$inertia.form({
-				email: '',
-			}),
-		}
-	},
-
-	methods: {
-		submit() {
-			this.form.post(this.route('password.email'))
-		},
-	},
-})
-</script>

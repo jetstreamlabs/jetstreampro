@@ -1,3 +1,26 @@
+<script setup>
+const props = defineProps({
+	email: String,
+	token: String,
+})
+
+const form = useForm({
+	token: props.token,
+	email: props.email,
+	password: '',
+	password_confirmation: '',
+})
+
+const submit = () => {
+	const { href } = useRoutes('password.update')
+
+	form.post(href.value, {
+		onStart: () => form.clearErrors(),
+		onFinish: () => form.reset('password', 'password_confirmation'),
+	})
+}
+</script>
+
 <template>
 	<Head title="Reset Password" />
 
@@ -44,31 +67,3 @@
 		</form>
 	</JetAuthenticationCard>
 </template>
-
-<script>
-export default defineComponent({
-	props: {
-		email: String,
-		token: String,
-	},
-
-	data() {
-		return {
-			form: this.$inertia.form({
-				token: this.token,
-				email: this.email,
-				password: '',
-				password_confirmation: '',
-			}),
-		}
-	},
-
-	methods: {
-		submit() {
-			this.form.post(this.route('password.update'), {
-				onFinish: () => this.form.reset('password', 'password_confirmation'),
-			})
-		},
-	},
-})
-</script>

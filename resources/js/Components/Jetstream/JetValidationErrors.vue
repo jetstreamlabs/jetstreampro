@@ -4,7 +4,7 @@ const errors = computed(() => {
 })
 
 const hasErrors = computed(() => {
-	return Object.keys(errors).length > 0
+	return Object.keys(errors.value).length > 0
 })
 </script>
 
