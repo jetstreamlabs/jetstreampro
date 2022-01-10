@@ -1,3 +1,24 @@
+<script setup>
+const props = defineProps({
+	show: {
+		default: false,
+	},
+	maxWidth: {
+		default: '2xl',
+	},
+	closeable: {
+		default: true,
+	},
+})
+const { show, maxWidth, closeable } = toRefs(props)
+
+const emit = defineEmits(['close'])
+
+const close = () => {
+	emit('close')
+}
+</script>
+
 <template>
 	<JetModal :show="show" :max-width="maxWidth" :closeable="closeable" @close="close">
 		<div class="px-6 py-4">
@@ -15,27 +36,3 @@
 		</div>
 	</JetModal>
 </template>
-
-<script>
-export default defineComponent({
-	emits: ['close'],
-
-	props: {
-		show: {
-			default: false,
-		},
-		maxWidth: {
-			default: '2xl',
-		},
-		closeable: {
-			default: true,
-		},
-	},
-
-	methods: {
-		close() {
-			this.$emit('close')
-		},
-	},
-})
-</script>

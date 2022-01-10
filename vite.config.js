@@ -18,40 +18,48 @@ export default defineConfig(({ command }) => {
 			manifest: true,
 			target: 'es2018',
 			rollupOptions: {
-				input: ['resources/js/app.js']
-			}
+				input: ['resources/js/app.js'],
+			},
 		},
 		server: {
-      host: 'jasmine.test',
+			host: 'jetstreampro.test',
 			strictPort: true,
 			origin: process.env.VITE_DOMAIN,
-			port: process.env.VITE_PORT
+			port: process.env.VITE_PORT,
 		},
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, 'resources/js'),
-        '/storage': resolve(__dirname, 'storage/app/public'),
-        vue: resolve(__dirname, 'node_modules/vue/dist/vue.runtime.esm-bundler.js'),
-				ziggy: resolve(__dirname, 'vendor/tightenco/ziggy/dist/vue.es.js'),
-				zaggy: resolve(__dirname, 'vendor/tightenco/ziggy/dist/index.es.js'),
-				zora: resolve(__dirname, 'vendor/serenity/zora/dist/index.js')
-			}
+				'/storage': resolve(__dirname, 'storage/app/public'),
+				vue: resolve(__dirname, 'node_modules/vue/dist/vue.runtime.esm-bundler.js'),
+				ziggy: resolve(__dirname, 'vendor/tightenco/ziggy/dist/index.es.js'),
+				zora: resolve(__dirname, 'vendor/serenity/zora/dist/index.js'),
+				composable: resolve(__dirname, 'resources/js/Composable/index.js'),
+			},
 		},
 		optimizeDeps: {
-			include: [
-				'vue',
-				'@inertiajs/inertia',
-				'@inertiajs/inertia-vue3',
-				'@inertiajs/progress',
-				'axios'
-			]
+			include: ['vue', '@inertiajs/inertia', '@inertiajs/inertia-vue3', '@inertiajs/progress', 'axios'],
 		},
 		plugins: [
 			vue(),
+			AutoImport({
+				include: [
+					/\.vue$/,
+					/\.vue\?vue/, // .vue
+					/\.md$/, // .md
+				],
+				imports: [
+					'vue',
+					'vuex',
+					{
+						'@inertiajs/inertia': ['Inertia'],
+            '@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember'],
+						'composable': ['useTrans', 'useRoutes'],
+					},
+				],
+			}),
 			Components({
-        dirs: [
-          'resources/js/Components',
-        ],
+				dirs: ['resources/js/Components'],
 				extensions: ['vue'],
 				deep: true,
 				resolvers: [],
@@ -60,26 +68,8 @@ export default defineConfig(({ command }) => {
 				globalNamespaces: [],
 				directives: true,
 				include: [/\.vue$/, /\.vue\?vue/],
-				exclude: [
-					/[\\/]node_modules[\\/]/,
-					/[\\/]\.git[\\/]/,
-					/[\\/]\.nuxt[\\/]/
-				]
+				exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
 			}),
-			AutoImport({
-				include: [
-					/\.vue$/,
-					/\.vue\?vue/, // .vue
-					/\.md$/ // .md
-				],
-				imports: [
-					'vue',
-					'vuex',
-					{
-						'@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember']
-					}
-				]
-			})
-		]
+		],
 	}
 })

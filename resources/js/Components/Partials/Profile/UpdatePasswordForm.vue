@@ -1,3 +1,36 @@
+<script setup>
+const current_password = ref()
+const password = ref()
+
+const form = useForm({
+	current_password: '',
+	password: '',
+	password_confirmation: '',
+})
+const updatePassword = () => {
+	const { href } = useRoutes('user-password.update')
+
+	form.put(href.value, {
+		errorBag: 'updatePassword',
+		preserveScroll: true,
+		onSuccess: () => form.reset(),
+		onError: () => {
+			if (form.errors.password) {
+				form.reset('password', 'password_confirmation')
+				password.value.input.focus()
+			}
+
+			if (form.errors.current_password) {
+				form.reset('current_password')
+				current_password.value.input.focus()
+			}
+		},
+	})
+}
+
+defineExpose({ password, current_password })
+</script>
+
 <template>
 	<JetFormSection @submitted="updatePassword">
 		<template #title> Update Password </template>
@@ -13,8 +46,7 @@
 					class="block w-full mt-1"
 					v-model="form.current_password"
 					ref="current_password"
-					autocomplete="current-password"
-				/>
+					autocomplete="current-password" />
 				<JetInput-error :message="form.errors.current_password" class="mt-2" />
 			</div>
 
@@ -26,8 +58,7 @@
 					class="block w-full mt-1"
 					v-model="form.password"
 					ref="password"
-					autocomplete="new-password"
-				/>
+					autocomplete="new-password" />
 				<JetInput-error :message="form.errors.password" class="mt-2" />
 			</div>
 
@@ -38,8 +69,7 @@
 					type="password"
 					class="block w-full mt-1"
 					v-model="form.password_confirmation"
-					autocomplete="new-password"
-				/>
+					autocomplete="new-password" />
 				<JetInput-error :message="form.errors.password_confirmation" class="mt-2" />
 			</div>
 		</template>
@@ -51,38 +81,3 @@
 		</template>
 	</JetFormSection>
 </template>
-
-<script>
-export default defineComponent({
-	data() {
-		return {
-			form: this.$inertia.form({
-				current_password: '',
-				password: '',
-				password_confirmation: '',
-			}),
-		}
-	},
-
-	methods: {
-		updatePassword() {
-			this.form.put(this.route('user-password.update'), {
-				errorBag: 'updatePassword',
-				preserveScroll: true,
-				onSuccess: () => this.form.reset(),
-				onError: () => {
-					if (this.form.errors.password) {
-						this.form.reset('password', 'password_confirmation')
-						this.$refs.password.focus()
-					}
-
-					if (this.form.errors.current_password) {
-						this.form.reset('current_password')
-						this.$refs.current_password.focus()
-					}
-				},
-			})
-		},
-	},
-})
-</script>

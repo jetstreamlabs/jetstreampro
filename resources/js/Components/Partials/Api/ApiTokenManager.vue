@@ -1,3 +1,59 @@
+<script setup>
+const displayingToken = ref(false)
+const managingPermissionsFor = ref(null)
+const apiTokenBeingDeleted = ref(null)
+
+const props = defineProps(['tokens', 'availablePermissions', 'defaultPermissions'])
+const { tokens, availablePermissions } = toRefs(props)
+
+const createApiTokenForm = useForm({
+	name: '',
+	permissions: props.defaultPermissions,
+})
+const updateApiTokenForm = useForm({
+	permissions: [],
+})
+const deleteApiTokenForm = useForm()
+
+const createApiToken = () => {
+	const { href } = useRoutes('api-tokens.store')
+	createApiTokenForm.post(href.value, {
+		preserveScroll: true,
+		onSuccess: () => {
+			displayingToken.value = true
+			createApiTokenForm.reset()
+		},
+	})
+}
+
+const manageApiTokenPermissions = (token) => {
+	updateApiTokenForm.permissions = token.abilities
+	managingPermissionsFor.value = token
+}
+
+const updateApiToken = () => {
+	const { href } = useRoutes('api-tokens.update', { token: managingPermissionsFor.value.id })
+	updateApiTokenForm.put(href.value, {
+		preserveScroll: true,
+		preserveState: true,
+		onSuccess: () => (managingPermissionsFor.value = null),
+	})
+}
+
+const confirmApiTokenDeletion = (token) => {
+	apiTokenBeingDeleted.value = token
+}
+
+const deleteApiToken = () => {
+	const { href } = useRoutes('api-tokens.destroy', { token: apiTokenBeingDeleted.value.id })
+	deleteApiTokenForm.delete(href.value, {
+		preserveScroll: true,
+		preserveState: true,
+		onSuccess: () => (apiTokenBeingDeleted.value = null),
+	})
+}
+</script>
+
 <template>
 	<div>
 		<!-- Generate API Token -->
@@ -66,8 +122,7 @@
 									<button
 										class="ml-6 text-sm text-gray-400 underline cursor-pointer"
 										@click="manageApiTokenPermissions(token)"
-										v-if="availablePermissions.length > 0"
-									>
+										v-if="availablePermissions.length > 0">
 										Permissions
 									</button>
 
@@ -91,8 +146,7 @@
 
 				<div
 					class="px-4 py-2 mt-4 font-mono text-sm text-gray-500 bg-gray-100 rounded"
-					v-if="$page.props.jetstream.flash.token"
-				>
+					v-if="$page.props.jetstream.flash.token">
 					{{ $page.props.jetstream.flash.token }}
 				</div>
 			</template>
@@ -124,8 +178,7 @@
 					class="ml-2"
 					@click="updateApiToken"
 					:class="{ 'opacity-25': updateApiTokenForm.processing }"
-					:disabled="updateApiTokenForm.processing"
-				>
+					:disabled="updateApiTokenForm.processing">
 					Save
 				</JetButton>
 			</template>
@@ -144,74 +197,10 @@
 					class="ml-2"
 					@click="deleteApiToken"
 					:class="{ 'opacity-25': deleteApiTokenForm.processing }"
-					:disabled="deleteApiTokenForm.processing"
-				>
+					:disabled="deleteApiTokenForm.processing">
 					Delete
 				</JetDangerButton>
 			</template>
 		</JetConfirmationModal>
 	</div>
 </template>
-
-<script>
-export default defineComponent({
-	props: ['tokens', 'availablePermissions', 'defaultPermissions'],
-
-	data() {
-		return {
-			createApiTokenForm: this.$inertia.form({
-				name: '',
-				permissions: this.defaultPermissions,
-			}),
-
-			updateApiTokenForm: this.$inertia.form({
-				permissions: [],
-			}),
-
-			deleteApiTokenForm: this.$inertia.form(),
-
-			displayingToken: false,
-			managingPermissionsFor: null,
-			apiTokenBeingDeleted: null,
-		}
-	},
-
-	methods: {
-		createApiToken() {
-			this.createApiTokenForm.post(this.route('api-tokens.store'), {
-				preserveScroll: true,
-				onSuccess: () => {
-					this.displayingToken = true
-					this.createApiTokenForm.reset()
-				},
-			})
-		},
-
-		manageApiTokenPermissions(token) {
-			this.updateApiTokenForm.permissions = token.abilities
-
-			this.managingPermissionsFor = token
-		},
-
-		updateApiToken() {
-			this.updateApiTokenForm.put(this.route('api-tokens.update', this.managingPermissionsFor), {
-				preserveScroll: true,
-				preserveState: true,
-				onSuccess: () => (this.managingPermissionsFor = null),
-			})
-		},
-
-		confirmApiTokenDeletion(token) {
-			this.apiTokenBeingDeleted = token
-		},
-
-		deleteApiToken() {
-			this.deleteApiTokenForm.delete(this.route('api-tokens.destroy', this.apiTokenBeingDeleted), {
-				preserveScroll: true,
-				preserveState: true,
-				onSuccess: () => (this.apiTokenBeingDeleted = null),
-			})
-		},
-	},
-})
-</script>

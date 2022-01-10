@@ -1,7 +1,7 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { jetstreampro } from '@/Application/plugin.js'
-import DefaultLayout from '@/Components/Layouts/MainLayout.vue'
+import DefaultLayout from '../Components/Layouts/MainLayout.vue'
 
 const pages = import.meta.glob('../Pages/**/*.vue')
 

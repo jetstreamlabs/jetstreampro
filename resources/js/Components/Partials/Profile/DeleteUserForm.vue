@@ -1,3 +1,34 @@
+<script setup>
+const confirmingUserDeletion = ref(false)
+const password = ref()
+
+const form = useForm({
+	password: '',
+})
+
+const confirmUserDeletion = () => {
+	confirmingUserDeletion.value = true
+	setTimeout(() => password.value.input.focus(), 250)
+}
+
+const deleteUser = () => {
+	const { href } = useRoutes('current-user.destroy')
+	form.delete(href.value, {
+		preserveScroll: true,
+		onSuccess: () => closeModal(),
+		onError: () => password.value.input.focus(),
+		onFinish: () => form.reset(),
+	})
+}
+
+const closeModal = () => {
+	confirmingUserDeletion.value = false
+	form.reset()
+}
+
+defineExpose({ password })
+</script>
+
 <template>
 	<JetActionSection>
 		<template #title> Delete Account </template>
@@ -30,8 +61,7 @@
 							placeholder="Password"
 							ref="password"
 							v-model="form.password"
-							@keyup.enter="deleteUser"
-						/>
+							@keyup.enter="deleteUser" />
 
 						<JetInput-error :message="form.errors.password" class="mt-2" />
 					</div>
@@ -44,8 +74,7 @@
 						class="ml-2"
 						@click="deleteUser"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing"
-					>
+						:disabled="form.processing">
 						Delete Account
 					</JetDangerButton>
 				</template>
@@ -53,40 +82,3 @@
 		</template>
 	</JetActionSection>
 </template>
-
-<script>
-export default defineComponent({
-	data() {
-		return {
-			confirmingUserDeletion: false,
-
-			form: this.$inertia.form({
-				password: '',
-			}),
-		}
-	},
-
-	methods: {
-		confirmUserDeletion() {
-			this.confirmingUserDeletion = true
-
-			setTimeout(() => this.$refs.password.focus(), 250)
-		},
-
-		deleteUser() {
-			this.form.delete(this.route('current-user.destroy'), {
-				preserveScroll: true,
-				onSuccess: () => this.closeModal(),
-				onError: () => this.$refs.password.focus(),
-				onFinish: () => this.form.reset(),
-			})
-		},
-
-		closeModal() {
-			this.confirmingUserDeletion = false
-
-			this.form.reset()
-		},
-	},
-})
-</script>

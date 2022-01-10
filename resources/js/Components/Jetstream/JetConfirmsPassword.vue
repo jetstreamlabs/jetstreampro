@@ -1,3 +1,68 @@
+<script setup>
+const props = defineProps({
+	title: {
+		default: 'Confirm Password',
+	},
+	content: {
+		default: 'For your security, please confirm your password to continue.',
+	},
+	button: {
+		default: 'Confirm',
+	},
+})
+const emit = defineEmits(['confirmed'])
+
+const confirmingPassword = ref(false)
+const password = ref()
+
+const { title, content, button } = toRefs(props)
+
+const form = useForm({
+	password: '',
+	error: '',
+})
+
+const startConfirmingPassword = () => {
+	const { href } = useRoutes('password.confirmation')
+	axios.get(href.value).then((response) => {
+		if (response.data.confirmed) {
+			emit('confirmed')
+		} else {
+			confirmingPassword.value = true
+			setTimeout(() => password.value.input.focus(), 250)
+		}
+	})
+}
+
+const confirmPassword = () => {
+	form.processing = true
+	const { href } = useRoutes('password.confirm')
+
+	axios
+		.post(href.value, {
+			password: form.password,
+		})
+		.then(() => {
+			form.processing = false
+			closeModal()
+			nextTick(() => emit('confirmed'))
+		})
+		.catch((error) => {
+			form.processing = false
+			form.error = error.response.data.errors.password[0]
+			password.value.input.focus()
+		})
+}
+
+const closeModal = () => {
+	confirmingPassword.value = false
+	form.password = ''
+	form.error = ''
+}
+
+defineExpose({ password })
+</script>
+
 <template>
 	<span>
 		<span @click="startConfirmingPassword">
@@ -19,8 +84,7 @@
 						placeholder="Password"
 						ref="password"
 						v-model="form.password"
-						@keyup.enter="confirmPassword"
-					/>
+						@keyup.enter="confirmPassword" />
 
 					<JetInput-error :message="form.error" class="mt-2" />
 				</div>
@@ -33,77 +97,10 @@
 					class="ml-2"
 					@click="confirmPassword"
 					:class="{ 'opacity-25': form.processing }"
-					:disabled="form.processing"
-				>
+					:disabled="form.processing">
 					{{ button }}
 				</JetButton>
 			</template>
 		</JetDialogModal>
 	</span>
 </template>
-
-<script>
-export default defineComponent({
-	emits: ['confirmed'],
-
-	props: {
-		title: {
-			default: 'Confirm Password',
-		},
-		content: {
-			default: 'For your security, please confirm your password to continue.',
-		},
-		button: {
-			default: 'Confirm',
-		},
-	},
-	data() {
-		return {
-			confirmingPassword: false,
-			form: {
-				password: '',
-				error: '',
-			},
-		}
-	},
-
-	methods: {
-		startConfirmingPassword() {
-			axios.get(this.route('password.confirmation')).then((response) => {
-				if (response.data.confirmed) {
-					this.$emit('confirmed')
-				} else {
-					this.confirmingPassword = true
-
-					setTimeout(() => this.$refs.password.focus(), 250)
-				}
-			})
-		},
-
-		confirmPassword() {
-			this.form.processing = true
-
-			axios
-				.post(this.route('password.confirm'), {
-					password: this.form.password,
-				})
-				.then(() => {
-					this.form.processing = false
-					this.closeModal()
-					this.$nextTick(() => this.$emit('confirmed'))
-				})
-				.catch((error) => {
-					this.form.processing = false
-					this.form.error = error.response.data.errors.password[0]
-					this.$refs.password.focus()
-				})
-		},
-
-		closeModal() {
-			this.confirmingPassword = false
-			this.form.password = ''
-			this.form.error = ''
-		},
-	},
-})
-</script>

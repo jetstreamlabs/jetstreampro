@@ -1,3 +1,22 @@
+<script setup>
+const props = defineProps(['team'])
+const confirmingTeamDeletion = ref(false)
+
+const form = useForm()
+
+const confirmTeamDeletion = () => {
+	confirmingTeamDeletion.value = true
+}
+
+const deleteTeam = () => {
+	const { href } = useRoutes('teams.destroy', { team: props.team.id })
+
+	form.delete(href.value, {
+		errorBag: 'deleteTeam',
+	})
+}
+</script>
+
 <template>
 	<JetActionSection>
 		<template #title> Delete Team </template>
@@ -30,8 +49,7 @@
 						class="ml-2"
 						@click="deleteTeam"
 						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing"
-					>
+						:disabled="form.processing">
 						Delete Team
 					</JetDangerButton>
 				</template>
@@ -39,30 +57,3 @@
 		</template>
 	</JetActionSection>
 </template>
-
-<script>
-export default defineComponent({
-	props: ['team'],
-
-	data() {
-		return {
-			confirmingTeamDeletion: false,
-			deleting: false,
-
-			form: this.$inertia.form(),
-		}
-	},
-
-	methods: {
-		confirmTeamDeletion() {
-			this.confirmingTeamDeletion = true
-		},
-
-		deleteTeam() {
-			this.form.delete(this.route('teams.destroy', this.team), {
-				errorBag: 'deleteTeam',
-			})
-		},
-	},
-})
-</script>

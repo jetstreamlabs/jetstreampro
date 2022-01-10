@@ -1,3 +1,17 @@
+<script setup>
+const form = useForm({
+	name: '',
+})
+
+const createTeam = () => {
+	const { href } = useRoutes('teams.store')
+	form.post(href.value, {
+		errorBag: 'createTeam',
+		preserveScroll: true,
+	})
+}
+</script>
+
 <template>
 	<JetFormSection @submitted="createTeam">
 		<template #title> Team Details </template>
@@ -12,8 +26,7 @@
 					<img
 						class="object-cover w-12 h-12 rounded-full"
 						:src="$page.props.user.profile_photo_url"
-						:alt="$page.props.user.name"
-					/>
+						:alt="$page.props.user.name" />
 
 					<div class="ml-4 leading-tight">
 						<div>{{ $page.props.user.name }}</div>
@@ -34,24 +47,3 @@
 		</template>
 	</JetFormSection>
 </template>
-
-<script>
-export default defineComponent({
-	data() {
-		return {
-			form: this.$inertia.form({
-				name: '',
-			}),
-		}
-	},
-
-	methods: {
-		createTeam() {
-			this.form.post(this.route('teams.store'), {
-				errorBag: 'createTeam',
-				preserveScroll: true,
-			})
-		},
-	},
-})
-</script>

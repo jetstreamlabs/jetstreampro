@@ -14,6 +14,7 @@ declare global {
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
+  const Inertia: typeof import('@inertiajs/inertia')['Inertia']
   const inject: typeof import('vue')['inject']
   const isReadonly: typeof import('vue')['isReadonly']
   const isRef: typeof import('vue')['isRef']
@@ -54,8 +55,10 @@ declare global {
   const useForm: typeof import('@inertiajs/inertia-vue3')['useForm']
   const usePage: typeof import('@inertiajs/inertia-vue3')['usePage']
   const useRemember: typeof import('@inertiajs/inertia-vue3')['useRemember']
+  const useRoutes: typeof import('composable')['useRoutes']
   const useSlots: typeof import('vue')['useSlots']
   const useStore: typeof import('vuex')['useStore']
+  const useTrans: typeof import('composable')['useTrans']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
 }

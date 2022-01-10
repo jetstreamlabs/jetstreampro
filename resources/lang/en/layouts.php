@@ -2,7 +2,7 @@
 
 return [
 	'main' => [
-		'title' => 'Dashboard',
+		'dashboard' => 'Dashboard',
 		'manage' => 'Manage Team',
 		'settings' => 'Team Settings',
 		'create' => 'Create New Team',

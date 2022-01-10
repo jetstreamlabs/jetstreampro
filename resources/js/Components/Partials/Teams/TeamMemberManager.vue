@@ -1,3 +1,87 @@
+<script setup>
+const props = defineProps(['team', 'availableRoles', 'userPermissions'])
+const { team, availableRoles, userPermissions } = toRefs(props)
+
+const currentlyManagingRole = ref(false)
+const managingRoleFor = ref(null)
+const confirmingLeavingTeam = ref(false)
+const teamMemberBeingRemoved = ref(null)
+
+const addTeamMemberForm = useForm({
+	email: '',
+	role: null,
+})
+
+const updateRoleForm = useForm({
+	role: null,
+})
+
+const leaveTeamForm = useForm()
+const removeTeamMemberForm = useForm()
+
+const addTeamMember = () => {
+	const { href } = useRoutes('team-members.store', props.team)
+
+	addTeamMemberForm.post(href.value, {
+		errorBag: 'addTeamMember',
+		preserveScroll: true,
+		onSuccess: () => addTeamMemberForm.reset(),
+	})
+}
+
+const cancelTeamInvitation = (invitation) => {
+	const { href } = useRoutes('team-invitations.destroy', invitation)
+
+	Inertia.delete(href.value, {
+		preserveScroll: true,
+	})
+}
+
+const manageRole = (teamMember) => {
+	managingRoleFor.value = teamMember
+	updateRoleForm.role = teamMember.membership.role
+	currentlyManagingRole.value = true
+}
+
+const updateRole = () => {
+	const { href } = useRoutes('team-members.update', [props.team.id, managingRoleFor.value])
+
+	updateRoleForm.put(href.value, {
+		preserveScroll: true,
+		onSuccess: () => (currentlyManagingRole.value = false),
+	})
+}
+
+const confirmLeavingTeam = () => {
+	confirmingLeavingTeam.value = true
+}
+
+const leaveTeam = () => {
+	const { href } = useRoutes('team-members.destroy', [props.team.id, usePage().props.value.user])
+
+	leaveTeamForm.delete(href.value)
+}
+
+const confirmTeamMemberRemoval = (teamMember) => {
+	teamMemberBeingRemoved.value = teamMember
+}
+
+const removeTeamMember = () => {
+	const { href } = useRoutes('team-members.destroy', [props.team.id, teamMemberBeingRemoved.value])
+
+	removeTeamMemberForm.delete(href.value, {
+		errorBag: 'removeTeamMember',
+		preserveScroll: true,
+		preserveState: true,
+		onSuccess: () => (teamMemberBeingRemoved.value = null),
+	})
+}
+
+const displayableRole = (role) => {
+	return availableRoles.value.find((r) => r.key === role).name
+}
+</script>
+
 <template>
 	<div>
 		<div v-if="userPermissions.canAddTeamMembers">
@@ -38,8 +122,7 @@
 								}"
 								@click="addTeamMemberForm.role = role.key"
 								v-for="(role, i) in availableRoles"
-								:key="role.key"
-							>
+								:key="role.key">
 								<div :class="{ 'opacity-50': addTeamMemberForm.role && addTeamMemberForm.role != role.key }">
 									<!-- Role Name -->
 									<div class="flex items-center">
@@ -55,8 +138,7 @@
 											stroke-linejoin="round"
 											stroke-width="2"
 											stroke="currentColor"
-											viewBox="0 0 24 24"
-										>
+											viewBox="0 0 24 24">
 											<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 										</svg>
 									</div>
@@ -99,8 +181,7 @@
 						<div
 							class="flex items-center justify-between"
 							v-for="invitation in team.team_invitations"
-							:key="invitation.id"
-						>
+							:key="invitation.id">
 							<div class="text-gray-600">{{ invitation.email }}</div>
 
 							<div class="flex items-center">
@@ -108,8 +189,7 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer focus:outline-none"
 									@click="cancelTeamInvitation(invitation)"
-									v-if="userPermissions.canRemoveTeamMembers"
-								>
+									v-if="userPermissions.canRemoveTeamMembers">
 									Cancel
 								</button>
 							</div>
@@ -142,8 +222,7 @@
 								<button
 									class="ml-2 text-sm text-gray-400 underline"
 									@click="manageRole(user)"
-									v-if="userPermissions.canAddTeamMembers && availableRoles.length"
-								>
+									v-if="userPermissions.canAddTeamMembers && availableRoles.length">
 									{{ displayableRole(user.membership.role) }}
 								</button>
 
@@ -155,8 +234,7 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmLeavingTeam"
-									v-if="$page.props.user.id === user.id"
-								>
+									v-if="$page.props.user.id === user.id">
 									Leave
 								</button>
 
@@ -164,8 +242,7 @@
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmTeamMemberRemoval(user)"
-									v-if="userPermissions.canRemoveTeamMembers"
-								>
+									v-if="userPermissions.canRemoveTeamMembers">
 									Remove
 								</button>
 							</div>
@@ -191,8 +268,7 @@
 							}"
 							@click="updateRoleForm.role = role.key"
 							v-for="(role, i) in availableRoles"
-							:key="role.key"
-						>
+							:key="role.key">
 							<div :class="{ 'opacity-50': updateRoleForm.role && updateRoleForm.role !== role.key }">
 								<!-- Role Name -->
 								<div class="flex items-center">
@@ -208,8 +284,7 @@
 										stroke-linejoin="round"
 										stroke-width="2"
 										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
+										viewBox="0 0 24 24">
 										<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 									</svg>
 								</div>
@@ -231,8 +306,7 @@
 					class="ml-2"
 					@click="updateRole"
 					:class="{ 'opacity-25': updateRoleForm.processing }"
-					:disabled="updateRoleForm.processing"
-				>
+					:disabled="updateRoleForm.processing">
 					Save
 				</JetButton>
 			</template>
@@ -251,8 +325,7 @@
 					class="ml-2"
 					@click="leaveTeam"
 					:class="{ 'opacity-25': leaveTeamForm.processing }"
-					:disabled="leaveTeamForm.processing"
-				>
+					:disabled="leaveTeamForm.processing">
 					Leave
 				</JetDangerButton>
 			</template>
@@ -271,92 +344,10 @@
 					class="ml-2"
 					@click="removeTeamMember"
 					:class="{ 'opacity-25': removeTeamMemberForm.processing }"
-					:disabled="removeTeamMemberForm.processing"
-				>
+					:disabled="removeTeamMemberForm.processing">
 					Remove
 				</JetDangerButton>
 			</template>
 		</JetConfirmationModal>
 	</div>
 </template>
-
-<script>
-export default defineComponent({
-	props: ['team', 'availableRoles', 'userPermissions'],
-
-	data() {
-		return {
-			addTeamMemberForm: this.$inertia.form({
-				email: '',
-				role: null,
-			}),
-
-			updateRoleForm: this.$inertia.form({
-				role: null,
-			}),
-
-			leaveTeamForm: this.$inertia.form(),
-			removeTeamMemberForm: this.$inertia.form(),
-
-			currentlyManagingRole: false,
-			managingRoleFor: null,
-			confirmingLeavingTeam: false,
-			teamMemberBeingRemoved: null,
-		}
-	},
-
-	methods: {
-		addTeamMember() {
-			this.addTeamMemberForm.post(this.route('team-members.store', this.team), {
-				errorBag: 'addTeamMember',
-				preserveScroll: true,
-				onSuccess: () => this.addTeamMemberForm.reset(),
-			})
-		},
-
-		cancelTeamInvitation(invitation) {
-			this.$inertia.delete(this.route('team-invitations.destroy', invitation), {
-				preserveScroll: true,
-			})
-		},
-
-		manageRole(teamMember) {
-			this.managingRoleFor = teamMember
-			this.updateRoleForm.role = teamMember.membership.role
-			this.currentlyManagingRole = true
-		},
-
-		updateRole() {
-			this.updateRoleForm.put(this.route('team-members.update', [this.team, this.managingRoleFor]), {
-				preserveScroll: true,
-				onSuccess: () => (this.currentlyManagingRole = false),
-			})
-		},
-
-		confirmLeavingTeam() {
-			this.confirmingLeavingTeam = true
-		},
-
-		leaveTeam() {
-			this.leaveTeamForm.delete(this.route('team-members.destroy', [this.team, this.$page.props.user]))
-		},
-
-		confirmTeamMemberRemoval(teamMember) {
-			this.teamMemberBeingRemoved = teamMember
-		},
-
-		removeTeamMember() {
-			this.removeTeamMemberForm.delete(this.route('team-members.destroy', [this.team, this.teamMemberBeingRemoved]), {
-				errorBag: 'removeTeamMember',
-				preserveScroll: true,
-				preserveState: true,
-				onSuccess: () => (this.teamMemberBeingRemoved = null),
-			})
-		},
-
-		displayableRole(role) {
-			return this.availableRoles.find((r) => r.key === role).name
-		},
-	},
-})
-</script>

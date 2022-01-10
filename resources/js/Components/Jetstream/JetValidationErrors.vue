@@ -1,3 +1,13 @@
+<script setup>
+const errors = computed(() => {
+	return usePage().props.value.errors
+})
+
+const hasErrors = computed(() => {
+	return Object.keys(errors).length > 0
+})
+</script>
+
 <template>
 	<div v-if="hasErrors">
 		<div class="font-medium text-red-600">Whoops! Something went wrong.</div>
@@ -7,17 +17,3 @@
 		</ul>
 	</div>
 </template>
-
-<script>
-export default defineComponent({
-	computed: {
-		errors() {
-			return this.$page.props.errors
-		},
-
-		hasErrors() {
-			return Object.keys(this.errors).length > 0
-		},
-	},
-})
-</script>

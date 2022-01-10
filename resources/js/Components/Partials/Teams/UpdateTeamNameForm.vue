@@ -1,3 +1,21 @@
+<script setup>
+const props = defineProps(['team', 'permissions'])
+const { team, permissions } = toRefs(props)
+
+const form = useForm({
+	name: props.team.name,
+})
+
+const updateTeamName = () => {
+	const { href } = useRoutes('teams.update', { team: props.team.id })
+
+	form.put(href.value, {
+		errorBag: 'updateTeamName',
+		preserveScroll: true,
+	})
+}
+</script>
+
 <template>
 	<JetFormSection @submitted="updateTeamName">
 		<template #title> Team Name </template>
@@ -28,8 +46,7 @@
 					type="text"
 					class="block w-full mt-1"
 					v-model="form.name"
-					:disabled="!permissions.canUpdateTeam"
-				/>
+					:disabled="!permissions.canUpdateTeam" />
 
 				<JetInput-error :message="form.errors.name" class="mt-2" />
 			</div>
@@ -42,26 +59,3 @@
 		</template>
 	</JetFormSection>
 </template>
-
-<script>
-export default defineComponent({
-	props: ['team', 'permissions'],
-
-	data() {
-		return {
-			form: this.$inertia.form({
-				name: this.team.name,
-			}),
-		}
-	},
-
-	methods: {
-		updateTeamName() {
-			this.form.put(this.route('teams.update', this.team), {
-				errorBag: 'updateTeamName',
-				preserveScroll: true,
-			})
-		},
-	},
-})
-</script>
