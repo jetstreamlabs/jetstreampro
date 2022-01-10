@@ -122,7 +122,8 @@ const displayableRole = (role) => {
 								}"
 								@click="addTeamMemberForm.role = role.key"
 								v-for="(role, i) in availableRoles"
-								:key="role.key">
+								:key="role.key"
+							>
 								<div :class="{ 'opacity-50': addTeamMemberForm.role && addTeamMemberForm.role != role.key }">
 									<!-- Role Name -->
 									<div class="flex items-center">
@@ -138,7 +139,8 @@ const displayableRole = (role) => {
 											stroke-linejoin="round"
 											stroke-width="2"
 											stroke="currentColor"
-											viewBox="0 0 24 24">
+											viewBox="0 0 24 24"
+										>
 											<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 										</svg>
 									</div>
@@ -181,7 +183,8 @@ const displayableRole = (role) => {
 						<div
 							class="flex items-center justify-between"
 							v-for="invitation in team.team_invitations"
-							:key="invitation.id">
+							:key="invitation.id"
+						>
 							<div class="text-gray-600">{{ invitation.email }}</div>
 
 							<div class="flex items-center">
@@ -189,7 +192,8 @@ const displayableRole = (role) => {
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer focus:outline-none"
 									@click="cancelTeamInvitation(invitation)"
-									v-if="userPermissions.canRemoveTeamMembers">
+									v-if="userPermissions.canRemoveTeamMembers"
+								>
 									Cancel
 								</button>
 							</div>
@@ -222,7 +226,8 @@ const displayableRole = (role) => {
 								<button
 									class="ml-2 text-sm text-gray-400 underline"
 									@click="manageRole(user)"
-									v-if="userPermissions.canAddTeamMembers && availableRoles.length">
+									v-if="userPermissions.canAddTeamMembers && availableRoles.length"
+								>
 									{{ displayableRole(user.membership.role) }}
 								</button>
 
@@ -234,7 +239,8 @@ const displayableRole = (role) => {
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmLeavingTeam"
-									v-if="$page.props.user.id === user.id">
+									v-if="$page.props.user.id === user.id"
+								>
 									Leave
 								</button>
 
@@ -242,7 +248,8 @@ const displayableRole = (role) => {
 								<button
 									class="ml-6 text-sm text-red-500 cursor-pointer"
 									@click="confirmTeamMemberRemoval(user)"
-									v-if="userPermissions.canRemoveTeamMembers">
+									v-if="userPermissions.canRemoveTeamMembers"
+								>
 									Remove
 								</button>
 							</div>
@@ -268,7 +275,8 @@ const displayableRole = (role) => {
 							}"
 							@click="updateRoleForm.role = role.key"
 							v-for="(role, i) in availableRoles"
-							:key="role.key">
+							:key="role.key"
+						>
 							<div :class="{ 'opacity-50': updateRoleForm.role && updateRoleForm.role !== role.key }">
 								<!-- Role Name -->
 								<div class="flex items-center">
@@ -284,7 +292,8 @@ const displayableRole = (role) => {
 										stroke-linejoin="round"
 										stroke-width="2"
 										stroke="currentColor"
-										viewBox="0 0 24 24">
+										viewBox="0 0 24 24"
+									>
 										<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 									</svg>
 								</div>
@@ -306,7 +315,8 @@ const displayableRole = (role) => {
 					class="ml-2"
 					@click="updateRole"
 					:class="{ 'opacity-25': updateRoleForm.processing }"
-					:disabled="updateRoleForm.processing">
+					:disabled="updateRoleForm.processing"
+				>
 					Save
 				</JetButton>
 			</template>
@@ -325,7 +335,8 @@ const displayableRole = (role) => {
 					class="ml-2"
 					@click="leaveTeam"
 					:class="{ 'opacity-25': leaveTeamForm.processing }"
-					:disabled="leaveTeamForm.processing">
+					:disabled="leaveTeamForm.processing"
+				>
 					Leave
 				</JetDangerButton>
 			</template>
@@ -344,7 +355,8 @@ const displayableRole = (role) => {
 					class="ml-2"
 					@click="removeTeamMember"
 					:class="{ 'opacity-25': removeTeamMemberForm.processing }"
-					:disabled="removeTeamMemberForm.processing">
+					:disabled="removeTeamMemberForm.processing"
+				>
 					Remove
 				</JetDangerButton>
 			</template>

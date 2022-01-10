@@ -87,7 +87,8 @@ defineExpose({ photo, photoPreview })
 				<div class="mt-2" v-show="photoPreview">
 					<span
 						class="block w-20 h-20 bg-center bg-no-repeat bg-cover rounded-full"
-						:style="'background-image: url(\'' + photoPreview + '\');'">
+						:style="'background-image: url(\'' + photoPreview + '\');'"
+					>
 					</span>
 				</div>
 
@@ -99,7 +100,8 @@ defineExpose({ photo, photoPreview })
 					type="button"
 					class="mt-2"
 					@click.prevent="deletePhoto"
-					v-if="props.user.profile_photo_path">
+					v-if="props.user.profile_photo_path"
+				>
 					Remove Photo
 				</JetSecondaryButton>
 
