@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+# [1.2.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.1.0...v1.2.0) (2022-01-10)
+
+
+### Features
+
+* finish converting components to script setup ([02e4732](https://github.com/jetstreamlabs/jetstreampro/commit/02e47321ebf71618d527f428808edf7ae1a4ef9e))
+
 # [1.1.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.0.2...v1.1.0) (2022-01-10)
 
 
