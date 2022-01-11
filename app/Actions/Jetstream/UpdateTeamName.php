@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jetstream;
+namespace App\Actions\Jetstream;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Validator;

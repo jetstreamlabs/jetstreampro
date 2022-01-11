@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jetstream;
+namespace App\Actions\Jetstream;
 
 use Laravel\Jetstream\Contracts\DeletesTeams;
 

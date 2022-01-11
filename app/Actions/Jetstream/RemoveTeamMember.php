@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jetstream;
+namespace App\Actions\Jetstream;
 
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Gate;

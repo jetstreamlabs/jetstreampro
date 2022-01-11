@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Actions;
+namespace App\Http\Controllers;
 
-use App\Core\Controller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
