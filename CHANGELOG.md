@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.2.8](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.7...v1.2.8) (2022-01-11)
+
+
+### Bug Fixes
+
+* **workflow:** added security for all tokens ([8164815](https://github.com/jetstreamlabs/jetstreampro/commit/8164815498d6181801dbb1fc69d99c2e589ad226))
+
 ## [1.2.7](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.6...v1.2.7) (2022-01-11)
 
 
