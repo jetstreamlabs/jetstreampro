@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.VERAN }}
 
       - name: setup node.js
         uses: actions/setup-node@v2
@@ -28,7 +28,7 @@ jobs:
 
       - name: run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.VERAN }}
         run: npx semantic-release
 
   create:
@@ -46,7 +46,7 @@ jobs:
       - name: create deploying branch
         uses: peterjgrainger/action-create-branch@v2.1.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.VERAN }}
         with:
           branch: deploying
           sha: ${{ github.sha }}
