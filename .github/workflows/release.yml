@@ -42,7 +42,9 @@ jobs:
         uses: actions-ecosystem/action-get-latest-tag@v1
         id: latest-tag
 
-      - run: git branch release ${{ steps.latest-tag.outputs.tag }}
+      - name: Create release branch
+        run: |
+          git branch release refs/tags/${{ steps.latest-tag.outputs.tag }}
 
   compile:
     name: Craft Builder App
