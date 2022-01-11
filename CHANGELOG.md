@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.2.9](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.8...v1.2.9) (2022-01-11)
+
+
+### Bug Fixes
+
+* **workflow:** add back the delete function ([ee69bf2](https://github.com/jetstreamlabs/jetstreampro/commit/ee69bf25c69954b959de35fda24ead7a2d0d242b))
+
 ## [1.2.8](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.7...v1.2.8) (2022-01-11)
 
 
