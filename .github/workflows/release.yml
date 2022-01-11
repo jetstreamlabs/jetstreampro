@@ -9,14 +9,14 @@ on:
 
 jobs:
   release:
-    name: Release main
+    name: Release Main
     runs-on: ubuntu-latest
     steps:
       - name: checkout main
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          token: ${{ secrets.VERAN }}
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: setup node.js
         uses: actions/setup-node@v2
@@ -28,7 +28,7 @@ jobs:
 
       - name: run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.VERAN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
 
   create:
@@ -46,7 +46,7 @@ jobs:
       - name: create staging branch
         uses: peterjgrainger/action-create-branch@v2.1.0
         env:
-          GITHUB_TOKEN: ${{ secrets.VERAN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           branch: staging
           sha: ${{ github.sha }}
@@ -60,8 +60,7 @@ jobs:
       - name: checkout main
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.release.tag_name }}
-          token: ${{ secrets.VERAN }}
+          ref: ${{ github.ref }}
 
       - name: generate .env file
         run: echo "${{ secrets.MAIN_ENV }}" > .env
@@ -91,11 +90,11 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actor
-          branch: staging
+          branch: deploying
           message: 'chore(deploy): deploy main code to production'
           add: '-f public/'
           pull: 'NO-PULL'
-          push: '-f origin staging'
+          push: '-f origin deploying'
 
   deploy:
     name: Deploy to Laravel Forge
@@ -120,4 +119,4 @@ jobs:
         uses: dawidd6/action-delete-branch@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          branches: staging
+          branches: deploying
