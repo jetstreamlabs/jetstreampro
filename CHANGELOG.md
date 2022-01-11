@@ -1,5 +1,13 @@
 # Jetstream Pro Changelog
 
+## [1.2.5](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.4...v1.2.5) (2022-01-11)
+
+
+### Bug Fixes
+
+* **assets:** remove old assets ([9ad088c](https://github.com/jetstreamlabs/jetstreampro/commit/9ad088c8b66331d779fb0336d80c5b9f6b6ad7c7))
+* **workflow:** more testing of deployment workflow ([5bb6a25](https://github.com/jetstreamlabs/jetstreampro/commit/5bb6a2533ec470e4c7d0308449e9c98600e92f6b))
+
 ## [1.2.4](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.3...v1.2.4) (2022-01-11)
 
 
