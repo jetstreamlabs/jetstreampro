@@ -92,7 +92,7 @@ defineExpose({ password })
 			</template>
 
 			<template #footer>
-				<JetSecondaryButton @click="closeModal"> Cancel </JetSecondaryButton>
+				<JetSecondaryButton @click="closeModal">{{ __('jet.cancel') }}</JetSecondaryButton>
 
 				<JetButton
 					class="ml-2"

@@ -5,14 +5,9 @@
 				<JetApplicationLogo class="block w-auto h-12" />
 			</div>
 
-			<div class="mt-8 text-2xl">Welcome to your Jetstream application!</div>
+			<div class="mt-8 text-2xl">{{ __('jet.welcome.title') }}</div>
 
-			<div class="mt-6 text-gray-500">
-				Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is
-				designed to help you build your application using a development environment that is simple, powerful, and
-				enjoyable. We believe you should love expressing your creativity through programming, so we have spent time
-				carefully crafting the Laravel ecosystem to be a breath of fresh air. We hope you love it.
-			</div>
+			<div class="mt-6 text-gray-500">{{ __('jet.welcome.desc') }}</div>
 		</div>
 
 		<div class="grid grid-cols-1 bg-gray-200 bg-opacity-25 md:grid-cols-2">
@@ -32,19 +27,16 @@
 						></path>
 					</svg>
 					<div class="ml-4 text-lg font-semibold leading-7 text-gray-600">
-						<a href="https://laravel.com/docs">Documentation</a>
+						<a href="https://laravel.com/docs">{{ __('jet.blocks.docs.title') }}</a>
 					</div>
 				</div>
 
 				<div class="ml-12">
-					<div class="mt-2 text-sm text-gray-500">
-						Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the
-						framework or have previous experience, we recommend reading all of the documentation from beginning to end.
-					</div>
+					<div class="mt-2 text-sm text-gray-500">{{ __('jet.blocks.docs.desc') }}</div>
 
 					<a href="https://laravel.com/docs">
 						<div class="flex items-center mt-3 text-sm font-semibold text-indigo-700">
-							<div>Explore the documentation</div>
+							<div>{{ __('jet.blocks.docs.link') }}</div>
 
 							<div class="ml-1 text-indigo-500">
 								<svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
@@ -77,19 +69,16 @@
 						<path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
 					</svg>
 					<div class="ml-4 text-lg font-semibold leading-7 text-gray-600">
-						<a href="https://laracasts.com">Laracasts</a>
+						<a href="https://laracasts.com">{{ __('jet.blocks.lara.title') }}</a>
 					</div>
 				</div>
 
 				<div class="ml-12">
-					<div class="mt-2 text-sm text-gray-500">
-						Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out,
-						see for yourself, and massively level up your development skills in the process.
-					</div>
+					<div class="mt-2 text-sm text-gray-500">{{ __('jet.blocks.lara.desc') }}</div>
 
 					<a href="https://laracasts.com">
 						<div class="flex items-center mt-3 text-sm font-semibold text-indigo-700">
-							<div>Start watching Laracasts</div>
+							<div>{{ __('jet.blocks.lara.link') }}</div>
 
 							<div class="ml-1 text-indigo-500">
 								<svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
@@ -121,16 +110,12 @@
 						></path>
 					</svg>
 					<div class="ml-4 text-lg font-semibold leading-7 text-gray-600">
-						<a href="https://tailwindcss.com/">Tailwind</a>
+						<a href="https://tailwindcss.com/">{{ __('jet.blocks.tw.title') }}</a>
 					</div>
 				</div>
 
 				<div class="ml-12">
-					<div class="mt-2 text-sm text-gray-500">
-						Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your
-						way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful
-						framework at your fingertips.
-					</div>
+					<div class="mt-2 text-sm text-gray-500">{{ __('jet.blocks.tw.desc') }}</div>
 				</div>
 			</div>
 
@@ -149,15 +134,11 @@
 							d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
 						></path>
 					</svg>
-					<div class="ml-4 text-lg font-semibold leading-7 text-gray-600">Authentication</div>
+					<div class="ml-4 text-lg font-semibold leading-7 text-gray-600">{{ __('jet.blocks.auth.title') }}</div>
 				</div>
 
 				<div class="ml-12">
-					<div class="mt-2 text-sm text-gray-500">
-						Authentication and registration views are included with Laravel Jetstream, as well as support for user email
-						verification and resetting forgotten passwords. So, you're free to get started what matters most: building
-						your application.
-					</div>
+					<div class="mt-2 text-sm text-gray-500">{{ __('jet.blocks.auth.desc') }}</div>
 				</div>
 			</div>
 		</div>
