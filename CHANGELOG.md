@@ -1,5 +1,15 @@
 # Jetstream Pro Changelog
 
+## [1.2.2](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.1...v1.2.2) (2022-01-11)
+
+
+### Bug Fixes
+
+* **workflow:** make auth more secure ([bdaa83f](https://github.com/jetstreamlabs/jetstreampro/commit/bdaa83f9222984a6c0da16d6b0022b0703bb7e72))
+
+
+* Merge branch 'develop' ([78869a6](https://github.com/jetstreamlabs/jetstreampro/commit/78869a60b741c9189a30729407e6bfab7e028eef))
+
 ## [1.2.1](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.0...v1.2.1) (2022-01-11)
 
 
