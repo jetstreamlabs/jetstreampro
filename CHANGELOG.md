@@ -1,5 +1,22 @@
 # Jetstream Pro Changelog
 
+## [1.2.1](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.0...v1.2.1) (2022-01-11)
+
+
+### Bug Fixes
+
+* **workflow:** add tags yml and update release yml ([8ae5681](https://github.com/jetstreamlabs/jetstreampro/commit/8ae5681ba37b3a31a8856ff3c3cbc618406d3b2b))
+
+
+### Maintenance
+
+* action workflow deployment testing ([14360fb](https://github.com/jetstreamlabs/jetstreampro/commit/14360fb8960aeb3f8417558beabab46562198d77))
+* adjust branch create command ([e0bb189](https://github.com/jetstreamlabs/jetstreampro/commit/e0bb1897206ed3e42f40dd95e602f22cbaca3a6f))
+* **fix:** fix vite build in package.json ([40ce505](https://github.com/jetstreamlabs/jetstreampro/commit/40ce50586bbbeb00d8d0969e34ca9a60b27b372b))
+* **fix:** missing checkout in action ([5441d80](https://github.com/jetstreamlabs/jetstreampro/commit/5441d80c72643393253e065049f31e7c66f2d8fa))
+* **fix:** remove create action for commandline ([b7ac1be](https://github.com/jetstreamlabs/jetstreampro/commit/b7ac1be6d9dc32404c0d0e6fbcfbe487ecb0bc97))
+* **fix:** run command as function ([1c59e9f](https://github.com/jetstreamlabs/jetstreampro/commit/1c59e9f373a20a3a6da6c5c3e154e87e7fc82026))
+
 # [1.2.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.1.0...v1.2.0) (2022-01-10)
 
 
