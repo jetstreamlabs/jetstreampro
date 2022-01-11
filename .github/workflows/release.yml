@@ -43,12 +43,12 @@ jobs:
           ref: ${{ github.ref }}
           fetch-depth: 0
 
-      - name: create staging branch
+      - name: create deploying branch
         uses: peterjgrainger/action-create-branch@v2.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          branch: staging
+          branch: deploying
           sha: ${{ github.sha }}
 
   compile:
