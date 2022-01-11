@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.2.6](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.5...v1.2.6) (2022-01-11)
+
+
+### Bug Fixes
+
+* **workflow:** wrong branch name ([56b2a44](https://github.com/jetstreamlabs/jetstreampro/commit/56b2a44b5ae8281de56b7c3456a1c06afe64d64d))
+
 ## [1.2.5](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.4...v1.2.5) (2022-01-11)
 
 
