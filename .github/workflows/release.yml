@@ -108,15 +108,3 @@ jobs:
           api_key: ${{ secrets.FID }}
           server_id: ${{ secrets.SID }}
           site_id: ${{ secrets.WID }}
-
-  remove:
-    name: Remove Staging Branch
-    needs: [deploy, compile, create, release]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: delete branch
-        uses: dawidd6/action-delete-branch@v3
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branches: deploying
