@@ -42,18 +42,7 @@ jobs:
         uses: actions-ecosystem/action-get-latest-tag@v1
         id: latest-tag
 
-      - name: Get SHA from latest tag
-        id: tag-sha
-        run: |
-          echo ::set-output name=sha::$(git log -1 --format="%H" ${{ steps.latest-tag.outputs.tag }})
-
-      - name: Create release branch
-        uses: peterjgrainger/action-create-branch@v2.1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          branch: release
-          sha: ${{ steps.tag-sha.outputs.sha }}
+      - run: git branch release ${{ steps.latest-tag.outputs.tag }}
 
   compile:
     name: Craft Builder App
@@ -70,7 +59,6 @@ jobs:
       - name: Generate .env file
         run: echo "${{ secrets.MAIN_ENV }}" > .env
 
-        # Set .env and directory permissions
       - run: sudo chown -R $(id -u):$(id -g) .env
       - run: chmod -R 777 storage bootstrap/cache
 
