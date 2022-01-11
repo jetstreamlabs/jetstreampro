@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.2.7](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.6...v1.2.7) (2022-01-11)
+
+
+### Bug Fixes
+
+* **workflow:** remove deletion of branch ([ade2a02](https://github.com/jetstreamlabs/jetstreampro/commit/ade2a0243bff0ba7397b968b55d49bf4fa32fb14))
+
 ## [1.2.6](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.5...v1.2.6) (2022-01-11)
 
 
