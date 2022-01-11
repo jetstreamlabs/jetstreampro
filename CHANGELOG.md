@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+# [1.3.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.9...v1.3.0) (2022-01-11)
+
+
+### Features
+
+* **structure:** return php classes back to start ([1788e78](https://github.com/jetstreamlabs/jetstreampro/commit/1788e78e62fe88df757ff6f37e04d5585ce50566))
+
 ## [1.2.9](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.8...v1.2.9) (2022-01-11)
 
 
