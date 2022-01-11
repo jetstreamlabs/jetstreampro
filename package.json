@@ -3,7 +3,7 @@
 	"scripts": {
 		"dev": "npm run jas && vite",
 		"build": "npm run jas && vite build",
-		"prod": "vite build --force",
+		"prod": "vite build",
 		"jas": "php artisan ziggy:generate && php artisan zora:generate",
 		"lint": "php ./vendor/bin/styleci analyze -c"
 	},
