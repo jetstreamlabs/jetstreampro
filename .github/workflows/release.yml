@@ -32,6 +32,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          fetch-depth: 0
+
       - name: Find latest tag
         uses: actions-ecosystem/action-get-latest-tag@v1
         id: latest-tag
