@@ -27,7 +27,7 @@ export default defineConfig(({ command }) => {
 				input: ['resources/js/app.js'],
 			},
 		},
-		server: makeServer(),
+		server: command === 'serve' ? makeServer() : null,
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, 'resources/js'),
