@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.1](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.0...v1.4.1) (2022-01-14)
+
+
+### Bug Fixes
+
+* **tools:** bypass server in production ([b6dc8fb](https://github.com/jetstreamlabs/jetstreampro/commit/b6dc8fb5bf87b5f04c65f4a77c2797986fb886b9))
+
 # [1.4.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.3.0...v1.4.0) (2022-01-14)
 
 
