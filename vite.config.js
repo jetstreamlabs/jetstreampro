@@ -2,10 +2,16 @@ import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import vue from '@vitejs/plugin-vue'
-import Dotenv from 'dotenv'
-const { resolve } = require('path')
+import dotenv from 'dotenv'
+import dotenvExpand from 'dotenv-expand'
+import { homedir } from 'os'
+import fs from 'fs'
+import { resolve } from 'path'
 
-Dotenv.config()
+const process = dotenv.config()
+const parsed = dotenvExpand(process).parsed
+
+const certPath = resolve(homedir(), parsed.VITE_CERTPATH)
 
 // prettier-ignore
 export default defineConfig(({ command }) => {
@@ -21,12 +27,7 @@ export default defineConfig(({ command }) => {
 				input: ['resources/js/app.js'],
 			},
 		},
-		server: {
-			host: true,
-			strictPort: true,
-			origin: process.env.VITE_DOMAIN,
-			port: process.env.VITE_PORT,
-		},
+		server: makeServer(),
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, 'resources/js'),
@@ -53,8 +54,8 @@ export default defineConfig(({ command }) => {
 					'vuex',
 					{
 						'@inertiajs/inertia': ['Inertia'],
-            '@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember'],
-						'composable': ['useTrans', 'useRoutes'],
+						'@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember'],
+						composable: ['useTrans', 'useRoutes'],
 					},
 				],
 			}),
@@ -73,3 +74,35 @@ export default defineConfig(({ command }) => {
 		],
 	}
 })
+
+export const makeServer = () => {
+	if (parsed.VITE_HTTPS == 'true') {
+		console.log('here')
+		return {
+			host: parsed.VITE_DOMAIN,
+			port: parsed.VITE_PORT,
+			origin: `${parsed.APP_URL}:${parsed.VITE_PORT}`,
+			strictPort: true,
+			https: {
+				key: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.key`)),
+				cert: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.crt`)),
+			},
+			hmr: {
+				host: parsed.VITE_DOMAIN,
+				port: parsed.VITE_PORT,
+			},
+		}
+	} else {
+		return {
+			host: parsed.VITE_DOMAIN,
+			port: parsed.VITE_PORT,
+			origin: `${parsed.APP_URL}:${parsed.VITE_PORT}`,
+			strictPort: true,
+			https: false,
+			hmr: {
+				host: parsed.VITE_DOMAIN,
+				port: parsed.VITE_PORT,
+			},
+		}
+	}
+}

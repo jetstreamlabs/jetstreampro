@@ -11,16 +11,19 @@ if (! function_exists('vite_assets')) {
 
 		if (app()->environment('local')) {
 			try {
-				Http::get('http://localhost:3000');
+				Http::withoutVerifying()->get(config('vite.server'));
 				$devServerIsRunning = true;
 			} catch (ConnectionException) {
 			}
 		}
 
 		if ($devServerIsRunning) {
-			return new HtmlString(<<<'HTML'
-      <script type="module" src="http://localhost:3000/@vite/client"></script>
-          <script type="module" src="http://localhost:3000/resources/js/app.js"></script>
+			$client = config('vite.server').'/@vite/client';
+			$module = config('vite.server').'/resources/js/app.js';
+
+			return new HtmlString(<<<HTML
+      <script type="module" src="{$client}"></script>
+          <script type="module" src="{$module}"></script>
       HTML);
 		}
 
