@@ -1,5 +1,27 @@
 # Jetstream Pro Changelog
 
+# [1.4.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.3.0...v1.4.0) (2022-01-14)
+
+
+### Code Refactoring
+
+* added license file ([9c7a909](https://github.com/jetstreamlabs/jetstreampro/commit/9c7a90916ff585535f66da31c4ed44c2104dd221))
+
+
+### Features
+
+* **tools:** ssl support for vite dev server ([f827a78](https://github.com/jetstreamlabs/jetstreampro/commit/f827a780cb3b4c5ccbd87389cefc7b85bbe11cfd))
+
+
+### Maintenance
+
+* small style fix ([4c327bb](https://github.com/jetstreamlabs/jetstreampro/commit/4c327bbce9ef1b370bbb0736447702d6f07d1f98))
+
+
+### Task Commit
+
+* adjusting for sail/docker setup ([c982fad](https://github.com/jetstreamlabs/jetstreampro/commit/c982fad34039f3498e3ad4394efff40444bb0d87))
+
 # [1.3.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.2.9...v1.3.0) (2022-01-11)
 
 
