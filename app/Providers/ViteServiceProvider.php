@@ -14,18 +14,13 @@ class ViteServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$vite = $this->app->make(
-		ViteConfig::class
-	  )->run();
+		$vite = $this->app->make(ViteConfig::class)->run();
 
 		$config = $this->app->make('config');
 
 		$config->set(
-		'vite',
-		array_merge(
-		  $vite,
-		  $config->get('vite', [])
-		)
+		  'vite',
+		  array_merge($vite, $config->get('vite', []))
 	  );
 	}
 }
