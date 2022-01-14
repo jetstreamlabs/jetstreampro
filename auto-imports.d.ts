@@ -52,6 +52,7 @@ declare global {
   const unref: typeof import('vue')['unref']
   const useAttrs: typeof import('vue')['useAttrs']
   const useCssModule: typeof import('vue')['useCssModule']
+  const useCssVars: typeof import('vue')['useCssVars']
   const useForm: typeof import('@inertiajs/inertia-vue3')['useForm']
   const usePage: typeof import('@inertiajs/inertia-vue3')['usePage']
   const useRemember: typeof import('@inertiajs/inertia-vue3')['useRemember']

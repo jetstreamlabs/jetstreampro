@@ -22,7 +22,7 @@ export default defineConfig(({ command }) => {
 			},
 		},
 		server: {
-			host: 'jetstreampro.test',
+			host: true,
 			strictPort: true,
 			origin: process.env.VITE_DOMAIN,
 			port: process.env.VITE_PORT,
