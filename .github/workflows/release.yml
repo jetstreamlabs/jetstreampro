@@ -31,35 +31,16 @@ jobs:
         run: npx semantic-release
 
   create:
-    name: Create New Branch
+    name: Create & Build Latest
     needs: [release]
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout main
-        uses: actions/checkout@v2
-        with:
-          ref: main
-          fetch-depth: 0
+      - name: set tag to latest release tag
+        run: tag=$(git tag  | grep -E '^v[0-9]' | sort -V | tail -1)
 
-      - name: create deploying branch
-        uses: peterjgrainger/action-create-branch@v2.1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.VERAN }}
-        with:
-          branch: deploying
-          sha: ${{ github.sha }}
-
-  compile:
-    name: Craft Jetstream App
-    needs: [create, release]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: checkout main
-        uses: actions/checkout@v2
-        with:
-          ref: main
+      - name: create and checkout latest
+        run: git checkout $tag -b latest
 
       - name: generate .env file
         run: echo "${{ secrets.MAIN_ENV }}" > .env
@@ -89,33 +70,8 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actor
-          branch: deploying
+          branch: latest
           message: 'chore(deploy): deploy main code to production'
           add: '-f public/'
           pull: 'NO-PULL'
-          push: '-f origin deploying'
-
-  deploy:
-    name: Deploy to Laravel Forge
-    needs: [compile, create, release]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: deploy production code
-        uses: jbrooksuk/laravel-forge-action@v1.0.2
-        with:
-          api_key: ${{ secrets.FID }}
-          server_id: ${{ secrets.SID }}
-          site_id: ${{ secrets.WID }}
-
-  remove:
-    name: Remove Staging Branch
-    needs: [deploy, compile, create, release]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: delete branch
-        uses: dawidd6/action-delete-branch@v3
-        with:
-          github_token: ${{ secrets.VERAN }}
-          branches: deploying
+          push: false
