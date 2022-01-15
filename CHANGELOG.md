@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.10](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.9...v1.4.10) (2022-01-15)
+
+
+### Bug Fixes
+
+* workflow needs to add all changed files ([c46e5ed](https://github.com/jetstreamlabs/jetstreampro/commit/c46e5ed833407e444af8f2a79955ace66a24a79b))
+
 ## [1.4.9](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.8...v1.4.9) (2022-01-15)
 
 
