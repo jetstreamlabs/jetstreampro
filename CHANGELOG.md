@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.5](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.4...v1.4.5) (2022-01-15)
+
+
+### Code Refactoring
+
+* **workflow:** redesign workflow test ([5635661](https://github.com/jetstreamlabs/jetstreampro/commit/563566194a19fc5aa357450316a2a16139b264d8))
+
 ## [1.4.4](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.3...v1.4.4) (2022-01-15)
 
 
