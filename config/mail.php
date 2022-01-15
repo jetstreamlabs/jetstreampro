@@ -44,6 +44,14 @@ return [
 			'timeout' => null,
 			'auth_mode' => null,
 		],
+		'improvmx' => [
+			'transport' => 'smtp',
+			'host' => 'smtp.improvmx.com',
+			'port' => 587,
+			'encryption' => 'TLS',
+			'username' => env('MAIL_USERNAME'),
+			'password' => env('MAIL_PASSWORD'),
+		],
 
 		'ses' => [
 			'transport' => 'ses',
