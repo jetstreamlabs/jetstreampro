@@ -11,10 +11,9 @@ import { resolve } from 'path'
 const process = dotenv.config()
 const parsed = dotenvExpand(process).parsed
 
-const certPath = resolve(homedir(), parsed.VITE_CERTPATH)
-
 // prettier-ignore
 export default defineConfig(({ command }) => {
+  console.log(command)
   return {
 		base: command === 'serve' ? '' : '/build/',
 		publicDir: '__none__',
@@ -27,7 +26,7 @@ export default defineConfig(({ command }) => {
 				input: ['resources/js/app.js'],
 			},
 		},
-		server: command === 'serve' ? makeServer() : null,
+		server: command === 'serve' ? makeServer(command) : null,
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, 'resources/js'),
@@ -75,9 +74,10 @@ export default defineConfig(({ command }) => {
 	}
 })
 
-export const makeServer = () => {
-	if (parsed.VITE_HTTPS == 'true') {
-		console.log('here')
+export const makeServer = (command) => {
+	if (parsed.VITE_HTTPS == 'true' && command === 'serve') {
+		const certPath = resolve(homedir(), parsed.VITE_CERTPATH)
+
 		return {
 			host: parsed.VITE_DOMAIN,
 			port: parsed.VITE_PORT,
