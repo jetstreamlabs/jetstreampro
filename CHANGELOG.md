@@ -1,5 +1,18 @@
 # Jetstream Pro Changelog
 
+## [1.4.8](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.7...v1.4.8) (2022-01-15)
+
+
+### Code Refactoring
+
+* changes to vite configuration ([7413f33](https://github.com/jetstreamlabs/jetstreampro/commit/7413f33aa3465a6790d42d1d2e457d95533d7635))
+
+
+### Maintenance
+
+* refactor workflow ([6a4da5c](https://github.com/jetstreamlabs/jetstreampro/commit/6a4da5c0887d2334fce3d7aebc908806bb7f81cc))
+* update workflow ([ba50884](https://github.com/jetstreamlabs/jetstreampro/commit/ba50884b8d3ceb030e250e010af3587541026e07))
+
 ## [1.4.7](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.6...v1.4.7) (2022-01-15)
 
 
