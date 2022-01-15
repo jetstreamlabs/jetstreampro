@@ -14,9 +14,9 @@ class ViteServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$vite = $this->app->make(ViteConfig::class)->run();
-
 		$config = $this->app->make('config');
+
+		$vite = $this->app->make(ViteConfig::class)->run();
 
 		$config->set(
 		  'vite',

@@ -2,6 +2,8 @@
 
 namespace App\Support;
 
+use Illuminate\Http\Request;
+
 class ViteConfig
 {
 	/**
@@ -58,18 +60,22 @@ class ViteConfig
 	 *
 	 * @return void
 	 */
-	public function __construct()
+	public function __construct(Request $request)
 	{
-		$base = env('APP_URL', false);
+		$base = env('APP_URL');
+
+		$this->expectsSecure = $request->server->get('HTTPS') === 'on' ? true : false;
+		$this->serverDomain = $request->server->get('HTTP_HOST');
 
 		if (! $base) {
-			throw new \Exception('You must set the APP_URL environment variable in .env', 1);
+			$this->baseUri = [
+				$this->expectsSecure ? 'https' : 'http',
+				$this->serverDomain,
+			];
+		} else {
+			$this->baseUri = explode('://', $base);
 		}
 
-		$this->expectsSecure = request()->server->get('HTTPS') === 'on' ? true : false;
-		$this->serverDomain = request()->server->get('HTTP_HOST');
-
-		$this->baseUri = explode('://', $base);
 		$this->make();
 	}
 

@@ -13,7 +13,6 @@ const parsed = dotenvExpand(process).parsed
 
 // prettier-ignore
 export default defineConfig(({ command }) => {
-  console.log(command)
   return {
 		base: command === 'serve' ? '' : '/build/',
 		publicDir: '__none__',
