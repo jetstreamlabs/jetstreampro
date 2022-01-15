@@ -54,7 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.VERAN }}
         with:
           branch: latest
-          sha: $sha
+          sha: ${{ sha }}
 
   compile:
     name: Craft Jetstream App
