@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.9](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.8...v1.4.9) (2022-01-15)
+
+
+### Code Refactoring
+
+* only run ViteConfig on local dev ([c4db766](https://github.com/jetstreamlabs/jetstreampro/commit/c4db766fc304cd9de61821988d113efb5d13455d))
+
 ## [1.4.8](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.7...v1.4.8) (2022-01-15)
 
 
