@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.2](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.1...v1.4.2) (2022-01-15)
+
+
+### Task Commit
+
+* moved call the certPath ([a57aecf](https://github.com/jetstreamlabs/jetstreampro/commit/a57aecf8fbee7be1da073ad9943980ffb1243ca1))
+
 ## [1.4.1](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.0...v1.4.1) (2022-01-14)
 
 
