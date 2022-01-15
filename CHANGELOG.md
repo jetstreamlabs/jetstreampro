@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.14](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.13...v1.4.14) (2022-01-15)
+
+
+### Bug Fixes
+
+* readd deployment and delete to workflow ([8146e3a](https://github.com/jetstreamlabs/jetstreampro/commit/8146e3a2a1c22b19b97c452f8916432fc9c7f9c5))
+
 ## [1.4.13](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.12...v1.4.13) (2022-01-15)
 
 
