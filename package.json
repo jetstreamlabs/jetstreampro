@@ -46,7 +46,7 @@
 		"@vue/compiler-sfc": "^3.0.5",
 		"axios": "^0.21",
 		"dayjs": "^1.10.7",
-		"dotenv": "^10.0.0",
+		"dotenv": "^12.0.3",
 		"dotenv-expand": "^5.1.0",
 		"husky": "^7.0.4",
 		"larasocket-js": "^1.0.16",
