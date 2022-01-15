@@ -46,7 +46,8 @@ jobs:
         run: tag=$(git tag  | grep -E '^v[0-9]' | sort -V | tail -1)
 
       - name: set sha from tag
-        run: sha=$(git log -1 --format="%H" $tag)
+        id: tagsha
+        run: echo "::set-output name=sha::$(git log -1 --format="%H" $tag)"
 
       - name: create latest branch
         uses: peterjgrainger/action-create-branch@v2.1.0
@@ -54,7 +55,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.VERAN }}
         with:
           branch: latest
-          sha: ${{ sha }}
+          sha: ${{ steps.tagsha.outputs.sha }}
 
   compile:
     name: Craft Jetstream App
