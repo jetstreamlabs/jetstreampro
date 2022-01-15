@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.12](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.11...v1.4.12) (2022-01-15)
+
+
+### Bug Fixes
+
+* remove -A try json array syntax ([38b45b9](https://github.com/jetstreamlabs/jetstreampro/commit/38b45b94e0b6e1d60edee441faef30d8f4b3376f))
+
 ## [1.4.11](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.10...v1.4.11) (2022-01-15)
 
 
