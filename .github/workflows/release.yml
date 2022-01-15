@@ -36,6 +36,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout main
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: set tag to latest release tag
         run: tag=$(git tag  | grep -E '^v[0-9]' | sort -V | tail -1)
 
