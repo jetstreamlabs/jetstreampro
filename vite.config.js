@@ -75,30 +75,27 @@ export default defineConfig(({ command }) => {
 })
 
 export const makeServer = (command) => {
-	if (parsed.VITE_HTTPS == 'true' && command === 'serve') {
-		const certPath = resolve(homedir(), parsed.VITE_CERTPATH)
+	// We ONLY build a server here if we're in local mode
+	if (command === 'serve') {
+		let secure
+
+		if (parsed.VITE_HTTPS == 'true') {
+			const certPath = resolve(homedir(), parsed.VITE_CERTPATH)
+
+			secure = {
+				key: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.key`)),
+				cert: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.crt`)),
+			}
+		} else {
+			secure = false
+		}
 
 		return {
 			host: parsed.VITE_DOMAIN,
 			port: parsed.VITE_PORT,
 			origin: `${parsed.APP_URL}:${parsed.VITE_PORT}`,
 			strictPort: true,
-			https: {
-				key: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.key`)),
-				cert: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.crt`)),
-			},
-			hmr: {
-				host: parsed.VITE_DOMAIN,
-				port: parsed.VITE_PORT,
-			},
-		}
-	} else {
-		return {
-			host: parsed.VITE_DOMAIN,
-			port: parsed.VITE_PORT,
-			origin: `${parsed.APP_URL}:${parsed.VITE_PORT}`,
-			strictPort: true,
-			https: false,
+			https: secure,
 			hmr: {
 				host: parsed.VITE_DOMAIN,
 				port: parsed.VITE_PORT,
