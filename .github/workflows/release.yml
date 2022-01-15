@@ -31,7 +31,7 @@ jobs:
         run: npx semantic-release
 
   create:
-    name: Create & Build Latest
+    name: Create New Branch
     needs: [release]
     runs-on: ubuntu-latest
 
@@ -39,13 +39,33 @@ jobs:
       - name: checkout main
         uses: actions/checkout@v2
         with:
+          ref: main
           fetch-depth: 0
 
-      - name: set tag to latest release tag
+      - name: set tag to latest tag
         run: tag=$(git tag  | grep -E '^v[0-9]' | sort -V | tail -1)
 
-      - name: create and checkout latest
-        run: git checkout $tag -b latest
+      - name: set sha from tag
+        run: sha=$(git log -1 --format="%H" $tag)
+
+      - name: create latest branch
+        uses: peterjgrainger/action-create-branch@v2.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.VERAN }}
+        with:
+          branch: latest
+          sha: $sha
+
+  compile:
+    name: Craft Jetstream App
+    needs: [create, release]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout main
+        uses: actions/checkout@v2
+        with:
+          ref: latest
 
       - name: generate .env file
         run: echo "${{ secrets.MAIN_ENV }}" > .env
@@ -79,4 +99,4 @@ jobs:
           message: 'chore(deploy): deploy main code to production'
           add: '-f public/'
           pull: 'NO-PULL'
-          push: false
+          push: '-f origin latest'
