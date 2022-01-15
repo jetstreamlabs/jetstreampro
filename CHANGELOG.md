@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [1.4.13](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.12...v1.4.13) (2022-01-15)
+
+
+### Bug Fixes
+
+* add -f to array items ([d7ba22d](https://github.com/jetstreamlabs/jetstreampro/commit/d7ba22d883633c283fa4b9602121a7a3e9e97d55))
+
 ## [1.4.12](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.11...v1.4.12) (2022-01-15)
 
 
