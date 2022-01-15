@@ -1,5 +1,17 @@
 # Jetstream Pro Changelog
 
+## [1.4.4](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.3...v1.4.4) (2022-01-15)
+
+
+### Maintenance
+
+* npm updates ([dbb4ee6](https://github.com/jetstreamlabs/jetstreampro/commit/dbb4ee62ece02601339520d83278e26f6f0c64d8))
+
+
+### Task Commit
+
+* add improvmx mail setting ([7318c09](https://github.com/jetstreamlabs/jetstreampro/commit/7318c09faf3ab29deb85e8541a7df836d5b0b1df))
+
 ## [1.4.3](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.2...v1.4.3) (2022-01-15)
 
 
