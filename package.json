@@ -61,7 +61,7 @@
 		"unplugin-vue-components": "^0.17.11",
 		"vite": "^2.7.10",
 		"vue": "^3.0.5",
-		"vue-loader": "^16.1.2",
+		"vue-loader": "^17.0.0",
 		"vuex": "^4.0.2"
 	}
 }
