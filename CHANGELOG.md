@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.0.1](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.0...v2.0.1) (2022-01-16)
+
+
+### Code Refactoring
+
+* **workflow:** add compile of ssr server ([7c992ce](https://github.com/jetstreamlabs/jetstreampro/commit/7c992cedd6edfe1048b12cb08e998a70585fdc0b))
+
 # [2.0.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.14...v2.0.0) (2022-01-16)
 
 
