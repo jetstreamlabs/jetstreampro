@@ -1,5 +1,35 @@
 # Jetstream Pro Changelog
 
+# [2.0.0](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.14...v2.0.0) (2022-01-16)
+
+
+### Breaking
+
+* updated entire site to inertia ssr ([3844cf4](https://github.com/jetstreamlabs/jetstreampro/commit/3844cf43a383c531af06b7ccaa6cd8d8cc7dc7be))
+
+
+* Merge pull request #10 from jetstreamlabs/dependabot/npm_and_yarn/vue-loader-17.0.0 ([8382bd2](https://github.com/jetstreamlabs/jetstreampro/commit/8382bd28277c869bc14ac5b23d3bc8656da5635c)), closes [#10](https://github.com/jetstreamlabs/jetstreampro/issues/10)
+* Merge pull request #9 from jetstreamlabs/dependabot/composer/nunomaduro/collision-5.11.0 ([c8134e5](https://github.com/jetstreamlabs/jetstreampro/commit/c8134e5fcb888fce6555f0f20ffbf73ba667a444)), closes [#9](https://github.com/jetstreamlabs/jetstreampro/issues/9)
+* Merge pull request #8 from jetstreamlabs/dependabot/composer/laravel/sanctum-2.14.0 ([ef1fa52](https://github.com/jetstreamlabs/jetstreampro/commit/ef1fa5208b5ae5c22a5a52f04152044e86a609cc)), closes [#8](https://github.com/jetstreamlabs/jetstreampro/issues/8)
+* Merge pull request #7 from jetstreamlabs/dependabot/composer/laravel/jetstream-2.6.1 ([5cf53fc](https://github.com/jetstreamlabs/jetstreampro/commit/5cf53fc10ab142f4bbe41829286635c9cfa9ea06)), closes [#7](https://github.com/jetstreamlabs/jetstreampro/issues/7)
+* Merge pull request #6 from jetstreamlabs/dependabot/npm_and_yarn/axios-0.24.0 ([1b3b402](https://github.com/jetstreamlabs/jetstreampro/commit/1b3b4029feb6958afebf0d0059aeed46f5e9d537)), closes [#6](https://github.com/jetstreamlabs/jetstreampro/issues/6)
+* Merge pull request #5 from jetstreamlabs/dependabot/npm_and_yarn/dotenv-12.0.3 ([17ccd47](https://github.com/jetstreamlabs/jetstreampro/commit/17ccd47ee6b942597033621289a9ef468737f4a7)), closes [#5](https://github.com/jetstreamlabs/jetstreampro/issues/5)
+* Merge pull request #4 from jetstreamlabs/dependabot/composer/inertiajs/inertia-laravel-0.5.2 ([c6f044d](https://github.com/jetstreamlabs/jetstreampro/commit/c6f044dc351923f6d3041e1c366f4e1839b7ce3c)), closes [#4](https://github.com/jetstreamlabs/jetstreampro/issues/4)
+
+
+### Maintenance
+
+* create dependabot.yml file ([31c9cda](https://github.com/jetstreamlabs/jetstreampro/commit/31c9cda5d1901c0f42c9fcd9ec0b50652bb70d15))
+* **deps-dev:** bump axios from 0.21.4 to 0.24.0 ([3bb6141](https://github.com/jetstreamlabs/jetstreampro/commit/3bb61413e37d1950e06727e0bbb3ce09830284c9))
+* **deps-dev:** bump dotenv from 10.0.0 to 12.0.3 ([babafd1](https://github.com/jetstreamlabs/jetstreampro/commit/babafd14dbb897b19808fc762b4d4818d2fa3505))
+* **deps-dev:** bump nunomaduro/collision from 5.10.0 to 5.11.0 ([73d02cb](https://github.com/jetstreamlabs/jetstreampro/commit/73d02cba9143bef84bc7c2395ead09e4886025d9))
+* **deps-dev:** bump vue-loader from 16.8.3 to 17.0.0 ([3385925](https://github.com/jetstreamlabs/jetstreampro/commit/3385925f833182fc62db93049c88621d05530804))
+* **deps:** bump inertiajs/inertia-laravel from 0.4.5 to 0.5.2 ([d0aceed](https://github.com/jetstreamlabs/jetstreampro/commit/d0aceed977d13337c284a697b88d7140dddc405b))
+* **deps:** bump laravel/jetstream from 2.5.1 to 2.6.1 ([899a74a](https://github.com/jetstreamlabs/jetstreampro/commit/899a74a7876ed7652d3241583847b54560c0578e))
+* **deps:** bump laravel/sanctum from 2.13.0 to 2.14.0 ([4163d07](https://github.com/jetstreamlabs/jetstreampro/commit/4163d07ea8be2ad9fe46f65f44e5a64c7209dfeb))
+* update composer to live package ([31e895f](https://github.com/jetstreamlabs/jetstreampro/commit/31e895f92ee3df1347e6b3dd08e515571826826b))
+* updates from dependabot prs ([883b79b](https://github.com/jetstreamlabs/jetstreampro/commit/883b79b84960b40e22c0794a9f0be3105eab3cb6))
+
 ## [1.4.14](https://github.com/jetstreamlabs/jetstreampro/compare/v1.4.13...v1.4.14) (2022-01-15)
 
 
