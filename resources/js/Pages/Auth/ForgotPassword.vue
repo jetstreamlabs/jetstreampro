@@ -8,9 +8,7 @@ const form = useForm({
 })
 
 const submit = () => {
-	const { href } = useRoutes('password.email')
-
-	form.post(href.value, {
+	form.post(useRoutes('password.email'), {
 		onStart: () => form.clearErrors(),
 		onSuccess: () => form.reset('email'),
 	})

@@ -1,10 +1,12 @@
 {
 	"private": true,
 	"scripts": {
-		"dev": "npm run jas && vite",
-		"build": "npm run jas && vite build",
+		"dev": "vite",
+		"build": "vite build",
 		"prod": "vite build",
 		"jas": "php artisan ziggy:generate && php artisan zora:generate",
+		"ssr": "vite build --config vite.ssr.config.js",
+		"kill": "kill -9 $(lsof -ti:3000)",
 		"lint": "php ./vendor/bin/styleci analyze -c"
 	},
 	"commitlint": {
@@ -35,8 +37,8 @@
 	"devDependencies": {
 		"@commitlint/cli": "^16.0.1",
 		"@commitlint/config-conventional": "^16.0.0",
-		"@inertiajs/inertia": "^0.10.0",
-		"@inertiajs/inertia-vue3": "^0.5.1",
+		"@inertiajs/inertia": "^0.11.0",
+		"@inertiajs/inertia-vue3": "^0.6.0",
 		"@inertiajs/progress": "^0.2.6",
 		"@semantic-release/changelog": "^6.0.1",
 		"@semantic-release/git": "^10.0.1",
@@ -63,5 +65,9 @@
 		"vue": "^3.0.5",
 		"vue-loader": "^17.0.0",
 		"vuex": "^4.0.2"
+	},
+	"dependencies": {
+		"@inertiajs/server": "^0.1.0",
+		"@vue/server-renderer": "^3.2.26"
 	}
 }

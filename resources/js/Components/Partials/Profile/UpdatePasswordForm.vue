@@ -8,9 +8,7 @@ const form = useForm({
 	password_confirmation: '',
 })
 const updatePassword = () => {
-	const { href } = useRoutes('user-password.update')
-
-	form.put(href.value, {
+	form.put(useRoutes('user-password.update'), {
 		errorBag: 'updatePassword',
 		preserveScroll: true,
 		onSuccess: () => form.reset(),

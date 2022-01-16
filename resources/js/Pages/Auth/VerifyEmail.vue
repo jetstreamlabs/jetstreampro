@@ -3,9 +3,7 @@ const props = defineProps({ status: String })
 const form = useForm()
 
 const submit = () => {
-	const { href } = useRoutes('verification.send')
-
-	form.post(href.value)
+	form.post(useRoutes('verification.send'))
 }
 
 const verificationLinkSent = computed(() => {

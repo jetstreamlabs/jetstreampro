@@ -1,15 +1,6 @@
-import { ref } from 'vue'
+import { usePage } from '@inertiajs/inertia-vue3'
 import { trans } from 'zora'
-import { Zora } from '../zora.js'
 
 export default function useTrans(key, replace) {
-	const phrase = ref('')
-
-	const translate = () => {
-		phrase.value = trans(key, replace, Zora)
-	}
-
-	translate()
-
-	return { phrase }
+	return trans(key, replace, usePage().props.value.zora)
 }

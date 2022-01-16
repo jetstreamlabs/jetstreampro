@@ -12,9 +12,7 @@ const form = useForm({
 })
 
 const submit = () => {
-	const { href } = useRoutes('password.update')
-
-	form.post(href.value, {
+	form.post(useRoutes('password.update'), {
 		onStart: () => form.clearErrors(),
 		onFinish: () => form.reset('password', 'password_confirmation'),
 	})

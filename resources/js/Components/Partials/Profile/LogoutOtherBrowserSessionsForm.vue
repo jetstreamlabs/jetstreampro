@@ -12,8 +12,7 @@ const confirmLogout = () => {
 }
 
 const logoutOtherBrowserSessions = () => {
-	const { href } = useRoutes('other-browser-sessions.destroy')
-	form.delete(href.value, {
+	form.delete(useRoutes('other-browser-sessions.destroy'), {
 		preserveScroll: true,
 		onSuccess: () => closeModal(),
 		onError: () => password.value.input.focus(),

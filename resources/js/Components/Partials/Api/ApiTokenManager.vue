@@ -16,8 +16,7 @@ const updateApiTokenForm = useForm({
 const deleteApiTokenForm = useForm()
 
 const createApiToken = () => {
-	const { href } = useRoutes('api-tokens.store')
-	createApiTokenForm.post(href.value, {
+	createApiTokenForm.post(useRoutes('api-tokens.store'), {
 		preserveScroll: true,
 		onSuccess: () => {
 			displayingToken.value = true
@@ -32,8 +31,7 @@ const manageApiTokenPermissions = (token) => {
 }
 
 const updateApiToken = () => {
-	const { href } = useRoutes('api-tokens.update', { token: managingPermissionsFor.value.id })
-	updateApiTokenForm.put(href.value, {
+	updateApiTokenForm.put(useRoutes('api-tokens.update', { token: managingPermissionsFor.value.id }), {
 		preserveScroll: true,
 		preserveState: true,
 		onSuccess: () => (managingPermissionsFor.value = null),
@@ -45,8 +43,7 @@ const confirmApiTokenDeletion = (token) => {
 }
 
 const deleteApiToken = () => {
-	const { href } = useRoutes('api-tokens.destroy', { token: apiTokenBeingDeleted.value.id })
-	deleteApiTokenForm.delete(href.value, {
+	deleteApiTokenForm.delete(useRoutes('api-tokens.destroy', { token: apiTokenBeingDeleted.value.id }), {
 		preserveScroll: true,
 		preserveState: true,
 		onSuccess: () => (apiTokenBeingDeleted.value = null),

@@ -7,9 +7,7 @@ const form = useForm({
 })
 
 const updateTeamName = () => {
-	const { href } = useRoutes('teams.update', { team: props.team.id })
-
-	form.put(href.value, {
+	form.put(useRoutes('teams.update', { team: props.team.id }), {
 		errorBag: 'updateTeamName',
 		preserveScroll: true,
 	})

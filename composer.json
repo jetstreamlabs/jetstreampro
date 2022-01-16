@@ -17,9 +17,18 @@
 		"laravel/jetstream": "^2.5",
 		"laravel/sanctum": "^2.11",
 		"laravel/tinker": "^2.5",
-		"serenity/zora": "^2.3",
+		"serenity/zora": "*",
 		"tightenco/ziggy": "^1.0"
 	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "/Users/vince/Code/serenity/zora",
+			"options": {
+				"symlink": true
+			}
+		}
+	],
 	"require-dev": {
 		"facade/ignition": "^2.5",
 		"fakerphp/faker": "^1.9.1",

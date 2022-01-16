@@ -12,8 +12,7 @@ const confirmUserDeletion = () => {
 }
 
 const deleteUser = () => {
-	const { href } = useRoutes('current-user.destroy')
-	form.delete(href.value, {
+	form.delete(useRoutes('current-user.destroy'), {
 		preserveScroll: true,
 		onSuccess: () => closeModal(),
 		onError: () => password.value.input.focus(),

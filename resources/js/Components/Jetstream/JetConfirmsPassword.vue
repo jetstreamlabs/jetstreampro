@@ -23,8 +23,7 @@ const form = useForm({
 })
 
 const startConfirmingPassword = () => {
-	const { href } = useRoutes('password.confirmation')
-	axios.get(href.value).then((response) => {
+	axios.get(useRoutes('password.confirmation')).then((response) => {
 		if (response.data.confirmed) {
 			emit('confirmed')
 		} else {
@@ -36,10 +35,8 @@ const startConfirmingPassword = () => {
 
 const confirmPassword = () => {
 	form.processing = true
-	const { href } = useRoutes('password.confirm')
-
 	axios
-		.post(href.value, {
+		.post(useRoutes('password.confirm'), {
 			password: form.password,
 		})
 		.then(() => {

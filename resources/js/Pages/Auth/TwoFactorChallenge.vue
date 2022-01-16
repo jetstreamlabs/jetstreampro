@@ -23,9 +23,7 @@ const toggleRecovery = () => {
 }
 
 const submit = () => {
-	const { href } = useRoutes('two-factor.login')
-
-	form.post(href.value)
+	form.post(useRoutes('two-factor.login'))
 }
 
 defineExpose({ code, recovery_code })

@@ -1,21 +1,18 @@
 <script setup>
-const { trans } = useTrans('layouts.main.dashboard')
 const props = defineProps({ title: String })
-const title = props.title || trans.value
+const title = props.title || useTrans('layouts.main.dashboard')
 const showingNavigationDropdown = ref(false)
 
 const switchToTeam = (team) => {
-	const { href } = useRoutes('current-team.update')
 	// prettier-ignore
-	Inertia.put(href.value, 
+	Inertia.put(useRoutes('current-team.update'), 
     { team_id: team.id }, 
     { preserveState: false }
 	)
 }
 
 const logout = () => {
-	const { href } = useRoutes('logout')
-	Inertia.post(href.value)
+	Inertia.post(useRoutes('logout'))
 }
 </script>
 

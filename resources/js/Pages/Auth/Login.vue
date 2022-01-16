@@ -11,13 +11,12 @@ const form = useForm({
 })
 
 const submit = () => {
-	const { href } = useRoutes('login')
 	form
 		.transform((data) => ({
 			...data,
 			remember: form.remember ? 'on' : '',
 		}))
-		.post(href.value, {
+		.post(useRoutes('login'), {
 			onFinish: () => form.reset('password'),
 		})
 }

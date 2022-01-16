@@ -16,9 +16,7 @@ const updateProfileInformation = () => {
 		form.photo = photo.value.files[0]
 	}
 
-	const { href } = useRoutes('user-profile-information.update')
-
-	form.post(href.value, {
+	form.post(useRoutes('user-profile-information.update'), {
 		errorBag: 'updateProfileInformation',
 		preserveScroll: true,
 		onSuccess: () => clearPhotoFileInput(),
@@ -44,9 +42,7 @@ const updatePhotoPreview = () => {
 }
 
 const deletePhoto = () => {
-	const { href } = useRoutes('current-user-photo.destroy')
-
-	Inertia.delete(href.value, {
+	Inertia.delete(useRoutes('current-user-photo.destroy'), {
 		preserveScroll: true,
 		onSuccess: () => {
 			photoPreview.value = null

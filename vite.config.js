@@ -8,8 +8,7 @@ import { homedir } from 'os'
 import fs from 'fs'
 import { resolve } from 'path'
 
-const process = dotenv.config()
-const parsed = dotenvExpand(process).parsed
+const env = dotenvExpand(dotenv.config()).parsed
 
 // prettier-ignore
 export default defineConfig(({ command }) => {
@@ -22,7 +21,7 @@ export default defineConfig(({ command }) => {
 			manifest: true,
 			target: 'es2018',
 			rollupOptions: {
-				input: ['resources/js/app.js'],
+        input: 'resources/js/app.js',
 			},
 		},
 		server: command === 'serve' ? makeServer(command) : null,
@@ -52,7 +51,7 @@ export default defineConfig(({ command }) => {
 					'vuex',
 					{
 						'@inertiajs/inertia': ['Inertia'],
-						'@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember'],
+            '@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember'],
 						composable: ['useTrans', 'useRoutes'],
 					},
 				],
@@ -78,26 +77,26 @@ export const makeServer = (command) => {
 	if (command === 'serve') {
 		let secure
 
-		if (parsed.VITE_HTTPS == 'true') {
-			const certPath = resolve(homedir(), parsed.VITE_CERTPATH)
+		if (env.VITE_HTTPS == 'true') {
+			const certPath = resolve(homedir(), env.VITE_CERTPATH)
 
 			secure = {
-				key: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.key`)),
-				cert: fs.readFileSync(resolve(certPath, `${parsed.VITE_DOMAIN}.crt`)),
+				key: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.key`)),
+				cert: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.crt`)),
 			}
 		} else {
 			secure = false
 		}
 
 		return {
-			host: parsed.VITE_DOMAIN,
-			port: parsed.VITE_PORT,
-			origin: `${parsed.APP_URL}:${parsed.VITE_PORT}`,
+			host: env.VITE_DOMAIN,
+			port: env.VITE_PORT,
+			origin: `${env.APP_URL}:${env.VITE_PORT}`,
 			strictPort: true,
 			https: secure,
 			hmr: {
-				host: parsed.VITE_DOMAIN,
-				port: parsed.VITE_PORT,
+				host: env.VITE_DOMAIN,
+				port: env.VITE_PORT,
 			},
 		}
 	}

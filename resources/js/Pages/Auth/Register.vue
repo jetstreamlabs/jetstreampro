@@ -8,9 +8,7 @@ const form = useForm({
 })
 
 const submit = () => {
-	const { href } = useRoutes('register')
-
-	form.post(href.value, {
+	form.post(useRoutes('register'), {
 		onStart: () => form.clearErrors(),
 		onFinish: () => form.reset('password', 'password_confirmation'),
 	})

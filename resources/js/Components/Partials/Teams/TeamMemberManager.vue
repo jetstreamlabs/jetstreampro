@@ -20,9 +20,7 @@ const leaveTeamForm = useForm()
 const removeTeamMemberForm = useForm()
 
 const addTeamMember = () => {
-	const { href } = useRoutes('team-members.store', props.team)
-
-	addTeamMemberForm.post(href.value, {
+	addTeamMemberForm.post(useRoutes('team-members.store', props.team), {
 		errorBag: 'addTeamMember',
 		preserveScroll: true,
 		onSuccess: () => addTeamMemberForm.reset(),
@@ -30,9 +28,7 @@ const addTeamMember = () => {
 }
 
 const cancelTeamInvitation = (invitation) => {
-	const { href } = useRoutes('team-invitations.destroy', invitation)
-
-	Inertia.delete(href.value, {
+	Inertia.delete(useRoutes('team-invitations.destroy', invitation), {
 		preserveScroll: true,
 	})
 }
@@ -44,9 +40,7 @@ const manageRole = (teamMember) => {
 }
 
 const updateRole = () => {
-	const { href } = useRoutes('team-members.update', [props.team.id, managingRoleFor.value])
-
-	updateRoleForm.put(href.value, {
+	updateRoleForm.put(useRoutes('team-members.update', [props.team.id, managingRoleFor.value]), {
 		preserveScroll: true,
 		onSuccess: () => (currentlyManagingRole.value = false),
 	})
@@ -57,9 +51,7 @@ const confirmLeavingTeam = () => {
 }
 
 const leaveTeam = () => {
-	const { href } = useRoutes('team-members.destroy', [props.team.id, usePage().props.value.user])
-
-	leaveTeamForm.delete(href.value)
+	leaveTeamForm.delete(useRoutes('team-members.destroy', [props.team.id, usePage().props.value.user]))
 }
 
 const confirmTeamMemberRemoval = (teamMember) => {
@@ -67,9 +59,7 @@ const confirmTeamMemberRemoval = (teamMember) => {
 }
 
 const removeTeamMember = () => {
-	const { href } = useRoutes('team-members.destroy', [props.team.id, teamMemberBeingRemoved.value])
-
-	removeTeamMemberForm.delete(href.value, {
+	removeTeamMemberForm.delete(useRoutes('team-members.destroy', [props.team.id, teamMemberBeingRemoved.value]), {
 		errorBag: 'removeTeamMember',
 		preserveScroll: true,
 		preserveState: true,

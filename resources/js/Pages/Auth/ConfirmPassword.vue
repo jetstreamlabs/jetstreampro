@@ -4,9 +4,7 @@ const form = useForm({
 })
 
 const submit = () => {
-	const { href } = useRoutes('password.confirm')
-
-	form.post(href.value, {
+	form.post(useRoutes('password.confirm'), {
 		onStart: () => form.clearErrors(),
 		onSuccess: () => form.reset('password'),
 	})

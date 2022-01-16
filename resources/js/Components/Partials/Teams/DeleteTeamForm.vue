@@ -9,9 +9,7 @@ const confirmTeamDeletion = () => {
 }
 
 const deleteTeam = () => {
-	const { href } = useRoutes('teams.destroy', { team: props.team.id })
-
-	form.delete(href.value, {
+	form.delete(useRoutes('teams.destroy', { team: props.team.id }), {
 		errorBag: 'deleteTeam',
 	})
 }

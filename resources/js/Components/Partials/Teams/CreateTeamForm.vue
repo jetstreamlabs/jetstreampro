@@ -4,8 +4,7 @@ const form = useForm({
 })
 
 const createTeam = () => {
-	const { href } = useRoutes('teams.store')
-	form.post(href.value, {
+	form.post(useRoutes('teams.store'), {
 		errorBag: 'createTeam',
 		preserveScroll: true,
 	})
