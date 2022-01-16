@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd582c5be4c2e6587ea6c58922913eed",
+    "content-hash": "252235af7eecae35b046c5e1a0e2f7b0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3515,11 +3515,17 @@
         },
         {
             "name": "serenity/zora",
-            "version": "dev-main",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jetstreamlabs/zora.git",
+                "reference": "12393104030b8c8910716e39a0bd6afedfc115cb"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/vince/Code/serenity/zora",
-                "reference": "9e0e9df7e034bd6f9ecd29e69fa94db388b499bd"
+                "type": "zip",
+                "url": "https://api.github.com/repos/jetstreamlabs/zora/zipball/12393104030b8c8910716e39a0bd6afedfc115cb",
+                "reference": "12393104030b8c8910716e39a0bd6afedfc115cb",
+                "shasum": ""
             },
             "require": {
                 "laravel/framework": "^8.0"
@@ -3540,6 +3546,7 @@
                     "Serenity\\Zora\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3550,10 +3557,11 @@
                 }
             ],
             "description": "Add your Laravel language translations to your asset pipeline for use in Javascript packages like Vue or React.",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/jetstreamlabs/zora/issues",
+                "source": "https://github.com/jetstreamlabs/zora/tree/v1.0.2"
+            },
+            "time": "2022-01-16T22:23:15+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
