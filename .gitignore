@@ -1,5 +1,6 @@
 /node_modules
 /public/build
+/public/render
 /public/storage
 /resources/js/ziggy.js 
 /resources/js/zora.js 

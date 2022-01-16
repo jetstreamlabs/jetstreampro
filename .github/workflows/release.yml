@@ -88,9 +88,8 @@ jobs:
           node-version: 'lts/*'
 
       - run: npm ci
-      - run: php artisan ziggy:generate
-      - run: php artisan zora:generate
       - run: npm run prod --force
+      - run: npm run ssr --force
 
       - name: commit assets to branch
         uses: EndBug/add-and-commit@v7
@@ -98,7 +97,7 @@ jobs:
           default_author: github_actor
           branch: latest
           message: 'chore(deploy): deploy main code to production'
-          add: '["-f public/", "-f resources/"]'
+          add: '-f public/'
           pull: 'NO-PULL'
           push: '-f origin latest'
 
@@ -116,7 +115,7 @@ jobs:
           site_id: ${{ secrets.WID }}
 
   remove:
-    name: Remove Staging Branch
+    name: Remove Latest Branch
     needs: [deploy, compile, create, release]
     runs-on: ubuntu-latest
 
