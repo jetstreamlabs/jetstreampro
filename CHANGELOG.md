@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.0.4](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.3...v2.0.4) (2022-01-17)
+
+
+### Bug Fixes
+
+* trying again for ssr ([b5f1256](https://github.com/jetstreamlabs/jetstreampro/commit/b5f1256c2d465a0c4d210e91b9ee9147f773b097))
+
 ## [2.0.3](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.2...v2.0.3) (2022-01-17)
 
 
