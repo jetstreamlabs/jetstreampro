@@ -59,19 +59,4 @@ export default defineConfig(() => ({
 			exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
 		}),
 	],
-	optimizeDeps: {
-		include: [
-			'vue',
-			'vue/server-renderer',
-			'@inertiajs/inertia-vue3',
-			'lodash',
-			'@inertiajs/inertia',
-			'@vue/server-renderer',
-			'@inertiajs/server',
-			'vuex',
-			'mitt',
-			'dayjs',
-			'axios',
-		],
-	},
 }))

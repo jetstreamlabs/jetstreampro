@@ -10,7 +10,7 @@ const pages = import.meta.globEager('./Pages/**/*.vue')
 
 createServer((page) =>
 	createInertiaApp({
-		title: (title) => `${title} - "Jetstreaam Pro"`,
+		title: (title) => `${title} - ${process.env.APP_NAME}`,
 		page,
 		render: renderToString,
 		resolve: (name) => pages[`./Pages/${name}.vue`].default,
