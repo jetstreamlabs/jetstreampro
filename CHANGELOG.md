@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.0.2](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.1...v2.0.2) (2022-01-17)
+
+
+### Bug Fixes
+
+* add optimized to vite ssr config ([f139811](https://github.com/jetstreamlabs/jetstreampro/commit/f1398116a35011d3152b9b0d4d32cf86405c9779))
+
 ## [2.0.1](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.0...v2.0.1) (2022-01-16)
 
 
