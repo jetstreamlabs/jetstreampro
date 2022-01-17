@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.0.3](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.2...v2.0.3) (2022-01-17)
+
+
+### Bug Fixes
+
+* add vue cjs alias ([788e7a5](https://github.com/jetstreamlabs/jetstreampro/commit/788e7a53e8f0036b8e039889ef4981636fd7f0ef))
+
 ## [2.0.2](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.1...v2.0.2) (2022-01-17)
 
 
