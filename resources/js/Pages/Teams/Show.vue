@@ -4,9 +4,9 @@ const { team, availableRoles, permissions } = toRefs(props)
 </script>
 
 <template>
-	<MainLayout title="Team Settings">
+	<MainLayout :title="__('Team Settings')">
 		<template #header>
-			<h2 class="text-xl font-semibold leading-tight text-gray-800">Team Settings</h2>
+			<h2 class="text-xl font-semibold leading-tight text-gray-800">{{ __('Team Settings') }}</h2>
 		</template>
 
 		<div>

@@ -30,7 +30,7 @@ defineExpose({ code, recovery_code })
 </script>
 
 <template>
-	<Head title="Two-factor Confirmation" />
+	<Head :title="__('Two-factor Confirmation')" />
 
 	<JetAuthenticationCard>
 		<template #logo>
@@ -39,12 +39,15 @@ defineExpose({ code, recovery_code })
 
 		<div class="mb-4 text-sm text-gray-600">
 			<template v-if="!recovery">
-				Please confirm access to your account by entering the authentication code provided by your authenticator
-				application.
+				{{
+					__(
+						'Please confirm access to your account by entering the authentication code provided by your authenticator application.'
+					)
+				}}
 			</template>
 
 			<template v-else>
-				Please confirm access to your account by entering one of your emergency recovery codes.
+				{{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
 			</template>
 		</div>
 
@@ -52,7 +55,7 @@ defineExpose({ code, recovery_code })
 
 		<form @submit.prevent="submit">
 			<div v-if="!recovery">
-				<JetLabel for="code" value="Code" />
+				<JetLabel for="code" :value="__('Code')" />
 				<JetInput
 					ref="code"
 					id="code"
@@ -66,7 +69,7 @@ defineExpose({ code, recovery_code })
 			</div>
 
 			<div v-else>
-				<JetLabel for="recovery_code" value="Recovery Code" />
+				<JetLabel for="recovery_code" :value="__('Recovery Code')" />
 				<JetInput
 					ref="recovery_code"
 					id="recovery_code"
@@ -83,13 +86,12 @@ defineExpose({ code, recovery_code })
 					class="text-sm text-gray-600 underline cursor-pointer hover:text-gray-900"
 					@click.prevent="toggleRecovery"
 				>
-					<template v-if="!recovery"> Use a recovery code </template>
-
-					<template v-else> Use an authentication code </template>
+					<template v-if="!recovery">{{ __('Use a recovery code') }}</template>
+					<template v-else>{{ __('Use an authentication code') }}</template>
 				</button>
 
 				<JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-					Log in
+					{{ __('Login') }}
 				</JetButton>
 			</div>
 		</form>

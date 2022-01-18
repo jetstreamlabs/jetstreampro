@@ -17,31 +17,39 @@ const deleteTeam = () => {
 
 <template>
 	<JetActionSection>
-		<template #title> Delete Team </template>
+		<template #title> {{ __('Delete Team') }} </template>
 
-		<template #description> Permanently delete this team. </template>
+		<template #description> {{ __('Permanently delete this team.') }} </template>
 
 		<template #content>
 			<div class="max-w-xl text-sm text-gray-600">
-				Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team,
-				please download any data or information regarding this team that you wish to retain.
+				{{
+					__(
+						'Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain.'
+					)
+				}}
 			</div>
 
 			<div class="mt-5">
-				<JetDangerButton @click="confirmTeamDeletion"> Delete Team </JetDangerButton>
+				<JetDangerButton @click="confirmTeamDeletion"> {{ __('Delete Team') }} </JetDangerButton>
 			</div>
 
 			<!-- Delete Team Confirmation Modal -->
 			<JetConfirmationModal :show="confirmingTeamDeletion" @close="confirmingTeamDeletion = false">
-				<template #title> Delete Team </template>
+				<template #title> {{ __('Delete Team') }} </template>
 
 				<template #content>
-					Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be
-					permanently deleted.
+					{{
+						__(
+							'Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted.'
+						)
+					}}
 				</template>
 
 				<template #footer>
-					<JetSecondaryButton @click="confirmingTeamDeletion = false"> Cancel </JetSecondaryButton>
+					<JetSecondaryButton @click="confirmingTeamDeletion = false">
+						{{ __('Cancel') }}
+					</JetSecondaryButton>
 
 					<JetDangerButton
 						class="ml-2"
@@ -49,7 +57,7 @@ const deleteTeam = () => {
 						:class="{ 'opacity-25': form.processing }"
 						:disabled="form.processing"
 					>
-						Delete Team
+						{{ __('Delete Team') }}
 					</JetDangerButton>
 				</template>
 			</JetConfirmationModal>

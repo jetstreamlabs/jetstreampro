@@ -15,14 +15,14 @@ const { canLogin, canRegister, laravelVersion, phpVersion } = toRefs(props)
 	<div class="relative flex justify-center min-h-screen bg-gray-100 items-top dark:bg-gray-900 sm:items-center sm:pt-0">
 		<div v-if="canLogin" class="fixed top-0 right-0 hidden px-6 py-4 sm:block">
 			<Link v-if="$page.props.user" :href="route('dashboard')" class="text-sm text-gray-700 underline">
-				Dashboard
+				{{ __('Dashboard') }}
 			</Link>
 
 			<template v-else>
-				<Link :href="route('login')" class="text-sm text-gray-700 underline"> Log in </Link>
+				<Link :href="route('login')" class="text-sm text-gray-700 underline">{{ __('Login') }}</Link>
 
 				<Link v-if="canRegister" :href="route('register')" class="ml-4 text-sm text-gray-700 underline">
-					Register
+					{{ __('Register') }}
 				</Link>
 			</template>
 		</div>
@@ -62,13 +62,19 @@ const { canLogin, canRegister, laravelVersion, phpVersion } = toRefs(props)
 							</svg>
 							<div class="ml-4 text-lg font-semibold leading-7">
 								<a href="https://laravel.com/docs" class="text-gray-900 underline dark:text-white">{{
-									__('home.blocks.docs.title')
+									__('Documentation')
 								}}</a>
 							</div>
 						</div>
 
 						<div class="ml-12">
-							<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ __('home.blocks.docs.desc') }}</div>
+							<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+								{{
+									__(
+										'Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.'
+									)
+								}}
+							</div>
 						</div>
 					</div>
 
@@ -90,13 +96,19 @@ const { canLogin, canRegister, laravelVersion, phpVersion } = toRefs(props)
 							</svg>
 							<div class="ml-4 text-lg font-semibold leading-7">
 								<a href="https://laracasts.com" class="text-gray-900 underline dark:text-white">{{
-									__('home.blocks.lara.title')
+									__('Laracasts')
 								}}</a>
 							</div>
 						</div>
 
 						<div class="ml-12">
-							<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ __('home.blocks.lara.desc') }}</div>
+							<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+								{{
+									__(
+										'Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.'
+									)
+								}}
+							</div>
 						</div>
 					</div>
 
@@ -117,13 +129,19 @@ const { canLogin, canRegister, laravelVersion, phpVersion } = toRefs(props)
 							</svg>
 							<div class="ml-4 text-lg font-semibold leading-7">
 								<a href="https://laravel-news.com/" class="text-gray-900 underline dark:text-white">{{
-									__('home.blocks.news.title')
+									__('Laravel News')
 								}}</a>
 							</div>
 						</div>
 
 						<div class="ml-12">
-							<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ __('home.blocks.news.desc') }}</div>
+							<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+								{{
+									__(
+										'Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.'
+									)
+								}}
+							</div>
 						</div>
 					</div>
 
@@ -143,27 +161,28 @@ const { canLogin, canRegister, laravelVersion, phpVersion } = toRefs(props)
 								></path>
 							</svg>
 							<div class="ml-4 text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-								{{ __('home.blocks.eco.title') }}
+								{{ __('Vibrant Ecosystem') }}
 							</div>
 						</div>
 
 						<div class="ml-12">
 							<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-								{{ __('home.blocks.eco.lead') }}
-								<a href="https://forge.laravel.com" class="underline">{{ __('home.blocks.eco.forge') }}</a
-								>, <a href="https://vapor.laravel.com" class="underline">{{ __('home.blocks.eco.vapor') }}</a
-								>, <a href="https://nova.laravel.com" class="underline">{{ __('home.blocks.eco.nova') }}</a
-								>{{ __('home.blocks.eco.and') }}
-								<a href="https://envoyer.io" class="underline">{{ __('home.blocks.eco.envoyer') }}</a>
-								{{ __('home.blocks.eco.next') }}
-								<a href="https://laravel.com/docs/billing" class="underline">{{ __('home.blocks.eco.cashier') }}</a
-								>, <a href="https://laravel.com/docs/dusk" class="underline">{{ __('home.blocks.eco.dusk') }}</a
-								>, <a href="https://laravel.com/docs/broadcasting" class="underline">{{ __('home.blocks.eco.echo') }}</a
-								>, <a href="https://laravel.com/docs/horizon" class="underline">{{ __('home.blocks.eco.horizon') }}</a
-								>, <a href="https://laravel.com/docs/sanctum" class="underline">{{ __('home.blocks.eco.sanctum') }}</a
-								>,
-								<a href="https://laravel.com/docs/telescope" class="underline">{{ __('home.blocks.eco.telescope') }}</a
-								>{{ __('home.blocks.eco.end') }}
+								{{ __("Laravel's robust library of first-party tools and libraries, such as") }}
+								<a href="https://forge.laravel.com" class="underline">Forge</a>,
+								<a href="https://vapor.laravel.com" class="underline">Vapor</a>,
+								<a href="https://nova.laravel.com" class="underline">Nova</a>, and
+								<a href="https://envoyer.io" class="underline">Envoyer</a>
+								{{
+									__(
+										'help you take your projects to the next level. Pair them with powerful open source libraries like'
+									)
+								}}
+								<a href="https://laravel.com/docs/billing" class="underline">Cashier</a>,
+								<a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>,
+								<a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>,
+								<a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>,
+								<a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>,
+								<a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>{{ __(', and more.') }}
 							</div>
 						</div>
 					</div>

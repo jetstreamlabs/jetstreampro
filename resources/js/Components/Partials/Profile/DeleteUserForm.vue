@@ -30,34 +30,39 @@ defineExpose({ password })
 
 <template>
 	<JetActionSection>
-		<template #title> Delete Account </template>
+		<template #title>{{ __('Delete Account') }}</template>
 
-		<template #description> Permanently delete your account. </template>
+		<template #description>{{ __('Permanently delete your account.') }}</template>
 
 		<template #content>
 			<div class="max-w-xl text-sm text-gray-600">
-				Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your
-				account, please download any data or information that you wish to retain.
+				{{
+					__(
+						'Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.'
+					)
+				}}
 			</div>
 
 			<div class="mt-5">
-				<JetDangerButton @click="confirmUserDeletion"> Delete Account </JetDangerButton>
+				<JetDangerButton @click="confirmUserDeletion">{{ __('Delete Account') }}</JetDangerButton>
 			</div>
 
 			<!-- Delete Account Confirmation Modal -->
 			<JetDialogModal :show="confirmingUserDeletion" @close="closeModal">
-				<template #title> Delete Account </template>
+				<template #title>{{ __('Delete Account') }}</template>
 
 				<template #content>
-					Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will
-					be permanently deleted. Please enter your password to confirm you would like to permanently delete your
-					account.
+					{{
+						__(
+							'Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.'
+						)
+					}}
 
 					<div class="mt-4">
 						<JetInput
 							type="password"
 							class="block w-3/4 mt-1"
-							placeholder="Password"
+							:placeholder="__('Password')"
 							ref="password"
 							v-model="form.password"
 							@keyup.enter="deleteUser"
@@ -68,7 +73,9 @@ defineExpose({ password })
 				</template>
 
 				<template #footer>
-					<JetSecondaryButton @click="closeModal"> Cancel </JetSecondaryButton>
+					<JetSecondaryButton @click="closeModal">
+						{{ __('Cancel') }}
+					</JetSecondaryButton>
 
 					<JetDangerButton
 						class="ml-2"
@@ -76,7 +83,7 @@ defineExpose({ password })
 						:class="{ 'opacity-25': form.processing }"
 						:disabled="form.processing"
 					>
-						Delete Account
+						{{ __('Delete Account') }}
 					</JetDangerButton>
 				</template>
 			</JetDialogModal>

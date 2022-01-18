@@ -8,9 +8,9 @@ const props = defineProps([
 </script>
 
 <template>
-	<MainLayout title="API Tokens">
+	<MainLayout :title="__('API Tokens')">
 		<template #header>
-			<h2 class="text-xl font-semibold leading-tight text-gray-800">API Tokens</h2>
+			<h2 class="text-xl font-semibold leading-tight text-gray-800">{{ __('API Tokens') }}</h2>
 		</template>
 
 		<div>

@@ -16,7 +16,7 @@ const submit = () => {
 </script>
 
 <template>
-	<Head title="Register" />
+	<Head :title="__('Register')" />
 
 	<JetAuthenticationCard>
 		<template #logo>
@@ -27,7 +27,7 @@ const submit = () => {
 
 		<form @submit.prevent="submit">
 			<div>
-				<JetLabel for="name" value="Name" />
+				<JetLabel for="name" :value="__('Name')" />
 				<JetInput
 					id="name"
 					type="text"
@@ -40,12 +40,12 @@ const submit = () => {
 			</div>
 
 			<div class="mt-4">
-				<JetLabel for="email" value="Email" />
+				<JetLabel for="email" :value="__('Email')" />
 				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required />
 			</div>
 
 			<div class="mt-4">
-				<JetLabel for="password" value="Password" />
+				<JetLabel for="password" :value="__('Password')" />
 				<JetInput
 					id="password"
 					type="password"
@@ -57,7 +57,7 @@ const submit = () => {
 			</div>
 
 			<div class="mt-4">
-				<JetLabel for="password_confirmation" value="Confirm Password" />
+				<JetLabel for="password_confirmation" :value="__('Confirm Password')" />
 				<JetInput
 					id="password_confirmation"
 					type="password"
@@ -75,13 +75,13 @@ const submit = () => {
 
 						<div class="ml-2">
 							I agree to the
-							<Link :href="route('terms.show')" class="text-sm text-gray-600 underline hover:text-gray-900"
-								>Terms of Service</Link
-							>
+							<Link :href="route('terms.show')" class="text-sm text-gray-600 underline hover:text-gray-900">
+								{{ __('Terms of Service') }}
+							</Link>
 							and
-							<Link :href="route('policy.show')" class="text-sm text-gray-600 underline hover:text-gray-900"
-								>Privacy Policy</Link
-							>
+							<Link :href="route('policy.show')" class="text-sm text-gray-600 underline hover:text-gray-900">
+								{{ __('Privacy Policy') }}
+							</Link>
 						</div>
 					</div>
 				</JetLabel>
@@ -89,11 +89,11 @@ const submit = () => {
 
 			<div class="flex items-center justify-end mt-4">
 				<Link :href="route('login')" class="text-sm text-gray-600 underline hover:text-gray-900">
-					Already registered?
+					{{ __('Already registered?') }}
 				</Link>
 
 				<JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-					Register
+					{{ __('Register') }}
 				</JetButton>
 			</div>
 		</form>

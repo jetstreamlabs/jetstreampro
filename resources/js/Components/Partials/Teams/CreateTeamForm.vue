@@ -13,9 +13,9 @@ const createTeam = () => {
 
 <template>
 	<JetFormSection @submitted="createTeam">
-		<template #title> Team Details </template>
+		<template #title> {{ __('Team Details') }} </template>
 
-		<template #description> Create a new team to collaborate with others on projects. </template>
+		<template #description> {{ __('Create a new team to collaborate with others on projects.') }} </template>
 
 		<template #form>
 			<div class="col-span-6">
@@ -43,7 +43,9 @@ const createTeam = () => {
 		</template>
 
 		<template #actions>
-			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Create </JetButton>
+			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+				{{ __('Create') }}
+			</JetButton>
 		</template>
 	</JetFormSection>
 </template>

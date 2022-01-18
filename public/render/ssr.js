@@ -64,7 +64,7 @@ function _sfc_ssrRender$8(_ctx, _push, _parent, _attrs) {
   const _component_JetApplicationLogo = __unplugin_components_0$2;
   _push(`<div${serverRenderer.ssrRenderAttrs(_attrs)}><div class="p-6 bg-white border-b border-gray-200 sm:px-20"><div>`);
   _push(serverRenderer.ssrRenderComponent(_component_JetApplicationLogo, { class: "block w-auto h-12" }, null, _parent));
-  _push(`</div><div class="mt-8 text-2xl">${serverRenderer.ssrInterpolate(_ctx.__("jet.welcome.title"))}</div><div class="mt-6 text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("jet.welcome.desc"))}</div></div><div class="grid grid-cols-1 bg-gray-200 bg-opacity-25 md:grid-cols-2"><div class="p-6"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="https://laravel.com/docs">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.docs.title"))}</a></div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.docs.desc"))}</div><a href="https://laravel.com/docs"><div class="flex items-center mt-3 text-sm font-semibold text-indigo-700"><div>${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.docs.link"))}</div><div class="ml-1 text-indigo-500"><svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div></div></a></div></div><div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="https://laracasts.com">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.lara.title"))}</a></div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.lara.desc"))}</div><a href="https://laracasts.com"><div class="flex items-center mt-3 text-sm font-semibold text-indigo-700"><div>${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.lara.link"))}</div><div class="ml-1 text-indigo-500"><svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div></div></a></div></div><div class="p-6 border-t border-gray-200"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="https://tailwindcss.com/">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.tw.title"))}</a></div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.tw.desc"))}</div></div></div><div class="p-6 border-t border-gray-200 md:border-l"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.auth.title"))}</div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("jet.blocks.auth.desc"))}</div></div></div></div></div>`);
+  _push(`</div><div class="mt-8 text-2xl">${serverRenderer.ssrInterpolate(_ctx.__("Welcome to your Jetstream application!"))}</div><div class="mt-6 text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel ecosystem to be a breath of fresh air. We hope you love it."))}</div></div><div class="grid grid-cols-1 bg-gray-200 bg-opacity-25 md:grid-cols-2"><div class="p-6"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="https://laravel.com/docs">${serverRenderer.ssrInterpolate(_ctx.__("Documentation"))}</a></div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end."))}</div><a href="https://laravel.com/docs"><div class="flex items-center mt-3 text-sm font-semibold text-indigo-700"><div>${serverRenderer.ssrInterpolate(_ctx.__("Explore the documentation"))}</div><div class="ml-1 text-indigo-500"><svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div></div></a></div></div><div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="https://laracasts.com">${serverRenderer.ssrInterpolate(_ctx.__("Laracasts"))}</a></div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process."))}</div><a href="https://laracasts.com"><div class="flex items-center mt-3 text-sm font-semibold text-indigo-700"><div>${serverRenderer.ssrInterpolate(_ctx.__("Start watching Laracasts"))}</div><div class="ml-1 text-indigo-500"><svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div></div></a></div></div><div class="p-6 border-t border-gray-200"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="https://tailwindcss.com/">${serverRenderer.ssrInterpolate(_ctx.__("Tailwind"))}</a></div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips."))}</div></div></div><div class="p-6 border-t border-gray-200 md:border-l"><div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-600">${serverRenderer.ssrInterpolate(_ctx.__("Authentication"))}</div></div><div class="ml-12"><div class="mt-2 text-sm text-gray-500">${serverRenderer.ssrInterpolate(_ctx.__("Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started what matters most: building your application."))}</div></div></div></div></div>`);
 }
 const _sfc_setup$P = _sfc_main$P.setup;
 _sfc_main$P.setup = (props, ctx) => {
@@ -306,26 +306,33 @@ _sfc_main$J.setup = (props, ctx) => {
   return _sfc_setup$J ? _sfc_setup$J(props, ctx) : void 0;
 };
 const trans = (key, replace, Zora) => {
-  let translation, locale = process.env.LOCALE, translationNotFound = true;
+  const locale = process.env.LOCALE;
+  let translation = null;
   try {
     translation = key.split(".").reduce((t6, i2) => t6[i2] || null, Zora.translations[locale].php);
     if (translation) {
-      translationNotFound = false;
+      return checkForVariables(translation, replace);
     }
   } catch (e2) {
-    translation = key;
   }
-  if (translationNotFound) {
-    try {
-      translation = Zora.translations[locale]["json"][key];
-    } catch (e2) {
-      translation = key;
+  try {
+    translation = Zora.translations[locale]["json"][key];
+    if (translation) {
+      return checkForVariables(translation, replace);
     }
+  } catch (e2) {
   }
-  ___default["default"].forEach(replace, (value, key2) => {
-    translation = translation.replace(":" + key2, value);
+  return checkForVariables(key, replace);
+};
+const checkForVariables = (translation, replace) => {
+  let translated = null;
+  if (typeof replace === "undefined") {
+    return translation;
+  }
+  ___default["default"].forEach(replace, (value, key) => {
+    translated = translation.replace(":" + key, value);
   });
-  return translation;
+  return translated;
 };
 function useTrans(key, replace) {
   return trans(key, replace, inertiaVue3.usePage().props.value.zora);
@@ -1161,7 +1168,7 @@ const _sfc_main$I = {
   props: { title: String },
   setup(__props) {
     const props = __props;
-    const title = props.title || useTrans("layouts.main.dashboard");
+    const title = props.title || useTrans("Dashboard");
     const showingNavigationDropdown = vue.ref(false);
     const switchToTeam = (team) => {
       inertia.Inertia.put(useRoutes("current-team.update"), { team_id: team.id }, { preserveState: false });
@@ -1203,10 +1210,10 @@ const _sfc_main$I = {
       }, {
         default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.dashboard"))}`);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Dashboard"))}`);
           } else {
             return [
-              vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.dashboard")), 1)
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Dashboard")), 1)
             ];
           }
         }),
@@ -1250,16 +1257,16 @@ const _sfc_main$I = {
             if (_push2) {
               _push2(`<div class="w-60"${_scopeId}>`);
               if (_ctx.$page.props.jetstream.hasTeamFeatures) {
-                _push2(`<!--[--><div class="block px-4 py-2 text-xs text-gray-400"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.manage"))}</div>`);
+                _push2(`<!--[--><div class="block px-4 py-2 text-xs text-gray-400"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Manage Team"))}</div>`);
                 _push2(serverRenderer.ssrRenderComponent(_component_JetDropdownLink, {
                   href: _ctx.route("teams.show", _ctx.$page.props.user.current_team)
                 }, {
                   default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                     if (_push3) {
-                      _push3(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.settings"))}`);
+                      _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Team Settings"))}`);
                     } else {
                       return [
-                        vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.settings")), 1)
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Team Settings")), 1)
                       ];
                     }
                   }),
@@ -1271,10 +1278,10 @@ const _sfc_main$I = {
                   }, {
                     default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                       if (_push3) {
-                        _push3(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.create"))}`);
+                        _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Create New Team"))}`);
                       } else {
                         return [
-                          vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.create")), 1)
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Create New Team")), 1)
                         ];
                       }
                     }),
@@ -1283,7 +1290,7 @@ const _sfc_main$I = {
                 } else {
                   _push2(`<!---->`);
                 }
-                _push2(`<div class="border-t border-gray-100"${_scopeId}></div><div class="block px-4 py-2 text-xs text-gray-400"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.switch"))}</div><!--[-->`);
+                _push2(`<div class="border-t border-gray-100"${_scopeId}></div><div class="block px-4 py-2 text-xs text-gray-400"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Switch Teams"))}</div><!--[-->`);
                 serverRenderer.ssrRenderList(_ctx.$page.props.user.all_teams, (team) => {
                   _push2(`<form${_scopeId}>`);
                   _push2(serverRenderer.ssrRenderComponent(_component_JetDropdownLink, { has: "button" }, {
@@ -1329,12 +1336,12 @@ const _sfc_main$I = {
               return [
                 vue.createVNode("div", { class: "w-60" }, [
                   _ctx.$page.props.jetstream.hasTeamFeatures ? (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 0 }, [
-                    vue.createVNode("div", { class: "block px-4 py-2 text-xs text-gray-400" }, vue.toDisplayString(_ctx.__("layouts.main.manage")), 1),
+                    vue.createVNode("div", { class: "block px-4 py-2 text-xs text-gray-400" }, vue.toDisplayString(_ctx.__("Manage Team")), 1),
                     vue.createVNode(_component_JetDropdownLink, {
                       href: _ctx.route("teams.show", _ctx.$page.props.user.current_team)
                     }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.settings")), 1)
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Team Settings")), 1)
                       ]),
                       _: 1
                     }, 8, ["href"]),
@@ -1343,12 +1350,12 @@ const _sfc_main$I = {
                       href: _ctx.route("teams.create")
                     }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.create")), 1)
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Create New Team")), 1)
                       ]),
                       _: 1
                     }, 8, ["href"])) : vue.createCommentVNode("", true),
                     vue.createVNode("div", { class: "border-t border-gray-100" }),
-                    vue.createVNode("div", { class: "block px-4 py-2 text-xs text-gray-400" }, vue.toDisplayString(_ctx.__("layouts.main.switch")), 1),
+                    vue.createVNode("div", { class: "block px-4 py-2 text-xs text-gray-400" }, vue.toDisplayString(_ctx.__("Switch Teams")), 1),
                     (vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.$page.props.user.all_teams, (team) => {
                       return vue.openBlock(), vue.createBlock("form", {
                         key: team.id,
@@ -1437,16 +1444,16 @@ const _sfc_main$I = {
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="block px-4 py-2 text-xs text-gray-400"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.account"))}</div>`);
+            _push2(`<div class="block px-4 py-2 text-xs text-gray-400"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Manage Account"))}</div>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetDropdownLink, {
               href: _ctx.route("profile.show")
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.profile"))}`);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Profile"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.profile")), 1)
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Profile")), 1)
                   ];
                 }
               }),
@@ -1458,10 +1465,10 @@ const _sfc_main$I = {
               }, {
                 default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.tokens"))}`);
+                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("API Tokens"))}`);
                   } else {
                     return [
-                      vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.tokens")), 1)
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("API Tokens")), 1)
                     ];
                   }
                 }),
@@ -1474,10 +1481,10 @@ const _sfc_main$I = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetDropdownLink, { has: "button" }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.logout"))}`);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Logout"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.logout")), 1)
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Logout")), 1)
                   ];
                 }
               }),
@@ -1486,12 +1493,12 @@ const _sfc_main$I = {
             _push2(`</form>`);
           } else {
             return [
-              vue.createVNode("div", { class: "block px-4 py-2 text-xs text-gray-400" }, vue.toDisplayString(_ctx.__("layouts.main.account")), 1),
+              vue.createVNode("div", { class: "block px-4 py-2 text-xs text-gray-400" }, vue.toDisplayString(_ctx.__("Manage Account")), 1),
               vue.createVNode(_component_JetDropdownLink, {
                 href: _ctx.route("profile.show")
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.profile")), 1)
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Profile")), 1)
                 ]),
                 _: 1
               }, 8, ["href"]),
@@ -1500,7 +1507,7 @@ const _sfc_main$I = {
                 href: _ctx.route("api-tokens.index")
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.tokens")), 1)
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("API Tokens")), 1)
                 ]),
                 _: 1
               }, 8, ["href"])) : vue.createCommentVNode("", true),
@@ -1510,7 +1517,7 @@ const _sfc_main$I = {
               }, [
                 vue.createVNode(_component_JetDropdownLink, { has: "button" }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.logout")), 1)
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Logout")), 1)
                   ]),
                   _: 1
                 })
@@ -1520,17 +1527,17 @@ const _sfc_main$I = {
         }),
         _: 1
       }, _parent));
-      _push(`</div></div><div class="flex items-center -mr-2 sm:hidden"><button class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"><svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path class="${serverRenderer.ssrRenderClass({ hidden: showingNavigationDropdown.value, "inline-flex": !showingNavigationDropdown.value })}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path><path class="${serverRenderer.ssrRenderClass({ hidden: !showingNavigationDropdown.value, "inline-flex": showingNavigationDropdown.value })}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div></div></div><div class="${serverRenderer.ssrRenderClass([{ block: showingNavigationDropdown.value, hidden: !showingNavigationDropdown.value }, "sm:hidden"])}"><div class="pt-2 pb-3 space-y-1">`);
+      _push(`</div></div><div class="flex items-center -mr-2 sm:hidden"><button class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"><svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path class="${serverRenderer.ssrRenderClass({ hidden: showingNavigationDropdown.value, "inline-flex": !showingNavigationDropdown.value })}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path><path class="${serverRenderer.ssrRenderClass({ hidden: !showingNavigationDropdown.value, "inline-flex": showingNavigationDropdown.value })}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div></div></div><div class="${serverRenderer.ssrRenderClass([{ block: showingNavigationDropdown.value, hidden: !showingNavigationDropdown.value }, "sm:hidden"])}"><div class="px-4 pt-2 pb-3 space-y-1">`);
       _push(serverRenderer.ssrRenderComponent(_component_JetResponsiveNavLink, {
         href: _ctx.route("dashboard"),
         active: _ctx.route().current("dashboard")
       }, {
         default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.dashboard"))}`);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Dashboard"))}`);
           } else {
             return [
-              vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.dashboard")), 1)
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Dashboard")), 1)
             ];
           }
         }),
@@ -1542,17 +1549,17 @@ const _sfc_main$I = {
       } else {
         _push(`<!---->`);
       }
-      _push(`<div><div class="text-base font-medium text-gray-800">${serverRenderer.ssrInterpolate(_ctx.$page.props.user.name)}</div><div class="text-sm font-medium text-gray-500">${serverRenderer.ssrInterpolate(_ctx.$page.props.user.email)}</div></div></div><div class="mt-3 space-y-1">`);
+      _push(`<div><div class="text-base font-medium text-gray-800">${serverRenderer.ssrInterpolate(_ctx.$page.props.user.name)}</div><div class="text-sm font-medium text-gray-500">${serverRenderer.ssrInterpolate(_ctx.$page.props.user.email)}</div></div></div><div class="px-4 mt-3 space-y-1">`);
       _push(serverRenderer.ssrRenderComponent(_component_JetResponsiveNavLink, {
         href: _ctx.route("profile.show"),
         active: _ctx.route().current("profile.show")
       }, {
         default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.profile"))}`);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Profile"))}`);
           } else {
             return [
-              vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.profile")), 1)
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Profile")), 1)
             ];
           }
         }),
@@ -1565,10 +1572,10 @@ const _sfc_main$I = {
         }, {
           default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.tokens"))}`);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("API Tokens"))}`);
             } else {
               return [
-                vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.tokens")), 1)
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("API Tokens")), 1)
               ];
             }
           }),
@@ -1581,10 +1588,10 @@ const _sfc_main$I = {
       _push(serverRenderer.ssrRenderComponent(_component_JetResponsiveNavLink, { has: "button" }, {
         default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.logout"))}`);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Logout"))}`);
           } else {
             return [
-              vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.logout")), 1)
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Logout")), 1)
             ];
           }
         }),
@@ -1592,17 +1599,17 @@ const _sfc_main$I = {
       }, _parent));
       _push(`</form>`);
       if (_ctx.$page.props.jetstream.hasTeamFeatures) {
-        _push(`<!--[--><div class="border-t border-gray-200"></div><div class="block px-4 py-2 text-xs text-gray-400">${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.manage"))}</div>`);
+        _push(`<!--[--><div class="border-t border-gray-200"></div><div class="block px-4 py-2 text-xs text-gray-400">${serverRenderer.ssrInterpolate(_ctx.__("Manage Teams"))}</div>`);
         _push(serverRenderer.ssrRenderComponent(_component_JetResponsiveNavLink, {
           href: _ctx.route("teams.show", _ctx.$page.props.user.current_team),
           active: _ctx.route().current("teams.show")
         }, {
           default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.settings"))}`);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Team Settings"))}`);
             } else {
               return [
-                vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.settings")), 1)
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("Team Settings")), 1)
               ];
             }
           }),
@@ -1615,10 +1622,10 @@ const _sfc_main$I = {
           }, {
             default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
               if (_push2) {
-                _push2(`${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.create"))}`);
+                _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Create New Team"))}`);
               } else {
                 return [
-                  vue.createTextVNode(vue.toDisplayString(_ctx.__("layouts.main.create")), 1)
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Create New Team")), 1)
                 ];
               }
             }),
@@ -1627,7 +1634,7 @@ const _sfc_main$I = {
         } else {
           _push(`<!---->`);
         }
-        _push(`<div class="border-t border-gray-200"></div><div class="block px-4 py-2 text-xs text-gray-400">${serverRenderer.ssrInterpolate(_ctx.__("layouts.main.switch"))}</div><!--[-->`);
+        _push(`<div class="border-t border-gray-200"></div><div class="block px-4 py-2 text-xs text-gray-400">${serverRenderer.ssrInterpolate(_ctx.__("Switch Teams"))}</div><!--[-->`);
         serverRenderer.ssrRenderList(_ctx.$page.props.user.all_teams, (team) => {
           _push(`<form>`);
           _push(serverRenderer.ssrRenderComponent(_component_JetResponsiveNavLink, { has: "button" }, {
@@ -1692,13 +1699,15 @@ const _sfc_main$H = {};
 function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs) {
   const _component_MainLayout = _sfc_main$I;
   const _component_JetWelcome = __unplugin_components_1$2;
-  _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({ title: "Dashboard" }, _attrs), {
+  _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({
+    title: _ctx.__("Dashboard")
+  }, _attrs), {
     header: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>Dashboard</h2>`);
+        _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Dashboard"))}</h2>`);
       } else {
         return [
-          vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, "Dashboard")
+          vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, vue.toDisplayString(_ctx.__("Dashboard")), 1)
         ];
       }
     }),
@@ -1782,7 +1791,9 @@ const _sfc_main$F = {
       const _component_Head = vue.resolveComponent("Head");
       const _component_JetAuthenticationCard_logo = __unplugin_components_1;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Privacy Policy" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Privacy Policy")
+      }, null, _parent));
       _push(`<div class="font-sans antialiased text-gray-900"><div class="pt-4 bg-gray-100"><div class="flex flex-col items-center min-h-screen pt-6 sm:pt-0"><div>`);
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard_logo, null, null, _parent));
       _push(`</div><div class="w-full p-6 mt-6 overflow-hidden prose bg-white shadow-md sm:max-w-2xl sm:rounded-lg">${props.policy}</div></div></div></div><!--]-->`);
@@ -1809,7 +1820,9 @@ const _sfc_main$E = {
       const _component_Head = vue.resolveComponent("Head");
       const _component_JetAuthenticationCard_logo = __unplugin_components_1;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Terms of Service" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Terms of Service")
+      }, null, _parent));
       _push(`<div class="font-sans antialiased text-gray-900"><div class="pt-4 bg-gray-100"><div class="flex flex-col items-center min-h-screen pt-6 sm:pt-0"><div>`);
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard_logo, null, null, _parent));
       _push(`</div><div class="w-full p-6 mt-6 overflow-hidden prose bg-white shadow-md sm:max-w-2xl sm:rounded-lg">${props.terms}</div></div></div></div><!--]-->`);
@@ -1844,9 +1857,9 @@ const _sfc_main$D = {
       const _component_Link = vue.resolveComponent("Link");
       _push(`<!--[-->`);
       _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Welcome" }, null, _parent));
-      _push(`<div class="relative flex justify-center min-h-screen bg-gray-100 items-top dark:bg-gray-900 sm:items-center sm:pt-0" data-v-47d3156e>`);
+      _push(`<div class="relative flex justify-center min-h-screen bg-gray-100 items-top dark:bg-gray-900 sm:items-center sm:pt-0" data-v-2568569a>`);
       if (vue.unref(canLogin)) {
-        _push(`<div class="fixed top-0 right-0 hidden px-6 py-4 sm:block" data-v-47d3156e>`);
+        _push(`<div class="fixed top-0 right-0 hidden px-6 py-4 sm:block" data-v-2568569a>`);
         if (_ctx.$page.props.user) {
           _push(serverRenderer.ssrRenderComponent(_component_Link, {
             href: _ctx.route("dashboard"),
@@ -1905,7 +1918,7 @@ const _sfc_main$D = {
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="max-w-6xl mx-auto sm:px-6 lg:px-8" data-v-47d3156e><div class="flex justify-center pt-8 sm:justify-start sm:pt-0" data-v-47d3156e><svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-auto h-16 text-gray-700 sm:h-20" data-v-47d3156e><g clip-path="url(#clip0)" fill="#EF3B2D" data-v-47d3156e><path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z" data-v-47d3156e></path></g></svg></div><div class="mt-8 overflow-hidden bg-white shadow dark:bg-gray-800 sm:rounded-lg" data-v-47d3156e><div class="grid grid-cols-1 md:grid-cols-2" data-v-47d3156e><div class="p-6" data-v-47d3156e><div class="flex items-center" data-v-47d3156e><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-47d3156e><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" data-v-47d3156e></path></svg><div class="ml-4 text-lg font-semibold leading-7" data-v-47d3156e><a href="https://laravel.com/docs" class="text-gray-900 underline dark:text-white" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.docs.title"))}</a></div></div><div class="ml-12" data-v-47d3156e><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.docs.desc"))}</div></div></div><div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l" data-v-47d3156e><div class="flex items-center" data-v-47d3156e><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-47d3156e><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" data-v-47d3156e></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" data-v-47d3156e></path></svg><div class="ml-4 text-lg font-semibold leading-7" data-v-47d3156e><a href="https://laracasts.com" class="text-gray-900 underline dark:text-white" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.lara.title"))}</a></div></div><div class="ml-12" data-v-47d3156e><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.lara.desc"))}</div></div></div><div class="p-6 border-t border-gray-200 dark:border-gray-700" data-v-47d3156e><div class="flex items-center" data-v-47d3156e><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-47d3156e><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" data-v-47d3156e></path></svg><div class="ml-4 text-lg font-semibold leading-7" data-v-47d3156e><a href="https://laravel-news.com/" class="text-gray-900 underline dark:text-white" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.news.title"))}</a></div></div><div class="ml-12" data-v-47d3156e><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.news.desc"))}</div></div></div><div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l" data-v-47d3156e><div class="flex items-center" data-v-47d3156e><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-47d3156e><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" data-v-47d3156e></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-900 dark:text-white" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.title"))}</div></div><div class="ml-12" data-v-47d3156e><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.lead"))} <a href="https://forge.laravel.com" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.forge"))}</a>, <a href="https://vapor.laravel.com" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.vapor"))}</a>, <a href="https://nova.laravel.com" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.nova"))}</a>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.and"))} <a href="https://envoyer.io" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.envoyer"))}</a> ${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.next"))} <a href="https://laravel.com/docs/billing" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.cashier"))}</a>, <a href="https://laravel.com/docs/dusk" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.dusk"))}</a>, <a href="https://laravel.com/docs/broadcasting" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.echo"))}</a>, <a href="https://laravel.com/docs/horizon" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.horizon"))}</a>, <a href="https://laravel.com/docs/sanctum" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.sanctum"))}</a>, <a href="https://laravel.com/docs/telescope" class="underline" data-v-47d3156e>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.telescope"))}</a>${serverRenderer.ssrInterpolate(_ctx.__("home.blocks.eco.end"))}</div></div></div></div></div><div class="flex justify-center mt-4 sm:items-center sm:justify-between" data-v-47d3156e><div class="text-sm text-center text-gray-500 sm:text-left" data-v-47d3156e><div class="flex items-center" data-v-47d3156e><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 -mt-px text-gray-400" data-v-47d3156e><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" data-v-47d3156e></path></svg><a href="https://laravel.bigcartel.com" class="ml-1 underline" data-v-47d3156e> Shop </a><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5 ml-4 -mt-px text-gray-400" data-v-47d3156e><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" data-v-47d3156e></path></svg><a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline" data-v-47d3156e> Sponsor </a></div></div><div class="ml-4 text-sm text-center text-gray-500 sm:text-right sm:ml-0" data-v-47d3156e> Laravel v${serverRenderer.ssrInterpolate(vue.unref(laravelVersion))} (PHP v${serverRenderer.ssrInterpolate(vue.unref(phpVersion))}) </div></div></div></div><!--]-->`);
+      _push(`<div class="max-w-6xl mx-auto sm:px-6 lg:px-8" data-v-2568569a><div class="flex justify-center pt-8 sm:justify-start sm:pt-0" data-v-2568569a><svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-auto h-16 text-gray-700 sm:h-20" data-v-2568569a><g clip-path="url(#clip0)" fill="#EF3B2D" data-v-2568569a><path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z" data-v-2568569a></path></g></svg></div><div class="mt-8 overflow-hidden bg-white shadow dark:bg-gray-800 sm:rounded-lg" data-v-2568569a><div class="grid grid-cols-1 md:grid-cols-2" data-v-2568569a><div class="p-6" data-v-2568569a><div class="flex items-center" data-v-2568569a><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-2568569a><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" data-v-2568569a></path></svg><div class="ml-4 text-lg font-semibold leading-7" data-v-2568569a><a href="https://laravel.com/docs" class="text-gray-900 underline dark:text-white" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Documentation"))}</a></div></div><div class="ml-12" data-v-2568569a><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end."))}</div></div></div><div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l" data-v-2568569a><div class="flex items-center" data-v-2568569a><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-2568569a><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" data-v-2568569a></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" data-v-2568569a></path></svg><div class="ml-4 text-lg font-semibold leading-7" data-v-2568569a><a href="https://laracasts.com" class="text-gray-900 underline dark:text-white" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Laracasts"))}</a></div></div><div class="ml-12" data-v-2568569a><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process."))}</div></div></div><div class="p-6 border-t border-gray-200 dark:border-gray-700" data-v-2568569a><div class="flex items-center" data-v-2568569a><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-2568569a><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" data-v-2568569a></path></svg><div class="ml-4 text-lg font-semibold leading-7" data-v-2568569a><a href="https://laravel-news.com/" class="text-gray-900 underline dark:text-white" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Laravel News"))}</a></div></div><div class="ml-12" data-v-2568569a><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials."))}</div></div></div><div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l" data-v-2568569a><div class="flex items-center" data-v-2568569a><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500" data-v-2568569a><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" data-v-2568569a></path></svg><div class="ml-4 text-lg font-semibold leading-7 text-gray-900 dark:text-white" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Vibrant Ecosystem"))}</div></div><div class="ml-12" data-v-2568569a><div class="mt-2 text-sm text-gray-600 dark:text-gray-400" data-v-2568569a>${serverRenderer.ssrInterpolate(_ctx.__("Laravel's robust library of first-party tools and libraries, such as"))} <a href="https://forge.laravel.com" class="underline" data-v-2568569a>Forge</a>, <a href="https://vapor.laravel.com" class="underline" data-v-2568569a>Vapor</a>, <a href="https://nova.laravel.com" class="underline" data-v-2568569a>Nova</a>, and <a href="https://envoyer.io" class="underline" data-v-2568569a>Envoyer</a> ${serverRenderer.ssrInterpolate(_ctx.__("help you take your projects to the next level. Pair them with powerful open source libraries like"))} <a href="https://laravel.com/docs/billing" class="underline" data-v-2568569a>Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline" data-v-2568569a>Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline" data-v-2568569a>Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline" data-v-2568569a>Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline" data-v-2568569a>Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline" data-v-2568569a>Telescope</a> ${serverRenderer.ssrInterpolate(_ctx.__(", and more."))}</div></div></div></div></div><div class="flex justify-center mt-4 sm:items-center sm:justify-between" data-v-2568569a><div class="text-sm text-center text-gray-500 sm:text-left" data-v-2568569a><div class="flex items-center" data-v-2568569a><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 -mt-px text-gray-400" data-v-2568569a><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" data-v-2568569a></path></svg><a href="https://laravel.bigcartel.com" class="ml-1 underline" data-v-2568569a> Shop </a><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5 ml-4 -mt-px text-gray-400" data-v-2568569a><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" data-v-2568569a></path></svg><a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline" data-v-2568569a> Sponsor </a></div></div><div class="ml-4 text-sm text-center text-gray-500 sm:text-right sm:ml-0" data-v-2568569a> Laravel v${serverRenderer.ssrInterpolate(vue.unref(laravelVersion))} (PHP v${serverRenderer.ssrInterpolate(vue.unref(phpVersion))}) </div></div></div></div><!--]-->`);
     };
   }
 };
@@ -1915,7 +1928,7 @@ _sfc_main$D.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = new Set())).add("resources/js/Pages/Welcome.vue");
   return _sfc_setup$D ? _sfc_setup$D(props, ctx) : void 0;
 };
-var Welcome = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["__scopeId", "data-v-47d3156e"]]);
+var Welcome = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["__scopeId", "data-v-2568569a"]]);
 var __glob_7_3 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
@@ -2514,19 +2527,19 @@ const _sfc_main$n = {
       _push(serverRenderer.ssrRenderComponent(_component_JetFormSection, null, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Create API Token `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Create API Token"))}`);
           } else {
             return [
-              vue.createTextVNode(" Create API Token ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Create API Token")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` API tokens allow third-party services to authenticate with our application on your behalf. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("API tokens allow third-party services to authenticate with our application on your behalf."))}`);
           } else {
             return [
-              vue.createTextVNode(" API tokens allow third-party services to authenticate with our application on your behalf. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("API tokens allow third-party services to authenticate with our application on your behalf.")), 1)
             ];
           }
         }),
@@ -2535,7 +2548,7 @@ const _sfc_main$n = {
             _push2(`<div class="col-span-6 sm:col-span-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "name",
-              value: "Name"
+              value: _ctx.__("Name")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "name",
@@ -2554,7 +2567,7 @@ const _sfc_main$n = {
               _push2(`<div class="col-span-6"${_scopeId}>`);
               _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
                 for: "permissions",
-                value: "Permissions"
+                value: _ctx.__("Permissions")
               }, null, _parent2, _scopeId));
               _push2(`<div class="grid grid-cols-1 gap-4 mt-2 md:grid-cols-2"${_scopeId}><!--[-->`);
               serverRenderer.ssrRenderList(vue.unref(availablePermissions), (permission) => {
@@ -2575,8 +2588,8 @@ const _sfc_main$n = {
               vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "name",
-                  value: "Name"
-                }),
+                  value: _ctx.__("Name")
+                }, null, 8, ["value"]),
                 vue.createVNode(_component_JetInput, {
                   id: "name",
                   type: "text",
@@ -2596,8 +2609,8 @@ const _sfc_main$n = {
               }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "permissions",
-                  value: "Permissions"
-                }),
+                  value: _ctx.__("Permissions")
+                }, null, 8, ["value"]),
                 vue.createVNode("div", { class: "grid grid-cols-1 gap-4 mt-2 md:grid-cols-2" }, [
                   (vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(vue.unref(availablePermissions), (permission) => {
                     return vue.openBlock(), vue.createBlock("div", { key: permission }, [
@@ -2624,10 +2637,10 @@ const _sfc_main$n = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Created. `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Created."))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Created. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Created.")), 1)
                   ];
                 }
               }),
@@ -2639,10 +2652,10 @@ const _sfc_main$n = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Create `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Create"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Create ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Create")), 1)
                   ];
                 }
               }),
@@ -2655,7 +2668,7 @@ const _sfc_main$n = {
                 class: "mr-3"
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Created. ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Created.")), 1)
                 ]),
                 _: 1
               }, 8, ["on"]),
@@ -2664,7 +2677,7 @@ const _sfc_main$n = {
                 disabled: vue.unref(createApiTokenForm).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Create ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Create")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -2680,19 +2693,19 @@ const _sfc_main$n = {
         _push(serverRenderer.ssrRenderComponent(_component_JetActionSection, null, {
           title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` Manage API Tokens `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Manage API Tokens"))}`);
             } else {
               return [
-                vue.createTextVNode(" Manage API Tokens ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("Manage API Tokens")), 1)
               ];
             }
           }),
           description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` You may delete any of your existing tokens if they are no longer needed. `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("You may delete any of your existing tokens if they are no longer needed."))}`);
             } else {
               return [
-                vue.createTextVNode(" You may delete any of your existing tokens if they are no longer needed. ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("You may delete any of your existing tokens if they are no longer needed.")), 1)
               ];
             }
           }),
@@ -2702,16 +2715,16 @@ const _sfc_main$n = {
               serverRenderer.ssrRenderList(vue.unref(tokens), (token) => {
                 _push2(`<div class="flex items-center justify-between"${_scopeId}><div${_scopeId}>${serverRenderer.ssrInterpolate(token.name)}</div><div class="flex items-center"${_scopeId}>`);
                 if (token.last_used_ago) {
-                  _push2(`<div class="text-sm text-gray-400"${_scopeId}> Last used ${serverRenderer.ssrInterpolate(token.last_used_ago)}</div>`);
+                  _push2(`<div class="text-sm text-gray-400"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Last used"))} ${serverRenderer.ssrInterpolate(token.last_used_ago)}</div>`);
                 } else {
                   _push2(`<!---->`);
                 }
                 if (vue.unref(availablePermissions).length > 0) {
-                  _push2(`<button class="ml-6 text-sm text-gray-400 underline cursor-pointer"${_scopeId}> Permissions </button>`);
+                  _push2(`<button class="ml-6 text-sm text-gray-400 underline cursor-pointer"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Permissions"))}</button>`);
                 } else {
                   _push2(`<!---->`);
                 }
-                _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer"${_scopeId}> Delete </button></div></div>`);
+                _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Delete"))}</button></div></div>`);
               });
               _push2(`<!--]--></div>`);
             } else {
@@ -2727,16 +2740,16 @@ const _sfc_main$n = {
                         token.last_used_ago ? (vue.openBlock(), vue.createBlock("div", {
                           key: 0,
                           class: "text-sm text-gray-400"
-                        }, " Last used " + vue.toDisplayString(token.last_used_ago), 1)) : vue.createCommentVNode("", true),
+                        }, vue.toDisplayString(_ctx.__("Last used")) + " " + vue.toDisplayString(token.last_used_ago), 1)) : vue.createCommentVNode("", true),
                         vue.unref(availablePermissions).length > 0 ? (vue.openBlock(), vue.createBlock("button", {
                           key: 1,
                           class: "ml-6 text-sm text-gray-400 underline cursor-pointer",
                           onClick: ($event) => manageApiTokenPermissions(token)
-                        }, " Permissions ", 8, ["onClick"])) : vue.createCommentVNode("", true),
+                        }, vue.toDisplayString(_ctx.__("Permissions")), 9, ["onClick"])) : vue.createCommentVNode("", true),
                         vue.createVNode("button", {
                           class: "ml-6 text-sm text-red-500 cursor-pointer",
                           onClick: ($event) => confirmApiTokenDeletion(token)
-                        }, " Delete ", 8, ["onClick"])
+                        }, vue.toDisplayString(_ctx.__("Delete")), 9, ["onClick"])
                       ])
                     ]);
                   }), 128))
@@ -2753,16 +2766,16 @@ const _sfc_main$n = {
       _push(serverRenderer.ssrRenderComponent(_component_JetDialogModal, { show: displayingToken.value }, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` API Token `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("API Token"))}`);
           } else {
             return [
-              vue.createTextVNode(" API Token ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("API Token")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div${_scopeId}>Please copy your new API token. For your security, it won&#39;t be shown again.</div>`);
+            _push2(`<div${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Please copy your new API token. For your security, it won't be shown again."))}</div>`);
             if (_ctx.$page.props.jetstream.flash.token) {
               _push2(`<div class="px-4 py-2 mt-4 font-mono text-sm text-gray-500 bg-gray-100 rounded"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.$page.props.jetstream.flash.token)}</div>`);
             } else {
@@ -2770,7 +2783,7 @@ const _sfc_main$n = {
             }
           } else {
             return [
-              vue.createVNode("div", null, "Please copy your new API token. For your security, it won't be shown again."),
+              vue.createVNode("div", null, vue.toDisplayString(_ctx.__("Please copy your new API token. For your security, it won't be shown again.")), 1),
               _ctx.$page.props.jetstream.flash.token ? (vue.openBlock(), vue.createBlock("div", {
                 key: 0,
                 class: "px-4 py-2 mt-4 font-mono text-sm text-gray-500 bg-gray-100 rounded"
@@ -2783,10 +2796,10 @@ const _sfc_main$n = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Close `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Close"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Close ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Close")), 1)
                   ];
                 }
               }),
@@ -2798,7 +2811,7 @@ const _sfc_main$n = {
                 onClick: ($event) => displayingToken.value = false
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Close ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Close")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"])
@@ -2810,10 +2823,10 @@ const _sfc_main$n = {
       _push(serverRenderer.ssrRenderComponent(_component_JetDialogModal, { show: managingPermissionsFor.value }, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` API Token Permissions `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("API Token Permissions"))}`);
           } else {
             return [
-              vue.createTextVNode(" API Token Permissions ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("API Token Permissions")), 1)
             ];
           }
         }),
@@ -2854,10 +2867,10 @@ const _sfc_main$n = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Cancel `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Cancel ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                   ];
                 }
               }),
@@ -2869,10 +2882,10 @@ const _sfc_main$n = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Save `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Save"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Save ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                   ];
                 }
               }),
@@ -2884,7 +2897,7 @@ const _sfc_main$n = {
                 onClick: ($event) => managingPermissionsFor.value = null
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Cancel ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
@@ -2894,7 +2907,7 @@ const _sfc_main$n = {
                 disabled: vue.unref(updateApiTokenForm).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Save ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -2906,19 +2919,19 @@ const _sfc_main$n = {
       _push(serverRenderer.ssrRenderComponent(_component_JetConfirmationModal, { show: apiTokenBeingDeleted.value }, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Delete API Token `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Delete API Token"))}`);
           } else {
             return [
-              vue.createTextVNode(" Delete API Token ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete API Token")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Are you sure you would like to delete this API token? `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Are you sure you would like to delete this API token?"))}`);
           } else {
             return [
-              vue.createTextVNode(" Are you sure you would like to delete this API token? ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Are you sure you would like to delete this API token?")), 1)
             ];
           }
         }),
@@ -2927,10 +2940,10 @@ const _sfc_main$n = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Cancel `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Cancel ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                   ];
                 }
               }),
@@ -2942,10 +2955,10 @@ const _sfc_main$n = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Delete `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Delete"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Delete ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete")), 1)
                   ];
                 }
               }),
@@ -2957,7 +2970,7 @@ const _sfc_main$n = {
                 onClick: ($event) => apiTokenBeingDeleted.value = null
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Cancel ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
@@ -2967,7 +2980,7 @@ const _sfc_main$n = {
                 disabled: vue.unref(deleteApiTokenForm).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Delete ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -2998,13 +3011,15 @@ const _sfc_main$m = {
     return (_ctx, _push, _parent, _attrs) => {
       const _component_MainLayout = _sfc_main$I;
       const _component_ApiTokenManager = _sfc_main$n;
-      _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({ title: "API Tokens" }, _attrs), {
+      _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({
+        title: _ctx.__("API Tokens")
+      }, _attrs), {
         header: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>API Tokens</h2>`);
+            _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("API Tokens"))}</h2>`);
           } else {
             return [
-              vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, "API Tokens")
+              vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, vue.toDisplayString(_ctx.__("API Tokens")), 1)
             ];
           }
         }),
@@ -3058,7 +3073,7 @@ const _sfc_main$l = {
     });
     return (_ctx, _push, _parent, _attrs) => {
       if (vue.unref(hasErrors)) {
-        _push(`<div${serverRenderer.ssrRenderAttrs(_attrs)}><div class="font-medium text-red-600">${serverRenderer.ssrInterpolate(_ctx.__("jet.error"))}</div><ul class="mt-3 text-sm text-red-600 list-disc list-inside"><!--[-->`);
+        _push(`<div${serverRenderer.ssrRenderAttrs(_attrs)}><div class="font-medium text-red-600">${serverRenderer.ssrInterpolate(_ctx.__("Whoops! Something went wrong."))}</div><ul class="mt-3 text-sm text-red-600 list-disc list-inside"><!--[-->`);
         serverRenderer.ssrRenderList(vue.unref(errors), (error, key) => {
           _push(`<li>${serverRenderer.ssrInterpolate(error)}</li>`);
         });
@@ -3111,7 +3126,9 @@ const _sfc_main$j = {
       const _component_JetInput = _sfc_main$q;
       const _component_JetButton = _sfc_main$u;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Secure Area" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Secure Area")
+      }, null, _parent));
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard, null, {
         logo: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -3124,7 +3141,7 @@ const _sfc_main$j = {
         }),
         default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="mb-4 text-sm text-gray-600"${_scopeId}> This is a secure area of the application. Please confirm your password before continuing. </div>`);
+            _push2(`<div class="mb-4 text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("This is a secure area of the application. Please confirm your password before continuing."))}</div>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetValidationErrors, { class: "mb-4" }, null, _parent2, _scopeId));
             _push2(`<form${_scopeId}><div${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
@@ -3148,10 +3165,10 @@ const _sfc_main$j = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Confirm `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Confirm"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Confirm ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Confirm")), 1)
                   ];
                 }
               }),
@@ -3160,7 +3177,7 @@ const _sfc_main$j = {
             _push2(`</div></form>`);
           } else {
             return [
-              vue.createVNode("div", { class: "mb-4 text-sm text-gray-600" }, " This is a secure area of the application. Please confirm your password before continuing. "),
+              vue.createVNode("div", { class: "mb-4 text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("This is a secure area of the application. Please confirm your password before continuing.")), 1),
               vue.createVNode(_component_JetValidationErrors, { class: "mb-4" }),
               vue.createVNode("form", {
                 onSubmit: vue.withModifiers(submit, ["prevent"])
@@ -3187,7 +3204,7 @@ const _sfc_main$j = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Confirm ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Confirm")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -3238,7 +3255,9 @@ const _sfc_main$i = {
       const _component_JetInput = _sfc_main$q;
       const _component_JetButton = _sfc_main$u;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Forgot Password" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Forgot Password")
+      }, null, _parent));
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard, null, {
         logo: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -3251,7 +3270,7 @@ const _sfc_main$i = {
         }),
         default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="mb-4 text-sm text-gray-600"${_scopeId}> Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one. </div>`);
+            _push2(`<div class="mb-4 text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one."))}</div>`);
             if (props.status) {
               _push2(`<div class="mb-4 text-sm font-medium text-green-600"${_scopeId}>${serverRenderer.ssrInterpolate(props.status)}</div>`);
             } else {
@@ -3261,7 +3280,7 @@ const _sfc_main$i = {
             _push2(`<form${_scopeId}><div${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "email",
-              value: "Email"
+              value: _ctx.__("Email")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "email",
@@ -3279,10 +3298,10 @@ const _sfc_main$i = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Email Password Reset Link `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Email Password Reset Link"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Email Password Reset Link ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Email Password Reset Link")), 1)
                   ];
                 }
               }),
@@ -3291,7 +3310,7 @@ const _sfc_main$i = {
             _push2(`</div></form>`);
           } else {
             return [
-              vue.createVNode("div", { class: "mb-4 text-sm text-gray-600" }, " Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one. "),
+              vue.createVNode("div", { class: "mb-4 text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.")), 1),
               props.status ? (vue.openBlock(), vue.createBlock("div", {
                 key: 0,
                 class: "mb-4 text-sm font-medium text-green-600"
@@ -3303,8 +3322,8 @@ const _sfc_main$i = {
                 vue.createVNode("div", null, [
                   vue.createVNode(_component_JetLabel, {
                     for: "email",
-                    value: "Email"
-                  }),
+                    value: _ctx.__("Email")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "email",
                     type: "email",
@@ -3321,7 +3340,7 @@ const _sfc_main$i = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Email Password Reset Link ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Email Password Reset Link")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -3378,7 +3397,9 @@ const _sfc_main$h = {
       const _component_Link = vue.resolveComponent("Link");
       const _component_JetButton = _sfc_main$u;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Log in" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Login")
+      }, null, _parent));
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard, null, {
         logo: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -3400,7 +3421,7 @@ const _sfc_main$h = {
             _push2(`<form${_scopeId}><div${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "email",
-              value: "Email"
+              value: _ctx.__("Email")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "email",
@@ -3414,7 +3435,7 @@ const _sfc_main$h = {
             _push2(`</div><div class="mt-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "password",
-              value: "Password"
+              value: _ctx.__("Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "password",
@@ -3431,7 +3452,7 @@ const _sfc_main$h = {
               checked: vue.unref(form).remember,
               "onUpdate:checked": ($event) => vue.unref(form).remember = $event
             }, null, _parent2, _scopeId));
-            _push2(`<span class="ml-2 text-sm text-gray-600"${_scopeId}>Remember me</span></label></div><div class="flex items-center justify-end mt-4"${_scopeId}>`);
+            _push2(`<span class="ml-2 text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Remember me"))}</span></label></div><div class="flex items-center justify-end mt-4"${_scopeId}>`);
             if (props.canResetPassword) {
               _push2(serverRenderer.ssrRenderComponent(_component_Link, {
                 href: _ctx.route("password.request"),
@@ -3439,10 +3460,10 @@ const _sfc_main$h = {
               }, {
                 default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(` Forgot your password? `);
+                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Forgot your password?"))}`);
                   } else {
                     return [
-                      vue.createTextVNode(" Forgot your password? ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Forgot your password?")), 1)
                     ];
                   }
                 }),
@@ -3457,10 +3478,10 @@ const _sfc_main$h = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Log in `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Login"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Log in ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Login")), 1)
                   ];
                 }
               }),
@@ -3480,8 +3501,8 @@ const _sfc_main$h = {
                 vue.createVNode("div", null, [
                   vue.createVNode(_component_JetLabel, {
                     for: "email",
-                    value: "Email"
-                  }),
+                    value: _ctx.__("Email")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "email",
                     type: "email",
@@ -3495,8 +3516,8 @@ const _sfc_main$h = {
                 vue.createVNode("div", { class: "mt-4" }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "password",
-                    value: "Password"
-                  }),
+                    value: _ctx.__("Password")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "password",
                     type: "password",
@@ -3514,7 +3535,7 @@ const _sfc_main$h = {
                       checked: vue.unref(form).remember,
                       "onUpdate:checked": ($event) => vue.unref(form).remember = $event
                     }, null, 8, ["checked", "onUpdate:checked"]),
-                    vue.createVNode("span", { class: "ml-2 text-sm text-gray-600" }, "Remember me")
+                    vue.createVNode("span", { class: "ml-2 text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("Remember me")), 1)
                   ])
                 ]),
                 vue.createVNode("div", { class: "flex items-center justify-end mt-4" }, [
@@ -3524,7 +3545,7 @@ const _sfc_main$h = {
                     class: "text-sm text-gray-600 underline hover:text-gray-900"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Forgot your password? ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Forgot your password?")), 1)
                     ]),
                     _: 1
                   }, 8, ["href"])) : vue.createCommentVNode("", true),
@@ -3533,7 +3554,7 @@ const _sfc_main$h = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Log in ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Login")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -3586,7 +3607,9 @@ const _sfc_main$g = {
       const _component_Link = vue.resolveComponent("Link");
       const _component_JetButton = _sfc_main$u;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Register" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Register")
+      }, null, _parent));
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard, null, {
         logo: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -3603,7 +3626,7 @@ const _sfc_main$g = {
             _push2(`<form${_scopeId}><div${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "name",
-              value: "Name"
+              value: _ctx.__("Name")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "name",
@@ -3618,7 +3641,7 @@ const _sfc_main$g = {
             _push2(`</div><div class="mt-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "email",
-              value: "Email"
+              value: _ctx.__("Email")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "email",
@@ -3631,7 +3654,7 @@ const _sfc_main$g = {
             _push2(`</div><div class="mt-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "password",
-              value: "Password"
+              value: _ctx.__("Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "password",
@@ -3645,7 +3668,7 @@ const _sfc_main$g = {
             _push2(`</div><div class="mt-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "password_confirmation",
-              value: "Confirm Password"
+              value: _ctx.__("Confirm Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "password_confirmation",
@@ -3676,10 +3699,10 @@ const _sfc_main$g = {
                     }, {
                       default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(`Terms of Service`);
+                          _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Terms of Service"))}`);
                         } else {
                           return [
-                            vue.createTextVNode("Terms of Service")
+                            vue.createTextVNode(vue.toDisplayString(_ctx.__("Terms of Service")), 1)
                           ];
                         }
                       }),
@@ -3692,10 +3715,10 @@ const _sfc_main$g = {
                     }, {
                       default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(`Privacy Policy`);
+                          _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Privacy Policy"))}`);
                         } else {
                           return [
-                            vue.createTextVNode("Privacy Policy")
+                            vue.createTextVNode(vue.toDisplayString(_ctx.__("Privacy Policy")), 1)
                           ];
                         }
                       }),
@@ -3718,7 +3741,7 @@ const _sfc_main$g = {
                             class: "text-sm text-gray-600 underline hover:text-gray-900"
                           }, {
                             default: vue.withCtx(() => [
-                              vue.createTextVNode("Terms of Service")
+                              vue.createTextVNode(vue.toDisplayString(_ctx.__("Terms of Service")), 1)
                             ]),
                             _: 1
                           }, 8, ["href"]),
@@ -3728,7 +3751,7 @@ const _sfc_main$g = {
                             class: "text-sm text-gray-600 underline hover:text-gray-900"
                           }, {
                             default: vue.withCtx(() => [
-                              vue.createTextVNode("Privacy Policy")
+                              vue.createTextVNode(vue.toDisplayString(_ctx.__("Privacy Policy")), 1)
                             ]),
                             _: 1
                           }, 8, ["href"])
@@ -3750,10 +3773,10 @@ const _sfc_main$g = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Already registered? `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Already registered?"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Already registered? ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Already registered?")), 1)
                   ];
                 }
               }),
@@ -3765,10 +3788,10 @@ const _sfc_main$g = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Register `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Register"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Register ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Register")), 1)
                   ];
                 }
               }),
@@ -3784,8 +3807,8 @@ const _sfc_main$g = {
                 vue.createVNode("div", null, [
                   vue.createVNode(_component_JetLabel, {
                     for: "name",
-                    value: "Name"
-                  }),
+                    value: _ctx.__("Name")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "name",
                     type: "text",
@@ -3800,8 +3823,8 @@ const _sfc_main$g = {
                 vue.createVNode("div", { class: "mt-4" }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "email",
-                    value: "Email"
-                  }),
+                    value: _ctx.__("Email")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "email",
                     type: "email",
@@ -3814,8 +3837,8 @@ const _sfc_main$g = {
                 vue.createVNode("div", { class: "mt-4" }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "password",
-                    value: "Password"
-                  }),
+                    value: _ctx.__("Password")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "password",
                     type: "password",
@@ -3829,8 +3852,8 @@ const _sfc_main$g = {
                 vue.createVNode("div", { class: "mt-4" }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "password_confirmation",
-                    value: "Confirm Password"
-                  }),
+                    value: _ctx.__("Confirm Password")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "password_confirmation",
                     type: "password",
@@ -3861,7 +3884,7 @@ const _sfc_main$g = {
                             class: "text-sm text-gray-600 underline hover:text-gray-900"
                           }, {
                             default: vue.withCtx(() => [
-                              vue.createTextVNode("Terms of Service")
+                              vue.createTextVNode(vue.toDisplayString(_ctx.__("Terms of Service")), 1)
                             ]),
                             _: 1
                           }, 8, ["href"]),
@@ -3871,7 +3894,7 @@ const _sfc_main$g = {
                             class: "text-sm text-gray-600 underline hover:text-gray-900"
                           }, {
                             default: vue.withCtx(() => [
-                              vue.createTextVNode("Privacy Policy")
+                              vue.createTextVNode(vue.toDisplayString(_ctx.__("Privacy Policy")), 1)
                             ]),
                             _: 1
                           }, 8, ["href"])
@@ -3887,7 +3910,7 @@ const _sfc_main$g = {
                     class: "text-sm text-gray-600 underline hover:text-gray-900"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Already registered? ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Already registered?")), 1)
                     ]),
                     _: 1
                   }, 8, ["href"]),
@@ -3896,7 +3919,7 @@ const _sfc_main$g = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Register ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Register")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -3951,7 +3974,9 @@ const _sfc_main$f = {
       const _component_JetInput = _sfc_main$q;
       const _component_JetButton = _sfc_main$u;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Reset Password" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Reset Password")
+      }, null, _parent));
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard, null, {
         logo: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -3968,7 +3993,7 @@ const _sfc_main$f = {
             _push2(`<form${_scopeId}><div${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "email",
-              value: "Email"
+              value: _ctx.__("Email")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "email",
@@ -3982,7 +4007,7 @@ const _sfc_main$f = {
             _push2(`</div><div class="mt-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "password",
-              value: "Password"
+              value: _ctx.__("Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "password",
@@ -3996,7 +4021,7 @@ const _sfc_main$f = {
             _push2(`</div><div class="mt-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "password_confirmation",
-              value: "Confirm Password"
+              value: _ctx.__("Confirm Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "password_confirmation",
@@ -4014,10 +4039,10 @@ const _sfc_main$f = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Reset Password `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Reset Password"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Reset Password ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Reset Password")), 1)
                   ];
                 }
               }),
@@ -4033,8 +4058,8 @@ const _sfc_main$f = {
                 vue.createVNode("div", null, [
                   vue.createVNode(_component_JetLabel, {
                     for: "email",
-                    value: "Email"
-                  }),
+                    value: _ctx.__("Email")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "email",
                     type: "email",
@@ -4048,8 +4073,8 @@ const _sfc_main$f = {
                 vue.createVNode("div", { class: "mt-4" }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "password",
-                    value: "Password"
-                  }),
+                    value: _ctx.__("Password")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "password",
                     type: "password",
@@ -4063,8 +4088,8 @@ const _sfc_main$f = {
                 vue.createVNode("div", { class: "mt-4" }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "password_confirmation",
-                    value: "Confirm Password"
-                  }),
+                    value: _ctx.__("Confirm Password")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     id: "password_confirmation",
                     type: "password",
@@ -4081,7 +4106,7 @@ const _sfc_main$f = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Reset Password ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Reset Password")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -4142,7 +4167,9 @@ const _sfc_main$e = {
       const _component_JetInput = _sfc_main$q;
       const _component_JetButton = _sfc_main$u;
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Two-factor Confirmation" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Two-factor Confirmation")
+      }, null, _parent));
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard, null, {
         logo: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -4157,9 +4184,9 @@ const _sfc_main$e = {
           if (_push2) {
             _push2(`<div class="mb-4 text-sm text-gray-600"${_scopeId}>`);
             if (!recovery.value) {
-              _push2(`<!--[--> Please confirm access to your account by entering the authentication code provided by your authenticator application. <!--]-->`);
+              _push2(`<!--[-->${serverRenderer.ssrInterpolate(_ctx.__("Please confirm access to your account by entering the authentication code provided by your authenticator application."))}<!--]-->`);
             } else {
-              _push2(`<!--[--> Please confirm access to your account by entering one of your emergency recovery codes. <!--]-->`);
+              _push2(`<!--[-->${serverRenderer.ssrInterpolate(_ctx.__("Please confirm access to your account by entering one of your emergency recovery codes."))}<!--]-->`);
             }
             _push2(`</div>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetValidationErrors, { class: "mb-4" }, null, _parent2, _scopeId));
@@ -4168,7 +4195,7 @@ const _sfc_main$e = {
               _push2(`<div${_scopeId}>`);
               _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
                 for: "code",
-                value: "Code"
+                value: _ctx.__("Code")
               }, null, _parent2, _scopeId));
               _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
                 ref_key: "code",
@@ -4187,7 +4214,7 @@ const _sfc_main$e = {
               _push2(`<div${_scopeId}>`);
               _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
                 for: "recovery_code",
-                value: "Recovery Code"
+                value: _ctx.__("Recovery Code")
               }, null, _parent2, _scopeId));
               _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
                 ref_key: "recovery_code",
@@ -4203,9 +4230,9 @@ const _sfc_main$e = {
             }
             _push2(`<div class="flex items-center justify-end mt-4"${_scopeId}><button type="button" class="text-sm text-gray-600 underline cursor-pointer hover:text-gray-900"${_scopeId}>`);
             if (!recovery.value) {
-              _push2(`<!--[--> Use a recovery code <!--]-->`);
+              _push2(`<!--[-->${serverRenderer.ssrInterpolate(_ctx.__("Use a recovery code"))}<!--]-->`);
             } else {
-              _push2(`<!--[--> Use an authentication code <!--]-->`);
+              _push2(`<!--[-->${serverRenderer.ssrInterpolate(_ctx.__("Use an authentication code"))}<!--]-->`);
             }
             _push2(`</button>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetButton, {
@@ -4214,10 +4241,10 @@ const _sfc_main$e = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Log in `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Login"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Log in ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Login")), 1)
                   ];
                 }
               }),
@@ -4228,9 +4255,9 @@ const _sfc_main$e = {
             return [
               vue.createVNode("div", { class: "mb-4 text-sm text-gray-600" }, [
                 !recovery.value ? (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 0 }, [
-                  vue.createTextVNode(" Please confirm access to your account by entering the authentication code provided by your authenticator application. ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Please confirm access to your account by entering the authentication code provided by your authenticator application.")), 1)
                 ], 64)) : (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 1 }, [
-                  vue.createTextVNode(" Please confirm access to your account by entering one of your emergency recovery codes. ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Please confirm access to your account by entering one of your emergency recovery codes.")), 1)
                 ], 64))
               ]),
               vue.createVNode(_component_JetValidationErrors, { class: "mb-4" }),
@@ -4240,8 +4267,8 @@ const _sfc_main$e = {
                 !recovery.value ? (vue.openBlock(), vue.createBlock("div", { key: 0 }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "code",
-                    value: "Code"
-                  }),
+                    value: _ctx.__("Code")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     ref_key: "code",
                     ref: code,
@@ -4257,8 +4284,8 @@ const _sfc_main$e = {
                 ])) : (vue.openBlock(), vue.createBlock("div", { key: 1 }, [
                   vue.createVNode(_component_JetLabel, {
                     for: "recovery_code",
-                    value: "Recovery Code"
-                  }),
+                    value: _ctx.__("Recovery Code")
+                  }, null, 8, ["value"]),
                   vue.createVNode(_component_JetInput, {
                     ref_key: "recovery_code",
                     ref: recovery_code,
@@ -4277,9 +4304,9 @@ const _sfc_main$e = {
                     onClick: vue.withModifiers(toggleRecovery, ["prevent"])
                   }, [
                     !recovery.value ? (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 0 }, [
-                      vue.createTextVNode(" Use a recovery code ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Use a recovery code")), 1)
                     ], 64)) : (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 1 }, [
-                      vue.createTextVNode(" Use an authentication code ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Use an authentication code")), 1)
                     ], 64))
                   ], 8, ["onClick"]),
                   vue.createVNode(_component_JetButton, {
@@ -4287,7 +4314,7 @@ const _sfc_main$e = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Log in ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Login")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -4332,7 +4359,9 @@ const _sfc_main$d = {
       const _component_JetButton = _sfc_main$u;
       const _component_Link = vue.resolveComponent("Link");
       _push(`<!--[-->`);
-      _push(serverRenderer.ssrRenderComponent(_component_Head, { title: "Email Verification" }, null, _parent));
+      _push(serverRenderer.ssrRenderComponent(_component_Head, {
+        title: _ctx.__("Email Verification")
+      }, null, _parent));
       _push(serverRenderer.ssrRenderComponent(_component_JetAuthenticationCard, null, {
         logo: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -4345,9 +4374,9 @@ const _sfc_main$d = {
         }),
         default: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="mb-4 text-sm text-gray-600"${_scopeId}> Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn&#39;t receive the email, we will gladly send you another. </div>`);
+            _push2(`<div class="mb-4 text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another."))}</div>`);
             if (vue.unref(verificationLinkSent)) {
-              _push2(`<div class="mb-4 text-sm font-medium text-green-600"${_scopeId}> A new verification link has been sent to the email address you provided during registration. </div>`);
+              _push2(`<div class="mb-4 text-sm font-medium text-green-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("A new verification link has been sent to the email address you provided during registration."))}</div>`);
             } else {
               _push2(`<!---->`);
             }
@@ -4358,10 +4387,10 @@ const _sfc_main$d = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Resend Verification Email `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Resend Verification Email"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Resend Verification Email ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Resend Verification Email")), 1)
                   ];
                 }
               }),
@@ -4375,10 +4404,10 @@ const _sfc_main$d = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`Log Out`);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Log Out"))}`);
                 } else {
                   return [
-                    vue.createTextVNode("Log Out")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out")), 1)
                   ];
                 }
               }),
@@ -4387,11 +4416,11 @@ const _sfc_main$d = {
             _push2(`</div></form>`);
           } else {
             return [
-              vue.createVNode("div", { class: "mb-4 text-sm text-gray-600" }, " Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another. "),
+              vue.createVNode("div", { class: "mb-4 text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.")), 1),
               vue.unref(verificationLinkSent) ? (vue.openBlock(), vue.createBlock("div", {
                 key: 0,
                 class: "mb-4 text-sm font-medium text-green-600"
-              }, " A new verification link has been sent to the email address you provided during registration. ")) : vue.createCommentVNode("", true),
+              }, vue.toDisplayString(_ctx.__("A new verification link has been sent to the email address you provided during registration.")), 1)) : vue.createCommentVNode("", true),
               vue.createVNode("form", {
                 onSubmit: vue.withModifiers(submit, ["prevent"])
               }, [
@@ -4401,7 +4430,7 @@ const _sfc_main$d = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Resend Verification Email ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Resend Verification Email")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"]),
@@ -4412,7 +4441,7 @@ const _sfc_main$d = {
                     class: "text-sm text-gray-600 underline hover:text-gray-900"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode("Log Out")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out")), 1)
                     ]),
                     _: 1
                   }, 8, ["href"])
@@ -4473,32 +4502,32 @@ const _sfc_main$c = {
       _push(serverRenderer.ssrRenderComponent(_component_JetActionSection, _attrs, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Delete Account `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Account"))}`);
           } else {
             return [
-              vue.createTextVNode(" Delete Account ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Permanently delete your account. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Permanently delete your account."))}`);
           } else {
             return [
-              vue.createTextVNode(" Permanently delete your account. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Permanently delete your account.")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="max-w-xl text-sm text-gray-600"${_scopeId}> Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain. </div><div class="mt-5"${_scopeId}>`);
+            _push2(`<div class="max-w-xl text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain."))}</div><div class="mt-5"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetDangerButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Delete Account `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Account"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Delete Account ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
                   ];
                 }
               }),
@@ -4508,20 +4537,20 @@ const _sfc_main$c = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetDialogModal, { show: confirmingUserDeletion.value }, {
               title: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Delete Account `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Account"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Delete Account ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
                   ];
                 }
               }),
               content: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account. <div class="mt-4"${_scopeId2}>`);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account."))} <div class="mt-4"${_scopeId2}>`);
                   _push3(serverRenderer.ssrRenderComponent(_component_JetInput, {
                     type: "password",
                     class: "block w-3/4 mt-1",
-                    placeholder: "Password",
+                    placeholder: _ctx.__("Password"),
                     ref_key: "password",
                     ref: password,
                     modelValue: vue.unref(form).password,
@@ -4534,18 +4563,18 @@ const _sfc_main$c = {
                   _push3(`</div>`);
                 } else {
                   return [
-                    vue.createTextVNode(" Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account. "),
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.")) + " ", 1),
                     vue.createVNode("div", { class: "mt-4" }, [
                       vue.createVNode(_component_JetInput, {
                         type: "password",
                         class: "block w-3/4 mt-1",
-                        placeholder: "Password",
+                        placeholder: _ctx.__("Password"),
                         ref_key: "password",
                         ref: password,
                         modelValue: vue.unref(form).password,
                         "onUpdate:modelValue": ($event) => vue.unref(form).password = $event,
                         onKeyup: vue.withKeys(deleteUser, ["enter"])
-                      }, null, 8, ["modelValue", "onUpdate:modelValue", "onKeyup"]),
+                      }, null, 8, ["placeholder", "modelValue", "onUpdate:modelValue", "onKeyup"]),
                       vue.createVNode(_component_JetInput_error, {
                         message: vue.unref(form).errors.password,
                         class: "mt-2"
@@ -4559,10 +4588,10 @@ const _sfc_main$c = {
                   _push3(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
                     default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(` Cancel `);
+                        _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                       } else {
                         return [
-                          vue.createTextVNode(" Cancel ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                         ];
                       }
                     }),
@@ -4574,10 +4603,10 @@ const _sfc_main$c = {
                   }, {
                     default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(` Delete Account `);
+                        _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Account"))}`);
                       } else {
                         return [
-                          vue.createTextVNode(" Delete Account ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
                         ];
                       }
                     }),
@@ -4587,7 +4616,7 @@ const _sfc_main$c = {
                   return [
                     vue.createVNode(_component_JetSecondaryButton, { onClick: closeModal }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(" Cancel ")
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                       ]),
                       _: 1
                     }),
@@ -4597,7 +4626,7 @@ const _sfc_main$c = {
                       disabled: vue.unref(form).processing
                     }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(" Delete Account ")
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
                       ]),
                       _: 1
                     }, 8, ["class", "disabled"])
@@ -4608,11 +4637,11 @@ const _sfc_main$c = {
             }, _parent2, _scopeId));
           } else {
             return [
-              vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, " Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain. "),
+              vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.")), 1),
               vue.createVNode("div", { class: "mt-5" }, [
                 vue.createVNode(_component_JetDangerButton, { onClick: confirmUserDeletion }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Delete Account ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
                   ]),
                   _: 1
                 })
@@ -4622,21 +4651,21 @@ const _sfc_main$c = {
                 onClose: closeModal
               }, {
                 title: vue.withCtx(() => [
-                  vue.createTextVNode(" Delete Account ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
                 ]),
                 content: vue.withCtx(() => [
-                  vue.createTextVNode(" Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account. "),
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.")) + " ", 1),
                   vue.createVNode("div", { class: "mt-4" }, [
                     vue.createVNode(_component_JetInput, {
                       type: "password",
                       class: "block w-3/4 mt-1",
-                      placeholder: "Password",
+                      placeholder: _ctx.__("Password"),
                       ref_key: "password",
                       ref: password,
                       modelValue: vue.unref(form).password,
                       "onUpdate:modelValue": ($event) => vue.unref(form).password = $event,
                       onKeyup: vue.withKeys(deleteUser, ["enter"])
-                    }, null, 8, ["modelValue", "onUpdate:modelValue", "onKeyup"]),
+                    }, null, 8, ["placeholder", "modelValue", "onUpdate:modelValue", "onKeyup"]),
                     vue.createVNode(_component_JetInput_error, {
                       message: vue.unref(form).errors.password,
                       class: "mt-2"
@@ -4646,7 +4675,7 @@ const _sfc_main$c = {
                 footer: vue.withCtx(() => [
                   vue.createVNode(_component_JetSecondaryButton, { onClick: closeModal }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Cancel ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                     ]),
                     _: 1
                   }),
@@ -4656,7 +4685,7 @@ const _sfc_main$c = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Delete Account ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Account")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -4715,25 +4744,25 @@ const _sfc_main$b = {
       _push(serverRenderer.ssrRenderComponent(_component_JetActionSection, _attrs, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Browser Sessions `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Browser Sessions"))}`);
           } else {
             return [
-              vue.createTextVNode(" Browser Sessions ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Browser Sessions")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Manage and log out your active sessions on other browsers and devices. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Manage and log out your active sessions on other browsers and devices."))}`);
           } else {
             return [
-              vue.createTextVNode(" Manage and log out your active sessions on other browsers and devices. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Manage and log out your active sessions on other browsers and devices.")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="max-w-xl text-sm text-gray-600"${_scopeId}> If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password. </div>`);
+            _push2(`<div class="max-w-xl text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password."))}</div>`);
             if (props.sessions.length > 0) {
               _push2(`<div class="mt-5 space-y-6"${_scopeId}><!--[-->`);
               serverRenderer.ssrRenderList(props.sessions, (session, i2) => {
@@ -4745,9 +4774,9 @@ const _sfc_main$b = {
                 }
                 _push2(`</div><div class="ml-3"${_scopeId}><div class="text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(session.agent.platform)} - ${serverRenderer.ssrInterpolate(session.agent.browser)}</div><div${_scopeId}><div class="text-xs text-gray-500"${_scopeId}>${serverRenderer.ssrInterpolate(session.ip_address)}, `);
                 if (session.is_current_device) {
-                  _push2(`<span class="font-semibold text-green-500"${_scopeId}>This device</span>`);
+                  _push2(`<span class="font-semibold text-green-500"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("This device"))}</span>`);
                 } else {
-                  _push2(`<span${_scopeId}>Last active ${serverRenderer.ssrInterpolate(session.last_active)}</span>`);
+                  _push2(`<span${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Last active"))} ${serverRenderer.ssrInterpolate(session.last_active)}</span>`);
                 }
                 _push2(`</div></div></div></div>`);
               });
@@ -4759,10 +4788,10 @@ const _sfc_main$b = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Log Out Other Browser Sessions `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Log Out Other Browser Sessions"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Log Out Other Browser Sessions ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out Other Browser Sessions")), 1)
                   ];
                 }
               }),
@@ -4774,10 +4803,10 @@ const _sfc_main$b = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Done. `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Done."))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Done. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Done.")), 1)
                   ];
                 }
               }),
@@ -4787,16 +4816,16 @@ const _sfc_main$b = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetDialogModal, { show: confirmingLogout.value }, {
               title: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Log Out Other Browser Sessions `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Log Out Other Browser Sessions"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Log Out Other Browser Sessions ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out Other Browser Sessions")), 1)
                   ];
                 }
               }),
               content: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices. <div class="mt-4"${_scopeId2}>`);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices."))} <div class="mt-4"${_scopeId2}>`);
                   _push3(serverRenderer.ssrRenderComponent(_component_JetInput, {
                     type: "password",
                     class: "block w-3/4 mt-1",
@@ -4813,7 +4842,7 @@ const _sfc_main$b = {
                   _push3(`</div>`);
                 } else {
                   return [
-                    vue.createTextVNode(" Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices. "),
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices.")) + " ", 1),
                     vue.createVNode("div", { class: "mt-4" }, [
                       vue.createVNode(_component_JetInput, {
                         type: "password",
@@ -4838,10 +4867,10 @@ const _sfc_main$b = {
                   _push3(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
                     default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(` Cancel `);
+                        _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                       } else {
                         return [
-                          vue.createTextVNode(" Cancel ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                         ];
                       }
                     }),
@@ -4853,10 +4882,10 @@ const _sfc_main$b = {
                   }, {
                     default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(` Log Out Other Browser Sessions `);
+                        _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Log Out Other Browser Sessions"))}`);
                       } else {
                         return [
-                          vue.createTextVNode(" Log Out Other Browser Sessions ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out Other Browser Sessions")), 1)
                         ];
                       }
                     }),
@@ -4866,7 +4895,7 @@ const _sfc_main$b = {
                   return [
                     vue.createVNode(_component_JetSecondaryButton, { onClick: closeModal }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(" Cancel ")
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                       ]),
                       _: 1
                     }),
@@ -4876,7 +4905,7 @@ const _sfc_main$b = {
                       disabled: vue.unref(form).processing
                     }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(" Log Out Other Browser Sessions ")
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out Other Browser Sessions")), 1)
                       ]),
                       _: 1
                     }, 8, ["class", "disabled"])
@@ -4887,7 +4916,7 @@ const _sfc_main$b = {
             }, _parent2, _scopeId));
           } else {
             return [
-              vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, " If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password. "),
+              vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.")), 1),
               props.sessions.length > 0 ? (vue.openBlock(), vue.createBlock("div", {
                 key: 0,
                 class: "mt-5 space-y-6"
@@ -4942,7 +4971,7 @@ const _sfc_main$b = {
                           session.is_current_device ? (vue.openBlock(), vue.createBlock("span", {
                             key: 0,
                             class: "font-semibold text-green-500"
-                          }, "This device")) : (vue.openBlock(), vue.createBlock("span", { key: 1 }, "Last active " + vue.toDisplayString(session.last_active), 1))
+                          }, vue.toDisplayString(_ctx.__("This device")), 1)) : (vue.openBlock(), vue.createBlock("span", { key: 1 }, vue.toDisplayString(_ctx.__("Last active")) + " " + vue.toDisplayString(session.last_active), 1))
                         ])
                       ])
                     ])
@@ -4952,7 +4981,7 @@ const _sfc_main$b = {
               vue.createVNode("div", { class: "flex items-center mt-5" }, [
                 vue.createVNode(_component_JetButton, { onClick: confirmLogout }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Log Out Other Browser Sessions ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out Other Browser Sessions")), 1)
                   ]),
                   _: 1
                 }),
@@ -4961,7 +4990,7 @@ const _sfc_main$b = {
                   class: "ml-3"
                 }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Done. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Done.")), 1)
                   ]),
                   _: 1
                 }, 8, ["on"])
@@ -4971,10 +5000,10 @@ const _sfc_main$b = {
                 onClose: closeModal
               }, {
                 title: vue.withCtx(() => [
-                  vue.createTextVNode(" Log Out Other Browser Sessions ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out Other Browser Sessions")), 1)
                 ]),
                 content: vue.withCtx(() => [
-                  vue.createTextVNode(" Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices. "),
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices.")) + " ", 1),
                   vue.createVNode("div", { class: "mt-4" }, [
                     vue.createVNode(_component_JetInput, {
                       type: "password",
@@ -4995,7 +5024,7 @@ const _sfc_main$b = {
                 footer: vue.withCtx(() => [
                   vue.createVNode(_component_JetSecondaryButton, { onClick: closeModal }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Cancel ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                     ]),
                     _: 1
                   }),
@@ -5005,7 +5034,7 @@ const _sfc_main$b = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Log Out Other Browser Sessions ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Log Out Other Browser Sessions")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -5132,10 +5161,10 @@ const _sfc_main$a = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("jet.cancel"))}`);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(vue.toDisplayString(_ctx.__("jet.cancel")), 1)
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                   ];
                 }
               }),
@@ -5160,7 +5189,7 @@ const _sfc_main$a = {
             return [
               vue.createVNode(_component_JetSecondaryButton, { onClick: closeModal }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(vue.toDisplayString(_ctx.__("jet.cancel")), 1)
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                 ]),
                 _: 1
               }),
@@ -5236,39 +5265,39 @@ const _sfc_main$9 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetActionSection, _attrs, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Two Factor Authentication `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Two Factor Authentication"))}`);
           } else {
             return [
-              vue.createTextVNode(" Two Factor Authentication ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Two Factor Authentication")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Add additional security to your account using two factor authentication. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Add additional security to your account using two factor authentication."))}`);
           } else {
             return [
-              vue.createTextVNode(" Add additional security to your account using two factor authentication. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Add additional security to your account using two factor authentication.")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
             if (vue.unref(twoFactorEnabled)) {
-              _push2(`<h3 class="text-lg font-medium text-gray-900"${_scopeId}> You have enabled two factor authentication. </h3>`);
+              _push2(`<h3 class="text-lg font-medium text-gray-900"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("You have enabled two factor authentication."))}</h3>`);
             } else {
-              _push2(`<h3 class="text-lg font-medium text-gray-900"${_scopeId}>You have not enabled two factor authentication.</h3>`);
+              _push2(`<h3 class="text-lg font-medium text-gray-900"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("You have not enabled two factor authentication."))}</h3>`);
             }
-            _push2(`<div class="max-w-xl mt-3 text-sm text-gray-600"${_scopeId}><p${_scopeId}> When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone&#39;s Google Authenticator application. </p></div>`);
+            _push2(`<div class="max-w-xl mt-3 text-sm text-gray-600"${_scopeId}><p${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application."))}</p></div>`);
             if (vue.unref(twoFactorEnabled)) {
               _push2(`<div${_scopeId}>`);
               if (qrCode.value) {
-                _push2(`<div${_scopeId}><div class="max-w-xl mt-4 text-sm text-gray-600"${_scopeId}><p class="font-semibold"${_scopeId}> Two factor authentication is now enabled. Scan the following QR code using your phone&#39;s authenticator application. </p></div><div class="mt-4"${_scopeId}>${qrCode.value}</div></div>`);
+                _push2(`<div${_scopeId}><div class="max-w-xl mt-4 text-sm text-gray-600"${_scopeId}><p class="font-semibold"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Two factor authentication is now enabled. Scan the following QR code using your phone's authenticator application."))}</p></div><div class="mt-4"${_scopeId}>${qrCode.value}</div></div>`);
               } else {
                 _push2(`<!---->`);
               }
               if (recoveryCodes.value.length > 0) {
-                _push2(`<div${_scopeId}><div class="max-w-xl mt-4 text-sm text-gray-600"${_scopeId}><p class="font-semibold"${_scopeId}> Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost. </p></div><div class="grid max-w-xl gap-1 px-4 py-4 mt-4 font-mono text-sm bg-gray-100 rounded-lg"${_scopeId}><!--[-->`);
+                _push2(`<div${_scopeId}><div class="max-w-xl mt-4 text-sm text-gray-600"${_scopeId}><p class="font-semibold"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost."))}</p></div><div class="grid max-w-xl gap-1 px-4 py-4 mt-4 font-mono text-sm bg-gray-100 rounded-lg"${_scopeId}><!--[-->`);
                 serverRenderer.ssrRenderList(recoveryCodes.value, (code) => {
                   _push2(`<div${_scopeId}>${serverRenderer.ssrInterpolate(code)}</div>`);
                 });
@@ -5293,10 +5322,10 @@ const _sfc_main$9 = {
                     }, {
                       default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(` Enable `);
+                          _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Enable"))}`);
                         } else {
                           return [
-                            vue.createTextVNode(" Enable ")
+                            vue.createTextVNode(vue.toDisplayString(_ctx.__("Enable")), 1)
                           ];
                         }
                       }),
@@ -5310,7 +5339,7 @@ const _sfc_main$9 = {
                         disabled: enabling.value
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Enable ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Enable")), 1)
                         ]),
                         _: 1
                       }, 8, ["class", "disabled"])
@@ -5329,10 +5358,10 @@ const _sfc_main$9 = {
                       _push3(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, { class: "mr-3" }, {
                         default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                           if (_push4) {
-                            _push4(` Regenerate Recovery Codes `);
+                            _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Regenerate Recovery Codes"))}`);
                           } else {
                             return [
-                              vue.createTextVNode(" Regenerate Recovery Codes ")
+                              vue.createTextVNode(vue.toDisplayString(_ctx.__("Regenerate Recovery Codes")), 1)
                             ];
                           }
                         }),
@@ -5348,7 +5377,7 @@ const _sfc_main$9 = {
                         class: "mr-3"
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Regenerate Recovery Codes ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Regenerate Recovery Codes")), 1)
                         ]),
                         _: 1
                       })) : vue.createCommentVNode("", true)
@@ -5364,10 +5393,10 @@ const _sfc_main$9 = {
                       _push3(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, { class: "mr-3" }, {
                         default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                           if (_push4) {
-                            _push4(` Show Recovery Codes `);
+                            _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Show Recovery Codes"))}`);
                           } else {
                             return [
-                              vue.createTextVNode(" Show Recovery Codes ")
+                              vue.createTextVNode(vue.toDisplayString(_ctx.__("Show Recovery Codes")), 1)
                             ];
                           }
                         }),
@@ -5383,7 +5412,7 @@ const _sfc_main$9 = {
                         class: "mr-3"
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Show Recovery Codes ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Show Recovery Codes")), 1)
                         ]),
                         _: 1
                       })) : vue.createCommentVNode("", true)
@@ -5401,10 +5430,10 @@ const _sfc_main$9 = {
                     }, {
                       default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(` Disable `);
+                          _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Disable"))}`);
                         } else {
                           return [
-                            vue.createTextVNode(" Disable ")
+                            vue.createTextVNode(vue.toDisplayString(_ctx.__("Disable")), 1)
                           ];
                         }
                       }),
@@ -5417,7 +5446,7 @@ const _sfc_main$9 = {
                         disabled: disabling.value
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Disable ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Disable")), 1)
                         ]),
                         _: 1
                       }, 8, ["class", "disabled"])
@@ -5434,17 +5463,17 @@ const _sfc_main$9 = {
               vue.unref(twoFactorEnabled) ? (vue.openBlock(), vue.createBlock("h3", {
                 key: 0,
                 class: "text-lg font-medium text-gray-900"
-              }, " You have enabled two factor authentication. ")) : (vue.openBlock(), vue.createBlock("h3", {
+              }, vue.toDisplayString(_ctx.__("You have enabled two factor authentication.")), 1)) : (vue.openBlock(), vue.createBlock("h3", {
                 key: 1,
                 class: "text-lg font-medium text-gray-900"
-              }, "You have not enabled two factor authentication.")),
+              }, vue.toDisplayString(_ctx.__("You have not enabled two factor authentication.")), 1)),
               vue.createVNode("div", { class: "max-w-xl mt-3 text-sm text-gray-600" }, [
-                vue.createVNode("p", null, " When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application. ")
+                vue.createVNode("p", null, vue.toDisplayString(_ctx.__("When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.")), 1)
               ]),
               vue.unref(twoFactorEnabled) ? (vue.openBlock(), vue.createBlock("div", { key: 2 }, [
                 qrCode.value ? (vue.openBlock(), vue.createBlock("div", { key: 0 }, [
                   vue.createVNode("div", { class: "max-w-xl mt-4 text-sm text-gray-600" }, [
-                    vue.createVNode("p", { class: "font-semibold" }, " Two factor authentication is now enabled. Scan the following QR code using your phone's authenticator application. ")
+                    vue.createVNode("p", { class: "font-semibold" }, vue.toDisplayString(_ctx.__("Two factor authentication is now enabled. Scan the following QR code using your phone's authenticator application.")), 1)
                   ]),
                   vue.createVNode("div", {
                     class: "mt-4",
@@ -5453,7 +5482,7 @@ const _sfc_main$9 = {
                 ])) : vue.createCommentVNode("", true),
                 recoveryCodes.value.length > 0 ? (vue.openBlock(), vue.createBlock("div", { key: 1 }, [
                   vue.createVNode("div", { class: "max-w-xl mt-4 text-sm text-gray-600" }, [
-                    vue.createVNode("p", { class: "font-semibold" }, " Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost. ")
+                    vue.createVNode("p", { class: "font-semibold" }, vue.toDisplayString(_ctx.__("Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.")), 1)
                   ]),
                   vue.createVNode("div", { class: "grid max-w-xl gap-1 px-4 py-4 mt-4 font-mono text-sm bg-gray-100 rounded-lg" }, [
                     (vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(recoveryCodes.value, (code) => {
@@ -5472,7 +5501,7 @@ const _sfc_main$9 = {
                         disabled: enabling.value
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Enable ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Enable")), 1)
                         ]),
                         _: 1
                       }, 8, ["class", "disabled"])
@@ -5487,7 +5516,7 @@ const _sfc_main$9 = {
                         class: "mr-3"
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Regenerate Recovery Codes ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Regenerate Recovery Codes")), 1)
                         ]),
                         _: 1
                       })) : vue.createCommentVNode("", true)
@@ -5501,7 +5530,7 @@ const _sfc_main$9 = {
                         class: "mr-3"
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Show Recovery Codes ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Show Recovery Codes")), 1)
                         ]),
                         _: 1
                       })) : vue.createCommentVNode("", true)
@@ -5515,7 +5544,7 @@ const _sfc_main$9 = {
                         disabled: disabling.value
                       }, {
                         default: vue.withCtx(() => [
-                          vue.createTextVNode(" Disable ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Disable")), 1)
                         ]),
                         _: 1
                       }, 8, ["class", "disabled"])
@@ -5559,19 +5588,19 @@ const _sfc_main$8 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetFormSection, _attrs, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Update Password `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Update Password"))}`);
           } else {
             return [
-              vue.createTextVNode(" Update Password ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Update Password")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Ensure your account is using a long, random password to stay secure. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Ensure your account is using a long, random password to stay secure."))}`);
           } else {
             return [
-              vue.createTextVNode(" Ensure your account is using a long, random password to stay secure. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Ensure your account is using a long, random password to stay secure.")), 1)
             ];
           }
         }),
@@ -5580,7 +5609,7 @@ const _sfc_main$8 = {
             _push2(`<div class="col-span-6 sm:col-span-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "current_password",
-              value: "Current Password"
+              value: _ctx.__("Current Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "current_password",
@@ -5599,7 +5628,7 @@ const _sfc_main$8 = {
             _push2(`</div><div class="col-span-6 sm:col-span-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "password",
-              value: "New Password"
+              value: _ctx.__("New Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "password",
@@ -5618,7 +5647,7 @@ const _sfc_main$8 = {
             _push2(`</div><div class="col-span-6 sm:col-span-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "password_confirmation",
-              value: "Confirm Password"
+              value: _ctx.__("Confirm Password")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "password_confirmation",
@@ -5638,8 +5667,8 @@ const _sfc_main$8 = {
               vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "current_password",
-                  value: "Current Password"
-                }),
+                  value: _ctx.__("Current Password")
+                }, null, 8, ["value"]),
                 vue.createVNode(_component_JetInput, {
                   id: "current_password",
                   type: "password",
@@ -5658,8 +5687,8 @@ const _sfc_main$8 = {
               vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "password",
-                  value: "New Password"
-                }),
+                  value: _ctx.__("New Password")
+                }, null, 8, ["value"]),
                 vue.createVNode(_component_JetInput, {
                   id: "password",
                   type: "password",
@@ -5678,8 +5707,8 @@ const _sfc_main$8 = {
               vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "password_confirmation",
-                  value: "Confirm Password"
-                }),
+                  value: _ctx.__("Confirm Password")
+                }, null, 8, ["value"]),
                 vue.createVNode(_component_JetInput, {
                   id: "password_confirmation",
                   type: "password",
@@ -5704,10 +5733,10 @@ const _sfc_main$8 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Saved. `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Saved."))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Saved. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Saved.")), 1)
                   ];
                 }
               }),
@@ -5719,10 +5748,10 @@ const _sfc_main$8 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Save `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Save"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Save ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                   ];
                 }
               }),
@@ -5735,7 +5764,7 @@ const _sfc_main$8 = {
                 class: "mr-3"
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Saved. ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Saved.")), 1)
                 ]),
                 _: 1
               }, 8, ["on"]),
@@ -5744,7 +5773,7 @@ const _sfc_main$8 = {
                 disabled: vue.unref(form).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Save ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -5814,19 +5843,19 @@ const _sfc_main$7 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetFormSection, _attrs, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Profile Information `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Profile Information"))}`);
           } else {
             return [
-              vue.createTextVNode(" Profile Information ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Profile Information")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Update your account&#39;s profile information and email address. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Update your account's profile information and email address."))}`);
           } else {
             return [
-              vue.createTextVNode(" Update your account's profile information and email address. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Update your account's profile information and email address.")), 1)
             ];
           }
         }),
@@ -5836,7 +5865,7 @@ const _sfc_main$7 = {
               _push2(`<div class="col-span-6 sm:col-span-4"${_scopeId}><input type="file" class="hidden"${_scopeId}>`);
               _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
                 for: "photo",
-                value: "Photo"
+                value: _ctx.__("Photo")
               }, null, _parent2, _scopeId));
               _push2(`<div class="mt-2" style="${serverRenderer.ssrRenderStyle(!photoPreview.value ? null : { display: "none" })}"${_scopeId}><img${serverRenderer.ssrRenderAttr("src", props.user.profile_photo_url)}${serverRenderer.ssrRenderAttr("alt", __props.user.name)} class="object-cover w-20 h-20 rounded-full"${_scopeId}></div><div class="mt-2" style="${serverRenderer.ssrRenderStyle(photoPreview.value ? null : { display: "none" })}"${_scopeId}><span class="block w-20 h-20 bg-center bg-no-repeat bg-cover rounded-full" style="${serverRenderer.ssrRenderStyle("background-image: url('" + photoPreview.value + "');")}"${_scopeId}></span></div>`);
               _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, {
@@ -5845,10 +5874,10 @@ const _sfc_main$7 = {
               }, {
                 default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(` Select A New Photo `);
+                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Select A New Photo"))}`);
                   } else {
                     return [
-                      vue.createTextVNode(" Select A New Photo ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Select A New Photo")), 1)
                     ];
                   }
                 }),
@@ -5861,10 +5890,10 @@ const _sfc_main$7 = {
                 }, {
                   default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                     if (_push3) {
-                      _push3(` Remove Photo `);
+                      _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Remove Photo"))}`);
                     } else {
                       return [
-                        vue.createTextVNode(" Remove Photo ")
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Remove Photo")), 1)
                       ];
                     }
                   }),
@@ -5884,7 +5913,7 @@ const _sfc_main$7 = {
             _push2(`<div class="col-span-6 sm:col-span-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "name",
-              value: "Name"
+              value: _ctx.__("Name")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "name",
@@ -5901,7 +5930,7 @@ const _sfc_main$7 = {
             _push2(`</div><div class="col-span-6 sm:col-span-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "email",
-              value: "Email"
+              value: _ctx.__("Email")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "email",
@@ -5930,8 +5959,8 @@ const _sfc_main$7 = {
                 }, null, 544),
                 vue.createVNode(_component_JetLabel, {
                   for: "photo",
-                  value: "Photo"
-                }),
+                  value: _ctx.__("Photo")
+                }, null, 8, ["value"]),
                 vue.withDirectives(vue.createVNode("div", { class: "mt-2" }, [
                   vue.createVNode("img", {
                     src: props.user.profile_photo_url,
@@ -5955,7 +5984,7 @@ const _sfc_main$7 = {
                   onClick: vue.withModifiers(selectNewPhoto, ["prevent"])
                 }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Select A New Photo ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Select A New Photo")), 1)
                   ]),
                   _: 1
                 }, 8, ["onClick"]),
@@ -5966,7 +5995,7 @@ const _sfc_main$7 = {
                   onClick: vue.withModifiers(deletePhoto, ["prevent"])
                 }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Remove Photo ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Remove Photo")), 1)
                   ]),
                   _: 1
                 }, 8, ["onClick"])) : vue.createCommentVNode("", true),
@@ -5978,8 +6007,8 @@ const _sfc_main$7 = {
               vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "name",
-                  value: "Name"
-                }),
+                  value: _ctx.__("Name")
+                }, null, 8, ["value"]),
                 vue.createVNode(_component_JetInput, {
                   id: "name",
                   type: "text",
@@ -5996,8 +6025,8 @@ const _sfc_main$7 = {
               vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "email",
-                  value: "Email"
-                }),
+                  value: _ctx.__("Email")
+                }, null, 8, ["value"]),
                 vue.createVNode(_component_JetInput, {
                   id: "email",
                   type: "email",
@@ -6021,10 +6050,10 @@ const _sfc_main$7 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Saved. `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Saved."))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Saved. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Saved.")), 1)
                   ];
                 }
               }),
@@ -6036,10 +6065,10 @@ const _sfc_main$7 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Save `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Save"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Save ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                   ];
                 }
               }),
@@ -6052,7 +6081,7 @@ const _sfc_main$7 = {
                 class: "mr-3"
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Saved. ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Saved.")), 1)
                 ]),
                 _: 1
               }, 8, ["on"]),
@@ -6061,7 +6090,7 @@ const _sfc_main$7 = {
                 disabled: vue.unref(form).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Save ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -6092,13 +6121,15 @@ const _sfc_main$6 = {
       const _component_two_factor_authentication_form = _sfc_main$9;
       const _component_logout_other_browser_sessions_form = _sfc_main$b;
       const _component_delete_user_form = _sfc_main$c;
-      _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({ title: "Profile" }, _attrs), {
+      _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({
+        title: _ctx.__("Profile")
+      }, _attrs), {
         header: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>Profile</h2>`);
+            _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Profile"))}</h2>`);
           } else {
             return [
-              vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, "Profile")
+              vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, vue.toDisplayString(_ctx.__("Profile")), 1)
             ];
           }
         }),
@@ -6206,19 +6237,19 @@ const _sfc_main$5 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetFormSection, _attrs, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Team Details `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Team Details"))}`);
           } else {
             return [
-              vue.createTextVNode(" Team Details ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Team Details")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Create a new team to collaborate with others on projects. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Create a new team to collaborate with others on projects."))}`);
           } else {
             return [
-              vue.createTextVNode(" Create a new team to collaborate with others on projects. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Create a new team to collaborate with others on projects.")), 1)
             ];
           }
         }),
@@ -6289,10 +6320,10 @@ const _sfc_main$5 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Create `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Create"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Create ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Create")), 1)
                   ];
                 }
               }),
@@ -6305,7 +6336,7 @@ const _sfc_main$5 = {
                 disabled: vue.unref(form).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Create ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Create")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -6327,13 +6358,15 @@ const _sfc_main$4 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_MainLayout = _sfc_main$I;
   const _component_create_team_form = _sfc_main$5;
-  _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({ title: "Create Team" }, _attrs), {
+  _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({
+    title: _ctx.__("Create Team")
+  }, _attrs), {
     header: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>Create Team</h2>`);
+        _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Create Team"))}</h2>`);
       } else {
         return [
-          vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, "Create Team")
+          vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, vue.toDisplayString(_ctx.__("Create Team")), 1)
         ];
       }
     }),
@@ -6390,32 +6423,32 @@ const _sfc_main$3 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetActionSection, _attrs, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Delete Team `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Team"))}`);
           } else {
             return [
-              vue.createTextVNode(" Delete Team ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Permanently delete this team. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Permanently delete this team."))}`);
           } else {
             return [
-              vue.createTextVNode(" Permanently delete this team. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Permanently delete this team.")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="max-w-xl text-sm text-gray-600"${_scopeId}> Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain. </div><div class="mt-5"${_scopeId}>`);
+            _push2(`<div class="max-w-xl text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain."))}</div><div class="mt-5"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetDangerButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Delete Team `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Team"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Delete Team ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
                   ];
                 }
               }),
@@ -6425,19 +6458,19 @@ const _sfc_main$3 = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetConfirmationModal, { show: confirmingTeamDeletion.value }, {
               title: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Delete Team `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Team"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Delete Team ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
                   ];
                 }
               }),
               content: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted. `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted."))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted.")), 1)
                   ];
                 }
               }),
@@ -6446,10 +6479,10 @@ const _sfc_main$3 = {
                   _push3(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
                     default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(` Cancel `);
+                        _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                       } else {
                         return [
-                          vue.createTextVNode(" Cancel ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                         ];
                       }
                     }),
@@ -6461,10 +6494,10 @@ const _sfc_main$3 = {
                   }, {
                     default: vue.withCtx((_4, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(` Delete Team `);
+                        _push4(`${serverRenderer.ssrInterpolate(_ctx.__("Delete Team"))}`);
                       } else {
                         return [
-                          vue.createTextVNode(" Delete Team ")
+                          vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
                         ];
                       }
                     }),
@@ -6476,7 +6509,7 @@ const _sfc_main$3 = {
                       onClick: ($event) => confirmingTeamDeletion.value = false
                     }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(" Cancel ")
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                       ]),
                       _: 1
                     }, 8, ["onClick"]),
@@ -6486,7 +6519,7 @@ const _sfc_main$3 = {
                       disabled: vue.unref(form).processing
                     }, {
                       default: vue.withCtx(() => [
-                        vue.createTextVNode(" Delete Team ")
+                        vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
                       ]),
                       _: 1
                     }, 8, ["class", "disabled"])
@@ -6497,11 +6530,11 @@ const _sfc_main$3 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, " Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain. "),
+              vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain.")), 1),
               vue.createVNode("div", { class: "mt-5" }, [
                 vue.createVNode(_component_JetDangerButton, { onClick: confirmTeamDeletion }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Delete Team ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
                   ]),
                   _: 1
                 })
@@ -6511,17 +6544,17 @@ const _sfc_main$3 = {
                 onClose: ($event) => confirmingTeamDeletion.value = false
               }, {
                 title: vue.withCtx(() => [
-                  vue.createTextVNode(" Delete Team ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
                 ]),
                 content: vue.withCtx(() => [
-                  vue.createTextVNode(" Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted. ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted.")), 1)
                 ]),
                 footer: vue.withCtx(() => [
                   vue.createVNode(_component_JetSecondaryButton, {
                     onClick: ($event) => confirmingTeamDeletion.value = false
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Cancel ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                     ]),
                     _: 1
                   }, 8, ["onClick"]),
@@ -6531,7 +6564,7 @@ const _sfc_main$3 = {
                     disabled: vue.unref(form).processing
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createTextVNode(" Delete Team ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Delete Team")), 1)
                     ]),
                     _: 1
                   }, 8, ["class", "disabled"])
@@ -6627,25 +6660,25 @@ const _sfc_main$2 = {
         _push(serverRenderer.ssrRenderComponent(_component_JetFormSection, null, {
           title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` Add Team Member `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Add Team Member"))}`);
             } else {
               return [
-                vue.createTextVNode(" Add Team Member ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("Add Team Member")), 1)
               ];
             }
           }),
           description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` Add a new team member to your team, allowing them to collaborate with you. `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Add a new team member to your team, allowing them to collaborate with you."))}`);
             } else {
               return [
-                vue.createTextVNode(" Add a new team member to your team, allowing them to collaborate with you. ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("Add a new team member to your team, allowing them to collaborate with you.")), 1)
               ];
             }
           }),
           form: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(`<div class="col-span-6"${_scopeId}><div class="max-w-xl text-sm text-gray-600"${_scopeId}> Please provide the email address of the person you would like to add to this team. </div></div><div class="col-span-6 sm:col-span-4"${_scopeId}>`);
+              _push2(`<div class="col-span-6"${_scopeId}><div class="max-w-xl text-sm text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Please provide the email address of the person you would like to add to this team."))}</div></div><div class="col-span-6 sm:col-span-4"${_scopeId}>`);
               _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
                 for: "email",
                 value: "Email"
@@ -6692,7 +6725,7 @@ const _sfc_main$2 = {
             } else {
               return [
                 vue.createVNode("div", { class: "col-span-6" }, [
-                  vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, " Please provide the email address of the person you would like to add to this team. ")
+                  vue.createVNode("div", { class: "max-w-xl text-sm text-gray-600" }, vue.toDisplayString(_ctx.__("Please provide the email address of the person you would like to add to this team.")), 1)
                 ]),
                 vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                   vue.createVNode(_component_JetLabel, {
@@ -6771,10 +6804,10 @@ const _sfc_main$2 = {
               }, {
                 default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(` Added. `);
+                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Added"))}. `);
                   } else {
                     return [
-                      vue.createTextVNode(" Added. ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Added")) + ". ", 1)
                     ];
                   }
                 }),
@@ -6786,10 +6819,10 @@ const _sfc_main$2 = {
               }, {
                 default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(` Add `);
+                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Add"))}`);
                   } else {
                     return [
-                      vue.createTextVNode(" Add ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Add")), 1)
                     ];
                   }
                 }),
@@ -6802,7 +6835,7 @@ const _sfc_main$2 = {
                   class: "mr-3"
                 }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Added. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Added")) + ". ", 1)
                   ]),
                   _: 1
                 }, 8, ["on"]),
@@ -6811,7 +6844,7 @@ const _sfc_main$2 = {
                   disabled: vue.unref(addTeamMemberForm).processing
                 }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Add ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Add")), 1)
                   ]),
                   _: 1
                 }, 8, ["class", "disabled"])
@@ -6830,19 +6863,19 @@ const _sfc_main$2 = {
         _push(serverRenderer.ssrRenderComponent(_component_JetActionSection, { class: "mt-10 sm:mt-0" }, {
           title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` Pending Team Invitations `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Pending Team Invitations"))}`);
             } else {
               return [
-                vue.createTextVNode(" Pending Team Invitations ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("Pending Team Invitations")), 1)
               ];
             }
           }),
           description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` These people have been invited to your team and have been sent an invitation email. They may join the team by accepting the email invitation. `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("These people have been invited to your team and have been sent an invitation email. They may join the team by accepting the email invitation."))}`);
             } else {
               return [
-                vue.createTextVNode(" These people have been invited to your team and have been sent an invitation email. They may join the team by accepting the email invitation. ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("These people have been invited to your team and have been sent an invitation email. They may join the team by accepting the email invitation.")), 1)
               ];
             }
           }),
@@ -6852,7 +6885,7 @@ const _sfc_main$2 = {
               serverRenderer.ssrRenderList(vue.unref(team).team_invitations, (invitation) => {
                 _push2(`<div class="flex items-center justify-between"${_scopeId}><div class="text-gray-600"${_scopeId}>${serverRenderer.ssrInterpolate(invitation.email)}</div><div class="flex items-center"${_scopeId}>`);
                 if (vue.unref(userPermissions).canRemoveTeamMembers) {
-                  _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer focus:outline-none"${_scopeId}> Cancel </button>`);
+                  _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer focus:outline-none"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}</button>`);
                 } else {
                   _push2(`<!---->`);
                 }
@@ -6873,7 +6906,7 @@ const _sfc_main$2 = {
                           key: 0,
                           class: "ml-6 text-sm text-red-500 cursor-pointer focus:outline-none",
                           onClick: ($event) => cancelTeamInvitation(invitation)
-                        }, " Cancel ", 8, ["onClick"])) : vue.createCommentVNode("", true)
+                        }, vue.toDisplayString(_ctx.__("Cancel")), 9, ["onClick"])) : vue.createCommentVNode("", true)
                       ])
                     ]);
                   }), 128))
@@ -6893,19 +6926,19 @@ const _sfc_main$2 = {
         _push(serverRenderer.ssrRenderComponent(_component_JetActionSection, { class: "mt-10 sm:mt-0" }, {
           title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` Team Members `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Team Members"))}`);
             } else {
               return [
-                vue.createTextVNode(" Team Members ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("Team Members")), 1)
               ];
             }
           }),
           description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(` All of the people that are part of this team. `);
+              _push2(`${serverRenderer.ssrInterpolate(_ctx.__("All of the people that are part of this team."))}`);
             } else {
               return [
-                vue.createTextVNode(" All of the people that are part of this team. ")
+                vue.createTextVNode(vue.toDisplayString(_ctx.__("All of the people that are part of this team.")), 1)
               ];
             }
           }),
@@ -6922,12 +6955,12 @@ const _sfc_main$2 = {
                   _push2(`<!---->`);
                 }
                 if (_ctx.$page.props.user.id === user.id) {
-                  _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer"${_scopeId}> Leave </button>`);
+                  _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Leave"))}</button>`);
                 } else {
                   _push2(`<!---->`);
                 }
                 if (vue.unref(userPermissions).canRemoveTeamMembers) {
-                  _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer"${_scopeId}> Remove </button>`);
+                  _push2(`<button class="ml-6 text-sm text-red-500 cursor-pointer"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Remove"))}</button>`);
                 } else {
                   _push2(`<!---->`);
                 }
@@ -6963,12 +6996,12 @@ const _sfc_main$2 = {
                           key: 2,
                           class: "ml-6 text-sm text-red-500 cursor-pointer",
                           onClick: confirmLeavingTeam
-                        }, " Leave ")) : vue.createCommentVNode("", true),
+                        }, vue.toDisplayString(_ctx.__("Leave")), 1)) : vue.createCommentVNode("", true),
                         vue.unref(userPermissions).canRemoveTeamMembers ? (vue.openBlock(), vue.createBlock("button", {
                           key: 3,
                           class: "ml-6 text-sm text-red-500 cursor-pointer",
                           onClick: ($event) => confirmTeamMemberRemoval(user)
-                        }, " Remove ", 8, ["onClick"])) : vue.createCommentVNode("", true)
+                        }, vue.toDisplayString(_ctx.__("Remove")), 9, ["onClick"])) : vue.createCommentVNode("", true)
                       ])
                     ]);
                   }), 128))
@@ -6985,10 +7018,10 @@ const _sfc_main$2 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetDialogModal, { show: currentlyManagingRole.value }, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Manage Role `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Manage Role"))}`);
           } else {
             return [
-              vue.createTextVNode(" Manage Role ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Manage Role")), 1)
             ];
           }
         }),
@@ -7060,10 +7093,10 @@ const _sfc_main$2 = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Cancel `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Cancel ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                   ];
                 }
               }),
@@ -7075,10 +7108,10 @@ const _sfc_main$2 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Save `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Save"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Save ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                   ];
                 }
               }),
@@ -7090,7 +7123,7 @@ const _sfc_main$2 = {
                 onClick: ($event) => currentlyManagingRole.value = false
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Cancel ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
@@ -7100,7 +7133,7 @@ const _sfc_main$2 = {
                 disabled: vue.unref(updateRoleForm).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Save ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -7112,19 +7145,19 @@ const _sfc_main$2 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetConfirmationModal, { show: confirmingLeavingTeam.value }, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Leave Team `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Leave Team"))}`);
           } else {
             return [
-              vue.createTextVNode(" Leave Team ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Leave Team")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Are you sure you would like to leave this team? `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Are you sure you would like to leave this team?"))}`);
           } else {
             return [
-              vue.createTextVNode(" Are you sure you would like to leave this team? ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Are you sure you would like to leave this team?")), 1)
             ];
           }
         }),
@@ -7133,10 +7166,10 @@ const _sfc_main$2 = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Cancel `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Cancel ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                   ];
                 }
               }),
@@ -7148,10 +7181,10 @@ const _sfc_main$2 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Leave `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Leave"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Leave ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Leave")), 1)
                   ];
                 }
               }),
@@ -7163,7 +7196,7 @@ const _sfc_main$2 = {
                 onClick: ($event) => confirmingLeavingTeam.value = false
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Cancel ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
@@ -7173,7 +7206,7 @@ const _sfc_main$2 = {
                 disabled: vue.unref(leaveTeamForm).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Leave ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Leave")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -7185,19 +7218,19 @@ const _sfc_main$2 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetConfirmationModal, { show: teamMemberBeingRemoved.value }, {
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Remove Team Member `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Remove Team Member"))}`);
           } else {
             return [
-              vue.createTextVNode(" Remove Team Member ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Remove Team Member")), 1)
             ];
           }
         }),
         content: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Are you sure you would like to remove this person from the team? `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Are you sure you would like to remove this person from the team?"))}`);
           } else {
             return [
-              vue.createTextVNode(" Are you sure you would like to remove this person from the team? ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Are you sure you would like to remove this person from the team?")), 1)
             ];
           }
         }),
@@ -7206,10 +7239,10 @@ const _sfc_main$2 = {
             _push2(serverRenderer.ssrRenderComponent(_component_JetSecondaryButton, null, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Cancel `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Cancel"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Cancel ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                   ];
                 }
               }),
@@ -7221,10 +7254,10 @@ const _sfc_main$2 = {
             }, {
               default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(` Remove `);
+                  _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Remove"))}`);
                 } else {
                   return [
-                    vue.createTextVNode(" Remove ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Remove")), 1)
                   ];
                 }
               }),
@@ -7236,7 +7269,7 @@ const _sfc_main$2 = {
                 onClick: ($event) => teamMemberBeingRemoved.value = null
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Cancel ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
@@ -7246,7 +7279,7 @@ const _sfc_main$2 = {
                 disabled: vue.unref(removeTeamMemberForm).processing
               }, {
                 default: vue.withCtx(() => [
-                  vue.createTextVNode(" Remove ")
+                  vue.createTextVNode(vue.toDisplayString(_ctx.__("Remove")), 1)
                 ]),
                 _: 1
               }, 8, ["class", "disabled"])
@@ -7284,30 +7317,32 @@ const _sfc_main$1 = {
       _push(serverRenderer.ssrRenderComponent(_component_JetFormSection, _attrs, vue.createSlots({
         title: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Team Name `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("Team Name"))}`);
           } else {
             return [
-              vue.createTextVNode(" Team Name ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("Team Name")), 1)
             ];
           }
         }),
         description: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` The team&#39;s name and owner information. `);
+            _push2(`${serverRenderer.ssrInterpolate(_ctx.__("The team's name and owner information."))}`);
           } else {
             return [
-              vue.createTextVNode(" The team's name and owner information. ")
+              vue.createTextVNode(vue.toDisplayString(_ctx.__("The team's name and owner information.")), 1)
             ];
           }
         }),
         form: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<div class="col-span-6"${_scopeId}>`);
-            _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, { value: "Team Owner" }, null, _parent2, _scopeId));
+            _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
+              value: _ctx.__("Team Owner")
+            }, null, _parent2, _scopeId));
             _push2(`<div class="flex items-center mt-2"${_scopeId}><img class="object-cover w-12 h-12 rounded-full"${serverRenderer.ssrRenderAttr("src", vue.unref(team).owner.profile_photo_url)}${serverRenderer.ssrRenderAttr("alt", vue.unref(team).owner.name)}${_scopeId}><div class="ml-4 leading-tight"${_scopeId}><div${_scopeId}>${serverRenderer.ssrInterpolate(vue.unref(team).owner.name)}</div><div class="text-sm text-gray-700"${_scopeId}>${serverRenderer.ssrInterpolate(vue.unref(team).owner.email)}</div></div></div></div><div class="col-span-6 sm:col-span-4"${_scopeId}>`);
             _push2(serverRenderer.ssrRenderComponent(_component_JetLabel, {
               for: "name",
-              value: "Team Name"
+              value: _ctx.__("Team Name")
             }, null, _parent2, _scopeId));
             _push2(serverRenderer.ssrRenderComponent(_component_JetInput, {
               id: "name",
@@ -7325,7 +7360,9 @@ const _sfc_main$1 = {
           } else {
             return [
               vue.createVNode("div", { class: "col-span-6" }, [
-                vue.createVNode(_component_JetLabel, { value: "Team Owner" }),
+                vue.createVNode(_component_JetLabel, {
+                  value: _ctx.__("Team Owner")
+                }, null, 8, ["value"]),
                 vue.createVNode("div", { class: "flex items-center mt-2" }, [
                   vue.createVNode("img", {
                     class: "object-cover w-12 h-12 rounded-full",
@@ -7341,8 +7378,8 @@ const _sfc_main$1 = {
               vue.createVNode("div", { class: "col-span-6 sm:col-span-4" }, [
                 vue.createVNode(_component_JetLabel, {
                   for: "name",
-                  value: "Team Name"
-                }),
+                  value: _ctx.__("Team Name")
+                }, null, 8, ["value"]),
                 vue.createVNode(_component_JetInput, {
                   id: "name",
                   type: "text",
@@ -7371,10 +7408,10 @@ const _sfc_main$1 = {
               }, {
                 default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(` Saved. `);
+                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Saved."))}`);
                   } else {
                     return [
-                      vue.createTextVNode(" Saved. ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Saved.")), 1)
                     ];
                   }
                 }),
@@ -7386,10 +7423,10 @@ const _sfc_main$1 = {
               }, {
                 default: vue.withCtx((_3, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(` Save `);
+                    _push3(`${serverRenderer.ssrInterpolate(_ctx.__("Save"))}`);
                   } else {
                     return [
-                      vue.createTextVNode(" Save ")
+                      vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                     ];
                   }
                 }),
@@ -7402,7 +7439,7 @@ const _sfc_main$1 = {
                   class: "mr-3"
                 }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Saved. ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Saved.")), 1)
                   ]),
                   _: 1
                 }, 8, ["on"]),
@@ -7411,7 +7448,7 @@ const _sfc_main$1 = {
                   disabled: vue.unref(form).processing
                 }, {
                   default: vue.withCtx(() => [
-                    vue.createTextVNode(" Save ")
+                    vue.createTextVNode(vue.toDisplayString(_ctx.__("Save")), 1)
                   ]),
                   _: 1
                 }, 8, ["class", "disabled"])
@@ -7441,13 +7478,15 @@ const _sfc_main = {
       const _component_TeamMemberManager = _sfc_main$2;
       const _component_JetSectionBorder = __unplugin_components_3;
       const _component_DeleteTeamForm = _sfc_main$3;
-      _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({ title: "Team Settings" }, _attrs), {
+      _push(serverRenderer.ssrRenderComponent(_component_MainLayout, vue.mergeProps({
+        title: _ctx.__("Team Settings")
+      }, _attrs), {
         header: vue.withCtx((_2, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>Team Settings</h2>`);
+            _push2(`<h2 class="text-xl font-semibold leading-tight text-gray-800"${_scopeId}>${serverRenderer.ssrInterpolate(_ctx.__("Team Settings"))}</h2>`);
           } else {
             return [
-              vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, "Team Settings")
+              vue.createVNode("h2", { class: "text-xl font-semibold leading-tight text-gray-800" }, vue.toDisplayString(_ctx.__("Team Settings")), 1)
             ];
           }
         }),
@@ -7561,7 +7600,7 @@ const jetstreamssr = {
 };
 const pages = { "./Pages/Dashboard.vue": __glob_7_0, "./Pages/PrivacyPolicy.vue": __glob_7_1, "./Pages/TermsOfService.vue": __glob_7_2, "./Pages/Welcome.vue": __glob_7_3, "./Pages/API/Index.vue": __glob_7_4, "./Pages/Auth/ConfirmPassword.vue": __glob_7_5, "./Pages/Auth/ForgotPassword.vue": __glob_7_6, "./Pages/Auth/Login.vue": __glob_7_7, "./Pages/Auth/Register.vue": __glob_7_8, "./Pages/Auth/ResetPassword.vue": __glob_7_9, "./Pages/Auth/TwoFactorChallenge.vue": __glob_7_10, "./Pages/Auth/VerifyEmail.vue": __glob_7_11, "./Pages/Profile/Show.vue": __glob_7_12, "./Pages/Teams/Create.vue": __glob_7_13, "./Pages/Teams/Show.vue": __glob_7_14 };
 createServer__default["default"]((page) => inertiaVue3.createInertiaApp({
-  title: (title) => `${title} - "Jetstreaam Pro"`,
+  title: (title) => `${title} - ${process.env.VITE_APP_NAME}`,
   page,
   render: serverRenderer$1.renderToString,
   resolve: (name) => pages[`./Pages/${name}.vue`].default,

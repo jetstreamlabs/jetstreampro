@@ -62,9 +62,11 @@ defineExpose({ photo, photoPreview })
 
 <template>
 	<JetFormSection @submitted="updateProfileInformation">
-		<template #title> Profile Information </template>
+		<template #title>{{ __('Profile Information') }}</template>
 
-		<template #description> Update your account's profile information and email address. </template>
+		<template #description>
+			{{ __("Update your account's profile information and email address.") }}
+		</template>
 
 		<template #form>
 			<!-- Profile Photo -->
@@ -72,7 +74,7 @@ defineExpose({ photo, photoPreview })
 				<!-- Profile Photo File Input -->
 				<input type="file" class="hidden" ref="photo" @change="updatePhotoPreview" />
 
-				<JetLabel for="photo" value="Photo" />
+				<JetLabel for="photo" :value="__('Photo')" />
 
 				<!-- Current Profile Photo -->
 				<div class="mt-2" v-show="!photoPreview">
@@ -89,7 +91,7 @@ defineExpose({ photo, photoPreview })
 				</div>
 
 				<JetSecondaryButton class="mt-2 mr-2" type="button" @click.prevent="selectNewPhoto">
-					Select A New Photo
+					{{ __('Select A New Photo') }}
 				</JetSecondaryButton>
 
 				<JetSecondaryButton
@@ -98,7 +100,7 @@ defineExpose({ photo, photoPreview })
 					@click.prevent="deletePhoto"
 					v-if="props.user.profile_photo_path"
 				>
-					Remove Photo
+					{{ __('Remove Photo') }}
 				</JetSecondaryButton>
 
 				<JetInput-error :message="form.errors.photo" class="mt-2" />
@@ -106,23 +108,25 @@ defineExpose({ photo, photoPreview })
 
 			<!-- Name -->
 			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="name" value="Name" />
+				<JetLabel for="name" :value="__('Name')" />
 				<JetInput id="name" type="text" class="block w-full mt-1" v-model="form.name" autocomplete="name" />
 				<JetInput-error :message="form.errors.name" class="mt-2" />
 			</div>
 
 			<!-- Email -->
 			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="email" value="Email" />
+				<JetLabel for="email" :value="__('Email')" />
 				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" />
 				<JetInput-error :message="form.errors.email" class="mt-2" />
 			</div>
 		</template>
 
 		<template #actions>
-			<JetActionMessage :on="form.recentlySuccessful" class="mr-3"> Saved. </JetActionMessage>
+			<JetActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</JetActionMessage>
 
-			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Save </JetButton>
+			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+				{{ __('Save') }}
+			</JetButton>
 		</template>
 	</JetFormSection>
 </template>

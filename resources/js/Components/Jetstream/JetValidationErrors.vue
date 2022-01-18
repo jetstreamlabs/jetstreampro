@@ -10,7 +10,7 @@ const hasErrors = computed(() => {
 
 <template>
 	<div v-if="hasErrors">
-		<div class="font-medium text-red-600">{{ __('jet.error') }}</div>
+		<div class="font-medium text-red-600">{{ __('Whoops! Something went wrong.') }}</div>
 
 		<ul class="mt-3 text-sm text-red-600 list-disc list-inside">
 			<li v-for="(error, key) in errors" :key="key">{{ error }}</li>

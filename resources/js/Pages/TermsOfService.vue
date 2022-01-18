@@ -3,7 +3,7 @@ const props = defineProps(['terms'])
 </script>
 
 <template>
-	<Head title="Terms of Service" />
+	<Head :title="__('Terms of Service')" />
 
 	<div class="font-sans antialiased text-gray-900">
 		<div class="pt-4 bg-gray-100">

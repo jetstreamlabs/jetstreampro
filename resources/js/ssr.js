@@ -10,7 +10,7 @@ const pages = import.meta.globEager('./Pages/**/*.vue')
 
 createServer((page) =>
 	createInertiaApp({
-		title: (title) => `${title} - ${process.env.APP_NAME}`,
+		title: (title) => `${title} - ${process.env.VITE_APP_NAME}`,
 		page,
 		render: renderToString,
 		resolve: (name) => pages[`./Pages/${name}.vue`].default,

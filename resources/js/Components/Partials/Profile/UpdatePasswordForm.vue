@@ -31,13 +31,15 @@ defineExpose({ password, current_password })
 
 <template>
 	<JetFormSection @submitted="updatePassword">
-		<template #title> Update Password </template>
+		<template #title>{{ __('Update Password') }}</template>
 
-		<template #description> Ensure your account is using a long, random password to stay secure. </template>
+		<template #description>
+			{{ __('Ensure your account is using a long, random password to stay secure.') }}
+		</template>
 
 		<template #form>
 			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="current_password" value="Current Password" />
+				<JetLabel for="current_password" :value="__('Current Password')" />
 				<JetInput
 					id="current_password"
 					type="password"
@@ -50,7 +52,7 @@ defineExpose({ password, current_password })
 			</div>
 
 			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="password" value="New Password" />
+				<JetLabel for="password" :value="__('New Password')" />
 				<JetInput
 					id="password"
 					type="password"
@@ -63,7 +65,7 @@ defineExpose({ password, current_password })
 			</div>
 
 			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="password_confirmation" value="Confirm Password" />
+				<JetLabel for="password_confirmation" :value="__('Confirm Password')" />
 				<JetInput
 					id="password_confirmation"
 					type="password"
@@ -76,9 +78,11 @@ defineExpose({ password, current_password })
 		</template>
 
 		<template #actions>
-			<JetActionMessage :on="form.recentlySuccessful" class="mr-3"> Saved. </JetActionMessage>
+			<JetActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</JetActionMessage>
 
-			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Save </JetButton>
+			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+				{{ __('Save') }}
+			</JetButton>
 		</template>
 	</JetFormSection>
 </template>

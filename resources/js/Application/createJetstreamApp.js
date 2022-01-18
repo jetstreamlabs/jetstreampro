@@ -30,7 +30,7 @@ export default async function createJetstreamApp({ appName }) {
 				.use(jetstreampro)
 				.mixin({
 					methods: {
-						route: (name, params, absolute, config = Ziggy) => route(name, params, absolute, config),
+						route: (name, params, absolute, config = Ziggy) => route(name, params, false, config),
 						__: (key, replace, config = Zora) => trans(key, replace, config),
 						trans: (key, replace, config = Zora) => trans(key, replace, config),
 					},

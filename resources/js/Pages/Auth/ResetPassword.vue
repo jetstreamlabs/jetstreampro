@@ -20,7 +20,7 @@ const submit = () => {
 </script>
 
 <template>
-	<Head title="Reset Password" />
+	<Head :title="__('Reset Password')" />
 
 	<JetAuthenticationCard>
 		<template #logo>
@@ -31,12 +31,12 @@ const submit = () => {
 
 		<form @submit.prevent="submit">
 			<div>
-				<JetLabel for="email" value="Email" />
+				<JetLabel for="email" :value="__('Email')" />
 				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
 			</div>
 
 			<div class="mt-4">
-				<JetLabel for="password" value="Password" />
+				<JetLabel for="password" :value="__('Password')" />
 				<JetInput
 					id="password"
 					type="password"
@@ -48,7 +48,7 @@ const submit = () => {
 			</div>
 
 			<div class="mt-4">
-				<JetLabel for="password_confirmation" value="Confirm Password" />
+				<JetLabel for="password_confirmation" :value="__('Confirm Password')" />
 				<JetInput
 					id="password_confirmation"
 					type="password"
@@ -60,7 +60,9 @@ const submit = () => {
 			</div>
 
 			<div class="flex items-center justify-end mt-4">
-				<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing"> Reset Password </JetButton>
+				<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+					{{ __('Reset Password') }}
+				</JetButton>
 			</div>
 		</form>
 	</JetAuthenticationCard>

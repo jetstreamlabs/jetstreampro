@@ -1,7 +1,7 @@
 <template>
-	<MainLayout title="Create Team">
+	<MainLayout :title="__('Create Team')">
 		<template #header>
-			<h2 class="text-xl font-semibold leading-tight text-gray-800">Create Team</h2>
+			<h2 class="text-xl font-semibold leading-tight text-gray-800">{{ __('Create Team') }}</h2>
 		</template>
 
 		<div>

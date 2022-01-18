@@ -23,7 +23,7 @@ const submit = () => {
 </script>
 
 <template>
-	<Head title="Log in" />
+	<Head :title="__('Login')" />
 
 	<JetAuthenticationCard>
 		<template #logo>
@@ -38,12 +38,12 @@ const submit = () => {
 
 		<form @submit.prevent="submit">
 			<div>
-				<JetLabel for="email" value="Email" />
+				<JetLabel for="email" :value="__('Email')" />
 				<JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
 			</div>
 
 			<div class="mt-4">
-				<JetLabel for="password" value="Password" />
+				<JetLabel for="password" :value="__('Password')" />
 				<JetInput
 					id="password"
 					type="password"
@@ -57,7 +57,7 @@ const submit = () => {
 			<div class="block mt-4">
 				<label class="flex items-center">
 					<JetCheckbox name="remember" v-model:checked="form.remember" />
-					<span class="ml-2 text-sm text-gray-600">Remember me</span>
+					<span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
 				</label>
 			</div>
 
@@ -67,11 +67,11 @@ const submit = () => {
 					:href="route('password.request')"
 					class="text-sm text-gray-600 underline hover:text-gray-900"
 				>
-					Forgot your password?
+					{{ __('Forgot your password?') }}
 				</Link>
 
 				<JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-					Log in
+					{{ __('Login') }}
 				</JetButton>
 			</div>
 		</form>

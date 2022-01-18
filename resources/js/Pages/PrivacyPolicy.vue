@@ -3,7 +3,7 @@ const props = defineProps(['policy'])
 </script>
 
 <template>
-	<Head title="Privacy Policy" />
+	<Head :title="__('Privacy Policy')" />
 
 	<div class="font-sans antialiased text-gray-900">
 		<div class="pt-4 bg-gray-100">

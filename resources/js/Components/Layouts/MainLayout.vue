@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({ title: String })
-const title = props.title || useTrans('layouts.main.dashboard')
+const title = props.title || useTrans('Dashboard')
 const showingNavigationDropdown = ref(false)
 
 const switchToTeam = (team) => {
@@ -38,7 +38,7 @@ const logout = () => {
 							<!-- Navigation Links -->
 							<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 								<JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-									{{ __('layouts.main.dashboard') }}
+									{{ __('Dashboard') }}
 								</JetNavLink>
 							</div>
 						</div>
@@ -75,21 +75,21 @@ const logout = () => {
 										<div class="w-60">
 											<!-- Team Management -->
 											<template v-if="$page.props.jetstream.hasTeamFeatures">
-												<div class="block px-4 py-2 text-xs text-gray-400">{{ __('layouts.main.manage') }}</div>
+												<div class="block px-4 py-2 text-xs text-gray-400">{{ __('Manage Team') }}</div>
 
 												<!-- Team Settings -->
 												<JetDropdownLink :href="route('teams.show', $page.props.user.current_team)">
-													{{ __('layouts.main.settings') }}
+													{{ __('Team Settings') }}
 												</JetDropdownLink>
 
 												<JetDropdownLink :href="route('teams.create')" v-if="$page.props.jetstream.canCreateTeams">
-													{{ __('layouts.main.create') }}
+													{{ __('Create New Team') }}
 												</JetDropdownLink>
 
 												<div class="border-t border-gray-100"></div>
 
 												<!-- Team Switcher -->
-												<div class="block px-4 py-2 text-xs text-gray-400">{{ __('layouts.main.switch') }}</div>
+												<div class="block px-4 py-2 text-xs text-gray-400">{{ __('Switch Teams') }}</div>
 
 												<template v-for="team in $page.props.user.all_teams" :key="team.id">
 													<form @submit.prevent="switchToTeam(team)">
@@ -158,19 +158,19 @@ const logout = () => {
 
 									<template #content>
 										<!-- Account Management -->
-										<div class="block px-4 py-2 text-xs text-gray-400">{{ __('layouts.main.account') }}</div>
+										<div class="block px-4 py-2 text-xs text-gray-400">{{ __('Manage Account') }}</div>
 
-										<JetDropdownLink :href="route('profile.show')"> {{ __('layouts.main.profile') }} </JetDropdownLink>
+										<JetDropdownLink :href="route('profile.show')"> {{ __('Profile') }} </JetDropdownLink>
 
 										<JetDropdownLink :href="route('api-tokens.index')" v-if="$page.props.jetstream.hasApiFeatures">
-											{{ __('layouts.main.tokens') }}
+											{{ __('API Tokens') }}
 										</JetDropdownLink>
 
 										<div class="border-t border-gray-100"></div>
 
 										<!-- Authentication -->
 										<form @submit.prevent="logout">
-											<JetDropdownLink has="button"> {{ __('layouts.main.logout') }} </JetDropdownLink>
+											<JetDropdownLink has="button"> {{ __('Logout') }} </JetDropdownLink>
 										</form>
 									</template>
 								</JetDropdown>
@@ -206,9 +206,9 @@ const logout = () => {
 
 				<!-- Responsive Navigation Menu -->
 				<div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden">
-					<div class="pt-2 pb-3 space-y-1">
+					<div class="px-4 pt-2 pb-3 space-y-1">
 						<JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-							{{ __('layouts.main.dashboard') }}
+							{{ __('Dashboard') }}
 						</JetResponsiveNavLink>
 					</div>
 
@@ -229,9 +229,9 @@ const logout = () => {
 							</div>
 						</div>
 
-						<div class="mt-3 space-y-1">
+						<div class="px-4 mt-3 space-y-1">
 							<JetResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
-								{{ __('layouts.main.profile') }}
+								{{ __('Profile') }}
 							</JetResponsiveNavLink>
 
 							<JetResponsiveNavLink
@@ -239,26 +239,26 @@ const logout = () => {
 								:active="route().current('api-tokens.index')"
 								v-if="$page.props.jetstream.hasApiFeatures"
 							>
-								{{ __('layouts.main.tokens') }}
+								{{ __('API Tokens') }}
 							</JetResponsiveNavLink>
 
 							<!-- Authentication -->
 							<form method="POST" @submit.prevent="logout">
-								<JetResponsiveNavLink has="button">{{ __('layouts.main.logout') }}</JetResponsiveNavLink>
+								<JetResponsiveNavLink has="button">{{ __('Logout') }}</JetResponsiveNavLink>
 							</form>
 
 							<!-- Team Management -->
 							<template v-if="$page.props.jetstream.hasTeamFeatures">
 								<div class="border-t border-gray-200"></div>
 
-								<div class="block px-4 py-2 text-xs text-gray-400">{{ __('layouts.main.manage') }}</div>
+								<div class="block px-4 py-2 text-xs text-gray-400">{{ __('Manage Teams') }}</div>
 
 								<!-- Team Settings -->
 								<JetResponsiveNavLink
 									:href="route('teams.show', $page.props.user.current_team)"
 									:active="route().current('teams.show')"
 								>
-									{{ __('layouts.main.settings') }}
+									{{ __('Team Settings') }}
 								</JetResponsiveNavLink>
 
 								<JetResponsiveNavLink
@@ -266,13 +266,13 @@ const logout = () => {
 									:active="route().current('teams.create')"
 									v-if="$page.props.jetstream.canCreateTeams"
 								>
-									{{ __('layouts.main.create') }}
+									{{ __('Create New Team') }}
 								</JetResponsiveNavLink>
 
 								<div class="border-t border-gray-200"></div>
 
 								<!-- Team Switcher -->
-								<div class="block px-4 py-2 text-xs text-gray-400">{{ __('layouts.main.switch') }}</div>
+								<div class="block px-4 py-2 text-xs text-gray-400">{{ __('Switch Teams') }}</div>
 
 								<template v-for="team in $page.props.user.all_teams" :key="team.id">
 									<form @submit.prevent="switchToTeam(team)">

@@ -30,15 +30,19 @@ defineExpose({ password })
 
 <template>
 	<JetActionSection>
-		<template #title> Browser Sessions </template>
+		<template #title>{{ __('Browser Sessions') }}</template>
 
-		<template #description> Manage and log out your active sessions on other browsers and devices. </template>
+		<template #description>
+			{{ __('Manage and log out your active sessions on other browsers and devices.') }}
+		</template>
 
 		<template #content>
 			<div class="max-w-xl text-sm text-gray-600">
-				If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your
-				recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been
-				compromised, you should also update your password.
+				{{
+					__(
+						'If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.'
+					)
+				}}
 			</div>
 
 			<!-- Other Browser Sessions -->
@@ -84,8 +88,10 @@ defineExpose({ password })
 							<div class="text-xs text-gray-500">
 								{{ session.ip_address }},
 
-								<span class="font-semibold text-green-500" v-if="session.is_current_device">This device</span>
-								<span v-else>Last active {{ session.last_active }}</span>
+								<span class="font-semibold text-green-500" v-if="session.is_current_device">
+									{{ __('This device') }}
+								</span>
+								<span v-else> {{ __('Last active') }} {{ session.last_active }} </span>
 							</div>
 						</div>
 					</div>
@@ -93,18 +99,23 @@ defineExpose({ password })
 			</div>
 
 			<div class="flex items-center mt-5">
-				<JetButton @click="confirmLogout"> Log Out Other Browser Sessions </JetButton>
+				<JetButton @click="confirmLogout">
+					{{ __('Log Out Other Browser Sessions') }}
+				</JetButton>
 
-				<JetActionMessage :on="form.recentlySuccessful" class="ml-3"> Done. </JetActionMessage>
+				<JetActionMessage :on="form.recentlySuccessful" class="ml-3"> {{ __('Done.') }}</JetActionMessage>
 			</div>
 
 			<!-- Log Out Other Devices Confirmation Modal -->
 			<JetDialogModal :show="confirmingLogout" @close="closeModal">
-				<template #title> Log Out Other Browser Sessions </template>
+				<template #title>{{ __('Log Out Other Browser Sessions') }}</template>
 
 				<template #content>
-					Please enter your password to confirm you would like to log out of your other browser sessions across all of
-					your devices.
+					{{
+						__(
+							'Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices.'
+						)
+					}}
 
 					<div class="mt-4">
 						<JetInput
@@ -121,7 +132,9 @@ defineExpose({ password })
 				</template>
 
 				<template #footer>
-					<JetSecondaryButton @click="closeModal"> Cancel </JetSecondaryButton>
+					<JetSecondaryButton @click="closeModal">
+						{{ __('Cancel') }}
+					</JetSecondaryButton>
 
 					<JetButton
 						class="ml-2"
@@ -129,7 +142,7 @@ defineExpose({ password })
 						:class="{ 'opacity-25': form.processing }"
 						:disabled="form.processing"
 					>
-						Log Out Other Browser Sessions
+						{{ __('Log Out Other Browser Sessions') }}
 					</JetButton>
 				</template>
 			</JetDialogModal>

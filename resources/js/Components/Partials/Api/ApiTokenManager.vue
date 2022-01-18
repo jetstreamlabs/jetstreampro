@@ -55,23 +55,23 @@ const deleteApiToken = () => {
 	<div>
 		<!-- Generate API Token -->
 		<JetFormSection @submitted="createApiToken">
-			<template #title> Create API Token </template>
+			<template #title>{{ __('Create API Token') }}</template>
 
 			<template #description>
-				API tokens allow third-party services to authenticate with our application on your behalf.
+				{{ __('API tokens allow third-party services to authenticate with our application on your behalf.') }}
 			</template>
 
 			<template #form>
 				<!-- Token Name -->
 				<div class="col-span-6 sm:col-span-4">
-					<JetLabel for="name" value="Name" />
+					<JetLabel for="name" :value="__('Name')" />
 					<JetInput id="name" type="text" class="block w-full mt-1" v-model="createApiTokenForm.name" autofocus />
 					<JetInput-error :message="createApiTokenForm.errors.name" class="mt-2" />
 				</div>
 
 				<!-- Token Permissions -->
 				<div class="col-span-6" v-if="availablePermissions.length > 0">
-					<JetLabel for="permissions" value="Permissions" />
+					<JetLabel for="permissions" :value="__('Permissions')" />
 
 					<div class="grid grid-cols-1 gap-4 mt-2 md:grid-cols-2">
 						<div v-for="permission in availablePermissions" :key="permission">
@@ -85,10 +85,12 @@ const deleteApiToken = () => {
 			</template>
 
 			<template #actions>
-				<JetActionMessage :on="createApiTokenForm.recentlySuccessful" class="mr-3"> Created. </JetActionMessage>
+				<JetActionMessage :on="createApiTokenForm.recentlySuccessful" class="mr-3">
+					{{ __('Created.') }}</JetActionMessage
+				>
 
 				<JetButton :class="{ 'opacity-25': createApiTokenForm.processing }" :disabled="createApiTokenForm.processing">
-					Create
+					{{ __('Create') }}
 				</JetButton>
 			</template>
 		</JetFormSection>
@@ -99,9 +101,11 @@ const deleteApiToken = () => {
 			<!-- Manage API Tokens -->
 			<div class="mt-10 sm:mt-0">
 				<JetActionSection>
-					<template #title> Manage API Tokens </template>
+					<template #title>{{ __('Manage API Tokens') }}</template>
 
-					<template #description> You may delete any of your existing tokens if they are no longer needed. </template>
+					<template #description>
+						{{ __('You may delete any of your existing tokens if they are no longer needed.') }}
+					</template>
 
 					<!-- API Token List -->
 					<template #content>
@@ -113,7 +117,7 @@ const deleteApiToken = () => {
 
 								<div class="flex items-center">
 									<div class="text-sm text-gray-400" v-if="token.last_used_ago">
-										Last used {{ token.last_used_ago }}
+										{{ __('Last used') }} {{ token.last_used_ago }}
 									</div>
 
 									<button
@@ -121,11 +125,11 @@ const deleteApiToken = () => {
 										@click="manageApiTokenPermissions(token)"
 										v-if="availablePermissions.length > 0"
 									>
-										Permissions
+										{{ __('Permissions') }}
 									</button>
 
 									<button class="ml-6 text-sm text-red-500 cursor-pointer" @click="confirmApiTokenDeletion(token)">
-										Delete
+										{{ __('Delete') }}
 									</button>
 								</div>
 							</div>
@@ -137,10 +141,12 @@ const deleteApiToken = () => {
 
 		<!-- Token Value Modal -->
 		<JetDialogModal :show="displayingToken" @close="displayingToken = false">
-			<template #title> API Token </template>
+			<template #title>{{ __('API Token') }}</template>
 
 			<template #content>
-				<div>Please copy your new API token. For your security, it won't be shown again.</div>
+				<div>
+					{{ __("Please copy your new API token. For your security, it won't be shown again.") }}
+				</div>
 
 				<div
 					class="px-4 py-2 mt-4 font-mono text-sm text-gray-500 bg-gray-100 rounded"
@@ -151,13 +157,15 @@ const deleteApiToken = () => {
 			</template>
 
 			<template #footer>
-				<JetSecondaryButton @click="displayingToken = false"> Close </JetSecondaryButton>
+				<JetSecondaryButton @click="displayingToken = false">
+					{{ __('Close') }}
+				</JetSecondaryButton>
 			</template>
 		</JetDialogModal>
 
 		<!-- API Token Permissions Modal -->
 		<JetDialogModal :show="managingPermissionsFor" @close="managingPermissionsFor = null">
-			<template #title> API Token Permissions </template>
+			<template #title>{{ __('API Token Permissions') }}</template>
 
 			<template #content>
 				<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -171,7 +179,9 @@ const deleteApiToken = () => {
 			</template>
 
 			<template #footer>
-				<JetSecondaryButton @click="managingPermissionsFor = null"> Cancel </JetSecondaryButton>
+				<JetSecondaryButton @click="managingPermissionsFor = null">
+					{{ __('Cancel') }}
+				</JetSecondaryButton>
 
 				<JetButton
 					class="ml-2"
@@ -179,19 +189,23 @@ const deleteApiToken = () => {
 					:class="{ 'opacity-25': updateApiTokenForm.processing }"
 					:disabled="updateApiTokenForm.processing"
 				>
-					Save
+					{{ __('Save') }}
 				</JetButton>
 			</template>
 		</JetDialogModal>
 
 		<!-- Delete Token Confirmation Modal -->
 		<JetConfirmationModal :show="apiTokenBeingDeleted" @close="apiTokenBeingDeleted = null">
-			<template #title> Delete API Token </template>
+			<template #title>{{ __('Delete API Token') }}</template>
 
-			<template #content> Are you sure you would like to delete this API token? </template>
+			<template #content>
+				{{ __('Are you sure you would like to delete this API token?') }}
+			</template>
 
 			<template #footer>
-				<JetSecondaryButton @click="apiTokenBeingDeleted = null"> Cancel </JetSecondaryButton>
+				<JetSecondaryButton @click="apiTokenBeingDeleted = null">
+					{{ __('Cancel') }}
+				</JetSecondaryButton>
 
 				<JetDangerButton
 					class="ml-2"
@@ -199,7 +213,7 @@ const deleteApiToken = () => {
 					:class="{ 'opacity-25': deleteApiTokenForm.processing }"
 					:disabled="deleteApiTokenForm.processing"
 				>
-					Delete
+					{{ __('Delete') }}
 				</JetDangerButton>
 			</template>
 		</JetConfirmationModal>
