@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.1.3](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.2...v2.1.3) (2022-01-19)
+
+
+### Bug Fixes
+
+* adjust release ([0121b4d](https://github.com/jetstreamlabs/jetstreampro/commit/0121b4de41434f329d96e76939c4f8447ca4bb47))
+
 ## [2.1.2](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.1...v2.1.2) (2022-01-19)
 
 
