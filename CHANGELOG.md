@@ -1,5 +1,18 @@
 # Jetstream Pro Changelog
 
+## [2.1.2](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.1...v2.1.2) (2022-01-19)
+
+
+### Bug Fixes
+
+* remove render to untrack ([9b601d7](https://github.com/jetstreamlabs/jetstreampro/commit/9b601d74872eb401448450720b1450fde8093876))
+
+
+### Maintenance
+
+* adjust gitignore ([9774a87](https://github.com/jetstreamlabs/jetstreampro/commit/9774a879086ceef1a4e4f80b96b8d639f53b2edb))
+* adjust gitignore to remove dupes ([5c25cf2](https://github.com/jetstreamlabs/jetstreampro/commit/5c25cf2288adce08855ed4eb7b7aeab419acf040))
+
 ## [2.1.1](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.0...v2.1.1) (2022-01-19)
 
 
