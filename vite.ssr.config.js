@@ -2,11 +2,11 @@ import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import dotenv from 'dotenv'
-import dotenvExpand from 'dotenv-expand'
+import { expand } from 'dotenv-expand'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 
-const env = dotenvExpand(dotenv.config()).parsed
+const env = expand(dotenv.config()).parsed
 
 export default defineConfig(() => ({
 	publicDir: false,

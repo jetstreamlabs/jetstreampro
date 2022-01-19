@@ -3,12 +3,12 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import vue from '@vitejs/plugin-vue'
 import dotenv from 'dotenv'
-import dotenvExpand from 'dotenv-expand'
+import { expand } from 'dotenv-expand'
 import { homedir } from 'os'
 import fs from 'fs'
 import { resolve } from 'path'
 
-const env = dotenvExpand(dotenv.config()).parsed
+const env = expand(dotenv.config()).parsed
 
 // prettier-ignore
 export default defineConfig(({ command }) => {
