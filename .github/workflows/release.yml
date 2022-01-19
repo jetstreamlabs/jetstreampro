@@ -23,7 +23,7 @@ jobs:
           node-version: 'lts/*'
 
       - name: install dependencies
-        run: npm ci
+        run: npm install
 
       - name: run semantic-release
         env:
@@ -42,20 +42,13 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: set tag to latest tag
-        run: tag=$(git tag  | grep -E '^v[0-9]' | sort -V | tail -1)
-
-      - name: set sha from tag
-        id: tagsha
-        run: echo "::set-output name=sha::$(git log -1 --format="%H" $tag)"
-
       - name: create latest branch
         uses: peterjgrainger/action-create-branch@v2.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.VERAN }}
         with:
           branch: latest
-          sha: ${{ steps.tagsha.outputs.sha }}
+          sha: ${{ github.sha }}
 
   compile:
     name: Craft Jetstream App
@@ -87,8 +80,8 @@ jobs:
         with:
           node-version: 'lts/*'
 
-      - run: npm ci
-      - run: npm run prod --force
+      - run: npm install
+      - run: npm run build --force
       - run: npm run ssr --force
 
       - name: commit assets to branch
