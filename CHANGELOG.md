@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.1.4](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.3...v2.1.4) (2022-01-19)
+
+
+### Task Commit
+
+* upgrade to laravel-ignition ([28824ed](https://github.com/jetstreamlabs/jetstreampro/commit/28824edbda42c9cc638dfab42bb94a49afb80bb7))
+
 ## [2.1.3](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.2...v2.1.3) (2022-01-19)
 
 
