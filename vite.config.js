@@ -1,14 +1,15 @@
+const dotenv = require('dotenv')
+const expandDotenv = require('dotenv-expand')
+
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import vue from '@vitejs/plugin-vue'
-import dotenv from 'dotenv'
-import { expand } from 'dotenv-expand'
 import { homedir } from 'os'
 import fs from 'fs'
 import { resolve } from 'path'
 
-const env = expand(dotenv.config()).parsed
+const env = expandDotenv.expand(dotenv.config()).parsed
 
 // prettier-ignore
 export default defineConfig(({ command }) => {
