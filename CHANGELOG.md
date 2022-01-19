@@ -1,5 +1,32 @@
 # Jetstream Pro Changelog
 
+# [2.1.0](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.4...v2.1.0) (2022-01-19)
+
+
+### Code Refactoring
+
+* node dependency updates ([8c840f5](https://github.com/jetstreamlabs/jetstreampro/commit/8c840f5a917b3a8409f22405a22ff8cff6e75f24))
+
+
+### Features
+
+* lang updates to use default keys ([6d3eaf2](https://github.com/jetstreamlabs/jetstreampro/commit/6d3eaf2b8502943c8259f5f6a4dc8309b2e40110))
+
+
+### Maintenance
+
+* **deps-dev:** bump @vue/compiler-sfc from 3.2.26 to 3.2.27 ([8299070](https://github.com/jetstreamlabs/jetstreampro/commit/8299070ec1a14916244ce1c5aa29f87163a8cc0a))
+* **deps-dev:** bump dotenv from 12.0.3 to 14.2.0 ([ffab54f](https://github.com/jetstreamlabs/jetstreampro/commit/ffab54f4d0781b01c4cc5311e3c4573f59011d3f))
+* **deps-dev:** bump dotenv-expand from 5.1.0 to 6.0.1 ([1d8adbd](https://github.com/jetstreamlabs/jetstreampro/commit/1d8adbd6ab62f93e617295ed3652565015f2cfd3))
+* **deps-dev:** bump laravel/sail from 1.12.12 to 1.13.0 ([5423c77](https://github.com/jetstreamlabs/jetstreampro/commit/5423c77781343b5248b1548b3bd507d41f2eff1a))
+* **deps-dev:** bump semantic-release from 18.0.1 to 19.0.2 ([a81dec6](https://github.com/jetstreamlabs/jetstreampro/commit/a81dec6aeab30943affba83f23dea0422ff43bd3))
+* **deps-dev:** bump unplugin-vue-components from 0.17.11 to 0.17.13 ([53e243d](https://github.com/jetstreamlabs/jetstreampro/commit/53e243df80348a823a72b05f24216bdd98dc341c))
+* **deps-dev:** bump vite from 2.7.12 to 2.7.13 ([a96016c](https://github.com/jetstreamlabs/jetstreampro/commit/a96016c0e0ae3df80e980dd88064b0711996f118))
+* **deps:** bump axios from 0.24.0 to 0.25.0 ([27b340f](https://github.com/jetstreamlabs/jetstreampro/commit/27b340f115606363d0a5a5e0e44c068c1f04d4f6))
+* **deps:** bump inertiajs/inertia-laravel from 0.5.2 to 0.5.4 ([62db17e](https://github.com/jetstreamlabs/jetstreampro/commit/62db17ec527762743be2abfa316e94f15eab618e))
+* **deps:** bump laravel/jetstream from 2.6.1 to 2.6.2 ([6063af7](https://github.com/jetstreamlabs/jetstreampro/commit/6063af72f1dc80a9c0bab8e1cd3e94f6a18ece1a))
+* **deps:** bump serenity/zora from 1.0.2 to 2.0.0 ([fcb74d0](https://github.com/jetstreamlabs/jetstreampro/commit/fcb74d0e5fe4296687f2a7757fd77f2a36616d0c))
+
 ## [2.0.4](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.3...v2.0.4) (2022-01-17)
 
 
