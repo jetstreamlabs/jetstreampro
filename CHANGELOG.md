@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.1.1](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.0...v2.1.1) (2022-01-19)
+
+
+### Bug Fixes
+
+* dotenv-expand function changes ([3e99993](https://github.com/jetstreamlabs/jetstreampro/commit/3e999938fbd3b7e0fe8cd066f4600ebec0a7115e))
+
 # [2.1.0](https://github.com/jetstreamlabs/jetstreampro/compare/v2.0.4...v2.1.0) (2022-01-19)
 
 
