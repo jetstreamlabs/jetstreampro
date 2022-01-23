@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [2.1.6](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.5...v2.1.6) (2022-01-23)
+
+
+### Bug Fixes
+
+* rolling action back to v7 ([48e81d4](https://github.com/jetstreamlabs/jetstreampro/commit/48e81d4f0eabc46d0bb1a731cf08a0c9c58ebc5b))
+
 ## [2.1.5](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.4...v2.1.5) (2022-01-23)
 
 
