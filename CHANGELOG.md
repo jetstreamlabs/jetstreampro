@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+# [3.0.0](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.6...v3.0.0) (2022-01-23)
+
+
+### Breaking
+
+* package updates ([922761f](https://github.com/jetstreamlabs/jetstreampro/commit/922761f907bc7550106d93974a6c73635c0819ef))
+
 ## [2.1.6](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.5...v2.1.6) (2022-01-23)
 
 
