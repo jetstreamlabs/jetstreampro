@@ -85,10 +85,10 @@ jobs:
       - run: npm run ssr --force
 
       - name: commit assets to branch
-        uses: EndBug/add-and-commit@v8
+        uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actor
-          new_branch: latest
+          branch: latest
           message: 'chore(deploy): deploy main code to production'
           add: '-f public/'
           pull: 'NO-PULL'
