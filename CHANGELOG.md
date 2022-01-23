@@ -1,5 +1,40 @@
 # Jetstream Pro Changelog
 
+## [2.1.5](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.4...v2.1.5) (2022-01-23)
+
+
+### Bug Fixes
+
+* workflow error from update ([545e017](https://github.com/jetstreamlabs/jetstreampro/commit/545e0179d48e8356cfa3b010cfc206e6d5e49d1d))
+
+
+* Merge remote-tracking branch 'origin/dependabot/github_actions/EndBug/add-and-commit-8' into develop ([ea5cf37](https://github.com/jetstreamlabs/jetstreampro/commit/ea5cf374cbcbbc24d0ddf8667bd35ffeb39ac5b2))
+* Merge remote-tracking branch 'origin/dependabot/npm_and_yarn/vue/server-renderer-3.2.28' into develop ([6cac4cf](https://github.com/jetstreamlabs/jetstreampro/commit/6cac4cf63bdb5e5bdd2093161f8061d596aa8f61))
+* Merge remote-tracking branch 'origin/dependabot/npm_and_yarn/vue/compiler-sfc-3.2.28' into develop ([93c7eed](https://github.com/jetstreamlabs/jetstreampro/commit/93c7eed0d0cb946fe17c2441c560df369764bdca))
+* Merge remote-tracking branch 'origin/dependabot/npm_and_yarn/vitejs/plugin-vue-2.1.0' into develop ([edd9d1c](https://github.com/jetstreamlabs/jetstreampro/commit/edd9d1c204d07c50281c8a4704e87005799763c7))
+* Merge remote-tracking branch 'origin/dependabot/npm_and_yarn/unplugin-vue-components-0.17.14' into develop ([5af6d3f](https://github.com/jetstreamlabs/jetstreampro/commit/5af6d3f54206d8ac81026cc7d2881387df1fc1ad))
+* Merge remote-tracking branch 'origin/dependabot/npm_and_yarn/commitlint/cli-16.1.0' into develop ([73582d1](https://github.com/jetstreamlabs/jetstreampro/commit/73582d15e4dc0c65dede7c3b694a4b039c6d2f78))
+* Merge remote-tracking branch 'origin/dependabot/composer/spatie/laravel-ignition-1.0.2' into develop ([7fe2ff1](https://github.com/jetstreamlabs/jetstreampro/commit/7fe2ff1b564df8e495a268faa17bd1a16e065827))
+* Merge remote-tracking branch 'origin/dependabot/composer/phpunit/phpunit-9.5.12' into develop ([46d4af8](https://github.com/jetstreamlabs/jetstreampro/commit/46d4af89a225685fd7c4f57c7082e315fe4511e2))
+* Merge remote-tracking branch 'origin/dependabot/composer/mockery/mockery-1.5.0' into develop ([b59755d](https://github.com/jetstreamlabs/jetstreampro/commit/b59755d166acd3482fd3822bc831c68ba442ce1c))
+
+
+### Maintenance
+
+* **deps-dev:** bump @commitlint/cli from 16.0.2 to 16.0.3 ([4559635](https://github.com/jetstreamlabs/jetstreampro/commit/4559635f4623d0fa7e40be52bf7c475ad265d91a))
+* **deps-dev:** bump @commitlint/cli from 16.0.3 to 16.1.0 ([cbeb9a9](https://github.com/jetstreamlabs/jetstreampro/commit/cbeb9a9329ec52636b1636335f58d868c4331eaf))
+* **deps-dev:** bump @vitejs/plugin-vue from 2.0.1 to 2.1.0 ([e9fea0b](https://github.com/jetstreamlabs/jetstreampro/commit/e9fea0becea65c4bb904763a3386485f37625362))
+* **deps-dev:** bump @vue/compiler-sfc from 3.2.27 to 3.2.28 ([96730aa](https://github.com/jetstreamlabs/jetstreampro/commit/96730aa86cbed96043e9dafc5b14fef8b5636609))
+* **deps-dev:** bump laravel/sail from 1.13.0 to 1.13.1 ([159704d](https://github.com/jetstreamlabs/jetstreampro/commit/159704dd6bf57e370ca014f1ee5a121de48f0902))
+* **deps-dev:** bump mockery/mockery from 1.4.4 to 1.5.0 ([a9b0fbd](https://github.com/jetstreamlabs/jetstreampro/commit/a9b0fbdeb2e9a1106fa2ed23d76bca5da432c539))
+* **deps-dev:** bump phpunit/phpunit from 9.5.11 to 9.5.12 ([1a1bb0d](https://github.com/jetstreamlabs/jetstreampro/commit/1a1bb0d5197ffa278c28adcca332265a17c4771c))
+* **deps-dev:** bump spatie/laravel-ignition from 1.0.0 to 1.0.1 ([0586c1d](https://github.com/jetstreamlabs/jetstreampro/commit/0586c1d2143f986de9b9380d3a1eda6e8a69a330))
+* **deps-dev:** bump spatie/laravel-ignition from 1.0.1 to 1.0.2 ([239d501](https://github.com/jetstreamlabs/jetstreampro/commit/239d501b8b8053c15888b739b463b453230707c7))
+* **deps-dev:** bump unplugin-vue-components from 0.17.13 to 0.17.14 ([d390db0](https://github.com/jetstreamlabs/jetstreampro/commit/d390db0041b63593c5733317bfe2441c7e44a0d6))
+* **deps:** bump @vue/server-renderer from 3.2.27 to 3.2.28 ([c090288](https://github.com/jetstreamlabs/jetstreampro/commit/c09028813322892de27b2f6616a0e2d3a8ea9c7c))
+* **deps:** bump EndBug/add-and-commit from 7 to 8 ([40c1515](https://github.com/jetstreamlabs/jetstreampro/commit/40c1515e9c54eea39281fa908d924fd3680a11d8))
+* updates to lock files from prs ([fcf3274](https://github.com/jetstreamlabs/jetstreampro/commit/fcf3274cb667bb23a144b6af42ee95c2ee199f41))
+
 ## [2.1.4](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.3...v2.1.4) (2022-01-19)
 
 
