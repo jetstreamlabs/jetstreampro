@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.0.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.0.0...v3.0.1) (2022-01-23)
+
+
+### Bug Fixes
+
+* remove local composer deps ([0998fe7](https://github.com/jetstreamlabs/jetstreampro/commit/0998fe78f5a485103e79939fbcee37cc9399667b))
+
 # [3.0.0](https://github.com/jetstreamlabs/jetstreampro/compare/v2.1.6...v3.0.0) (2022-01-23)
 
 
