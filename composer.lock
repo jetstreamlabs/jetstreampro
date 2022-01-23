@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "775b37f7d023400bf857d8d6fe74779b",
+    "content-hash": "cb71ba4b2ec89cc98893b6fc9b6c0395",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1264,6 +1264,178 @@
             "time": "2020-06-13T08:05:20+00:00"
         },
         {
+            "name": "jetstreamlabs/trust",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/Users/vince/Code/jslabs/trust",
+                "reference": "1fbbcdf6d7aa772daa07528caa7e5732a14afe9b"
+            },
+            "require": {
+                "kkszymanowski/traitor": "^0.2.0",
+                "laravel/framework": "^8.0",
+                "laravel/jetstream": "^2.6",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.2",
+                "orchestra/testbench": "4.*|5.*|6.*",
+                "phpunit/phpunit": "^9.0",
+                "styleci/cli": "^1.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jetlabs\\Trust\\TrustServiceProvider"
+                    ],
+                    "aliases": {
+                        "Jetlabs\\Trust": "Jetlabs\\Trust\\TrustFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jetlabs\\Trust\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Jetlabs\\Trust\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "secondman",
+                    "email": "secondman@jetstreamlabs.com"
+                },
+                {
+                    "name": "Santiago Garcia",
+                    "homepage": "http://santigarcor.me"
+                }
+            ],
+            "description": "Recoded package of Laratrust for implementing in Laravel Jetstream.",
+            "keywords": [
+                "acl",
+                "authorization",
+                "jetstream",
+                "laratrust",
+                "laravel",
+                "permissions",
+                "rbac",
+                "roles",
+                "teams",
+                "trust"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "jetstreamlabs/zora",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jetstreamlabs/zora.git",
+                "reference": "a69377f77046a5d2299d294a5d90f9eea3a91c1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jetstreamlabs/zora/zipball/a69377f77046a5d2299d294a5d90f9eea3a91c1a",
+                "reference": "a69377f77046a5d2299d294a5d90f9eea3a91c1a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0"
+            },
+            "require-dev": {
+                "styleci/cli": "^1.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jetlabs\\Zora\\ZoraServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jetlabs\\Zora\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "secondman",
+                    "email": "secondman@jetstreamlabs.com"
+                }
+            ],
+            "description": "Add your Laravel language translations to your asset pipeline for use in Javascript packages like Vue or React.",
+            "support": {
+                "issues": "https://github.com/jetstreamlabs/zora/issues",
+                "source": "https://github.com/jetstreamlabs/zora/tree/v3.1.0"
+            },
+            "time": "2022-01-20T09:09:08+00:00"
+        },
+        {
+            "name": "kkszymanowski/traitor",
+            "version": "0.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KKSzymanowski/Traitor.git",
+                "reference": "9770fc7de72ff585601dc9c42b31715d9fc40a24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KKSzymanowski/Traitor/zipball/9770fc7de72ff585601dc9c42b31715d9fc40a24",
+                "reference": "9770fc7de72ff585601dc9c42b31715d9fc40a24",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^1.0|^2.0|^3.0|^4.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Traitor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kuba Szymanowski",
+                    "email": "kuba.szymanowski@inf24.pl"
+                }
+            ],
+            "description": "Add a trait use statement to existing PHP class",
+            "keywords": [
+                "add",
+                "php",
+                "trait"
+            ],
+            "support": {
+                "email": "kuba.szymanowski@inf24.pl",
+                "issues": "https://github.com/kkszymanowski/traitor/issues",
+                "source": "https://github.com/kkszymanowski/traitor"
+            },
+            "time": "2018-04-19T12:24:36+00:00"
+        },
+        {
             "name": "larasocket/larasocket-driver",
             "version": "1.0.4",
             "source": {
@@ -1810,16 +1982,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.1.1",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "17d2b9cb5161a2ea1a8dd30e6991d668e503fb9d"
+                "reference": "c5aadcc15548629787d02b86a7afef03b46271b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/17d2b9cb5161a2ea1a8dd30e6991d668e503fb9d",
-                "reference": "17d2b9cb5161a2ea1a8dd30e6991d668e503fb9d",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c5aadcc15548629787d02b86a7afef03b46271b5",
+                "reference": "c5aadcc15548629787d02b86a7afef03b46271b5",
                 "shasum": ""
             },
             "require": {
@@ -1827,6 +1999,7 @@
                 "league/config": "^1.1.1",
                 "php": "^7.4 || ^8.0",
                 "psr/event-dispatcher": "^1.0",
+                "symfony/deprecation-contracts": "^v2.1 || ^3.0",
                 "symfony/polyfill-php80": "^1.15"
             },
             "require-dev": {
@@ -1852,7 +2025,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.2-dev"
+                    "dev-main": "2.3-dev"
                 }
             },
             "autoload": {
@@ -1909,7 +2082,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T18:25:06+00:00"
+            "time": "2022-01-22T14:06:22+00:00"
         },
         {
             "name": "league/config",
@@ -3512,56 +3685,6 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
-        },
-        {
-            "name": "serenity/zora",
-            "version": "v2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jetstreamlabs/zora.git",
-                "reference": "baaba44a00e2ec68ad49305222eddc07bb1244ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jetstreamlabs/zora/zipball/baaba44a00e2ec68ad49305222eddc07bb1244ad",
-                "reference": "baaba44a00e2ec68ad49305222eddc07bb1244ad",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "^8.0"
-            },
-            "require-dev": {
-                "styleci/cli": "^1.2"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Serenity\\Zora\\ZoraServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Serenity\\Zora\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "secondman",
-                    "email": "secondman@jetstreamlabs.com"
-                }
-            ],
-            "description": "Add your Laravel language translations to your asset pipeline for use in Javascript packages like Vue or React.",
-            "support": {
-                "issues": "https://github.com/jetstreamlabs/zora/issues",
-                "source": "https://github.com/jetstreamlabs/zora/tree/v2.0.0"
-            },
-            "time": "2022-01-18T13:11:18+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -6296,16 +6419,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.17.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "b85e9d44eae8c52cca7aa0939483611f7232b669"
+                "reference": "2e77a868f6540695cf5ebf21e5ab472c65f47567"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/b85e9d44eae8c52cca7aa0939483611f7232b669",
-                "reference": "b85e9d44eae8c52cca7aa0939483611f7232b669",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/2e77a868f6540695cf5ebf21e5ab472c65f47567",
+                "reference": "2e77a868f6540695cf5ebf21e5ab472c65f47567",
                 "shasum": ""
             },
             "require": {
@@ -6330,7 +6453,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "v1.17-dev"
+                    "dev-main": "v1.18-dev"
                 }
             },
             "autoload": {
@@ -6355,9 +6478,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.17.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.18.0"
             },
-            "time": "2021-12-05T17:14:47+00:00"
+            "time": "2022-01-23T17:56:23+00:00"
         },
         {
             "name": "filp/whoops",

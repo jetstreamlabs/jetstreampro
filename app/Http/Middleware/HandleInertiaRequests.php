@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
-use Serenity\Zora\Zora;
+use Jetlabs\Zora\Zora;
 use Tightenco\Ziggy\Ziggy;
 
 class HandleInertiaRequests extends Middleware

@@ -44,6 +44,7 @@ return [
 			'timeout' => null,
 			'auth_mode' => null,
 		],
+
 		'improvmx' => [
 			'transport' => 'smtp',
 			'host' => 'smtp.improvmx.com',
@@ -51,6 +52,15 @@ return [
 			'encryption' => 'TLS',
 			'username' => env('MAIL_USERNAME'),
 			'password' => env('MAIL_PASSWORD'),
+		],
+
+		'mailhog' => [
+			'transport' => 'smtp',
+			'host' => 'mailhog.test',
+			'port' => 1025,
+			'encryption' => null,
+			'username' => null,
+			'password' => null,
 		],
 
 		'ses' => [

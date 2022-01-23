@@ -32,7 +32,7 @@ export default defineConfig(({ command }) => {
 				'/storage': resolve(__dirname, 'storage/app/public'),
 				vue: resolve(__dirname, 'node_modules/vue/dist/vue.runtime.esm-bundler.js'),
 				ziggy: resolve(__dirname, 'vendor/tightenco/ziggy/dist/index.es.js'),
-				zora: resolve(__dirname, 'vendor/serenity/zora/dist/index.js'),
+				zora: resolve(__dirname, 'vendor/jetstreamlabs/zora/dist/index.js'),
 				composable: resolve(__dirname, 'resources/js/Composable/index.js'),
 			},
 		},
