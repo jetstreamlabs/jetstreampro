@@ -11,7 +11,6 @@
 		"php": "^7.3|^8.0",
 		"fruitcake/laravel-cors": "^2.0",
 		"guzzlehttp/guzzle": "^7.0.1",
-		"jetstreamlabs/trust": "*",
 		"jetstreamlabs/zora": "^3.0",
 		"inertiajs/inertia-laravel": "^0.5.2",
 		"larasocket/larasocket-driver": "^1.0",
@@ -21,15 +20,6 @@
 		"laravel/tinker": "^2.5",
 		"tightenco/ziggy": "^1.0"
 	},
-	"repositories": [
-		{
-			"type": "path",
-			"url": "/Users/vince/Code/jslabs/trust",
-			"options": {
-				"symlink": true
-			}
-		}
-	],
 	"require-dev": {
 		"spatie/laravel-ignition": "^1.0",
 		"fakerphp/faker": "^1.9.1",
