@@ -74,31 +74,31 @@ export default defineConfig(({ command }) => {
 })
 
 export const makeServer = (command) => {
-	// We ONLY build a server here if we're in local mode
-	if (command === 'serve') {
-		let secure
+  // We ONLY build a server here if we're in local mode
+  if (command === 'serve') {
+    let secure
 
-		if (env.VITE_HTTPS == 'true') {
-			const certPath = resolve(homedir(), env.VITE_CERTPATH)
+    if (env.VITE_HTTPS == 'true') {
+      const certPath = resolve(homedir(), env.VITE_CERTPATH)
 
-			secure = {
-				key: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.key`)),
-				cert: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.crt`)),
-			}
-		} else {
-			secure = false
-		}
+      secure = {
+        key: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.key`)),
+        cert: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.crt`)),
+      }
+    } else {
+      secure = false
+    }
 
-		return {
-			host: env.VITE_DOMAIN,
-			port: env.VITE_PORT,
-			origin: `${env.APP_URL}:${env.VITE_PORT}`,
-			strictPort: true,
-			https: secure,
-			hmr: {
-				host: env.VITE_DOMAIN,
-				port: env.VITE_PORT,
-			},
-		}
-	}
+    return {
+      host: env.VITE_DOMAIN,
+      port: env.VITE_PORT,
+      origin: `${env.APP_URL}:${env.VITE_PORT}`,
+      strictPort: true,
+      https: secure,
+      hmr: {
+        host: env.VITE_DOMAIN,
+        port: env.VITE_PORT,
+      },
+    }
+  }
 }

@@ -3,86 +3,86 @@ const current_password = ref()
 const password = ref()
 
 const form = useForm({
-	current_password: '',
-	password: '',
-	password_confirmation: '',
+  current_password: '',
+  password: '',
+  password_confirmation: '',
 })
 const updatePassword = () => {
-	form.put(useRoutes('user-password.update'), {
-		errorBag: 'updatePassword',
-		preserveScroll: true,
-		onSuccess: () => form.reset(),
-		onError: () => {
-			if (form.errors.password) {
-				form.reset('password', 'password_confirmation')
-				password.value.input.focus()
-			}
+  form.put(useRoutes('user-password.update'), {
+    errorBag: 'updatePassword',
+    preserveScroll: true,
+    onSuccess: () => form.reset(),
+    onError: () => {
+      if (form.errors.password) {
+        form.reset('password', 'password_confirmation')
+        password.value.input.focus()
+      }
 
-			if (form.errors.current_password) {
-				form.reset('current_password')
-				current_password.value.input.focus()
-			}
-		},
-	})
+      if (form.errors.current_password) {
+        form.reset('current_password')
+        current_password.value.input.focus()
+      }
+    },
+  })
 }
 
 defineExpose({ password, current_password })
 </script>
 
 <template>
-	<JetFormSection @submitted="updatePassword">
-		<template #title>{{ __('Update Password') }}</template>
+  <JetFormSection @submitted="updatePassword">
+    <template #title>{{ __('Update Password') }}</template>
 
-		<template #description>
-			{{ __('Ensure your account is using a long, random password to stay secure.') }}
-		</template>
+    <template #description>
+      {{ __('Ensure your account is using a long, random password to stay secure.') }}
+    </template>
 
-		<template #form>
-			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="current_password" :value="__('Current Password')" />
-				<JetInput
-					id="current_password"
-					type="password"
-					class="block w-full mt-1"
-					v-model="form.current_password"
-					ref="current_password"
-					autocomplete="current-password"
-				/>
-				<JetInput-error :message="form.errors.current_password" class="mt-2" />
-			</div>
+    <template #form>
+      <div class="col-span-6 sm:col-span-4">
+        <JetLabel for="current_password" :value="__('Current Password')" />
+        <JetInput
+          id="current_password"
+          type="password"
+          class="block w-full mt-1"
+          v-model="form.current_password"
+          ref="current_password"
+          autocomplete="current-password"
+        />
+        <JetInput-error :message="form.errors.current_password" class="mt-2" />
+      </div>
 
-			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="password" :value="__('New Password')" />
-				<JetInput
-					id="password"
-					type="password"
-					class="block w-full mt-1"
-					v-model="form.password"
-					ref="password"
-					autocomplete="new-password"
-				/>
-				<JetInput-error :message="form.errors.password" class="mt-2" />
-			</div>
+      <div class="col-span-6 sm:col-span-4">
+        <JetLabel for="password" :value="__('New Password')" />
+        <JetInput
+          id="password"
+          type="password"
+          class="block w-full mt-1"
+          v-model="form.password"
+          ref="password"
+          autocomplete="new-password"
+        />
+        <JetInput-error :message="form.errors.password" class="mt-2" />
+      </div>
 
-			<div class="col-span-6 sm:col-span-4">
-				<JetLabel for="password_confirmation" :value="__('Confirm Password')" />
-				<JetInput
-					id="password_confirmation"
-					type="password"
-					class="block w-full mt-1"
-					v-model="form.password_confirmation"
-					autocomplete="new-password"
-				/>
-				<JetInput-error :message="form.errors.password_confirmation" class="mt-2" />
-			</div>
-		</template>
+      <div class="col-span-6 sm:col-span-4">
+        <JetLabel for="password_confirmation" :value="__('Confirm Password')" />
+        <JetInput
+          id="password_confirmation"
+          type="password"
+          class="block w-full mt-1"
+          v-model="form.password_confirmation"
+          autocomplete="new-password"
+        />
+        <JetInput-error :message="form.errors.password_confirmation" class="mt-2" />
+      </div>
+    </template>
 
-		<template #actions>
-			<JetActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</JetActionMessage>
+    <template #actions>
+      <JetActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</JetActionMessage>
 
-			<JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-				{{ __('Save') }}
-			</JetButton>
-		</template>
-	</JetFormSection>
+      <JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        {{ __('Save') }}
+      </JetButton>
+    </template>
+  </JetFormSection>
 </template>

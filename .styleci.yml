@@ -14,7 +14,7 @@ php:
       - 'server.php'
 js:
   tab-width: 2
-  use-tabs: true
+  use-tabs: false
   semicolons: false
   bracket-same-line: true
   finder:
@@ -23,10 +23,10 @@ js:
       - 'node_modules'
 css:
   tab-width: 2
-  use-tabs: true
+  use-tabs: false
 
 vue:
   tab-width: 2
-  use-tabs: true
+  use-tabs: false
   semicolons: false
   bracket-same-line: true

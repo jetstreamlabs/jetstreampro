@@ -5,62 +5,62 @@ const confirmingTeamDeletion = ref(false)
 const form = useForm()
 
 const confirmTeamDeletion = () => {
-	confirmingTeamDeletion.value = true
+  confirmingTeamDeletion.value = true
 }
 
 const deleteTeam = () => {
-	form.delete(useRoutes('teams.destroy', { team: props.team.id }), {
-		errorBag: 'deleteTeam',
-	})
+  form.delete(useRoutes('teams.destroy', { team: props.team.id }), {
+    errorBag: 'deleteTeam',
+  })
 }
 </script>
 
 <template>
-	<JetActionSection>
-		<template #title> {{ __('Delete Team') }} </template>
+  <JetActionSection>
+    <template #title> {{ __('Delete Team') }} </template>
 
-		<template #description> {{ __('Permanently delete this team.') }} </template>
+    <template #description> {{ __('Permanently delete this team.') }} </template>
 
-		<template #content>
-			<div class="max-w-xl text-sm text-gray-600">
-				{{
-					__(
-						'Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain.'
-					)
-				}}
-			</div>
+    <template #content>
+      <div class="max-w-xl text-sm text-gray-600">
+        {{
+          __(
+            'Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain.'
+          )
+        }}
+      </div>
 
-			<div class="mt-5">
-				<JetDangerButton @click="confirmTeamDeletion"> {{ __('Delete Team') }} </JetDangerButton>
-			</div>
+      <div class="mt-5">
+        <JetDangerButton @click="confirmTeamDeletion"> {{ __('Delete Team') }} </JetDangerButton>
+      </div>
 
-			<!-- Delete Team Confirmation Modal -->
-			<JetConfirmationModal :show="confirmingTeamDeletion" @close="confirmingTeamDeletion = false">
-				<template #title> {{ __('Delete Team') }} </template>
+      <!-- Delete Team Confirmation Modal -->
+      <JetConfirmationModal :show="confirmingTeamDeletion" @close="confirmingTeamDeletion = false">
+        <template #title> {{ __('Delete Team') }} </template>
 
-				<template #content>
-					{{
-						__(
-							'Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted.'
-						)
-					}}
-				</template>
+        <template #content>
+          {{
+            __(
+              'Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted.'
+            )
+          }}
+        </template>
 
-				<template #footer>
-					<JetSecondaryButton @click="confirmingTeamDeletion = false">
-						{{ __('Cancel') }}
-					</JetSecondaryButton>
+        <template #footer>
+          <JetSecondaryButton @click="confirmingTeamDeletion = false">
+            {{ __('Cancel') }}
+          </JetSecondaryButton>
 
-					<JetDangerButton
-						class="ml-2"
-						@click="deleteTeam"
-						:class="{ 'opacity-25': form.processing }"
-						:disabled="form.processing"
-					>
-						{{ __('Delete Team') }}
-					</JetDangerButton>
-				</template>
-			</JetConfirmationModal>
-		</template>
-	</JetActionSection>
+          <JetDangerButton
+            class="ml-2"
+            @click="deleteTeam"
+            :class="{ 'opacity-25': form.processing }"
+            :disabled="form.processing"
+          >
+            {{ __('Delete Team') }}
+          </JetDangerButton>
+        </template>
+      </JetConfirmationModal>
+    </template>
+  </JetActionSection>
 </template>
