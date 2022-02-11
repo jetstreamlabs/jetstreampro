@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.1.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.1.0...v3.1.1) (2022-02-11)
+
+
+### Bug Fixes
+
+* adjust composer.json for publication ([8113334](https://github.com/jetstreamlabs/jetstreampro/commit/81133344025619dc9f661d53c0160ad59548c5d8))
+
 # [3.1.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.0.1...v3.1.0) (2022-02-11)
 
 
