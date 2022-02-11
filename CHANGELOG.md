@@ -1,5 +1,30 @@
 # Jetstream Pro Changelog
 
+# [3.1.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.0.1...v3.1.0) (2022-02-11)
+
+
+### Features
+
+* **dep:** update to laravel 9 ([c3817d7](https://github.com/jetstreamlabs/jetstreampro/commit/c3817d7c46454017bb7e9a849ecf61c0b000612e))
+
+
+### Maintenance
+
+* **deps-dev:** bump @vue/compiler-sfc from 3.2.28 to 3.2.30 ([4ae45da](https://github.com/jetstreamlabs/jetstreampro/commit/4ae45da959fe6ad0aa5d1a35dd8795d9536e8368))
+* **deps-dev:** bump dotenv from 14.2.0 to 16.0.0 ([3004003](https://github.com/jetstreamlabs/jetstreampro/commit/30040037d69767952d5f72c5c5bf2d9b2291e2c5))
+* **deps-dev:** bump fakerphp/faker from 1.18.0 to 1.19.0 ([fdce88d](https://github.com/jetstreamlabs/jetstreampro/commit/fdce88d758edf242b738505d29c64e3d8f0cf3af))
+* **deps-dev:** bump laravel/sail from 1.13.1 to 1.13.2 ([2e87133](https://github.com/jetstreamlabs/jetstreampro/commit/2e871334c9f2688f92294435c647233a8b38e1e1))
+* **deps-dev:** bump phpunit/phpunit from 9.5.12 to 9.5.13 ([74e9dcc](https://github.com/jetstreamlabs/jetstreampro/commit/74e9dcc59e0f7e7b834a1742e50d54e25c397907))
+* **deps-dev:** bump spatie/laravel-ignition from 1.0.2 to 1.0.4 ([460a771](https://github.com/jetstreamlabs/jetstreampro/commit/460a771a8a87364f256ba3b68874b1e50df730dd))
+* **deps-dev:** bump styleci/cli from 1.2.1 to 1.2.2 ([502ec8e](https://github.com/jetstreamlabs/jetstreampro/commit/502ec8ee1a08a76cac5b1ef8ee95c13083b222e7))
+* **deps-dev:** bump tailwindcss from 3.0.15 to 3.0.21 ([2e2aa11](https://github.com/jetstreamlabs/jetstreampro/commit/2e2aa11bf839ce8bc736755f5d5ac644fa5def5f))
+* **deps-dev:** bump unplugin-vue-components from 0.17.14 to 0.17.18 ([e93fbad](https://github.com/jetstreamlabs/jetstreampro/commit/e93fbad94ca0ead4224cf64a8942378a3718ff10))
+* **deps:** bump @vue/server-renderer from 3.2.27 to 3.2.30 ([3d3e460](https://github.com/jetstreamlabs/jetstreampro/commit/3d3e460f6e0d0856f9f93160c0ac442de4f5869b))
+* **deps:** bump laravel/framework from 8.80.0 to 8.83.0 ([3e5d7cf](https://github.com/jetstreamlabs/jetstreampro/commit/3e5d7cfd4e7447914017ec4b8e11b5936161f6a1))
+* **deps:** bump laravel/jetstream from 2.6.2 to 2.6.5 ([fb77786](https://github.com/jetstreamlabs/jetstreampro/commit/fb777868873073334d92269a397ca4bc7dbf7d04))
+* **deps:** bump tightenco/ziggy from 1.4.2 to 1.4.3 ([45c8b92](https://github.com/jetstreamlabs/jetstreampro/commit/45c8b9232b9766253dc1c293e12e5f7364deba8b))
+* update local from pull requests ([336b03e](https://github.com/jetstreamlabs/jetstreampro/commit/336b03e254fe75f1a848e5dcd5a95114d3b190bb))
+
 ## [3.0.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.0.0...v3.0.1) (2022-01-23)
 
 
