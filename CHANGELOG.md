@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.2.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.2.0...v3.2.1) (2022-02-11)
+
+
+### Bug Fixes
+
+* update zora and code style ([463668c](https://github.com/jetstreamlabs/jetstreampro/commit/463668cc0ef8b18d56d486165a5fc2dadb32bd00))
+
 # [3.2.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.1.1...v3.2.0) (2022-02-11)
 
 
