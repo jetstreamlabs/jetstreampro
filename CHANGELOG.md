@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+# [3.2.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.1.1...v3.2.0) (2022-02-11)
+
+
+### Features
+
+* **deps:** update L9 via github compare ([8a9cc72](https://github.com/jetstreamlabs/jetstreampro/commit/8a9cc72258ef66cfab5b7926661bc8d85e4321dd))
+
 ## [3.1.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.1.0...v3.1.1) (2022-02-11)
 
 
