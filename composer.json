@@ -1,10 +1,14 @@
 {
-	"name": "laravel/laravel",
+	"name": "jetstreamlabs/jetstreampro",
 	"type": "project",
-	"description": "The Laravel Framework.",
+	"description": "Laravel Jetstream Professional. Includes Vite, Unplugin, Semantic-Release, Github-Actions and more.",
 	"keywords": [
 		"framework",
-		"laravel"
+		"laravel",
+		"vue 3",
+		"vite",
+		"unplugin",
+		"semantic-release"
 	],
 	"license": "MIT",
 	"require": {
