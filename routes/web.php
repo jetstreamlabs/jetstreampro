@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', \App\Http\Controllers\Index::class)->name('home');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
-	Route::get('/dashboard', \App\Http\Controllers\Dashboard::class)->name('dashboard');
+  Route::get('/dashboard', \App\Http\Controllers\Dashboard::class)->name('dashboard');
 });

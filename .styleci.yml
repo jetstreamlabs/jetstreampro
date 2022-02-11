@@ -1,8 +1,8 @@
 php:
   preset: laravel
-  version: 8
+  version: 8.1
   tab-width: 2
-  use-tabs: true
+  use-tabs: false
   finder:
     exclude:
       - 'public'
@@ -10,11 +10,13 @@ php:
       - 'vendor'
     name: '*.php'
     not-name:
-      - '*.blade.php'
+      - 'index.php'
+      - 'server.php'
 js:
   tab-width: 2
   use-tabs: true
   semicolons: false
+  bracket-same-line: true
   finder:
     exclude:
       - 'public'
@@ -27,3 +29,4 @@ vue:
   tab-width: 2
   use-tabs: true
   semicolons: false
+  bracket-same-line: true

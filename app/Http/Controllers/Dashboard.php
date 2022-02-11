@@ -7,8 +7,8 @@ use Inertia\Inertia;
 
 class Dashboard extends Controller
 {
-	public function __invoke(Request $request)
-	{
-		return Inertia::render('Dashboard');
-	}
+  public function __invoke(Request $request)
+  {
+    return Inertia::render('Dashboard');
+  }
 }

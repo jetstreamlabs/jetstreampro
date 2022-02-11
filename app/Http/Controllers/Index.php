@@ -8,13 +8,13 @@ use Inertia\Inertia;
 
 class Index extends Controller
 {
-	public function __invoke()
-	{
-		return Inertia::render('Welcome', [
-			'canLogin' => Route::has('login'),
-			'canRegister' => Route::has('register'),
-			'laravelVersion' => Application::VERSION,
-			'phpVersion' => PHP_VERSION,
-		]);
-	}
+  public function __invoke()
+  {
+    return Inertia::render('Welcome', [
+      'canLogin' => Route::has('login'),
+      'canRegister' => Route::has('register'),
+      'laravelVersion' => Application::VERSION,
+      'phpVersion' => PHP_VERSION,
+    ]);
+  }
 }

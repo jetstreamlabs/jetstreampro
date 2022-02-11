@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 //Route::post('/sanctum/token', [AuthenticationService::class, 'authenticate']);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-	Route::get('/me', function (Request $request) {
-		return response($request->user());
-	});
+  Route::get('/me', function (Request $request) {
+    return response($request->user());
+  });
 });
 
 Broadcast::routes(['middleware' => ['auth:sanctum']]);
