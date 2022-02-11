@@ -23,7 +23,7 @@ export default defineConfig(() => ({
     alias: {
       '@': resolve(__dirname, 'resources/js'),
       '/storage': resolve(__dirname, 'storage/app/public'),
-      vue: resolve(__dirname, 'node_modules/vue/index.js'),
+      //vue: resolve(__dirname, 'node_modules/vue/index.js'),
       ziggy: resolve(__dirname, 'vendor/tightenco/ziggy/dist/index.es.js'),
       zora: resolve(__dirname, 'vendor/jetstreamlabs/zora/dist/ssr.js'),
       composable: resolve(__dirname, 'resources/js/Composable/index.js'),
