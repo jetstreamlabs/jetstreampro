@@ -41,8 +41,7 @@ const verificationLinkSent = computed(() => {
           :href="route('logout')"
           method="post"
           has="button"
-          class="text-sm text-gray-600 underline hover:text-gray-900"
-        >
+          class="text-sm text-gray-600 underline hover:text-gray-900">
           {{ __('Log Out') }}
         </Link>
       </div>
