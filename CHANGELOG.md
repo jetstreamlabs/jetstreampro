@@ -1,5 +1,22 @@
 # Jetstream Pro Changelog
 
+# [3.3.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.2.1...v3.3.0) (2022-02-14)
+
+
+### Features
+
+* apply new asset schema ([3a02d83](https://github.com/jetstreamlabs/jetstreampro/commit/3a02d83c59ea600bfa46b2ced18468cb3b1b2ee4))
+
+
+### Maintenance
+
+* **deps-dev:** bump dotenv-expand from 6.0.1 to 8.0.1 ([7dd6158](https://github.com/jetstreamlabs/jetstreampro/commit/7dd6158b4816bc221131e651e6f9e4cf0d42b375))
+* **deps-dev:** bump vite from 2.8.0 to 2.8.1 ([a34dc14](https://github.com/jetstreamlabs/jetstreampro/commit/a34dc14793fc29ddb255522eeb842b80413532d5))
+* **dev-deps:** update tailwind vite ([6f62dbf](https://github.com/jetstreamlabs/jetstreampro/commit/6f62dbfffc1244e143230b91dc27151b4d762dbe))
+* restage package-lock ([ec098ca](https://github.com/jetstreamlabs/jetstreampro/commit/ec098ca1d8cb295ccc5fe22b78a3e2e2faa85103))
+* **style:** apply fixes from StyleCI ([f41d731](https://github.com/jetstreamlabs/jetstreampro/commit/f41d731273523d00f7e5e6804134dee383e71b11))
+* **test:** remove vue alias for ssr ([e550b16](https://github.com/jetstreamlabs/jetstreampro/commit/e550b16715a28699b4579583ee57a16bd882333b))
+
 ## [3.2.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.2.0...v3.2.1) (2022-02-11)
 
 
