@@ -50,8 +50,7 @@ const submit = () => {
           class="block w-full mt-1"
           v-model="form.password"
           required
-          autocomplete="current-password"
-        />
+          autocomplete="current-password" />
       </div>
 
       <div class="block mt-4">
@@ -65,8 +64,7 @@ const submit = () => {
         <Link
           v-if="props.canResetPassword"
           :href="route('password.request')"
-          class="text-sm text-gray-600 underline hover:text-gray-900"
-        >
+          class="text-sm text-gray-600 underline hover:text-gray-900">
           {{ __('Forgot your password?') }}
         </Link>
 
