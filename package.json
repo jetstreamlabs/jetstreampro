@@ -39,7 +39,7 @@
     "@commitlint/cli": "^16.1",
     "@commitlint/config-conventional": "^16.0",
     "@headlessui/vue": "^1.4.3",
-    "@iconify-json/heroicons-outline": "^1.0.2",
+    "@iconify-json/heroicons-outline": "^1.1.0",
     "@iconify-json/heroicons-solid": "^1.0.2",
     "@inertiajs/progress": "^0.2",
     "@semantic-release/changelog": "^6.0",
