@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.3.2](https://github.com/jetstreamlabs/jetstreampro/compare/v3.3.1...v3.3.2) (2022-02-14)
+
+
+### Bug Fixes
+
+* repair ssr dependencies ([b87f374](https://github.com/jetstreamlabs/jetstreampro/commit/b87f3745c69664788fc7d433d06da4eaf0155f64))
+
 ## [3.3.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.3.0...v3.3.1) (2022-02-14)
 
 
