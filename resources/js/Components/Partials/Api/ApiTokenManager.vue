@@ -123,8 +123,7 @@ const deleteApiToken = () => {
                   <button
                     class="ml-6 text-sm text-gray-400 underline cursor-pointer"
                     @click="manageApiTokenPermissions(token)"
-                    v-if="availablePermissions.length > 0"
-                  >
+                    v-if="availablePermissions.length > 0">
                     {{ __('Permissions') }}
                   </button>
 
@@ -150,8 +149,7 @@ const deleteApiToken = () => {
 
         <div
           class="px-4 py-2 mt-4 font-mono text-sm text-gray-500 bg-gray-100 rounded"
-          v-if="$page.props.jetstream.flash.token"
-        >
+          v-if="$page.props.jetstream.flash.token">
           {{ $page.props.jetstream.flash.token }}
         </div>
       </template>
@@ -187,8 +185,7 @@ const deleteApiToken = () => {
           class="ml-2"
           @click="updateApiToken"
           :class="{ 'opacity-25': updateApiTokenForm.processing }"
-          :disabled="updateApiTokenForm.processing"
-        >
+          :disabled="updateApiTokenForm.processing">
           {{ __('Save') }}
         </JetButton>
       </template>
@@ -211,8 +208,7 @@ const deleteApiToken = () => {
           class="ml-2"
           @click="deleteApiToken"
           :class="{ 'opacity-25': deleteApiTokenForm.processing }"
-          :disabled="deleteApiTokenForm.processing"
-        >
+          :disabled="deleteApiTokenForm.processing">
           {{ __('Delete') }}
         </JetDangerButton>
       </template>
