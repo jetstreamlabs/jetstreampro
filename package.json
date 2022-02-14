@@ -73,7 +73,7 @@
     "@inertiajs/inertia-vue3": "^0.6",
     "@inertiajs/server": "^0.1",
     "@vue/server-renderer": "^3.2",
-    "axios": "^0.25",
+    "axios": "^0.26",
     "dayjs": "^1.0",
     "lodash": "^4.0",
     "mitt": "^3.0",
