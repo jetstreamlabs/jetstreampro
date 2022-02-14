@@ -4,8 +4,6 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
-use Jetlabs\Zora\Zora;
-use Tightenco\Ziggy\Ziggy;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -41,12 +39,6 @@ class HandleInertiaRequests extends Middleware
    */
   public function share(Request $request)
   {
-    $ziggy = new Ziggy($group = null, $request->url());
-    $zora = new Zora();
-
-    return array_merge(parent::share($request), [
-      'zora' => $zora->toArray(),
-      'ziggy' => $ziggy->toArray(),
-    ]);
+    return array_merge(parent::share($request), []);
   }
 }

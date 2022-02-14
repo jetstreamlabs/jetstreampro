@@ -44,8 +44,7 @@ const updateTeamName = () => {
           type="text"
           class="block w-full mt-1"
           v-model="form.name"
-          :disabled="!permissions.canUpdateTeam"
-        />
+          :disabled="!permissions.canUpdateTeam" />
 
         <JetInput-error :message="form.errors.name" class="mt-2" />
       </div>

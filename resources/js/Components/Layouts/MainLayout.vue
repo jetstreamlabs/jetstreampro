@@ -23,27 +23,26 @@ const logout = () => {
     <JetBanner />
 
     <div class="min-h-screen bg-gray-100">
-      <nav class="bg-white border-b border-gray-100">
+      <nav class="bg-white border-b border-color-transparent">
         <!-- Primary Navigation Menu -->
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex">
               <!-- Logo -->
               <div class="flex items-center shrink-0">
-                <Link :href="route('dashboard')">
+                <Link :href="route('dashboard.show')">
                   <JetApplicationMark class="block w-auto h-9" />
                 </Link>
               </div>
 
               <!-- Navigation Links -->
               <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                <JetNavLink :href="route('dashboard.show')" :active="route().current('dashboard.show')">
                   {{ __('Dashboard') }}
                 </JetNavLink>
               </div>
             </div>
-
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <div class="hidden sm:ml-6 sm:flex sm:items-center">
               <div class="relative ml-3">
                 <!-- Teams Dropdown -->
                 <JetDropdown align="right" width="60" v-if="$page.props.jetstream.hasTeamFeatures">
@@ -51,22 +50,9 @@ const logout = () => {
                     <span class="inline-flex rounded-md">
                       <button
                         type="button"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50"
-                      >
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:bg-gray-50 hover:text-gray-700 focus:bg-gray-50 focus:outline-none active:bg-gray-50">
                         {{ $page.props.user.current_team.name }}
-
-                        <svg
-                          class="ml-2 -mr-0.5 h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
+                        <IconOutlineSelector class="ml-2 -mr-0.5 h-4 w-4" />
                       </button>
                     </span>
                   </template>
@@ -95,18 +81,9 @@ const logout = () => {
                           <form @submit.prevent="switchToTeam(team)">
                             <JetDropdownLink has="button">
                               <div class="flex items-center">
-                                <svg
+                                <IconOutlineBadgeCheck
                                   v-if="team.id == $page.props.user.current_team_id"
-                                  class="w-5 h-5 mr-2 text-green-400"
-                                  fill="none"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                                  class="w-5 h-5 mr-2 text-green-400" />
                                 <div>{{ team.name }}</div>
                               </div>
                             </JetDropdownLink>
@@ -124,34 +101,20 @@ const logout = () => {
                   <template #trigger>
                     <button
                       v-if="$page.props.jetstream.managesProfilePhotos"
-                      class="flex text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300"
-                    >
+                      class="flex text-sm transition border-2 border-transparent rounded-full focus:border-laravel-500 focus:outline-none">
                       <img
                         class="object-cover w-8 h-8 rounded-full"
                         :src="$page.props.user.profile_photo_url"
-                        :alt="$page.props.user.name"
-                      />
+                        :alt="$page.props.user.name" />
                     </button>
 
                     <span v-else class="inline-flex rounded-md">
                       <button
                         type="button"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none"
-                      >
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
                         {{ $page.props.user.name }}
 
-                        <svg
-                          class="ml-2 -mr-0.5 h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
+                        <IconOutlineChevronDown class="ml-2 -mr-0.5 h-4 w-4" />
                       </button>
                     </span>
                   </template>
@@ -181,24 +144,13 @@ const logout = () => {
             <div class="flex items-center -mr-2 sm:hidden">
               <button
                 @click="showingNavigationDropdown = !showingNavigationDropdown"
-                class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
-              >
-                <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                  <path
-                    :class="{ hidden: showingNavigationDropdown, 'inline-flex': !showingNavigationDropdown }"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                  <path
-                    :class="{ hidden: !showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:bg-gray-100 hover:text-gray-500 focus:bg-gray-100 focus:text-gray-500 focus:outline-none">
+                <IconOutlineMenu
+                  class="w-6 h-6"
+                  :class="{ hidden: showingNavigationDropdown, 'inline-flex': !showingNavigationDropdown }" />
+                <IconOutlineX
+                  class="w-6 h-6"
+                  :class="{ hidden: !showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }" />
               </button>
             </div>
           </div>
@@ -207,7 +159,7 @@ const logout = () => {
         <!-- Responsive Navigation Menu -->
         <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden">
           <div class="px-4 pt-2 pb-3 space-y-1">
-            <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+            <JetResponsiveNavLink :href="route('dashboard.show')" :active="route().current('dashboard.show')">
               {{ __('Dashboard') }}
             </JetResponsiveNavLink>
           </div>
@@ -219,8 +171,7 @@ const logout = () => {
                 <img
                   class="object-cover w-10 h-10 rounded-full"
                   :src="$page.props.user.profile_photo_url"
-                  :alt="$page.props.user.name"
-                />
+                  :alt="$page.props.user.name" />
               </div>
 
               <div>
@@ -237,8 +188,7 @@ const logout = () => {
               <JetResponsiveNavLink
                 :href="route('api-tokens.index')"
                 :active="route().current('api-tokens.index')"
-                v-if="$page.props.jetstream.hasApiFeatures"
-              >
+                v-if="$page.props.jetstream.hasApiFeatures">
                 {{ __('API Tokens') }}
               </JetResponsiveNavLink>
 
@@ -256,16 +206,14 @@ const logout = () => {
                 <!-- Team Settings -->
                 <JetResponsiveNavLink
                   :href="route('teams.show', $page.props.user.current_team)"
-                  :active="route().current('teams.show')"
-                >
+                  :active="route().current('teams.show')">
                   {{ __('Team Settings') }}
                 </JetResponsiveNavLink>
 
                 <JetResponsiveNavLink
                   :href="route('teams.create')"
                   :active="route().current('teams.create')"
-                  v-if="$page.props.jetstream.canCreateTeams"
-                >
+                  v-if="$page.props.jetstream.canCreateTeams">
                   {{ __('Create New Team') }}
                 </JetResponsiveNavLink>
 
@@ -278,18 +226,9 @@ const logout = () => {
                   <form @submit.prevent="switchToTeam(team)">
                     <JetResponsiveNavLink has="button">
                       <div class="flex items-center">
-                        <svg
+                        <IconOutlineBadgeCheck
                           v-if="team.id == $page.props.user.current_team_id"
-                          class="w-5 h-5 mr-2 text-green-400"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                          class="w-5 h-5 mr-2 text-green-400" />
                         <div>{{ team.name }}</div>
                       </div>
                     </JetResponsiveNavLink>
@@ -302,8 +241,8 @@ const logout = () => {
       </nav>
 
       <!-- Page Heading -->
-      <header class="bg-white shadow" v-if="$slots.header">
-        <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <header class="bg-gray-300" v-if="$slots.header">
+        <div class="px-4 py-6 mx-auto text-white max-w-7xl sm:px-6 lg:px-8">
           <slot name="header"></slot>
         </div>
       </header>

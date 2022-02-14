@@ -1,6 +1,6 @@
-import { usePage } from '@inertiajs/inertia-vue3'
-import route from 'ziggy'
+import route from 'ziggy-js'
+import { Ziggy } from '../ziggy.js'
 
 export default function useRoutes(name, params) {
-  return route(name, params, false, usePage().props.value.ziggy)
+  return route(name, params, false, Ziggy)
 }

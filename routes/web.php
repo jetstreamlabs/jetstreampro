@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\RouteDiscovery\Discovery\Discover;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \App\Http\Controllers\Index::class)->name('home');
+Route::get('/', \App\Http\Controllers\FrontController::class)->name('front.show');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
-  Route::get('/dashboard', \App\Http\Controllers\Dashboard::class)->name('dashboard');
+  Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)->name('dashboard.show');
 });
+
+//Discover::controllers()->in(app_path('Http/Controllers'));

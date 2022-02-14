@@ -107,34 +107,23 @@ const displayableRole = (role) => {
             <div class="relative z-0 mt-1 border border-gray-200 rounded-lg cursor-pointer">
               <button
                 type="button"
-                class="relative inline-flex w-full px-4 py-3 rounded-lg focus:z-10 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200"
+                class="relative inline-flex w-full px-4 py-3 rounded-lg focus:z-10 focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-200"
                 :class="{
-                  'border-t border-gray-200 rounded-t-none': i > 0,
+                  'rounded-t-none border-t border-gray-200': i > 0,
                   'rounded-b-none': i != Object.keys(availableRoles).length - 1,
                 }"
                 @click="addTeamMemberForm.role = role.key"
                 v-for="(role, i) in availableRoles"
-                :key="role.key"
-              >
+                :key="role.key">
                 <div :class="{ 'opacity-50': addTeamMemberForm.role && addTeamMemberForm.role != role.key }">
                   <!-- Role Name -->
                   <div class="flex items-center">
                     <div class="text-sm text-gray-600" :class="{ 'font-semibold': addTeamMemberForm.role == role.key }">
                       {{ role.name }}
                     </div>
-
-                    <svg
+                    <IconOutlineCheckCircle
                       v-if="addTeamMemberForm.role == role.key"
-                      class="w-5 h-5 ml-2 text-green-400"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
+                      class="w-5 h-5 ml-2 text-green-400" />
                   </div>
 
                   <!-- Role Description -->
@@ -180,8 +169,7 @@ const displayableRole = (role) => {
             <div
               class="flex items-center justify-between"
               v-for="invitation in team.team_invitations"
-              :key="invitation.id"
-            >
+              :key="invitation.id">
               <div class="text-gray-600">{{ invitation.email }}</div>
 
               <div class="flex items-center">
@@ -189,8 +177,7 @@ const displayableRole = (role) => {
                 <button
                   class="ml-6 text-sm text-red-500 cursor-pointer focus:outline-none"
                   @click="cancelTeamInvitation(invitation)"
-                  v-if="userPermissions.canRemoveTeamMembers"
-                >
+                  v-if="userPermissions.canRemoveTeamMembers">
                   {{ __('Cancel') }}
                 </button>
               </div>
@@ -223,8 +210,7 @@ const displayableRole = (role) => {
                 <button
                   class="ml-2 text-sm text-gray-400 underline"
                   @click="manageRole(user)"
-                  v-if="userPermissions.canAddTeamMembers && availableRoles.length"
-                >
+                  v-if="userPermissions.canAddTeamMembers && availableRoles.length">
                   {{ displayableRole(user.membership.role) }}
                 </button>
 
@@ -236,8 +222,7 @@ const displayableRole = (role) => {
                 <button
                   class="ml-6 text-sm text-red-500 cursor-pointer"
                   @click="confirmLeavingTeam"
-                  v-if="$page.props.user.id === user.id"
-                >
+                  v-if="$page.props.user.id === user.id">
                   {{ __('Leave') }}
                 </button>
 
@@ -245,8 +230,7 @@ const displayableRole = (role) => {
                 <button
                   class="ml-6 text-sm text-red-500 cursor-pointer"
                   @click="confirmTeamMemberRemoval(user)"
-                  v-if="userPermissions.canRemoveTeamMembers"
-                >
+                  v-if="userPermissions.canRemoveTeamMembers">
                   {{ __('Remove') }}
                 </button>
               </div>
@@ -265,34 +249,21 @@ const displayableRole = (role) => {
           <div class="relative z-0 mt-1 border border-gray-200 rounded-lg cursor-pointer">
             <button
               type="button"
-              class="relative inline-flex w-full px-4 py-3 rounded-lg focus:z-10 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200"
+              class="relative inline-flex w-full px-4 py-3 rounded-lg focus:z-10 focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-200"
               :class="{
-                'border-t border-gray-200 rounded-t-none': i > 0,
+                'rounded-t-none border-t border-gray-200': i > 0,
                 'rounded-b-none': i !== Object.keys(availableRoles).length - 1,
               }"
               @click="updateRoleForm.role = role.key"
               v-for="(role, i) in availableRoles"
-              :key="role.key"
-            >
+              :key="role.key">
               <div :class="{ 'opacity-50': updateRoleForm.role && updateRoleForm.role !== role.key }">
                 <!-- Role Name -->
                 <div class="flex items-center">
                   <div class="text-sm text-gray-600" :class="{ 'font-semibold': updateRoleForm.role === role.key }">
                     {{ role.name }}
                   </div>
-
-                  <svg
-                    v-if="updateRoleForm.role === role.key"
-                    class="w-5 h-5 ml-2 text-green-400"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
+                  <IconOutlineCheckCircle v-if="updateRoleForm.role === role.key" class="w-5 h-5 ml-2 text-green-400" />
                 </div>
 
                 <!-- Role Description -->
@@ -312,8 +283,7 @@ const displayableRole = (role) => {
           class="ml-2"
           @click="updateRole"
           :class="{ 'opacity-25': updateRoleForm.processing }"
-          :disabled="updateRoleForm.processing"
-        >
+          :disabled="updateRoleForm.processing">
           {{ __('Save') }}
         </JetButton>
       </template>
@@ -332,8 +302,7 @@ const displayableRole = (role) => {
           class="ml-2"
           @click="leaveTeam"
           :class="{ 'opacity-25': leaveTeamForm.processing }"
-          :disabled="leaveTeamForm.processing"
-        >
+          :disabled="leaveTeamForm.processing">
           {{ __('Leave') }}
         </JetDangerButton>
       </template>
@@ -352,8 +321,7 @@ const displayableRole = (role) => {
           class="ml-2"
           @click="removeTeamMember"
           :class="{ 'opacity-25': removeTeamMemberForm.processing }"
-          :disabled="removeTeamMemberForm.processing"
-        >
+          :disabled="removeTeamMemberForm.processing">
           {{ __('Remove') }}
         </JetDangerButton>
       </template>
