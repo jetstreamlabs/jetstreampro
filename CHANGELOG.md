@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.3.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.3.0...v3.3.1) (2022-02-14)
+
+
+### Bug Fixes
+
+* missing files ([4bdf4a1](https://github.com/jetstreamlabs/jetstreampro/commit/4bdf4a1d9795f04fe420155febff5bc004dfc455))
+
 # [3.3.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.2.1...v3.3.0) (2022-02-14)
 
 
