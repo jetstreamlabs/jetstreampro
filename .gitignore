@@ -2,6 +2,8 @@
 /public/build
 /public/render
 /public/storage
+/resources/js/ziggy.js
+/resources/js/zora.js
 /storage/*.key
 /vendor
 .env
