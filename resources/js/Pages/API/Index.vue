@@ -18,8 +18,7 @@ const props = defineProps([
         <ApiTokenManager
           :tokens="props.tokens"
           :available-permissions="props.availablePermissions"
-          :default-permissions="props.defaultPermissions"
-        />
+          :default-permissions="props.defaultPermissions" />
       </div>
     </div>
   </MainLayout>
