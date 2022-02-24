@@ -14,8 +14,7 @@ const props = defineProps(['policy'])
 
         <div
           v-html="props.policy"
-          class="w-full p-6 mt-6 overflow-hidden prose bg-white shadow-md sm:max-w-2xl sm:rounded-lg"
-        ></div>
+          class="w-full p-6 mt-6 overflow-hidden prose bg-white shadow-md sm:max-w-2xl sm:rounded-lg"></div>
       </div>
     </div>
   </div>
