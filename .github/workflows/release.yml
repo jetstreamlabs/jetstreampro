@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout main
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - name: checkout main
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: main
           fetch-depth: 0
@@ -57,7 +57,7 @@ jobs:
 
     steps:
       - name: checkout main
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: latest
 
