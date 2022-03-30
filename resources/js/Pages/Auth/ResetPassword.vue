@@ -43,8 +43,7 @@ const submit = () => {
           class="block w-full mt-1"
           v-model="form.password"
           required
-          autocomplete="new-password"
-        />
+          autocomplete="new-password" />
       </div>
 
       <div class="mt-4">
@@ -55,8 +54,7 @@ const submit = () => {
           class="block w-full mt-1"
           v-model="form.password_confirmation"
           required
-          autocomplete="new-password"
-        />
+          autocomplete="new-password" />
       </div>
 
       <div class="flex items-center justify-end mt-4">
