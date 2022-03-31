@@ -88,7 +88,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actor
-          branch: latest
           message: 'chore(deploy): deploy main code to production'
           add: '-f public/'
           push: '-f origin latest'
