@@ -3,7 +3,7 @@ name: Semantic Release Deployment
 on:
   push:
     branches:
-      - main
+      - 3.x
 
   workflow_dispatch:
 
