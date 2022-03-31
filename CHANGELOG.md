@@ -1,5 +1,21 @@
 # Jetstream Pro Changelog
 
+## [3.3.3](https://github.com/jetstreamlabs/jetstreampro/compare/v3.3.2...v3.3.3) (2022-03-31)
+
+
+### Code Refactoring
+
+* update composer dependencies ([59e43cd](https://github.com/jetstreamlabs/jetstreampro/commit/59e43cdb17e8f75d1f15433e3693bbcb361ec7a2))
+
+
+### Maintenance
+
+* **deps-dev:** bump @iconify-json/heroicons-outline ([65d208b](https://github.com/jetstreamlabs/jetstreampro/commit/65d208bc6e816df786c0d4315d6b3a3e70b7d12d))
+* **deps-dev:** bump @tailwindcss/typography from 0.5.1 to 0.5.2 ([5e89fa8](https://github.com/jetstreamlabs/jetstreampro/commit/5e89fa8486f07e5c1241d7a33b6cec671812b8d5))
+* **deps-dev:** bump vite from 2.8.1 to 2.8.2 ([8329bb0](https://github.com/jetstreamlabs/jetstreampro/commit/8329bb0f7d29a25e12bfb776b2536f1b654c3303))
+* revert index margin ([860d37f](https://github.com/jetstreamlabs/jetstreampro/commit/860d37fefbb9559c754d51366dc4bf2ad49041d1))
+* **style:** apply fixes from StyleCI ([ea07bdd](https://github.com/jetstreamlabs/jetstreampro/commit/ea07bddf4b107bc2e1df8391d9985c8eb47f1ef6))
+
 ## [3.3.2](https://github.com/jetstreamlabs/jetstreampro/compare/v3.3.1...v3.3.2) (2022-02-14)
 
 
