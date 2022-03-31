@@ -91,7 +91,6 @@ jobs:
           branch: latest
           message: 'chore(deploy): deploy main code to production'
           add: '-f public/'
-          pull: 'NO-PULL'
           push: '-f origin latest'
 
   deploy:
