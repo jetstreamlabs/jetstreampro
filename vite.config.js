@@ -22,7 +22,7 @@ export default defineConfig(({ command }) => {
       outDir: 'public/build',
       emptyOutDir: true,
       manifest: true,
-      target: 'es2018',
+      target: 'es2020',
       rollupOptions: {
         input: 'resources/js/app.js',
       },
