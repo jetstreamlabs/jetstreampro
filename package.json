@@ -54,7 +54,7 @@
     "autoprefixer": "^10.4.7",
     "dotenv": "^16.0",
     "dotenv-expand": "^8.0",
-    "husky": "^7.0",
+    "husky": "^8.0",
     "larasocket-js": "^1.0",
     "laravel-echo": "^1.11.7",
     "postcss": "^8.4.13",
