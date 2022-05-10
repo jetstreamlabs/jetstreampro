@@ -15,7 +15,7 @@
     "php": "^8.0.2",
     "fruitcake/laravel-cors": "^3.0.0",
     "guzzlehttp/guzzle": "^7.2",
-    "inertiajs/inertia-laravel": "^0.5.2",
+    "inertiajs/inertia-laravel": "^0.6.0",
     "jetstreamlabs/zora": "^3.0",
     "larasocket/larasocket-driver": "^1.0",
     "laravel/framework": "^9.1.0",
