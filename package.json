@@ -57,7 +57,7 @@
     "husky": "^8.0",
     "larasocket-js": "^1.0",
     "laravel-echo": "^1.11.7",
-    "postcss": "^8.4.13",
+    "postcss": "^8.4.14",
     "postcss-import": "^14.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
     "semantic-release": "^19.0",
