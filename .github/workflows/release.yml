@@ -15,7 +15,7 @@ jobs:
       - name: checkout 3.x
         uses: actions/checkout@v3
         with:
-          ref: '3.x'
+          ref: main
           fetch-depth: 0
 
       - name: setup node.js
