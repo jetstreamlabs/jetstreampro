@@ -12,9 +12,10 @@ jobs:
     name: Release Main
     runs-on: ubuntu-latest
     steps:
-      - name: checkout main
+      - name: checkout 3.x
         uses: actions/checkout@v3
         with:
+          ref: '3.x'
           fetch-depth: 0
 
       - name: setup node.js
@@ -36,10 +37,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout main
+      - name: checkout 3.x
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: '3.x'
           fetch-depth: 0
 
       - name: create latest branch
@@ -56,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout main
+      - name: checkout latest
         uses: actions/checkout@v3
         with:
           ref: latest
