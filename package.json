@@ -38,7 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@headlessui/vue": "^1.6.2",
+    "@headlessui/vue": "^1.6.4",
     "@iconify-json/heroicons-outline": "^1.1.0",
     "@iconify-json/heroicons-solid": "^1.1.0",
     "@inertiajs/progress": "^0.2",
