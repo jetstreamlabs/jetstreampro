@@ -8692,16 +8692,16 @@
         },
         {
             "name": "styleci/cli",
-            "version": "v1.2.3",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/CLI.git",
-                "reference": "64627433a733ff21870e64d0c9b6f6b4e8c8b1c9"
+                "reference": "5a7c57ee8efd45050cf1367f209c19930ad76ae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/CLI/zipball/64627433a733ff21870e64d0c9b6f6b4e8c8b1c9",
-                "reference": "64627433a733ff21870e64d0c9b6f6b4e8c8b1c9",
+                "url": "https://api.github.com/repos/StyleCI/CLI/zipball/5a7c57ee8efd45050cf1367f209c19930ad76ae3",
+                "reference": "5a7c57ee8efd45050cf1367f209c19930ad76ae3",
                 "shasum": ""
             },
             "require": {
@@ -8731,9 +8731,9 @@
             ],
             "description": "The CLI tool for StyleCI",
             "support": {
-                "source": "https://github.com/StyleCI/CLI/tree/v1.2.3"
+                "source": "https://github.com/StyleCI/CLI/tree/v1.3.1"
             },
-            "time": "2022-03-26T14:51:15+00:00"
+            "time": "2022-06-12T13:12:40+00:00"
         },
         {
             "name": "theseer/tokenizer",
