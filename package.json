@@ -65,7 +65,7 @@
     "unplugin-auto-import": "^0.8",
     "unplugin-icons": "^0.14.4",
     "unplugin-vue-components": "^0.19",
-    "vite": "^2.9.9",
+    "vite": "^2.9.12",
     "vue-loader": "^17.0",
     "ziggy-js": "^1.4.6"
   },
