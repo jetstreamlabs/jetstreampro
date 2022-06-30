@@ -64,7 +64,7 @@
     "tailwindcss": "^3.1",
     "unplugin-auto-import": "^0.9",
     "unplugin-icons": "^0.14.7",
-    "unplugin-vue-components": "^0.19",
+    "unplugin-vue-components": "^0.20",
     "vite": "^2.9.13",
     "vue-loader": "^17.0",
     "ziggy-js": "^1.4.6"
