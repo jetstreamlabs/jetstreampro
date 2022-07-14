@@ -3,7 +3,7 @@ name: Semantic Release Deployment
 on:
   push:
     branches:
-      - 3.x
+      - main
 
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ jobs:
     name: Release Main
     runs-on: ubuntu-latest
     steps:
-      - name: checkout 3.x
+      - name: checkout main
         uses: actions/checkout@v3
         with:
           ref: main
@@ -37,10 +37,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout 3.x
+      - name: checkout main
         uses: actions/checkout@v3
         with:
-          ref: '3.x'
+          ref: 'main'
           fetch-depth: 0
 
       - name: create latest branch
@@ -82,7 +82,7 @@ jobs:
           node-version: 'lts/*'
 
       - run: npm install
-      - run: npm run build --force
+      - run: npm run prod --force
       - run: npm run ssr --force
 
       - name: commit assets to branch

@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "npm run build:assets && vite",
-    "prod": "npm run build",
-    "build": "npm run build:assets && vite build",
+    "build": "npm run build",
+    "prod": "npm run build:assets && vite build",
     "ssr": "vite build --config vite.ssr.config.js",
     "start": "node public/render/ssr.js",
     "kill": "kill -9 $(lsof -ti:3000)",
