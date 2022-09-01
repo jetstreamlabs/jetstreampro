@@ -53,7 +53,7 @@
     "@vue/compiler-sfc": "^3.2",
     "autoprefixer": "^10.4.8",
     "dotenv": "^16.0",
-    "dotenv-expand": "^8.0",
+    "dotenv-expand": "^9.0",
     "husky": "^8.0",
     "larasocket-js": "^1.0",
     "laravel-echo": "^1.13.1",
