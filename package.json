@@ -36,7 +36,7 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
+    "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.0.3",
     "@headlessui/vue": "^1.6.7",
     "@iconify-json/heroicons-outline": "^1.1.2",
@@ -57,7 +57,7 @@
     "husky": "^8.0",
     "larasocket-js": "^1.0",
     "laravel-echo": "^1.13.1",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "postcss-import": "^14.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "semantic-release": "^19.0",
