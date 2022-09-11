@@ -5,7 +5,7 @@ import '../css/app.css'
 import { createJetstreamApp } from '@/Application'
 import { InertiaProgress } from '@inertiajs/progress'
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Jetstream Pro'
+const appName = import.meta.env.VITE_APP_NAME
 
 createJetstreamApp({ appName: appName })
 

@@ -7,7 +7,7 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
     
-    {{ vite_assets() }}
+    @vite('resources/js/app.js')
     @inertiaHead 
   </head>
   <body class="font-sans antialiased">
