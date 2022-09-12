@@ -8,12 +8,36 @@ on:
   workflow_dispatch:
 
 jobs:
+  release:
+    name: Release Main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Main
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 'lts/*'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.VERAN }}
+        run: npx semantic-release
+
   create:
     name: Create New Branch
+    needs: [release]
     runs-on: ubuntu-latest
 
     steps:
-      - name: create latest branch
+      - name: Create Latest Branch
         uses: peterjgrainger/action-create-branch@v2.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.VERAN }}
@@ -23,30 +47,30 @@ jobs:
 
   compile:
     name: Craft Jetstream App
-    needs: [create]
+    needs: [create, release]
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout latest
+      - name: Checkout Latest
         uses: actions/checkout@v3
         with:
           ref: latest
 
-      - name: generate .env file
+      - name: Generate .env File
         run: echo "${{ secrets.MAIN_ENV }}" > .env
 
       - run: sudo chown -R $(id -u):$(id -g) .env
       - run: chmod -R 777 storage bootstrap/cache
 
-      - name: install php
+      - name: Install PHP
         uses: shivammathur/setup-php@master
         with:
           php-version: '8.1'
 
-      - name: install composer dependencies
+      - name: Install Composer Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-      - name: install node and npm
+      - name: Install Node
         uses: actions/setup-node@v3.4.1
         with:
           node-version: 'lts/*'
@@ -54,7 +78,7 @@ jobs:
       - run: npm install
       - run: npm run prod --force
 
-      - name: commit assets to branch
+      - name: Commit Assets to Latest
         uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actor
@@ -64,11 +88,11 @@ jobs:
 
   deploy:
     name: Deploy to Laravel Forge
-    needs: [compile, create]
+    needs: [compile, create, release]
     runs-on: ubuntu-latest
 
     steps:
-      - name: deploy production code
+      - name: Deploy Production Code
         uses: jbrooksuk/laravel-forge-action@v1.0.2
         with:
           api_key: ${{ secrets.FID }}
@@ -77,11 +101,11 @@ jobs:
 
   remove:
     name: Remove Latest Branch
-    needs: [deploy, compile, create]
+    needs: [deploy, compile, create, release]
     runs-on: ubuntu-latest
 
     steps:
-      - name: delete branch
+      - name: Delete Latest
         uses: dawidd6/action-delete-branch@v3
         with:
           github_token: ${{ secrets.VERAN }}
