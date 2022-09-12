@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.5.3](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.2...v3.5.3) (2022-09-12)
+
+
+### Bug Fixes
+
+* dependabot workflow resolves [#310](https://github.com/jetstreamlabs/jetstreampro/issues/310) ([24ce5bf](https://github.com/jetstreamlabs/jetstreampro/commit/24ce5bfea67deb1bbcbf8a4a673ecab08b087516))
+
 ## [3.5.2](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.1...v3.5.2) (2022-09-12)
 
 
