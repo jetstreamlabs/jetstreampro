@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.5.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.0...v3.5.1) (2022-09-12)
+
+
+### Code Refactoring
+
+* new db migrations ([fbee937](https://github.com/jetstreamlabs/jetstreampro/commit/fbee937a9f6f9dace9e6b2a7be359552764c194c))
+
 # [3.5.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.4.0...v3.5.0) (2022-09-12)
 
 
