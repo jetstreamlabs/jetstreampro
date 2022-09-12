@@ -1,5 +1,82 @@
 # Jetstream Pro Changelog
 
+# [3.5.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.4.0...v3.5.0) (2022-09-12)
+
+
+### Code Refactoring
+
+* **deps:** change workflow to manage main ([559dac7](https://github.com/jetstreamlabs/jetstreampro/commit/559dac7989356e6669344804758b0164b26042bd))
+* **deps:** update dpbot flow and deps ([308a660](https://github.com/jetstreamlabs/jetstreampro/commit/308a660ee7fbaa3f6e279e39c171f38c5c87713e))
+
+
+### Features
+
+* update ssr location ([10728d2](https://github.com/jetstreamlabs/jetstreampro/commit/10728d20e36170528b22cb60f0b92cf6ed358720))
+* upgrade vite and ssr ([43fc27d](https://github.com/jetstreamlabs/jetstreampro/commit/43fc27da44f2d350205819f73c5115008b09526b))
+
+
+### Maintenance
+
+* **deps-dev:** bump @commitlint/cli from 17.0.3 to 17.1.2 ([2713141](https://github.com/jetstreamlabs/jetstreampro/commit/2713141590865429d41b43b601331c297bb8007a))
+* **deps-dev:** bump @commitlint/config-conventional ([5142f88](https://github.com/jetstreamlabs/jetstreampro/commit/5142f881e73e19e8e1fd6b64f437110c1ac5f0ac))
+* **deps-dev:** bump @headlessui/vue from 1.6.7 to 1.7.0 ([d1808e6](https://github.com/jetstreamlabs/jetstreampro/commit/d1808e6be720a122de70db19bc8fca3b56871195))
+* **deps-dev:** bump @iconify-json/heroicons-outline ([0ff243f](https://github.com/jetstreamlabs/jetstreampro/commit/0ff243f025addd3d151858201269d457685f92d9))
+* **deps-dev:** bump @iconify-json/heroicons-solid from 1.1.2 to 1.1.5 ([d81cbd6](https://github.com/jetstreamlabs/jetstreampro/commit/d81cbd6ebbc9acd39dd9d40f9c4bd3010d62888d))
+* **deps-dev:** bump @tailwindcss/aspect-ratio from 0.4.0 to 0.4.1 ([d3d7480](https://github.com/jetstreamlabs/jetstreampro/commit/d3d7480a3a9c7b6add1e349a3eec67f221d6fd61))
+* **deps-dev:** bump @tailwindcss/aspect-ratio from 0.4.1 to 0.4.2 ([eb96580](https://github.com/jetstreamlabs/jetstreampro/commit/eb965806a5eed3db2e49190332311a6e0fd1ddcb))
+* **deps-dev:** bump @tailwindcss/forms from 0.5.2 to 0.5.3 ([869af78](https://github.com/jetstreamlabs/jetstreampro/commit/869af785aea4c89f01f1b4d61a95f28183a5bb9b))
+* **deps-dev:** bump @tailwindcss/line-clamp from 0.4.0 to 0.4.1 ([24bbc8f](https://github.com/jetstreamlabs/jetstreampro/commit/24bbc8fe4fde8ab9ad35aa59dc596247ba6ec1be))
+* **deps-dev:** bump @tailwindcss/line-clamp from 0.4.1 to 0.4.2 ([95b0104](https://github.com/jetstreamlabs/jetstreampro/commit/95b01049a2ca9ff16d2df04bef1cf391d6f6f3bd))
+* **deps-dev:** bump @tailwindcss/typography from 0.5.4 to 0.5.6 ([77d356a](https://github.com/jetstreamlabs/jetstreampro/commit/77d356a89fbd5eacee5eda0df8ea74329820dc58))
+* **deps-dev:** bump @tailwindcss/typography from 0.5.6 to 0.5.7 ([91e33c5](https://github.com/jetstreamlabs/jetstreampro/commit/91e33c53a06f678bbab64d8f85d72db6880d5519))
+* **deps-dev:** bump @vitejs/plugin-vue from 2.3.3 to 2.3.4 ([7cfe35f](https://github.com/jetstreamlabs/jetstreampro/commit/7cfe35f8706763e0449a521b6f242cc38c975a3f))
+* **deps-dev:** bump autoprefixer from 10.4.7 to 10.4.8 ([09a3c05](https://github.com/jetstreamlabs/jetstreampro/commit/09a3c05b8d3dec651346f4320fe5c8f59b5f2832))
+* **deps-dev:** bump dotenv from 16.0.1 to 16.0.2 ([c7b6ca8](https://github.com/jetstreamlabs/jetstreampro/commit/c7b6ca8e8d06834d27376963cb4fc10a6a90d1f0))
+* **deps-dev:** bump dotenv-expand from 8.0.3 to 9.0.0 ([0abc302](https://github.com/jetstreamlabs/jetstreampro/commit/0abc302ad8525ec10f2cd4f9ffdcfc0d436696ab))
+* **deps-dev:** bump fakerphp/faker from 1.19.0 to 1.20.0 ([46f9930](https://github.com/jetstreamlabs/jetstreampro/commit/46f993041243d55dd38fa166378063cc72325ca5))
+* **deps-dev:** bump laravel-echo from 1.12.1 to 1.13.0 ([0be2f8f](https://github.com/jetstreamlabs/jetstreampro/commit/0be2f8ff54fccde3797cd0f483dc57bccea75f09))
+* **deps-dev:** bump laravel-echo from 1.13.0 to 1.13.1 ([1ac8dd2](https://github.com/jetstreamlabs/jetstreampro/commit/1ac8dd238a20a25e94fc250c95c7dce6162c8711))
+* **deps-dev:** bump laravel-echo from 1.13.1 to 1.14.0 ([2394b13](https://github.com/jetstreamlabs/jetstreampro/commit/2394b13b72de178887150f2022068f6440ceea42))
+* **deps-dev:** bump laravel/sail from 1.15.0 to 1.15.1 ([6e2c2f5](https://github.com/jetstreamlabs/jetstreampro/commit/6e2c2f56f33cf32d88284e9e7fbc05603fb742a0))
+* **deps-dev:** bump laravel/sail from 1.15.1 to 1.15.4 ([ae8d011](https://github.com/jetstreamlabs/jetstreampro/commit/ae8d01128b3d456866582d0c2d9039d468e7bb4d))
+* **deps-dev:** bump laravel/sail from 1.15.4 to 1.16.0 ([ae4183e](https://github.com/jetstreamlabs/jetstreampro/commit/ae4183e250a733c82b303d5474cb21e01c7ced8f))
+* **deps-dev:** bump mockery/mockery from 1.5.0 to 1.5.1 ([6be7821](https://github.com/jetstreamlabs/jetstreampro/commit/6be7821660e54b4761c5faa7a636b1fced5db9e9))
+* **deps-dev:** bump phpunit/phpunit from 9.5.21 to 9.5.23 ([f25ebca](https://github.com/jetstreamlabs/jetstreampro/commit/f25ebca276283256ab67325286292f8ce829f80f))
+* **deps-dev:** bump postcss from 8.4.14 to 8.4.16 ([76e5288](https://github.com/jetstreamlabs/jetstreampro/commit/76e528827542124e18986cf225eb97035fedbe12))
+* **deps-dev:** bump postcss-import from 14.1.0 to 15.0.0 ([c5fb01f](https://github.com/jetstreamlabs/jetstreampro/commit/c5fb01f5273dbb036e3c5801afc2f1366c65d191))
+* **deps-dev:** bump prettier-plugin-tailwindcss from 0.1.12 to 0.1.13 ([9d95f54](https://github.com/jetstreamlabs/jetstreampro/commit/9d95f54adf475dfc40d1520936465a479e7d8364))
+* **deps-dev:** bump semantic-release from 19.0.3 to 19.0.5 ([a8e216f](https://github.com/jetstreamlabs/jetstreampro/commit/a8e216fbbc68a96124efa42d51d9043fae5f32db))
+* **deps-dev:** bump spatie/laravel-ignition from 1.3.1 to 1.4.1 ([b6ca3eb](https://github.com/jetstreamlabs/jetstreampro/commit/b6ca3ebf473765c93c3a13cbaa24ab2944b24ade))
+* **deps-dev:** bump tailwindcss from 3.1.6 to 3.1.7 ([9026819](https://github.com/jetstreamlabs/jetstreampro/commit/9026819509286e2ed494db80c59059557cc88360))
+* **deps-dev:** bump tailwindcss from 3.1.7 to 3.1.8 ([516e957](https://github.com/jetstreamlabs/jetstreampro/commit/516e957bf4facc50c7b5cbaba3e7f2b82c4d053e))
+* **deps-dev:** bump unplugin-auto-import from 0.10.2 to 0.10.3 ([75629a7](https://github.com/jetstreamlabs/jetstreampro/commit/75629a79f55748d22fe9cf0841afc22ff7042b00))
+* **deps-dev:** bump unplugin-auto-import from 0.10.3 to 0.11.0 ([aef28f5](https://github.com/jetstreamlabs/jetstreampro/commit/aef28f5f56806ce02c0d0883ccaa07e566a30210))
+* **deps-dev:** bump unplugin-auto-import from 0.11.1 to 0.11.2 ([e64b237](https://github.com/jetstreamlabs/jetstreampro/commit/e64b2370917d41fda68988e05065bf8d11b017f2))
+* **deps-dev:** bump unplugin-auto-import from 0.9.2 to 0.9.3 ([39f710e](https://github.com/jetstreamlabs/jetstreampro/commit/39f710e8435fe3405ef7a7073aaf5390e1327955))
+* **deps-dev:** bump unplugin-auto-import from 0.9.3 to 0.10.2 ([807001e](https://github.com/jetstreamlabs/jetstreampro/commit/807001e10771e76368184449578991d3e1aafdab))
+* **deps-dev:** bump unplugin-icons from 0.14.7 to 0.14.8 ([2ba7397](https://github.com/jetstreamlabs/jetstreampro/commit/2ba7397cdfb311709ec64e5467d76916f7d3f61b))
+* **deps-dev:** bump unplugin-icons from 0.14.8 to 0.14.9 ([1e299a8](https://github.com/jetstreamlabs/jetstreampro/commit/1e299a8b850dd903d07ee9cba53bc13213769b95))
+* **deps-dev:** bump unplugin-vue-components from 0.21.1 to 0.21.2 ([1ed6c81](https://github.com/jetstreamlabs/jetstreampro/commit/1ed6c819dc7e1af455d04a24bea04ffa5c427c2d))
+* **deps-dev:** bump unplugin-vue-components from 0.21.2 to 0.22.0 ([6be28ff](https://github.com/jetstreamlabs/jetstreampro/commit/6be28ff903038f3cac5c6bca48a494bddf1ae2f8))
+* **deps-dev:** bump unplugin-vue-components from 0.22.0 to 0.22.4 ([9d28895](https://github.com/jetstreamlabs/jetstreampro/commit/9d288956589f5c96f94829cd9ff6854c30de47d0))
+* **deps:** bump @vue/server-renderer from 3.2.37 to 3.2.38 ([1efe465](https://github.com/jetstreamlabs/jetstreampro/commit/1efe46535139f1594dd4cd1be4a7c44395061023))
+* **deps:** bump @vue/server-renderer from 3.2.38 to 3.2.39 ([b56a795](https://github.com/jetstreamlabs/jetstreampro/commit/b56a79529ea7494832a02910768fcf044f01cd39))
+* **deps:** bump actions/setup-node from 3.4.0 to 3.4.1 ([b580dcf](https://github.com/jetstreamlabs/jetstreampro/commit/b580dcffe234ccb950b0a44156af77d3be66ec5f))
+* **deps:** bump dayjs from 1.11.3 to 1.11.4 ([c0c2dd1](https://github.com/jetstreamlabs/jetstreampro/commit/c0c2dd1bd8754f8ff0f9e0751431c6c24a1db0d5))
+* **deps:** bump dayjs from 1.11.4 to 1.11.5 ([2be1566](https://github.com/jetstreamlabs/jetstreampro/commit/2be156632d12be79c9feec3a4e2736ced1e32cf4))
+* **deps:** bump laravel/framework from 9.20.0 to 9.22.1 ([903b2b4](https://github.com/jetstreamlabs/jetstreampro/commit/903b2b4a0a25d45cbb6c053aea989035a64167f9))
+* **deps:** bump laravel/framework from 9.25.1 to 9.27.0 ([0a49fdb](https://github.com/jetstreamlabs/jetstreampro/commit/0a49fdbb00dec1d344ad501597c836d383eca154))
+* **deps:** bump laravel/jetstream from 2.10.0 to 2.10.2 ([04ff700](https://github.com/jetstreamlabs/jetstreampro/commit/04ff700bc0a2414bbc3b481b6ed1183c6f50e18b))
+* **deps:** bump laravel/jetstream from 2.10.2 to 2.10.3 ([05a770e](https://github.com/jetstreamlabs/jetstreampro/commit/05a770e60d009e17cf99342995358a98515cd713))
+* **deps:** bump laravel/jetstream from 2.10.3 to 2.11.2 ([d507ac7](https://github.com/jetstreamlabs/jetstreampro/commit/d507ac77072dbf4f7e279c48e1489339e8048daa))
+* **deps:** bump laravel/jetstream from 2.11.2 to 2.12.0 ([6d0b574](https://github.com/jetstreamlabs/jetstreampro/commit/6d0b5749a9d6a900963c424b2a4f1e4ba4c89953))
+* **deps:** bump laravel/sanctum from 2.15.1 to 3.0.0 ([7fd3647](https://github.com/jetstreamlabs/jetstreampro/commit/7fd3647ce4add711d3753b477bbf2bbbec0326df))
+* **deps:** bump laravel/sanctum from 3.0.0 to 3.0.1 ([a76daba](https://github.com/jetstreamlabs/jetstreampro/commit/a76daba7c0c120f17e05b536f53b610a94a45af2))
+* **dev-deps:** apply dpbot updates ([fdda021](https://github.com/jetstreamlabs/jetstreampro/commit/fdda0217863a1a738eec7afa9525b838fce6c6d9))
+* **dev-deps:** dependabot updates ([ae451fe](https://github.com/jetstreamlabs/jetstreampro/commit/ae451fe18e2064e41b027301cf7f1fe547cad05c))
+* **dev-deps:** dependabot weekly updates ([2dcba96](https://github.com/jetstreamlabs/jetstreampro/commit/2dcba964ebb86b8e0715b7e21a6be3c14b7d5191))
+* update workflow to release on develop ([646eb70](https://github.com/jetstreamlabs/jetstreampro/commit/646eb70489fcbf494501d680111bb405bfd84e3f))
+
 # [3.4.0](https://github.com/jetstreamlabs/jetstreampro/compare/v3.3.3...v3.4.0) (2022-07-14)
 
 
