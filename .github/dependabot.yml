@@ -1,21 +1,21 @@
 version: 2
 updates:
   - package-ecosystem: 'github-actions'
-    target-branch: 'develop'
+    target-branch: 'main'
     directory: '/'
     schedule:
       interval: 'weekly'
       day: 'saturday'
 
   - package-ecosystem: 'npm'
-    target-branch: 'develop'
+    target-branch: 'main'
     directory: '/'
     schedule:
       interval: 'weekly'
       day: 'saturday'
 
   - package-ecosystem: 'composer'
-    target-branch: 'develop'
+    target-branch: 'main'
     directory: '/'
     schedule:
       interval: 'weekly'
