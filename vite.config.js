@@ -20,6 +20,7 @@ export default defineConfig(({ command }) => {
       laravel({
         input: 'resources/js/app.js',
         ssr: 'resources/js/ssr.js',
+        ssrOutputDirectory: 'public/ssr',
         refresh: true,
       }),
       Vue({

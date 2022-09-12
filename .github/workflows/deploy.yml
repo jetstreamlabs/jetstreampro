@@ -59,7 +59,7 @@ jobs:
         with:
           default_author: github_actor
           message: 'chore(deploy): deploy main code to production'
-          add: '["-f public/", "-f bootstrap/"]'
+          add: '-f public/'
           push: '-f origin latest'
 
   deploy:

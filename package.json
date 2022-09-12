@@ -5,7 +5,7 @@
     "build": "npm run build",
     "prod": "npm run build:assets && vite build && vite build --ssr",
     "ssr": "vite build --ssr",
-    "start": "node bootstrap/ssr/ssr.mjs",
+    "start": "node public/ssr/ssr.mjs",
     "kill": "kill -9 $(lsof -ti:3000)",
     "lint": "php ./vendor/bin/styleci analyze -c",
     "build:assets": "php artisan ziggy:generate && php artisan zora:generate"

@@ -1,6 +1,6 @@
 /node_modules
 /public/build
-/public/render
+/public/ssr
 /public/storage
 /resources/js/ziggy.js
 /resources/js/zora.js
@@ -15,4 +15,3 @@ yarn-error.log
 /.idea
 /.vscode
 .DS_Store
-/bootstrap/ssr
