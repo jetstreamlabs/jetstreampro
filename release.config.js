@@ -76,7 +76,7 @@ const releaseNotesGeneratorOptions = {
 
 module.exports = {
   debug: true,
-  branches: ['main'],
+  branches: ['develop'],
   repositoryUrl: 'https://github.com/jetstreamlabs/jetstreampro',
 
   plugins: [
