@@ -1,5 +1,13 @@
 # Jetstream Pro Changelog
 
+## [3.5.2](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.1...v3.5.2) (2022-09-12)
+
+
+### Code Refactoring
+
+* sr auth token ([715014a](https://github.com/jetstreamlabs/jetstreampro/commit/715014a49307f51723fc2338851ef8231c7a0e4e))
+* update workflow ([4fc2323](https://github.com/jetstreamlabs/jetstreampro/commit/4fc23237d32d0ee8557280db4b0ccb85750a6bbb))
+
 ## [3.5.1](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.0...v3.5.1) (2022-09-12)
 
 
