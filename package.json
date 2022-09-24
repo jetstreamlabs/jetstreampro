@@ -80,6 +80,6 @@
     "unplugin-vue-components": "^0.22.7",
     "vite": "^3.1.2",
     "vue-loader": "^17.0.0",
-    "ziggy-js": "^1.4.6"
+    "ziggy-js": "^1.5.0"
   }
 }
