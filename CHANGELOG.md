@@ -1,5 +1,12 @@
 # Jetstream Pro Changelog
 
+## [3.5.5](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.4...v3.5.5) (2022-10-11)
+
+
+### Bug Fixes
+
+* remove flowbite plugin ([8b375a0](https://github.com/jetstreamlabs/jetstreampro/commit/8b375a02c6d0a64dc1b6929b620e00cf9db4c529))
+
 ## [3.5.4](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.3...v3.5.4) (2022-10-11)
 
 
