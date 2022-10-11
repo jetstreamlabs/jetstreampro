@@ -18,9 +18,9 @@ const submit = () => {
 <template>
   <Head :title="__('Forgot Password')" />
 
-  <JetAuthenticationCard>
+  <AuthenticationCard>
     <template #logo>
-      <JetAuthenticationCard-logo />
+      <AuthenticationCard-logo />
     </template>
 
     <div class="mb-4 text-sm text-gray-600">
@@ -35,19 +35,19 @@ const submit = () => {
       {{ props.status }}
     </div>
 
-    <JetValidationErrors class="mb-4" />
+    <ValidationErrors class="mb-4" />
 
     <form @submit.prevent="submit">
       <div>
-        <JetLabel for="email" :value="__('Email')" />
-        <JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
+        <Label for="email" :value="__('Email')" />
+        <Input id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
       </div>
 
       <div class="flex items-center justify-end mt-4">
-        <JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        <Button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
           {{ __('Email Password Reset Link') }}
-        </JetButton>
+        </Button>
       </div>
     </form>
-  </JetAuthenticationCard>
+  </AuthenticationCard>
 </template>

@@ -22,22 +22,22 @@ const submit = () => {
 <template>
   <Head :title="__('Reset Password')" />
 
-  <JetAuthenticationCard>
+  <AuthenticationCard>
     <template #logo>
-      <JetAuthenticationCard-logo />
+      <AuthenticationCard-logo />
     </template>
 
-    <JetValidationErrors class="mb-4" />
+    <ValidationErrors class="mb-4" />
 
     <form @submit.prevent="submit">
       <div>
-        <JetLabel for="email" :value="__('Email')" />
-        <JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
+        <Label for="email" :value="__('Email')" />
+        <Input id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
       </div>
 
       <div class="mt-4">
-        <JetLabel for="password" :value="__('Password')" />
-        <JetInput
+        <Label for="password" :value="__('Password')" />
+        <Input
           id="password"
           type="password"
           class="block w-full mt-1"
@@ -47,8 +47,8 @@ const submit = () => {
       </div>
 
       <div class="mt-4">
-        <JetLabel for="password_confirmation" :value="__('Confirm Password')" />
-        <JetInput
+        <Label for="password_confirmation" :value="__('Confirm Password')" />
+        <Input
           id="password_confirmation"
           type="password"
           class="block w-full mt-1"
@@ -58,10 +58,10 @@ const submit = () => {
       </div>
 
       <div class="flex items-center justify-end mt-4">
-        <JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        <Button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
           {{ __('Reset Password') }}
-        </JetButton>
+        </Button>
       </div>
     </form>
-  </JetAuthenticationCard>
+  </AuthenticationCard>
 </template>

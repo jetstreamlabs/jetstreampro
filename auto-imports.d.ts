@@ -61,6 +61,7 @@ declare global {
   const useRoutes: typeof import('composable')['useRoutes']
   const useSlots: typeof import('vue')['useSlots']
   const useStore: typeof import('vuex')['useStore']
+  const useToasts: typeof import('flowbite-vue')['useToasts']
   const useTrans: typeof import('composable')['useTrans']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']

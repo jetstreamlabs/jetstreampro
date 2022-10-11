@@ -32,9 +32,9 @@ defineExpose({ code, recovery_code })
 <template>
   <Head :title="__('Two-factor Confirmation')" />
 
-  <JetAuthenticationCard>
+  <AuthenticationCard>
     <template #logo>
-      <JetAuthenticationCard-logo />
+      <AuthenticationCard-logo />
     </template>
 
     <div class="mb-4 text-sm text-gray-600">
@@ -51,12 +51,12 @@ defineExpose({ code, recovery_code })
       </template>
     </div>
 
-    <JetValidationErrors class="mb-4" />
+    <ValidationErrors class="mb-4" />
 
     <form @submit.prevent="submit">
       <div v-if="!recovery">
-        <JetLabel for="code" :value="__('Code')" />
-        <JetInput
+        <Label for="code" :value="__('Code')" />
+        <Input
           ref="code"
           id="code"
           type="text"
@@ -68,8 +68,8 @@ defineExpose({ code, recovery_code })
       </div>
 
       <div v-else>
-        <JetLabel for="recovery_code" :value="__('Recovery Code')" />
-        <JetInput
+        <Label for="recovery_code" :value="__('Recovery Code')" />
+        <Input
           ref="recovery_code"
           id="recovery_code"
           type="text"
@@ -87,10 +87,10 @@ defineExpose({ code, recovery_code })
           <template v-else>{{ __('Use an authentication code') }}</template>
         </button>
 
-        <JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
           {{ __('Login') }}
-        </JetButton>
+        </Button>
       </div>
     </form>
-  </JetAuthenticationCard>
+  </AuthenticationCard>
 </template>

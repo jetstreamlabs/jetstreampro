@@ -66,7 +66,7 @@ defineExpose({ password })
       <slot />
     </span>
 
-    <JetDialogModal :show="confirmingPassword" @close="closeModal">
+    <DialogModal :show="confirmingPassword" @close="closeModal">
       <template #title>
         {{ title }}
       </template>
@@ -75,7 +75,7 @@ defineExpose({ password })
         {{ content }}
 
         <div class="mt-4">
-          <JetInput
+          <Input
             type="password"
             class="block w-3/4 mt-1"
             placeholder="Password"
@@ -83,21 +83,21 @@ defineExpose({ password })
             v-model="form.password"
             @keyup.enter="confirmPassword" />
 
-          <JetInput-error :message="form.error" class="mt-2" />
+          <Input-error :message="form.error" class="mt-2" />
         </div>
       </template>
 
       <template #footer>
-        <JetSecondaryButton @click="closeModal">{{ __('Cancel') }}</JetSecondaryButton>
+        <SecondaryButton @click="closeModal">{{ __('Cancel') }}</SecondaryButton>
 
-        <JetButton
+        <Button
           class="ml-2"
           @click="confirmPassword"
           :class="{ 'opacity-25': form.processing }"
           :disabled="form.processing">
           {{ button }}
-        </JetButton>
+        </Button>
       </template>
-    </JetDialogModal>
+    </DialogModal>
   </span>
 </template>

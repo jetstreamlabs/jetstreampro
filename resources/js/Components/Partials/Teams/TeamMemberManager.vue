@@ -75,10 +75,10 @@ const displayableRole = (role) => {
 <template>
   <div>
     <div v-if="userPermissions.canAddTeamMembers">
-      <JetSectionBorder />
+      <SectionBorder />
 
       <!-- Add Team Member -->
-      <JetFormSection @submitted="addTeamMember">
+      <FormSection @submitted="addTeamMember">
         <template #title> {{ __('Add Team Member') }} </template>
 
         <template #description>
@@ -94,15 +94,15 @@ const displayableRole = (role) => {
 
           <!-- Member Email -->
           <div class="col-span-6 sm:col-span-4">
-            <JetLabel for="email" value="Email" />
-            <JetInput id="email" type="email" class="block w-full mt-1" v-model="addTeamMemberForm.email" />
-            <JetInput-error :message="addTeamMemberForm.errors.email" class="mt-2" />
+            <Label for="email" value="Email" />
+            <Input id="email" type="email" class="block w-full mt-1" v-model="addTeamMemberForm.email" />
+            <Input-error :message="addTeamMemberForm.errors.email" class="mt-2" />
           </div>
 
           <!-- Role -->
           <div class="col-span-6 lg:col-span-4" v-if="availableRoles.length > 0">
-            <JetLabel for="roles" value="Role" />
-            <JetInput-error :message="addTeamMemberForm.errors.role" class="mt-2" />
+            <Label for="roles" value="Role" />
+            <Input-error :message="addTeamMemberForm.errors.role" class="mt-2" />
 
             <div class="relative z-0 mt-1 border border-gray-200 rounded-lg cursor-pointer">
               <button
@@ -137,22 +137,20 @@ const displayableRole = (role) => {
         </template>
 
         <template #actions>
-          <JetActionMessage :on="addTeamMemberForm.recentlySuccessful" class="mr-3">
-            {{ __('Added') }}.
-          </JetActionMessage>
+          <ActionMessage :on="addTeamMemberForm.recentlySuccessful" class="mr-3"> {{ __('Added') }}. </ActionMessage>
 
-          <JetButton :class="{ 'opacity-25': addTeamMemberForm.processing }" :disabled="addTeamMemberForm.processing">
+          <Button :class="{ 'opacity-25': addTeamMemberForm.processing }" :disabled="addTeamMemberForm.processing">
             {{ __('Add') }}
-          </JetButton>
+          </Button>
         </template>
-      </JetFormSection>
+      </FormSection>
     </div>
 
     <div v-if="team.team_invitations.length > 0 && userPermissions.canAddTeamMembers">
-      <JetSectionBorder />
+      <SectionBorder />
 
       <!-- Team Member Invitations -->
-      <JetActionSection class="mt-10 sm:mt-0">
+      <ActionSection class="mt-10 sm:mt-0">
         <template #title> {{ __('Pending Team Invitations') }} </template>
 
         <template #description>
@@ -184,14 +182,14 @@ const displayableRole = (role) => {
             </div>
           </div>
         </template>
-      </JetActionSection>
+      </ActionSection>
     </div>
 
     <div v-if="team.users.length > 0">
-      <JetSectionBorder />
+      <SectionBorder />
 
       <!-- Manage Team Members -->
-      <JetActionSection class="mt-10 sm:mt-0">
+      <ActionSection class="mt-10 sm:mt-0">
         <template #title> {{ __('Team Members') }} </template>
 
         <template #description> {{ __('All of the people that are part of this team.') }} </template>
@@ -237,11 +235,11 @@ const displayableRole = (role) => {
             </div>
           </div>
         </template>
-      </JetActionSection>
+      </ActionSection>
     </div>
 
     <!-- Role Management Modal -->
-    <JetDialogModal :show="currentlyManagingRole" @close="currentlyManagingRole = false">
+    <DialogModal :show="currentlyManagingRole" @close="currentlyManagingRole = false">
       <template #title> {{ __('Manage Role') }} </template>
 
       <template #content>
@@ -277,54 +275,54 @@ const displayableRole = (role) => {
       </template>
 
       <template #footer>
-        <JetSecondaryButton @click="currentlyManagingRole = false"> {{ __('Cancel') }} </JetSecondaryButton>
+        <SecondaryButton @click="currentlyManagingRole = false"> {{ __('Cancel') }} </SecondaryButton>
 
-        <JetButton
+        <Button
           class="ml-2"
           @click="updateRole"
           :class="{ 'opacity-25': updateRoleForm.processing }"
           :disabled="updateRoleForm.processing">
           {{ __('Save') }}
-        </JetButton>
+        </Button>
       </template>
-    </JetDialogModal>
+    </DialogModal>
 
     <!-- Leave Team Confirmation Modal -->
-    <JetConfirmationModal :show="confirmingLeavingTeam" @close="confirmingLeavingTeam = false">
+    <ConfirmationModal :show="confirmingLeavingTeam" @close="confirmingLeavingTeam = false">
       <template #title> {{ __('Leave Team') }} </template>
 
       <template #content> {{ __('Are you sure you would like to leave this team?') }} </template>
 
       <template #footer>
-        <JetSecondaryButton @click="confirmingLeavingTeam = false"> {{ __('Cancel') }} </JetSecondaryButton>
+        <SecondaryButton @click="confirmingLeavingTeam = false"> {{ __('Cancel') }} </SecondaryButton>
 
-        <JetDangerButton
+        <DangerButton
           class="ml-2"
           @click="leaveTeam"
           :class="{ 'opacity-25': leaveTeamForm.processing }"
           :disabled="leaveTeamForm.processing">
           {{ __('Leave') }}
-        </JetDangerButton>
+        </DangerButton>
       </template>
-    </JetConfirmationModal>
+    </ConfirmationModal>
 
     <!-- Remove Team Member Confirmation Modal -->
-    <JetConfirmationModal :show="teamMemberBeingRemoved" @close="teamMemberBeingRemoved = null">
+    <ConfirmationModal :show="teamMemberBeingRemoved" @close="teamMemberBeingRemoved = null">
       <template #title> {{ __('Remove Team Member') }} </template>
 
       <template #content> {{ __('Are you sure you would like to remove this person from the team?') }} </template>
 
       <template #footer>
-        <JetSecondaryButton @click="teamMemberBeingRemoved = null"> {{ __('Cancel') }} </JetSecondaryButton>
+        <SecondaryButton @click="teamMemberBeingRemoved = null"> {{ __('Cancel') }} </SecondaryButton>
 
-        <JetDangerButton
+        <DangerButton
           class="ml-2"
           @click="removeTeamMember"
           :class="{ 'opacity-25': removeTeamMemberForm.processing }"
           :disabled="removeTeamMemberForm.processing">
           {{ __('Remove') }}
-        </JetDangerButton>
+        </DangerButton>
       </template>
-    </JetConfirmationModal>
+    </ConfirmationModal>
   </div>
 </template>

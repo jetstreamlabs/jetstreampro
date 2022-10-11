@@ -29,7 +29,7 @@ defineExpose({ password })
 </script>
 
 <template>
-  <JetActionSection>
+  <ActionSection>
     <template #title>{{ __('Browser Sessions') }}</template>
 
     <template #description>
@@ -71,15 +71,15 @@ defineExpose({ password })
       </div>
 
       <div class="flex items-center mt-5">
-        <JetButton @click="confirmLogout">
+        <Button @click="confirmLogout">
           {{ __('Log Out Other Browser Sessions') }}
-        </JetButton>
+        </Button>
 
-        <JetActionMessage :on="form.recentlySuccessful" class="ml-3"> {{ __('Done.') }}</JetActionMessage>
+        <ActionMessage :on="form.recentlySuccessful" class="ml-3"> {{ __('Done.') }}</ActionMessage>
       </div>
 
       <!-- Log Out Other Devices Confirmation Modal -->
-      <JetDialogModal :show="confirmingLogout" @close="closeModal">
+      <DialogModal :show="confirmingLogout" @close="closeModal">
         <template #title>{{ __('Log Out Other Browser Sessions') }}</template>
 
         <template #content>
@@ -90,7 +90,7 @@ defineExpose({ password })
           }}
 
           <div class="mt-4">
-            <JetInput
+            <Input
               type="password"
               class="block w-3/4 mt-1"
               placeholder="Password"
@@ -98,24 +98,24 @@ defineExpose({ password })
               v-model="form.password"
               @keyup.enter="logoutOtherBrowserSessions" />
 
-            <JetInput-error :message="form.errors.password" class="mt-2" />
+            <Input-error :message="form.errors.password" class="mt-2" />
           </div>
         </template>
 
         <template #footer>
-          <JetSecondaryButton @click="closeModal">
+          <SecondaryButton @click="closeModal">
             {{ __('Cancel') }}
-          </JetSecondaryButton>
+          </SecondaryButton>
 
-          <JetButton
+          <Button
             class="ml-2"
             @click="logoutOtherBrowserSessions"
             :class="{ 'opacity-25': form.processing }"
             :disabled="form.processing">
             {{ __('Log Out Other Browser Sessions') }}
-          </JetButton>
+          </Button>
         </template>
-      </JetDialogModal>
+      </DialogModal>
     </template>
-  </JetActionSection>
+  </ActionSection>
 </template>

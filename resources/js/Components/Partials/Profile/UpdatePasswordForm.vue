@@ -30,7 +30,7 @@ defineExpose({ password, current_password })
 </script>
 
 <template>
-  <JetFormSection @submitted="updatePassword">
+  <FormSection @submitted="updatePassword">
     <template #title>{{ __('Update Password') }}</template>
 
     <template #description>
@@ -39,47 +39,47 @@ defineExpose({ password, current_password })
 
     <template #form>
       <div class="col-span-6 sm:col-span-4">
-        <JetLabel for="current_password" :value="__('Current Password')" />
-        <JetInput
+        <Label for="current_password" :value="__('Current Password')" />
+        <Input
           id="current_password"
           type="password"
           class="block w-full mt-1"
           v-model="form.current_password"
           ref="current_password"
           autocomplete="current-password" />
-        <JetInput-error :message="form.errors.current_password" class="mt-2" />
+        <Input-error :message="form.errors.current_password" class="mt-2" />
       </div>
 
       <div class="col-span-6 sm:col-span-4">
-        <JetLabel for="password" :value="__('New Password')" />
-        <JetInput
+        <Label for="password" :value="__('New Password')" />
+        <Input
           id="password"
           type="password"
           class="block w-full mt-1"
           v-model="form.password"
           ref="password"
           autocomplete="new-password" />
-        <JetInput-error :message="form.errors.password" class="mt-2" />
+        <Input-error :message="form.errors.password" class="mt-2" />
       </div>
 
       <div class="col-span-6 sm:col-span-4">
-        <JetLabel for="password_confirmation" :value="__('Confirm Password')" />
-        <JetInput
+        <Label for="password_confirmation" :value="__('Confirm Password')" />
+        <Input
           id="password_confirmation"
           type="password"
           class="block w-full mt-1"
           v-model="form.password_confirmation"
           autocomplete="new-password" />
-        <JetInput-error :message="form.errors.password_confirmation" class="mt-2" />
+        <Input-error :message="form.errors.password_confirmation" class="mt-2" />
       </div>
     </template>
 
     <template #actions>
-      <JetActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</JetActionMessage>
+      <ActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</ActionMessage>
 
-      <JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+      <Button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
         {{ __('Save') }}
-      </JetButton>
+      </Button>
     </template>
-  </JetFormSection>
+  </FormSection>
 </template>

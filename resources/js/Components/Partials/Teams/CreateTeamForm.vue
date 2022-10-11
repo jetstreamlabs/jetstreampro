@@ -12,14 +12,14 @@ const createTeam = () => {
 </script>
 
 <template>
-  <JetFormSection @submitted="createTeam">
+  <FormSection @submitted="createTeam">
     <template #title> {{ __('Team Details') }} </template>
 
     <template #description> {{ __('Create a new team to collaborate with others on projects.') }} </template>
 
     <template #form>
       <div class="col-span-6">
-        <JetLabel value="Team Owner" />
+        <Label value="Team Owner" />
 
         <div class="flex items-center mt-2">
           <img
@@ -35,16 +35,16 @@ const createTeam = () => {
       </div>
 
       <div class="col-span-6 sm:col-span-4">
-        <JetLabel for="name" value="Team Name" />
-        <JetInput id="name" type="text" class="block w-full mt-1" v-model="form.name" autofocus />
-        <JetInput-error :message="form.errors.name" class="mt-2" />
+        <Label for="name" value="Team Name" />
+        <Input id="name" type="text" class="block w-full mt-1" v-model="form.name" autofocus />
+        <Input-error :message="form.errors.name" class="mt-2" />
       </div>
     </template>
 
     <template #actions>
-      <JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+      <Button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
         {{ __('Create') }}
-      </JetButton>
+      </Button>
     </template>
-  </JetFormSection>
+  </FormSection>
 </template>

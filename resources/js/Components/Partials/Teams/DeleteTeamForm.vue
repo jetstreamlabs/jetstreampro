@@ -16,7 +16,7 @@ const deleteTeam = () => {
 </script>
 
 <template>
-  <JetActionSection>
+  <ActionSection>
     <template #title> {{ __('Delete Team') }} </template>
 
     <template #description> {{ __('Permanently delete this team.') }} </template>
@@ -31,11 +31,11 @@ const deleteTeam = () => {
       </div>
 
       <div class="mt-5">
-        <JetDangerButton @click="confirmTeamDeletion"> {{ __('Delete Team') }} </JetDangerButton>
+        <DangerButton @click="confirmTeamDeletion"> {{ __('Delete Team') }} </DangerButton>
       </div>
 
       <!-- Delete Team Confirmation Modal -->
-      <JetConfirmationModal :show="confirmingTeamDeletion" @close="confirmingTeamDeletion = false">
+      <ConfirmationModal :show="confirmingTeamDeletion" @close="confirmingTeamDeletion = false">
         <template #title> {{ __('Delete Team') }} </template>
 
         <template #content>
@@ -47,19 +47,19 @@ const deleteTeam = () => {
         </template>
 
         <template #footer>
-          <JetSecondaryButton @click="confirmingTeamDeletion = false">
+          <SecondaryButton @click="confirmingTeamDeletion = false">
             {{ __('Cancel') }}
-          </JetSecondaryButton>
+          </SecondaryButton>
 
-          <JetDangerButton
+          <DangerButton
             class="ml-2"
             @click="deleteTeam"
             :class="{ 'opacity-25': form.processing }"
             :disabled="form.processing">
             {{ __('Delete Team') }}
-          </JetDangerButton>
+          </DangerButton>
         </template>
-      </JetConfirmationModal>
+      </ConfirmationModal>
     </template>
-  </JetActionSection>
+  </ActionSection>
 </template>

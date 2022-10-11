@@ -45,7 +45,7 @@ const twoFactorEnabled = computed(() => !enabling.value && usePage().props.value
 </script>
 
 <template>
-  <JetActionSection>
+  <ActionSection>
     <template #title>{{ __('Two Factor Authentication') }}</template>
 
     <template #description>
@@ -107,33 +107,33 @@ const twoFactorEnabled = computed(() => !enabling.value && usePage().props.value
 
       <div class="mt-5">
         <div v-if="!twoFactorEnabled">
-          <JetConfirmsPassword @confirmed="enableTwoFactorAuthentication">
-            <JetButton type="button" :class="{ 'opacity-25': enabling }" :disabled="enabling">
+          <ConfirmsPassword @confirmed="enableTwoFactorAuthentication">
+            <Button type="button" :class="{ 'opacity-25': enabling }" :disabled="enabling">
               {{ __('Enable') }}
-            </JetButton>
-          </JetConfirmsPassword>
+            </Button>
+          </ConfirmsPassword>
         </div>
 
         <div v-else>
-          <JetConfirmsPassword @confirmed="regenerateRecoveryCodes">
-            <JetSecondaryButton class="mr-3" v-if="recoveryCodes.length > 0">
+          <ConfirmsPassword @confirmed="regenerateRecoveryCodes">
+            <SecondaryButton class="mr-3" v-if="recoveryCodes.length > 0">
               {{ __('Regenerate Recovery Codes') }}
-            </JetSecondaryButton>
-          </JetConfirmsPassword>
+            </SecondaryButton>
+          </ConfirmsPassword>
 
-          <JetConfirmsPassword @confirmed="showRecoveryCodes">
-            <JetSecondaryButton class="mr-3" v-if="recoveryCodes.length === 0">
+          <ConfirmsPassword @confirmed="showRecoveryCodes">
+            <SecondaryButton class="mr-3" v-if="recoveryCodes.length === 0">
               {{ __('Show Recovery Codes') }}
-            </JetSecondaryButton>
-          </JetConfirmsPassword>
+            </SecondaryButton>
+          </ConfirmsPassword>
 
-          <JetConfirmsPassword @confirmed="disableTwoFactorAuthentication">
-            <JetDangerButton :class="{ 'opacity-25': disabling }" :disabled="disabling">
+          <ConfirmsPassword @confirmed="disableTwoFactorAuthentication">
+            <DangerButton :class="{ 'opacity-25': disabling }" :disabled="disabling">
               {{ __('Disable') }}
-            </JetDangerButton>
-          </JetConfirmsPassword>
+            </DangerButton>
+          </ConfirmsPassword>
         </div>
       </div>
     </template>
-  </JetActionSection>
+  </ActionSection>
 </template>

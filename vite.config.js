@@ -10,6 +10,8 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import { FlowbiteVueResolver } from './resources/js/Application/FlowbiteVueResolver.ts'
+import { JetstreamProResolver } from './resources/js/Application/JetstreamProResolver.ts'
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 
 const env = expandDotenv.expand(dotenv.config()).parsed
@@ -48,13 +50,14 @@ export default defineConfig(({ command }) => {
           {
             '@inertiajs/inertia': ['Inertia'],
             '@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember'],
+            'flowbite-vue': ['useToasts'],
             composable: ['useTrans', 'useRoutes'],
           },
         ],
         dts: 'auto-imports.d.ts',
       }),
       Components({
-        dirs: ['resources/js/Components'],
+        dirs: ['./resources/js/Components'],
         resolvers: [
           HeadlessUiResolver(),
           IconsResolver({
@@ -85,8 +88,6 @@ export default defineConfig(({ command }) => {
     },
     resolve: {
       alias: {
-        //'@': resolve(__dirname, 'resources/js'),
-        '/storage': resolve(__dirname, 'storage/app/public'),
         ziggy: resolve(__dirname, 'vendor/tightenco/ziggy/dist/vue.es.js'),
         zora: resolve(__dirname, 'vendor/jetstreamlabs/zora/dist/vue.js'),
         'zora-js': resolve(__dirname, 'vendor/jetstreamlabs/zora/dist/index.js'),

@@ -15,7 +15,7 @@ const updateTeamName = () => {
 </script>
 
 <template>
-  <JetFormSection @submitted="updateTeamName">
+  <FormSection @submitted="updateTeamName">
     <template #title>{{ __('Team Name') }}</template>
 
     <template #description>{{ __("The team's name and owner information.") }}</template>
@@ -23,7 +23,7 @@ const updateTeamName = () => {
     <template #form>
       <!-- Team Owner Information -->
       <div class="col-span-6">
-        <JetLabel :value="__('Team Owner')" />
+        <Label :value="__('Team Owner')" />
 
         <div class="flex items-center mt-2">
           <img class="object-cover w-12 h-12 rounded-full" :src="team.owner.profile_photo_url" :alt="team.owner.name" />
@@ -37,25 +37,25 @@ const updateTeamName = () => {
 
       <!-- Team Name -->
       <div class="col-span-6 sm:col-span-4">
-        <JetLabel for="name" :value="__('Team Name')" />
+        <Label for="name" :value="__('Team Name')" />
 
-        <JetInput
+        <Input
           id="name"
           type="text"
           class="block w-full mt-1"
           v-model="form.name"
           :disabled="!permissions.canUpdateTeam" />
 
-        <JetInput-error :message="form.errors.name" class="mt-2" />
+        <Input-error :message="form.errors.name" class="mt-2" />
       </div>
     </template>
 
     <template #actions v-if="permissions.canUpdateTeam">
-      <JetActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</JetActionMessage>
+      <ActionMessage :on="form.recentlySuccessful" class="mr-3"> {{ __('Saved.') }}</ActionMessage>
 
-      <JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+      <Button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
         {{ __('Save') }}
-      </JetButton>
+      </Button>
     </template>
-  </JetFormSection>
+  </FormSection>
 </template>

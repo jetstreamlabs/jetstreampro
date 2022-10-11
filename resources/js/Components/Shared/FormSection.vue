@@ -8,10 +8,10 @@ const hasActions = computed(() => {
 
 <template>
   <div class="md:grid md:grid-cols-3 md:gap-6">
-    <JetSectionTitle>
+    <SectionTitle>
       <template #title><slot name="title"></slot></template>
       <template #description><slot name="description"></slot></template>
-    </JetSectionTitle>
+    </SectionTitle>
 
     <div class="mt-5 md:mt-0 md:col-span-2">
       <form @submit.prevent="emit('submitted')">

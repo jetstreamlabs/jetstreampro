@@ -14,9 +14,9 @@ const verificationLinkSent = computed(() => {
 <template>
   <Head :title="__('Email Verification')" />
 
-  <JetAuthenticationCard>
+  <AuthenticationCard>
     <template #logo>
-      <JetAuthenticationCard-logo />
+      <AuthenticationCard-logo />
     </template>
 
     <div class="mb-4 text-sm text-gray-600">
@@ -33,9 +33,9 @@ const verificationLinkSent = computed(() => {
 
     <form @submit.prevent="submit">
       <div class="flex items-center justify-between mt-4">
-        <JetButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        <Button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
           {{ __('Resend Verification Email') }}
-        </JetButton>
+        </Button>
 
         <Link
           :href="route('logout')"
@@ -46,5 +46,5 @@ const verificationLinkSent = computed(() => {
         </Link>
       </div>
     </form>
-  </JetAuthenticationCard>
+  </AuthenticationCard>
 </template>

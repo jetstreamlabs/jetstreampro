@@ -20,7 +20,7 @@ const { team, availableRoles, permissions } = toRefs(props)
           :user-permissions="permissions" />
 
         <template v-if="permissions.canDeleteTeam && !team.personal_team">
-          <JetSectionBorder />
+          <SectionBorder />
 
           <DeleteTeamForm class="mt-10 sm:mt-0" :team="team" />
         </template>

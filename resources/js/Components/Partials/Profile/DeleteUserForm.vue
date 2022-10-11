@@ -29,7 +29,7 @@ defineExpose({ password })
 </script>
 
 <template>
-  <JetActionSection>
+  <ActionSection>
     <template #title>{{ __('Delete Account') }}</template>
 
     <template #description>{{ __('Permanently delete your account.') }}</template>
@@ -44,11 +44,11 @@ defineExpose({ password })
       </div>
 
       <div class="mt-5">
-        <JetDangerButton @click="confirmUserDeletion">{{ __('Delete Account') }}</JetDangerButton>
+        <DangerButton @click="confirmUserDeletion">{{ __('Delete Account') }}</DangerButton>
       </div>
 
       <!-- Delete Account Confirmation Modal -->
-      <JetDialogModal :show="confirmingUserDeletion" @close="closeModal">
+      <DialogModal :show="confirmingUserDeletion" @close="closeModal">
         <template #title>{{ __('Delete Account') }}</template>
 
         <template #content>
@@ -59,7 +59,7 @@ defineExpose({ password })
           }}
 
           <div class="mt-4">
-            <JetInput
+            <Input
               type="password"
               class="block w-3/4 mt-1"
               :placeholder="__('Password')"
@@ -67,24 +67,24 @@ defineExpose({ password })
               v-model="form.password"
               @keyup.enter="deleteUser" />
 
-            <JetInput-error :message="form.errors.password" class="mt-2" />
+            <Input-error :message="form.errors.password" class="mt-2" />
           </div>
         </template>
 
         <template #footer>
-          <JetSecondaryButton @click="closeModal">
+          <SecondaryButton @click="closeModal">
             {{ __('Cancel') }}
-          </JetSecondaryButton>
+          </SecondaryButton>
 
-          <JetDangerButton
+          <DangerButton
             class="ml-2"
             @click="deleteUser"
             :class="{ 'opacity-25': form.processing }"
             :disabled="form.processing">
             {{ __('Delete Account') }}
-          </JetDangerButton>
+          </DangerButton>
         </template>
-      </JetDialogModal>
+      </DialogModal>
     </template>
-  </JetActionSection>
+  </ActionSection>
 </template>

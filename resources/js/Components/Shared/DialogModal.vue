@@ -20,7 +20,7 @@ const close = () => {
 </script>
 
 <template>
-  <JetModal :show="show" :max-width="maxWidth" :closeable="closeable" @close="close">
+  <Modal :show="show" :max-width="maxWidth" :closeable="closeable" @close="close">
     <div class="px-6 py-4">
       <div class="text-lg">
         <slot name="title"> </slot>
@@ -34,5 +34,5 @@ const close = () => {
     <div class="px-6 py-4 text-right bg-gray-100">
       <slot name="footer"> </slot>
     </div>
-  </JetModal>
+  </Modal>
 </template>

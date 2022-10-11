@@ -20,7 +20,7 @@ const close = () => {
 </script>
 
 <template>
-  <JetModal :show="show" :max-width="maxWidth" :closeable="closeable" @close="close">
+  <Modal :show="show" :max-width="maxWidth" :closeable="closeable" @close="close">
     <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
       <div class="sm:flex sm:items-start">
         <div
@@ -43,5 +43,5 @@ const close = () => {
     <div class="px-6 py-4 text-right bg-gray-100">
       <slot name="footer"> </slot>
     </div>
-  </JetModal>
+  </Modal>
 </template>

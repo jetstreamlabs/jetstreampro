@@ -14,21 +14,21 @@ const submit = () => {
 <template>
   <Head :title="__('Secure Area')" />
 
-  <JetAuthenticationCard>
+  <AuthenticationCard>
     <template #logo>
-      <JetAuthenticationCard-logo />
+      <AuthenticationCard-logo />
     </template>
 
     <div class="mb-4 text-sm text-gray-600">
       {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
     </div>
 
-    <JetValidationErrors class="mb-4" />
+    <ValidationErrors class="mb-4" />
 
     <form @submit.prevent="submit">
       <div>
-        <JetLabel for="password" value="Password" />
-        <JetInput
+        <Label for="password" value="Password" />
+        <Input
           id="password"
           type="password"
           class="block w-full mt-1"
@@ -39,10 +39,10 @@ const submit = () => {
       </div>
 
       <div class="flex justify-end mt-4">
-        <JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
           {{ __('Confirm') }}
-        </JetButton>
+        </Button>
       </div>
     </form>
-  </JetAuthenticationCard>
+  </AuthenticationCard>
 </template>

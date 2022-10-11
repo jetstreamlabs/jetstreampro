@@ -18,17 +18,17 @@ const submit = () => {
 <template>
   <Head :title="__('Register')" />
 
-  <JetAuthenticationCard>
+  <AuthenticationCard>
     <template #logo>
-      <JetAuthenticationCard-logo />
+      <AuthenticationCard-logo />
     </template>
 
-    <JetValidationErrors class="mb-4" />
+    <ValidationErrors class="mb-4" />
 
     <form @submit.prevent="submit">
       <div>
-        <JetLabel for="name" :value="__('Name')" />
-        <JetInput
+        <Label for="name" :value="__('Name')" />
+        <Input
           id="name"
           type="text"
           class="block w-full mt-1"
@@ -39,13 +39,13 @@ const submit = () => {
       </div>
 
       <div class="mt-4">
-        <JetLabel for="email" :value="__('Email')" />
-        <JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required />
+        <Label for="email" :value="__('Email')" />
+        <Input id="email" type="email" class="block w-full mt-1" v-model="form.email" required />
       </div>
 
       <div class="mt-4">
-        <JetLabel for="password" :value="__('Password')" />
-        <JetInput
+        <Label for="password" :value="__('Password')" />
+        <Input
           id="password"
           type="password"
           class="block w-full mt-1"
@@ -55,8 +55,8 @@ const submit = () => {
       </div>
 
       <div class="mt-4">
-        <JetLabel for="password_confirmation" :value="__('Confirm Password')" />
-        <JetInput
+        <Label for="password_confirmation" :value="__('Confirm Password')" />
+        <Input
           id="password_confirmation"
           type="password"
           class="block w-full mt-1"
@@ -66,9 +66,9 @@ const submit = () => {
       </div>
 
       <div class="mt-4" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">
-        <JetLabel for="terms">
+        <Label for="terms">
           <div class="flex items-center">
-            <JetCheckbox name="terms" id="terms" v-model:checked="form.terms" />
+            <Checkbox name="terms" id="terms" v-model:checked="form.terms" />
 
             <div class="ml-2">
               I agree to the
@@ -81,7 +81,7 @@ const submit = () => {
               </Link>
             </div>
           </div>
-        </JetLabel>
+        </Label>
       </div>
 
       <div class="flex items-center justify-end mt-4">
@@ -89,10 +89,10 @@ const submit = () => {
           {{ __('Already registered?') }}
         </Link>
 
-        <JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
           {{ __('Register') }}
-        </JetButton>
+        </Button>
       </div>
     </form>
-  </JetAuthenticationCard>
+  </AuthenticationCard>
 </template>

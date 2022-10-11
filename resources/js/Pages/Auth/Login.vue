@@ -25,12 +25,12 @@ const submit = () => {
 <template>
   <Head :title="__('Login')" />
 
-  <JetAuthenticationCard>
+  <AuthenticationCard>
     <template #logo>
-      <JetAuthenticationCard-logo />
+      <AuthenticationCard-logo />
     </template>
 
-    <JetValidationErrors class="mb-4" />
+    <ValidationErrors class="mb-4" />
 
     <div v-if="props.status" class="mb-4 text-sm font-medium text-green-600">
       {{ props.status }}
@@ -38,13 +38,13 @@ const submit = () => {
 
     <form @submit.prevent="submit">
       <div>
-        <JetLabel for="email" :value="__('Email')" />
-        <JetInput id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
+        <Label for="email" :value="__('Email')" />
+        <Input id="email" type="email" class="block w-full mt-1" v-model="form.email" required autofocus />
       </div>
 
       <div class="mt-4">
-        <JetLabel for="password" :value="__('Password')" />
-        <JetInput
+        <Label for="password" :value="__('Password')" />
+        <Input
           id="password"
           type="password"
           class="block w-full mt-1"
@@ -55,7 +55,7 @@ const submit = () => {
 
       <div class="block mt-4">
         <label class="flex items-center">
-          <JetCheckbox name="remember" v-model:checked="form.remember" />
+          <Checkbox name="remember" v-model:checked="form.remember" />
           <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
         </label>
       </div>
@@ -68,10 +68,10 @@ const submit = () => {
           {{ __('Forgot your password?') }}
         </Link>
 
-        <JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+        <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
           {{ __('Login') }}
-        </JetButton>
+        </Button>
       </div>
     </form>
-  </JetAuthenticationCard>
+  </AuthenticationCard>
 </template>
