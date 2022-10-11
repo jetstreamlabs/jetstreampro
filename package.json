@@ -64,7 +64,7 @@
     "@vitejs/plugin-vue": "^3.1.2",
     "@vue/compiler-sfc": "^3.2.40",
     "autoprefixer": "^10.4.12",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "dotenv-expand": "^9.0.0",
     "husky": "^8.0.1",
     "larasocket-js": "^1.0.16",
