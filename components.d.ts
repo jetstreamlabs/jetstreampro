@@ -15,7 +15,6 @@ declare module '@vue/runtime-core' {
     AuthenticationCard: typeof import('./resources/js/Components/Shared/AuthenticationCard.vue')['default']
     AuthenticationCardLogo: typeof import('./resources/js/Components/Shared/AuthenticationCardLogo.vue')['default']
     Banner: typeof import('./resources/js/Components/Shared/Banner.vue')['default']
-    'Bk--MainLayout': typeof import('./resources/js/Components/Layouts/bk---MainLayout.vue')['default']
     Button: typeof import('./resources/js/Components/Shared/Button.vue')['default']
     Checkbox: typeof import('./resources/js/Components/Shared/Checkbox.vue')['default']
     ConfirmationModal: typeof import('./resources/js/Components/Shared/ConfirmationModal.vue')['default']
