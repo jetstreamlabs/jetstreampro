@@ -8,7 +8,8 @@
     "start": "node public/ssr/ssr.mjs",
     "kill": "kill -9 $(lsof -ti:3000)",
     "lint": "php ./vendor/bin/styleci analyze -c",
-    "build:assets": "php artisan ziggy:generate && php artisan zora:generate"
+    "build:assets": "php artisan ziggy:generate && php artisan zora:generate",
+    "cn": "composer update && npm update"
   },
   "commitlint": {
     "extends": [
