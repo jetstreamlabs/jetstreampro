@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3.5.1
         with:
-          node-version: 'lts/*'
+          node-version: '18.12.1'
 
       - name: Install Dependencies
         run: npm install
@@ -75,7 +75,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3.5.1
         with:
-          node-version: 'lts/*'
+          node-version: '18.12.1'
 
       - run: npm install
       - run: npm run prod --force

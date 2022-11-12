@@ -5,8 +5,6 @@ import '../css/app.css'
 import { createJetstreamApp } from '@/Application'
 import { InertiaProgress } from '@inertiajs/progress'
 
-const appName = import.meta.env.VITE_APP_NAME
-
-createJetstreamApp({ appName: appName })
+createJetstreamApp({ appName: import.meta.env.VITE_APP_NAME })
 
 InertiaProgress.init({ color: 'rgb(104, 117, 245)' })
