@@ -1,5 +1,28 @@
 # Jetstream Pro Changelog
 
+## [3.5.6](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.5...v3.5.6) (2022-11-12)
+
+
+### Bug Fixes
+
+* update workflow node v to allow spaces in env ([6065f19](https://github.com/jetstreamlabs/jetstreampro/commit/6065f19879d67bd234a416a8ec2d9f797a6dcc8f))
+
+
+### Maintenance
+
+* **deps-dev:** bump @vue/compiler-sfc from 3.2.40 to 3.2.41 ([d9a1dd6](https://github.com/jetstreamlabs/jetstreampro/commit/d9a1dd67a7593f27623bca6e8c5d2505ac4344f2))
+* **deps-dev:** bump phpunit/phpunit from 9.5.25 to 9.5.26 ([a68d0ed](https://github.com/jetstreamlabs/jetstreampro/commit/a68d0edefb6b073fc4549996e4be35e6cbb87df5))
+* **deps-dev:** bump postcss from 8.4.18 to 8.4.19 ([ebd8d7c](https://github.com/jetstreamlabs/jetstreampro/commit/ebd8d7c0653d6ba25446ae6d15709762e853243e))
+* **deps-dev:** bump spatie/laravel-ignition from 1.5.1 to 1.6.1 ([4a7594c](https://github.com/jetstreamlabs/jetstreampro/commit/4a7594c594b584985fab9eff147c1766a34614cc))
+* **deps-dev:** bump vite from 3.1.7 to 3.2.2 ([e7dd4ae](https://github.com/jetstreamlabs/jetstreampro/commit/e7dd4ae41f074452923f4a1c4d470ff4e009300d))
+* **deps:** bump @vue/server-renderer from 3.2.40 to 3.2.45 ([44bdf35](https://github.com/jetstreamlabs/jetstreampro/commit/44bdf3514f63c330f65cf5b3a56477f1a5caaabf))
+* **deps:** bump actions/setup-node from 3.5.0 to 3.5.1 ([ca40de1](https://github.com/jetstreamlabs/jetstreampro/commit/ca40de1130d2dc4b1d0d347555e354e8af79a8f8))
+* **deps:** bump axios from 1.1.2 to 1.1.3 ([5dd9651](https://github.com/jetstreamlabs/jetstreampro/commit/5dd9651c1c11f38853d8a84dab2fe3b756bc1ca0))
+* **deps:** bump laravel/framework from 9.37.0 to 9.39.0 ([b514a18](https://github.com/jetstreamlabs/jetstreampro/commit/b514a185792edac17d5d4c29f0bb300e26372a04))
+* **deps:** bump laravel/jetstream from 2.12.3 to 2.12.5 ([281c79f](https://github.com/jetstreamlabs/jetstreampro/commit/281c79f49a9d88311e608af7a36802a537d27750))
+* **deps:** bump loader-utils from 2.0.2 to 2.0.3 ([81c80f2](https://github.com/jetstreamlabs/jetstreampro/commit/81c80f248db56e0279f491843c002a7d54e1fe0b))
+* **dev-deps:** dependabot package updates ([9fd030c](https://github.com/jetstreamlabs/jetstreampro/commit/9fd030c0dcf4febe179d42d2c2750e57eb270e16))
+
 ## [3.5.5](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.4...v3.5.5) (2022-10-11)
 
 
