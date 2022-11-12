@@ -58,10 +58,10 @@ jobs:
         with:
           ref: latest
 
-      - name: Generate .env File
-        run: echo "${{ secrets.MAIN_ENV }}" > .env
+      #- name: Generate .env File
+      #run: echo "${{ secrets.MAIN_ENV }}" > .env
 
-      - run: sudo chown -R $(id -u):$(id -g) .env
+      #- run: sudo chown -R $(id -u):$(id -g) .env
       - run: chmod -R 777 storage bootstrap/cache
 
       - name: Install PHP
