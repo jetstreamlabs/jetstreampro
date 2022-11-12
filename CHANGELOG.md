@@ -1,5 +1,17 @@
 # Jetstream Pro Changelog
 
+## [3.5.7](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.6...v3.5.7) (2022-11-12)
+
+
+### Bug Fixes
+
+* properly set app name dependent on whitespace ([3298483](https://github.com/jetstreamlabs/jetstreampro/commit/32984830e5cc638d37b2f99b1f0ded35203e376f))
+
+
+### Maintenance
+
+* test env ([2836980](https://github.com/jetstreamlabs/jetstreampro/commit/283698096cf6f2d30fd9c0bb5db8ce7b67ac2a15))
+
 ## [3.5.6](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.5...v3.5.6) (2022-11-12)
 
 
