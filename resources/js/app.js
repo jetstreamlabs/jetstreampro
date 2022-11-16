@@ -10,9 +10,9 @@ import { InertiaProgress } from '@inertiajs/progress'
 // to a .env file. Thusly we can't use the env to get our app name.
 
 // If your app has no whitespace you can switch these.
-const appName = import.meta.env.VITE_APP_NAME
-//const appName = 'Jetstream Pro'
+// const appName = import.meta.env.VITE_APP_NAME
+const appName = 'Jetstream Pro'
 
 createJetstreamApp({ appName: appName })
 
-InertiaProgress.init({ color: 'rgb(104, 117, 245)' })
+InertiaProgress.init({ color: '#EF3B2D' })
