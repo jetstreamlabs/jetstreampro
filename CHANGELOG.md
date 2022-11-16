@@ -1,5 +1,19 @@
 # Jetstream Pro Changelog
 
+## [3.5.8](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.7...v3.5.8) (2022-11-16)
+
+
+### Bug Fixes
+
+* app name error and inertia progress color ([6400b3b](https://github.com/jetstreamlabs/jetstreampro/commit/6400b3b6403cbf6769720eff64ed8e37bfd0fd8a))
+
+
+### Maintenance
+
+* **deps-dev:** bump laravel-vite-plugin from 0.6.1 to 0.7.0 ([05327f4](https://github.com/jetstreamlabs/jetstreampro/commit/05327f482ed8fcf37e0de8f852a0a27ecd72a512))
+* **dev-deps:** update via dependabot ([4684d45](https://github.com/jetstreamlabs/jetstreampro/commit/4684d4551801dde268abdc1bcf8c8b985114cb39))
+* hard code app name ([03d313b](https://github.com/jetstreamlabs/jetstreampro/commit/03d313b788830e1816af992289315a4eb2e2b502))
+
 ## [3.5.7](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.6...v3.5.7) (2022-11-12)
 
 
