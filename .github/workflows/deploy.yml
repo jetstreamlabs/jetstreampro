@@ -40,7 +40,7 @@ jobs:
 
     steps:
       - name: Create Latest Branch
-        uses: peterjgrainger/action-create-branch@v2.2.0
+        uses: peterjgrainger/action-create-branch@v2.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.VERAN }}
         with:
