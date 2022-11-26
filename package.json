@@ -69,7 +69,7 @@
     "dotenv-expand": "^9.0.0",
     "husky": "^8.0.1",
     "larasocket-js": "^1.0.16",
-    "laravel-echo": "^1.14.0",
+    "laravel-echo": "^1.14.2",
     "laravel-vite-plugin": "^0.7.0",
     "postcss": "^8.4.19",
     "postcss-import": "^15.0.0",
