@@ -95,7 +95,7 @@ jobs:
 
     steps:
       - name: Deploy Production Code
-        uses: jbrooksuk/laravel-forge-action@v1.0.3
+        uses: jbrooksuk/laravel-forge-action@v1.0.4
         with:
           api_key: ${{ secrets.FID }}
           server_id: ${{ secrets.SID }}
