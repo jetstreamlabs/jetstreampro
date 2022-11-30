@@ -1,5 +1,26 @@
 # Jetstream Pro Changelog
 
+## [3.5.9](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.8...v3.5.9) (2022-11-30)
+
+
+### Code Refactoring
+
+* keep remote latest branch ([0ef68ea](https://github.com/jetstreamlabs/jetstreampro/commit/0ef68ea8819e2c72a772db41297bb39dcf11aa22))
+
+
+### Maintenance
+
+* **deps-dev:** bump @iconify-json/heroicons-solid from 1.1.5 to 1.1.6 ([5761d0b](https://github.com/jetstreamlabs/jetstreampro/commit/5761d0b40c50dd62fa0c43919921640c4ea4d1b4))
+* **deps-dev:** bump laravel-echo from 1.14.1 to 1.14.2 ([9d13493](https://github.com/jetstreamlabs/jetstreampro/commit/9d13493d23048f34b8fa2f459b0fb57ebc95ad14))
+* **deps-dev:** bump laravel-vite-plugin from 0.7.0 to 0.7.1 ([e90b6c0](https://github.com/jetstreamlabs/jetstreampro/commit/e90b6c09c2b5febe51a180836ba0b00fada2ad7d))
+* **deps-dev:** bump laravel/sail from 1.16.2 to 1.16.3 ([fc3ea81](https://github.com/jetstreamlabs/jetstreampro/commit/fc3ea81d9099aa2a68c7e18b21167625f9c1f4c2))
+* **deps-dev:** bump unplugin-auto-import from 0.11.4 to 0.12.0 ([6ba685d](https://github.com/jetstreamlabs/jetstreampro/commit/6ba685d8ba45e295f48705c4da7de7ea058e90f8))
+* **deps-dev:** bump unplugin-icons from 0.14.13 to 0.14.14 ([9eb4c6d](https://github.com/jetstreamlabs/jetstreampro/commit/9eb4c6d96bcc000a02ca8558fda0f8c3747a6917))
+* **deps:** bump jbrooksuk/laravel-forge-action from 1.0.3 to 1.0.4 ([c025f03](https://github.com/jetstreamlabs/jetstreampro/commit/c025f03357d3f0d3451fa3c18bfbfa6a47861981))
+* **deps:** bump laravel/framework from 9.41.0 to 9.42.0 ([1c025f8](https://github.com/jetstreamlabs/jetstreampro/commit/1c025f8f59688273d1f5396ab622f083ef72973d))
+* **deps:** bump peterjgrainger/action-create-branch ([50960cb](https://github.com/jetstreamlabs/jetstreampro/commit/50960cb6406aaf114ff803a4da70d88569b6f9fa))
+* **dev-deps:** updates from dependabot ([f4c7217](https://github.com/jetstreamlabs/jetstreampro/commit/f4c721759c986e153c534b0ef3b71c8659037a0c))
+
 ## [3.5.8](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.7...v3.5.8) (2022-11-16)
 
 
