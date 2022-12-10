@@ -3691,16 +3691,16 @@
         },
         {
             "name": "spatie/laravel-route-discovery",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-route-discovery.git",
-                "reference": "5f1938f64b60e6128f494d6ddee1faa818d8935d"
+                "reference": "77b9d67afd841766943a4da1d681d18137b67712"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-route-discovery/zipball/5f1938f64b60e6128f494d6ddee1faa818d8935d",
-                "reference": "5f1938f64b60e6128f494d6ddee1faa818d8935d",
+                "url": "https://api.github.com/repos/spatie/laravel-route-discovery/zipball/77b9d67afd841766943a4da1d681d18137b67712",
+                "reference": "77b9d67afd841766943a4da1d681d18137b67712",
                 "shasum": ""
             },
             "require": {
@@ -3753,7 +3753,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-route-discovery/issues",
-                "source": "https://github.com/spatie/laravel-route-discovery/tree/1.0.1"
+                "source": "https://github.com/spatie/laravel-route-discovery/tree/1.0.2"
             },
             "funding": [
                 {
@@ -3765,7 +3765,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-03-08T14:54:07+00:00"
+            "time": "2022-12-06T07:26:35+00:00"
         },
         {
             "name": "symfony/console",
