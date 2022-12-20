@@ -1,5 +1,35 @@
 # Jetstream Pro Changelog
 
+## [3.5.10](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.9...v3.5.10) (2022-12-20)
+
+
+### Maintenance
+
+* **deps-dev:** bump @headlessui/vue from 1.7.4 to 1.7.5 ([a58067f](https://github.com/jetstreamlabs/jetstreampro/commit/a58067f22c08351bc4e0c5522a6efdbaa8db21e0))
+* **deps-dev:** bump @headlessui/vue from 1.7.5 to 1.7.7 ([623ce11](https://github.com/jetstreamlabs/jetstreampro/commit/623ce1113f5a36a0ccfefbe682f9b39d288f54e9))
+* **deps-dev:** bump dotenv-expand from 9.0.0 to 10.0.0 ([60d2067](https://github.com/jetstreamlabs/jetstreampro/commit/60d2067c2a28d90c8bae4286b53e903c4380fc95))
+* **deps-dev:** bump fakerphp/faker from 1.20.0 to 1.21.0 ([bd3a114](https://github.com/jetstreamlabs/jetstreampro/commit/bd3a11497e23d17b9ce1c38a660d89da6de53b4d))
+* **deps-dev:** bump laravel/sail from 1.16.3 to 1.16.5 ([e27e5a7](https://github.com/jetstreamlabs/jetstreampro/commit/e27e5a72cf2e544b0c1cf6e0ff3b11902df0d478))
+* **deps-dev:** bump phpunit/phpunit from 9.5.26 to 9.5.27 ([69ea49a](https://github.com/jetstreamlabs/jetstreampro/commit/69ea49aa276327c24a71c4b7188951c3633009b9))
+* **deps-dev:** bump postcss-import from 15.0.0 to 15.1.0 ([71239e4](https://github.com/jetstreamlabs/jetstreampro/commit/71239e4eb030641d6117ef3fdd1fa567980501e3))
+* **deps-dev:** bump prettier-plugin-tailwindcss from 0.1.13 to 0.2.1 ([d172e3f](https://github.com/jetstreamlabs/jetstreampro/commit/d172e3f1d3c69eed3a808edb741b2f2d13ccebe4))
+* **deps-dev:** bump spatie/laravel-ignition from 1.6.1 to 1.6.2 ([694d45d](https://github.com/jetstreamlabs/jetstreampro/commit/694d45d8f251379bebc1e8b6a1ee02ee0a8af7ed))
+* **deps-dev:** bump unplugin-auto-import from 0.12.0 to 0.12.1 ([7f7309b](https://github.com/jetstreamlabs/jetstreampro/commit/7f7309be78121cb15fc06c1e9da29d07dd2820a1))
+* **deps-dev:** bump unplugin-icons from 0.14.14 to 0.14.15 ([20ff13c](https://github.com/jetstreamlabs/jetstreampro/commit/20ff13cd17e633c3eb31cea54340f18628dd030e))
+* **deps-dev:** bump unplugin-vue-components from 0.22.11 to 0.22.12 ([a55aa8d](https://github.com/jetstreamlabs/jetstreampro/commit/a55aa8dae245b9d131742870a325250af1cdb731))
+* **deps:** bump axios from 1.2.0 to 1.2.1 ([f9c19cd](https://github.com/jetstreamlabs/jetstreampro/commit/f9c19cdee121bef0f10f94a08a69175a25c1c856))
+* **deps:** bump dayjs from 1.11.6 to 1.11.7 ([5981fad](https://github.com/jetstreamlabs/jetstreampro/commit/5981fade9e6219bceb4e043ea3643d901cdfbd9f))
+* **deps:** bump laravel/jetstream from 2.12.5 to 2.12.6 ([116e33f](https://github.com/jetstreamlabs/jetstreampro/commit/116e33f9f06f6c38fc202b3e3cf60f453dc86c91))
+* **deps:** bump laravel/jetstream from 2.12.6 to 2.13.0 ([caf3412](https://github.com/jetstreamlabs/jetstreampro/commit/caf341215253f12030effe8d4b9d17bc43539744))
+* **deps:** bump peterjgrainger/action-create-branch ([4887cde](https://github.com/jetstreamlabs/jetstreampro/commit/4887cde13f58a0c57197149bfe09f7a327bba537))
+* **deps:** bump spatie/laravel-route-discovery from 1.0.1 to 1.0.2 ([b3f9d22](https://github.com/jetstreamlabs/jetstreampro/commit/b3f9d22dd5949d614ee0d734da6cff7a93766076))
+* **dev-deps:** update dependencies dpbot ([7d6c860](https://github.com/jetstreamlabs/jetstreampro/commit/7d6c860784a396c7314121fe410feba9852e5158))
+
+
+### Task Commit
+
+* update dependencies —dpbot ([3ba1032](https://github.com/jetstreamlabs/jetstreampro/commit/3ba103294f0c10a594b678ea59bc2b6d5fef0897))
+
 ## [3.5.9](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.8...v3.5.9) (2022-11-30)
 
 
