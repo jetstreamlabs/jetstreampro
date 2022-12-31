@@ -41,7 +41,7 @@
     "@inertiajs/inertia-vue3": "^0.6.0",
     "@inertiajs/server": "^0.1.0",
     "@vue/server-renderer": "^3.2.45",
-    "axios": "^1.2.1",
+    "axios": "^1.2.2",
     "dayjs": "^1.11.7",
     "lodash": "^4.17.21",
     "mitt": "^3.0.0",
