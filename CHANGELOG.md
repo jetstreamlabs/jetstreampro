@@ -1,5 +1,22 @@
 # Jetstream Pro Changelog
 
+## [3.5.11](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.10...v3.5.11) (2023-01-04)
+
+
+### Maintenance
+
+* **deps-dev:** bump laravel-vite-plugin from 0.7.2 to 0.7.3 ([ce836ef](https://github.com/jetstreamlabs/jetstreampro/commit/ce836ef2fa7c9f8dbd6478ad66bb7b0bf6487c83))
+* **deps-dev:** bump laravel/sail from 1.16.5 to 1.16.6 ([d6a0314](https://github.com/jetstreamlabs/jetstreampro/commit/d6a0314d2841b9d7675a170285d032d1ac1ff9bd))
+* **deps-dev:** bump nunomaduro/collision from 6.3.1 to 6.3.2 ([e7765f7](https://github.com/jetstreamlabs/jetstreampro/commit/e7765f724f3e337b9c32596c4ce9cba229bdd080))
+* **deps-dev:** bump spatie/laravel-ignition from 1.6.2 to 1.6.4 ([f23d0d2](https://github.com/jetstreamlabs/jetstreampro/commit/f23d0d2551a34fef68f46bd57af7b43253a4aac2))
+* **deps:** bump axios from 1.2.1 to 1.2.2 ([94518ec](https://github.com/jetstreamlabs/jetstreampro/commit/94518ecda47ecd75a21df9900a3ff09c298502bd))
+* **deps:** bump laravel/jetstream from 2.13.0 to 2.13.1 ([435fdf6](https://github.com/jetstreamlabs/jetstreampro/commit/435fdf65abce419fce8409e6e806e50dee02a547))
+
+
+### Task Commit
+
+* update dependencies —dpbot ([b0abd9e](https://github.com/jetstreamlabs/jetstreampro/commit/b0abd9e7be87eaf0c21371c3252c7db9733308b5))
+
 ## [3.5.10](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.9...v3.5.10) (2022-12-20)
 
 
