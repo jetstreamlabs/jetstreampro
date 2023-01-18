@@ -1,5 +1,31 @@
 # Jetstream Pro Changelog
 
+## [3.5.12](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.11...v3.5.12) (2023-01-18)
+
+
+### Maintenance
+
+* **deps-dev:** bump @commitlint/cli from 17.3.0 to 17.4.1 ([5d80ddc](https://github.com/jetstreamlabs/jetstreampro/commit/5d80ddc96e7edcbf21b356bb335a183b8c6aec56))
+* **deps-dev:** bump @commitlint/cli from 17.4.1 to 17.4.2 ([8e37a78](https://github.com/jetstreamlabs/jetstreampro/commit/8e37a78971ccffe7341515877d609cacc05fb629))
+* **deps-dev:** bump @commitlint/config-conventional ([0e104fe](https://github.com/jetstreamlabs/jetstreampro/commit/0e104fec168494a8292c3bdb083e049639eec518))
+* **deps-dev:** bump @commitlint/config-conventional ([6abf560](https://github.com/jetstreamlabs/jetstreampro/commit/6abf5609b6ccb888844436009c99a1cd8b2096cb))
+* **deps-dev:** bump @tailwindcss/typography from 0.5.8 to 0.5.9 ([2afee54](https://github.com/jetstreamlabs/jetstreampro/commit/2afee54b8c7dd4b087ef0593a754be6ad93b3804))
+* **deps-dev:** bump laravel/sail from 1.17.0 to 1.18.0 ([455b2cf](https://github.com/jetstreamlabs/jetstreampro/commit/455b2cf43fdae7f37a239a08b9f34f9a022b654f))
+* **deps-dev:** bump phpunit/phpunit from 9.5.27 to 9.5.28 ([be0510b](https://github.com/jetstreamlabs/jetstreampro/commit/be0510b543666ab0fe16f9b63a326b0909df4bab))
+* **deps-dev:** bump postcss from 8.4.20 to 8.4.21 ([1d93a05](https://github.com/jetstreamlabs/jetstreampro/commit/1d93a0554c2ec73515486bbaf570b65189e16bfe))
+* **deps-dev:** bump semantic-release from 19.0.5 to 20.0.0 ([9676d34](https://github.com/jetstreamlabs/jetstreampro/commit/9676d34790ced8a7a20283900b5ab77043063699))
+* **deps-dev:** bump unplugin-icons from 0.14.15 to 0.15.1 ([fb00ce2](https://github.com/jetstreamlabs/jetstreampro/commit/fb00ce225461f10654ecea37dc3502e9332ed3a2))
+* **deps:** bump actions/setup-node from 3.5.1 to 3.6.0 ([df79b7a](https://github.com/jetstreamlabs/jetstreampro/commit/df79b7aaa2cb35c4a706da8c61d42ff0fbd0cad8))
+* **deps:** bump inertiajs/inertia-laravel from 0.6.4 to 0.6.8 ([f36811c](https://github.com/jetstreamlabs/jetstreampro/commit/f36811c0332b242fb475e668025b41897ce860c2))
+* **deps:** bump jetstreamlabs/zora from 3.2.3 to 3.2.4 ([a5da48e](https://github.com/jetstreamlabs/jetstreampro/commit/a5da48e8ccbd06e74d9eaa80024a3575f2b7a502))
+* **deps:** bump laravel/tinker from 2.7.3 to 2.8.0 ([7f7fde5](https://github.com/jetstreamlabs/jetstreampro/commit/7f7fde55ba9bf24deff1c2e0ddd1d1d05369a9c6))
+* update dependencies —dpbot ([92ddd60](https://github.com/jetstreamlabs/jetstreampro/commit/92ddd60659666983458baf1ee3cc6009153ba229))
+
+
+### Task Commit
+
+* update dependencies —dpbot ([e880f37](https://github.com/jetstreamlabs/jetstreampro/commit/e880f3779de2a4bdaef4043afaaf2a0148784398))
+
 ## [3.5.11](https://github.com/jetstreamlabs/jetstreampro/compare/v3.5.10...v3.5.11) (2023-01-04)
 
 
