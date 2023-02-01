@@ -97,9 +97,7 @@ jobs:
       - name: Deploy Production Code
         uses: jbrooksuk/laravel-forge-action@v1.0.4
         with:
-          api_key: ${{ secrets.FID }}
-          server_id: ${{ secrets.SID }}
-          site_id: ${{ secrets.WID }}
+          trigger_url: ${{ secrets.FORGE_TRIGGER_URL }}
 
   remove:
     name: Remove Latest Branch
