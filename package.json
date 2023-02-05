@@ -7,7 +7,8 @@
     "ssr": "vite build --ssr",
     "start": "node public/ssr/ssr.mjs",
     "kill": "kill -9 $(lsof -ti:3000)",
-    "lint": "php ./vendor/bin/styleci analyze -c",
+    "lint": "php ./vendor/bin/pinte --dirty",
+    "pinte": "php ./vendor/bin/pinte",
     "build:assets": "php artisan ziggy:generate && php artisan zora:generate",
     "cn": "composer update && npm update"
   },
@@ -82,5 +83,10 @@
     "vite": "^3.2.2",
     "vue-loader": "^17.0.0",
     "ziggy-js": "^1.5.0"
+  },
+  "overrides": {
+    "@semantic-release/npm": {
+      "npm": "^9.4.1"
+    }
   }
 }

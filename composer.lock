@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7a23b34a68d37f9b439e94eb8e47b45",
+    "content-hash": "bb4673ba6027a69f795865e64722e60c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1150,16 +1150,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.112",
+            "version": "v1.2.113",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "2c555ce35a07a5c1c808cee7d5bb52c41a4c7b2f"
+                "reference": "6710b75871da2b718550c2bc33388315a3b20151"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/2c555ce35a07a5c1c808cee7d5bb52c41a4c7b2f",
-                "reference": "2c555ce35a07a5c1c808cee7d5bb52c41a4c7b2f",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/6710b75871da2b718550c2bc33388315a3b20151",
+                "reference": "6710b75871da2b718550c2bc33388315a3b20151",
                 "shasum": ""
             },
             "require": {
@@ -1196,9 +1196,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
-                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.2.112"
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.2.113"
             },
-            "time": "2022-10-05T21:52:44+00:00"
+            "time": "2023-02-02T21:01:40+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -1282,6 +1282,76 @@
                 }
             ],
             "time": "2020-06-13T08:05:20+00:00"
+        },
+        {
+            "name": "jetstreamlabs/pinte",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jetstreamlabs/pinte.git",
+                "reference": "c9adecf4069369eb6be5fba14732aa2d98e60946"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jetstreamlabs/pinte/zipball/c9adecf4069369eb6be5fba14732aa2d98e60946",
+                "reference": "c9adecf4069369eb6be5fba14732aa2d98e60946",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-tokenizer": "*",
+                "ext-xml": "*",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.14",
+                "illuminate/view": "^9.50",
+                "laravel-zero/framework": "^9.2",
+                "mockery/mockery": "^1.5",
+                "nunomaduro/larastan": "^2.4",
+                "nunomaduro/termwind": "^1.15",
+                "pestphp/pest": "^1.22"
+            },
+            "bin": [
+                "builds/pinte"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "app/",
+                    "Database\\Seeders\\": "database/seeders/",
+                    "Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                },
+                {
+                    "name": "secondman",
+                    "email": "secondman@jetstreamlabs.com"
+                }
+            ],
+            "description": "A less opinionated code formatter for PHP, based on Laravel Pint.",
+            "homepage": "https://github.com/jetstreamlabs/pinte",
+            "keywords": [
+                "format",
+                "formatter",
+                "lint",
+                "linter",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/jetstreamlabs/pinte/issues",
+                "source": "https://github.com/jetstreamlabs/pinte"
+            },
+            "time": "2023-02-05T09:23:57+00:00"
         },
         {
             "name": "jetstreamlabs/zora",
@@ -2293,16 +2363,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50"
+                "reference": "e1c0ae1528ce313a450e5e1ad782765c4a8dd3cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/720488632c590286b88b80e62aa3d3d551ad4a50",
-                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/e1c0ae1528ce313a450e5e1ad782765c4a8dd3cb",
+                "reference": "e1c0ae1528ce313a450e5e1ad782765c4a8dd3cb",
                 "shasum": ""
             },
             "require": {
@@ -2317,7 +2387,7 @@
                 "doctrine/couchdb": "~1.0@dev",
                 "elasticsearch/elasticsearch": "^7 || ^8",
                 "ext-json": "*",
-                "graylog2/gelf-php": "^1.4.2",
+                "graylog2/gelf-php": "^1.4.2 || ^2@dev",
                 "guzzlehttp/guzzle": "^7.4",
                 "guzzlehttp/psr7": "^2.2",
                 "mongodb/mongodb": "^1.8",
@@ -2379,7 +2449,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.8.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.9.0"
             },
             "funding": [
                 {
@@ -2391,7 +2461,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-24T11:55:47+00:00"
+            "time": "2023-02-05T13:07:32+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -7217,16 +7287,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.0.3",
+            "version": "10.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "140897d407ce1c9e0b6b5ced8663d442af7c5560"
+                "reference": "6be2d07cce2c7f812db007825a57da3b08972eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/140897d407ce1c9e0b6b5ced8663d442af7c5560",
-                "reference": "140897d407ce1c9e0b6b5ced8663d442af7c5560",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6be2d07cce2c7f812db007825a57da3b08972eaf",
+                "reference": "6be2d07cce2c7f812db007825a57da3b08972eaf",
                 "shasum": ""
             },
             "require": {
@@ -7297,7 +7367,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.3"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.4"
             },
             "funding": [
                 {
@@ -7313,7 +7383,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-04T13:39:07+00:00"
+            "time": "2023-02-05T16:23:38+00:00"
         },
         {
             "name": "sebastian/cli-parser",
