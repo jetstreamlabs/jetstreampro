@@ -32,8 +32,8 @@ class AddTeamMember implements AddsTeamMembers
     AddingTeamMember::dispatch($team, $newTeamMember);
 
     $team->users()->attach(
-            $newTeamMember, ['role' => $role]
-        );
+      $newTeamMember, ['role' => $role]
+    );
 
     TeamMemberAdded::dispatch($team, $newTeamMember);
   }
@@ -54,8 +54,8 @@ class AddTeamMember implements AddsTeamMembers
     ], $this->rules(), [
       'email.exists' => __('We were unable to find a registered user with this email address.'),
     ])->after(
-            $this->ensureUserIsNotAlreadyOnTeam($team, $email)
-        )->validateWithBag('addTeamMember');
+      $this->ensureUserIsNotAlreadyOnTeam($team, $email)
+    )->validateWithBag('addTeamMember');
   }
 
   /**
@@ -84,10 +84,10 @@ class AddTeamMember implements AddsTeamMembers
   {
     return function ($validator) use ($team, $email) {
       $validator->errors()->addIf(
-                $team->hasUserWithEmail($email),
-                'email',
-                __('This user already belongs to the team.')
-            );
+        $team->hasUserWithEmail($email),
+        'email',
+        __('This user already belongs to the team.')
+      );
     };
   }
 }
