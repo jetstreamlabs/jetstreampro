@@ -20,7 +20,7 @@
     "jetstreamlabs/zora": "^3.0",
     "larasocket/larasocket-driver": "^1.0",
     "laravel/framework": "^9.1.0",
-    "laravel/jetstream": "^2.6.6",
+    "laravel/jetstream": "^3.0.1",
     "laravel/sanctum": "^3.0.0",
     "laravel/tinker": "^2.7",
     "spatie/laravel-route-discovery": "^1.0",
