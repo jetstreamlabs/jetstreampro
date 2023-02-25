@@ -52,7 +52,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
-    "@headlessui/vue": "^1.7.9",
+    "@headlessui/vue": "^1.7.11",
     "@iconify-json/heroicons-outline": "^1.1.4",
     "@iconify-json/heroicons-solid": "^1.1.6",
     "@inertiajs/progress": "^0.2.7",
