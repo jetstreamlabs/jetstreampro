@@ -22,27 +22,27 @@ export default defineConfig(({ command }) => {
       laravel({
         input: 'resources/js/app.js',
         ssr: 'resources/js/ssr.js',
-        ssrOutputDirectory: 'public/ssr',
-        refresh: true,
+        ssrOutputDirectory: 'bootstrap/ssr',
+        refresh: true
       }),
       Vue({
         include: [/\.vue$/, /\.md$/],
         template: {
           transformAssetUrls: {
             base: null,
-            includeAbsolute: false,
-          },
-        },
+            includeAbsolute: false
+          }
+        }
       }),
       Icons({
         compiler: 'vue3',
-        autoInstall: true,
+        autoInstall: true
       }),
       AutoImport({
         include: [
           /\.vue$/,
           /\.vue\?vue/, // .vue
-          /\.md$/, // .md
+          /\.md$/ // .md
         ],
         imports: [
           'vue',
@@ -51,10 +51,10 @@ export default defineConfig(({ command }) => {
             '@inertiajs/inertia': ['Inertia'],
             '@inertiajs/inertia-vue3': ['useForm', 'usePage', 'useRemember'],
             'flowbite-vue': ['useToasts'],
-            composable: ['useTrans', 'useRoutes'],
-          },
+            composable: ['useTrans', 'useRoutes']
+          }
         ],
-        dts: 'auto-imports.d.ts',
+        dts: 'auto-imports.d.ts'
       }),
       Components({
         dirs: ['./resources/js/Components'],
@@ -65,15 +65,15 @@ export default defineConfig(({ command }) => {
             enabledCollections: ['heroicons-outline', 'heroicons-solid'],
             alias: {
               outline: 'heroicons-outline',
-              solid: 'heroicons-solid',
-            },
-          }),
+              solid: 'heroicons-solid'
+            }
+          })
         ],
-        dts: 'components.d.ts',
-      }),
+        dts: 'components.d.ts'
+      })
     ],
     ssr: {
-      noExternal: ['@inertiajs/server'],
+      noExternal: ['@inertiajs/server']
     },
     optimizeDeps: {
       include: [
@@ -83,35 +83,38 @@ export default defineConfig(({ command }) => {
         '@inertiajs/inertia-vue3',
         '@inertiajs/progress',
         '@headlessui/vue',
-        'axios',
-      ],
+        'axios'
+      ]
     },
     resolve: {
       alias: {
         ziggy: resolve(__dirname, 'vendor/tightenco/ziggy/dist/vue.es.js'),
         zora: resolve(__dirname, 'vendor/jetstreamlabs/zora/dist/vue.js'),
-        'zora-js': resolve(__dirname, 'vendor/jetstreamlabs/zora/dist/index.js'),
-        composable: resolve(__dirname, 'resources/js/Composable/index.js'),
-      },
+        'zora-js': resolve(
+          __dirname,
+          'vendor/jetstreamlabs/zora/dist/index.js'
+        ),
+        composable: resolve(__dirname, 'resources/js/Composable/index.js')
+      }
     },
-    server: command === 'serve' ? makeServer(command) : null,
+    server: command === 'serve' ? makeServer(command) : null
   }
 })
 
-export const makeServer = (command) => {
+export const makeServer = command => {
   if (env.VITE_HTTPS == 'true') {
     const certPath = resolve(homedir(), env.VITE_CERTPATH)
 
     return {
       https: {
         key: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.key`)),
-        cert: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.crt`)),
+        cert: fs.readFileSync(resolve(certPath, `${env.VITE_DOMAIN}.crt`))
       },
-      host: env.VITE_DOMAIN,
+      host: env.VITE_DOMAIN
     }
   }
 
   return {
-    https: false,
+    https: false
   }
 }
